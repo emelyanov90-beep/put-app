@@ -73,7 +73,12 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/data/russian_cities.json
     - docs/imgs/autorization.png
+    - docs/imgs/compas.png
+    - docs/imgs/car.png
+    - docs/imgs/driver.png
+    - docs/imgs/passagire.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

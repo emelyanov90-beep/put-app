@@ -1,0 +1,9074 @@
+[
+  {
+    "id": "ru_city_1",
+    "name": "Абаза",
+    "region": "Хакасия",
+    "countryCode": "RU",
+    "latitude": 52.65,
+    "longitude": 90.083333333333
+  },
+  {
+    "id": "ru_city_2",
+    "name": "Абакан",
+    "region": "Хакасия",
+    "countryCode": "RU",
+    "latitude": 53.71667,
+    "longitude": 91.41667
+  },
+  {
+    "id": "ru_city_3",
+    "name": "Абдулино",
+    "region": "Оренбургская область",
+    "countryCode": "RU",
+    "latitude": 53.68333,
+    "longitude": 53.65
+  },
+  {
+    "id": "ru_city_4",
+    "name": "Абинск",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 44.86667,
+    "longitude": 38.16667
+  },
+  {
+    "id": "ru_city_5",
+    "name": "Агидель",
+    "region": "Башкортостан",
+    "countryCode": "RU",
+    "latitude": 55.9,
+    "longitude": 53.93333
+  },
+  {
+    "id": "ru_city_6",
+    "name": "Агрыз",
+    "region": "Татарстан",
+    "countryCode": "RU",
+    "latitude": 56.51667,
+    "longitude": 52.98333
+  },
+  {
+    "id": "ru_city_7",
+    "name": "Адыгейск",
+    "region": "Адыгея",
+    "countryCode": "RU",
+    "latitude": 44.884525,
+    "longitude": 39.19202
+  },
+  {
+    "id": "ru_city_8",
+    "name": "Азнакаево",
+    "region": "Татарстан",
+    "countryCode": "RU",
+    "latitude": 54.85,
+    "longitude": 53.06667
+  },
+  {
+    "id": "ru_city_9",
+    "name": "Азов",
+    "region": "Ростовская область",
+    "countryCode": "RU",
+    "latitude": 47.1,
+    "longitude": 39.41667
+  },
+  {
+    "id": "ru_city_10",
+    "name": "Ак-Довурак",
+    "region": "Тыва",
+    "countryCode": "RU",
+    "latitude": 51.16667,
+    "longitude": 90.6
+  },
+  {
+    "id": "ru_city_11",
+    "name": "Аксай",
+    "region": "Ростовская область",
+    "countryCode": "RU",
+    "latitude": 47.26667,
+    "longitude": 39.86667
+  },
+  {
+    "id": "ru_city_12",
+    "name": "Алагир",
+    "region": "Северная Осетия",
+    "countryCode": "RU",
+    "latitude": 43.04167,
+    "longitude": 44.21056
+  },
+  {
+    "id": "ru_city_13",
+    "name": "Алапаевск",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 57.85,
+    "longitude": 61.7
+  },
+  {
+    "id": "ru_city_14",
+    "name": "Алатырь",
+    "region": "Чувашия",
+    "countryCode": "RU",
+    "latitude": 54.85,
+    "longitude": 46.58333
+  },
+  {
+    "id": "ru_city_15",
+    "name": "Алдан",
+    "region": "Якутия",
+    "countryCode": "RU",
+    "latitude": 58.6,
+    "longitude": 125.38333
+  },
+  {
+    "id": "ru_city_16",
+    "name": "Алейск",
+    "region": "Алтайский край",
+    "countryCode": "RU",
+    "latitude": 52.5,
+    "longitude": 82.78333
+  },
+  {
+    "id": "ru_city_17",
+    "name": "Александров",
+    "region": "Владимирская область",
+    "countryCode": "RU",
+    "latitude": 56.39361,
+    "longitude": 38.715
+  },
+  {
+    "id": "ru_city_18",
+    "name": "Александровск-Сахалинский",
+    "region": "Сахалинская область",
+    "countryCode": "RU",
+    "latitude": 50.9,
+    "longitude": 142.15
+  },
+  {
+    "id": "ru_city_19",
+    "name": "Александровск",
+    "region": "Пермский край",
+    "countryCode": "RU",
+    "latitude": 59.16667,
+    "longitude": 57.58333
+  },
+  {
+    "id": "ru_city_20",
+    "name": "Алексеевка",
+    "region": "Белгородская область",
+    "countryCode": "RU",
+    "latitude": 50.63,
+    "longitude": 38.68639
+  },
+  {
+    "id": "ru_city_21",
+    "name": "Алексин",
+    "region": "Тульская область",
+    "countryCode": "RU",
+    "latitude": 54.5,
+    "longitude": 37.06667
+  },
+  {
+    "id": "ru_city_22",
+    "name": "Алзамай",
+    "region": "Иркутская область",
+    "countryCode": "RU",
+    "latitude": 55.55,
+    "longitude": 98.66667
+  },
+  {
+    "id": "ru_city_23",
+    "name": "Алупка",
+    "region": "Крым",
+    "countryCode": "RU",
+    "latitude": 44.41972,
+    "longitude": 34.04306
+  },
+  {
+    "id": "ru_city_24",
+    "name": "Алушта",
+    "region": "Крым",
+    "countryCode": "RU",
+    "latitude": 44.66722,
+    "longitude": 34.39778
+  },
+  {
+    "id": "ru_city_25",
+    "name": "Альметьевск",
+    "region": "Татарстан",
+    "countryCode": "RU",
+    "latitude": 54.9,
+    "longitude": 52.3
+  },
+  {
+    "id": "ru_city_26",
+    "name": "Амурск",
+    "region": "Хабаровский край",
+    "countryCode": "RU",
+    "latitude": 50.21667,
+    "longitude": 136.9
+  },
+  {
+    "id": "ru_city_27",
+    "name": "Анадырь",
+    "region": "Чукотский АО",
+    "countryCode": "RU",
+    "latitude": 64.73333,
+    "longitude": 177.51667
+  },
+  {
+    "id": "ru_city_28",
+    "name": "Анапа",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 44.893857,
+    "longitude": 37.317481
+  },
+  {
+    "id": "ru_city_29",
+    "name": "Ангарск",
+    "region": "Иркутская область",
+    "countryCode": "RU",
+    "latitude": 52.56667,
+    "longitude": 103.91667
+  },
+  {
+    "id": "ru_city_30",
+    "name": "Андреаполь",
+    "region": "Тверская область",
+    "countryCode": "RU",
+    "latitude": 56.65,
+    "longitude": 32.26667
+  },
+  {
+    "id": "ru_city_31",
+    "name": "Анжеро-Судженск",
+    "region": "Кемеровская область",
+    "countryCode": "RU",
+    "latitude": 56.08333,
+    "longitude": 86.03333
+  },
+  {
+    "id": "ru_city_32",
+    "name": "Анива",
+    "region": "Сахалинская область",
+    "countryCode": "RU",
+    "latitude": 46.71667,
+    "longitude": 142.51667
+  },
+  {
+    "id": "ru_city_33",
+    "name": "Апатиты",
+    "region": "Мурманская область",
+    "countryCode": "RU",
+    "latitude": 67.5675,
+    "longitude": 33.39333
+  },
+  {
+    "id": "ru_city_34",
+    "name": "Апрелевка",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.53333,
+    "longitude": 37.05
+  },
+  {
+    "id": "ru_city_35",
+    "name": "Апшеронск",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 44.46083,
+    "longitude": 39.74056
+  },
+  {
+    "id": "ru_city_36",
+    "name": "Арамиль",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 56.7,
+    "longitude": 60.83333
+  },
+  {
+    "id": "ru_city_37",
+    "name": "Аргун",
+    "region": "Чечня",
+    "countryCode": "RU",
+    "latitude": 43.292095,
+    "longitude": 45.876622
+  },
+  {
+    "id": "ru_city_38",
+    "name": "Ардатов",
+    "region": "Мордовия",
+    "countryCode": "RU",
+    "latitude": 54.85,
+    "longitude": 46.23333
+  },
+  {
+    "id": "ru_city_39",
+    "name": "Ардон",
+    "region": "Северная Осетия",
+    "countryCode": "RU",
+    "latitude": 43.17278,
+    "longitude": 44.29222
+  },
+  {
+    "id": "ru_city_40",
+    "name": "Арзамас",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 55.38333,
+    "longitude": 43.8
+  },
+  {
+    "id": "ru_city_41",
+    "name": "Аркадак",
+    "region": "Саратовская область",
+    "countryCode": "RU",
+    "latitude": 51.93333,
+    "longitude": 43.5
+  },
+  {
+    "id": "ru_city_42",
+    "name": "Армавир",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 44.99464,
+    "longitude": 41.12946
+  },
+  {
+    "id": "ru_city_43",
+    "name": "Армянск",
+    "region": "Крым",
+    "countryCode": "RU",
+    "latitude": 46.10694,
+    "longitude": 33.69306
+  },
+  {
+    "id": "ru_city_44",
+    "name": "Арсеньев",
+    "region": "Приморский край",
+    "countryCode": "RU",
+    "latitude": 44.16667,
+    "longitude": 133.26667
+  },
+  {
+    "id": "ru_city_45",
+    "name": "Арск",
+    "region": "Татарстан",
+    "countryCode": "RU",
+    "latitude": 56.09056,
+    "longitude": 49.87639
+  },
+  {
+    "id": "ru_city_46",
+    "name": "Артём",
+    "region": "Приморский край",
+    "countryCode": "RU",
+    "latitude": 43.35,
+    "longitude": 132.18333
+  },
+  {
+    "id": "ru_city_47",
+    "name": "Артёмовск",
+    "region": "Красноярский край",
+    "countryCode": "RU",
+    "latitude": 54.35,
+    "longitude": 93.43333
+  },
+  {
+    "id": "ru_city_48",
+    "name": "Артёмовский",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 57.33639,
+    "longitude": 61.89194
+  },
+  {
+    "id": "ru_city_49",
+    "name": "Архангельск",
+    "region": "Архангельская область",
+    "countryCode": "RU",
+    "latitude": 64.55,
+    "longitude": 40.53333
+  },
+  {
+    "id": "ru_city_50",
+    "name": "Асбест",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 57.01027679,
+    "longitude": 61.45639038
+  },
+  {
+    "id": "ru_city_51",
+    "name": "Асино",
+    "region": "Томская область",
+    "countryCode": "RU",
+    "latitude": 57,
+    "longitude": 86.15
+  },
+  {
+    "id": "ru_city_52",
+    "name": "Астрахань",
+    "region": "Астраханская область",
+    "countryCode": "RU",
+    "latitude": 46.33333,
+    "longitude": 48.03333
+  },
+  {
+    "id": "ru_city_53",
+    "name": "Аткарск",
+    "region": "Саратовская область",
+    "countryCode": "RU",
+    "latitude": 51.86667,
+    "longitude": 45
+  },
+  {
+    "id": "ru_city_54",
+    "name": "Ахтубинск",
+    "region": "Астраханская область",
+    "countryCode": "RU",
+    "latitude": 48.28333,
+    "longitude": 46.16667
+  },
+  {
+    "id": "ru_city_55",
+    "name": "Ачинск",
+    "region": "Красноярский край",
+    "countryCode": "RU",
+    "latitude": 56.26667,
+    "longitude": 90.5
+  },
+  {
+    "id": "ru_city_56",
+    "name": "Ачхой-Мартан",
+    "region": "Чечня",
+    "countryCode": "RU",
+    "latitude": 43.189155,
+    "longitude": 45.284741
+  },
+  {
+    "id": "ru_city_57",
+    "name": "Аша",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 55,
+    "longitude": 57.25
+  },
+  {
+    "id": "ru_city_58",
+    "name": "Бабаево",
+    "region": "Вологодская область",
+    "countryCode": "RU",
+    "latitude": 59.38333,
+    "longitude": 35.95
+  },
+  {
+    "id": "ru_city_59",
+    "name": "Бабушкин",
+    "region": "Бурятия",
+    "countryCode": "RU",
+    "latitude": 51.71667,
+    "longitude": 105.86667
+  },
+  {
+    "id": "ru_city_60",
+    "name": "Бавлы",
+    "region": "Татарстан",
+    "countryCode": "RU",
+    "latitude": 54.4,
+    "longitude": 53.25
+  },
+  {
+    "id": "ru_city_61",
+    "name": "Багратионовск",
+    "region": "Калининградская область",
+    "countryCode": "RU",
+    "latitude": 54.38333,
+    "longitude": 20.63333
+  },
+  {
+    "id": "ru_city_62",
+    "name": "Байкальск",
+    "region": "Иркутская область",
+    "countryCode": "RU",
+    "latitude": 51.51722,
+    "longitude": 104.15611
+  },
+  {
+    "id": "ru_city_63",
+    "name": "Баймак",
+    "region": "Башкортостан",
+    "countryCode": "RU",
+    "latitude": 52.58333,
+    "longitude": 58.31667
+  },
+  {
+    "id": "ru_city_64",
+    "name": "Бакал",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 54.93333,
+    "longitude": 58.8
+  },
+  {
+    "id": "ru_city_65",
+    "name": "Баксан",
+    "region": "Кабардино-Балкария",
+    "countryCode": "RU",
+    "latitude": 43.683333,
+    "longitude": 43.533333
+  },
+  {
+    "id": "ru_city_66",
+    "name": "Балабаново",
+    "region": "Калужская область",
+    "countryCode": "RU",
+    "latitude": 55.18333,
+    "longitude": 36.65
+  },
+  {
+    "id": "ru_city_67",
+    "name": "Балаклава",
+    "region": "Севастополь",
+    "countryCode": "RU",
+    "latitude": 44.5,
+    "longitude": 33.6
+  },
+  {
+    "id": "ru_city_68",
+    "name": "Балаково",
+    "region": "Саратовская область",
+    "countryCode": "RU",
+    "latitude": 52.03333,
+    "longitude": 47.78333
+  },
+  {
+    "id": "ru_city_69",
+    "name": "Балахна",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 56.48083,
+    "longitude": 43.54028
+  },
+  {
+    "id": "ru_city_70",
+    "name": "Балашиха",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.8,
+    "longitude": 37.93333
+  },
+  {
+    "id": "ru_city_71",
+    "name": "Балашов",
+    "region": "Саратовская область",
+    "countryCode": "RU",
+    "latitude": 51.55,
+    "longitude": 43.16667
+  },
+  {
+    "id": "ru_city_72",
+    "name": "Балей",
+    "region": "Забайкальский край",
+    "countryCode": "RU",
+    "latitude": 51.57694,
+    "longitude": 116.64917
+  },
+  {
+    "id": "ru_city_73",
+    "name": "Балтийск",
+    "region": "Калининградская область",
+    "countryCode": "RU",
+    "latitude": 54.65,
+    "longitude": 19.91667
+  },
+  {
+    "id": "ru_city_74",
+    "name": "Барабинск",
+    "region": "Новосибирская область",
+    "countryCode": "RU",
+    "latitude": 55.35,
+    "longitude": 78.35
+  },
+  {
+    "id": "ru_city_75",
+    "name": "Барнаул",
+    "region": "Алтайский край",
+    "countryCode": "RU",
+    "latitude": 53.347361,
+    "longitude": 83.77833
+  },
+  {
+    "id": "ru_city_76",
+    "name": "Барыш",
+    "region": "Ульяновская область",
+    "countryCode": "RU",
+    "latitude": 53.65,
+    "longitude": 47.11667
+  },
+  {
+    "id": "ru_city_77",
+    "name": "Батайск",
+    "region": "Ростовская область",
+    "countryCode": "RU",
+    "latitude": 47.13333,
+    "longitude": 39.75
+  },
+  {
+    "id": "ru_city_78",
+    "name": "Бахчисарай",
+    "region": "Крым",
+    "countryCode": "RU",
+    "latitude": 44.75278,
+    "longitude": 33.86083
+  },
+  {
+    "id": "ru_city_79",
+    "name": "Бежецк",
+    "region": "Тверская область",
+    "countryCode": "RU",
+    "latitude": 57.78333,
+    "longitude": 36.7
+  },
+  {
+    "id": "ru_city_80",
+    "name": "Белая Калитва",
+    "region": "Ростовская область",
+    "countryCode": "RU",
+    "latitude": 48.17472,
+    "longitude": 40.79306
+  },
+  {
+    "id": "ru_city_81",
+    "name": "Белая Холуница",
+    "region": "Кировская область",
+    "countryCode": "RU",
+    "latitude": 58.83333,
+    "longitude": 50.85
+  },
+  {
+    "id": "ru_city_82",
+    "name": "Белгород",
+    "region": "Белгородская область",
+    "countryCode": "RU",
+    "latitude": 50.6,
+    "longitude": 36.6
+  },
+  {
+    "id": "ru_city_83",
+    "name": "Белебей",
+    "region": "Башкортостан",
+    "countryCode": "RU",
+    "latitude": 54.1,
+    "longitude": 54.13333
+  },
+  {
+    "id": "ru_city_84",
+    "name": "Белинский",
+    "region": "Пензенская область",
+    "countryCode": "RU",
+    "latitude": 52.96667,
+    "longitude": 43.41667
+  },
+  {
+    "id": "ru_city_85",
+    "name": "Белово",
+    "region": "Кемеровская область",
+    "countryCode": "RU",
+    "latitude": 54.416666666667,
+    "longitude": 86.3
+  },
+  {
+    "id": "ru_city_86",
+    "name": "Белогорск",
+    "region": "Амурская область",
+    "countryCode": "RU",
+    "latitude": 50.91667,
+    "longitude": 128.48333
+  },
+  {
+    "id": "ru_city_87",
+    "name": "Белогорск",
+    "region": "Крым",
+    "countryCode": "RU",
+    "latitude": 45.05444,
+    "longitude": 34.60222
+  },
+  {
+    "id": "ru_city_88",
+    "name": "Белозерск",
+    "region": "Вологодская область",
+    "countryCode": "RU",
+    "latitude": 60.03333,
+    "longitude": 37.78333
+  },
+  {
+    "id": "ru_city_89",
+    "name": "Белокуриха",
+    "region": "Алтайский край",
+    "countryCode": "RU",
+    "latitude": 52,
+    "longitude": 84.98333
+  },
+  {
+    "id": "ru_city_90",
+    "name": "Беломорск",
+    "region": "Карелия",
+    "countryCode": "RU",
+    "latitude": 64.51667,
+    "longitude": 34.76667
+  },
+  {
+    "id": "ru_city_91",
+    "name": "Белоозёрский",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.46139,
+    "longitude": 38.44222
+  },
+  {
+    "id": "ru_city_92",
+    "name": "Белорецк",
+    "region": "Башкортостан",
+    "countryCode": "RU",
+    "latitude": 53.96667,
+    "longitude": 58.4
+  },
+  {
+    "id": "ru_city_93",
+    "name": "Белореченск",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 44.76667,
+    "longitude": 39.86667
+  },
+  {
+    "id": "ru_city_94",
+    "name": "Белоусово",
+    "region": "Калужская область",
+    "countryCode": "RU",
+    "latitude": 55.09167,
+    "longitude": 36.66667
+  },
+  {
+    "id": "ru_city_95",
+    "name": "Белоярский",
+    "region": "Ханты-Мансийский АО",
+    "countryCode": "RU",
+    "latitude": 63.71667,
+    "longitude": 66.66667
+  },
+  {
+    "id": "ru_city_96",
+    "name": "Белый",
+    "region": "Тверская область",
+    "countryCode": "RU",
+    "latitude": 55.83333,
+    "longitude": 32.93333
+  },
+  {
+    "id": "ru_city_97",
+    "name": "Белёв",
+    "region": "Тульская область",
+    "countryCode": "RU",
+    "latitude": 53.8,
+    "longitude": 36.13333
+  },
+  {
+    "id": "ru_city_98",
+    "name": "Бердск",
+    "region": "Новосибирская область",
+    "countryCode": "RU",
+    "latitude": 54.75,
+    "longitude": 83.1
+  },
+  {
+    "id": "ru_city_99",
+    "name": "Березники",
+    "region": "Пермский край",
+    "countryCode": "RU",
+    "latitude": 59.40806,
+    "longitude": 56.80528
+  },
+  {
+    "id": "ru_city_100",
+    "name": "Берёзовский",
+    "region": "Кемеровская область",
+    "countryCode": "RU",
+    "latitude": 55.66667,
+    "longitude": 86.25
+  },
+  {
+    "id": "ru_city_101",
+    "name": "Берёзовский",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 56.9,
+    "longitude": 60.8
+  },
+  {
+    "id": "ru_city_102",
+    "name": "Беслан",
+    "region": "Северная Осетия",
+    "countryCode": "RU",
+    "latitude": 43.18889,
+    "longitude": 44.521691
+  },
+  {
+    "id": "ru_city_103",
+    "name": "Бийск",
+    "region": "Алтайский край",
+    "countryCode": "RU",
+    "latitude": 52.51667,
+    "longitude": 85.16667
+  },
+  {
+    "id": "ru_city_104",
+    "name": "Бикин",
+    "region": "Хабаровский край",
+    "countryCode": "RU",
+    "latitude": 46.81667,
+    "longitude": 134.25
+  },
+  {
+    "id": "ru_city_105",
+    "name": "Билибино",
+    "region": "Чукотский АО",
+    "countryCode": "RU",
+    "latitude": 68.05,
+    "longitude": 166.45
+  },
+  {
+    "id": "ru_city_106",
+    "name": "Биробиджан",
+    "region": "Еврейская АО",
+    "countryCode": "RU",
+    "latitude": 48.78333,
+    "longitude": 132.93333
+  },
+  {
+    "id": "ru_city_107",
+    "name": "Бирск",
+    "region": "Башкортостан",
+    "countryCode": "RU",
+    "latitude": 55.41667,
+    "longitude": 55.53333
+  },
+  {
+    "id": "ru_city_108",
+    "name": "Бирюсинск",
+    "region": "Иркутская область",
+    "countryCode": "RU",
+    "latitude": 55.95,
+    "longitude": 97.81667
+  },
+  {
+    "id": "ru_city_109",
+    "name": "Бирюч",
+    "region": "Белгородская область",
+    "countryCode": "RU",
+    "latitude": 50.65,
+    "longitude": 38.4
+  },
+  {
+    "id": "ru_city_110",
+    "name": "Благовещенск",
+    "region": "Амурская область",
+    "countryCode": "RU",
+    "latitude": 50.25778,
+    "longitude": 127.53639
+  },
+  {
+    "id": "ru_city_111",
+    "name": "Благовещенск",
+    "region": "Башкортостан",
+    "countryCode": "RU",
+    "latitude": 55.03333,
+    "longitude": 55.98333
+  },
+  {
+    "id": "ru_city_112",
+    "name": "Благодарный",
+    "region": "Ставропольский край",
+    "countryCode": "RU",
+    "latitude": 45.1029039,
+    "longitude": 43.4251513
+  },
+  {
+    "id": "ru_city_113",
+    "name": "Бобров",
+    "region": "Воронежская область",
+    "countryCode": "RU",
+    "latitude": 51.09444,
+    "longitude": 40.03222
+  },
+  {
+    "id": "ru_city_114",
+    "name": "Богданович",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 56.78333,
+    "longitude": 62.05
+  },
+  {
+    "id": "ru_city_115",
+    "name": "Богородицк",
+    "region": "Тульская область",
+    "countryCode": "RU",
+    "latitude": 53.76667,
+    "longitude": 38.13333
+  },
+  {
+    "id": "ru_city_116",
+    "name": "Богородск",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 56.09972,
+    "longitude": 43.50722
+  },
+  {
+    "id": "ru_city_117",
+    "name": "Боготол",
+    "region": "Красноярский край",
+    "countryCode": "RU",
+    "latitude": 56.2,
+    "longitude": 89.51667
+  },
+  {
+    "id": "ru_city_118",
+    "name": "Богучар",
+    "region": "Воронежская область",
+    "countryCode": "RU",
+    "latitude": 49.93333,
+    "longitude": 40.55
+  },
+  {
+    "id": "ru_city_119",
+    "name": "Бодайбо",
+    "region": "Иркутская область",
+    "countryCode": "RU",
+    "latitude": 57.85,
+    "longitude": 114.2
+  },
+  {
+    "id": "ru_city_120",
+    "name": "Бокситогорск",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 59.473576,
+    "longitude": 33.847675
+  },
+  {
+    "id": "ru_city_121",
+    "name": "Болгар",
+    "region": "Татарстан",
+    "countryCode": "RU",
+    "latitude": 54.96667,
+    "longitude": 49.03333
+  },
+  {
+    "id": "ru_city_122",
+    "name": "Бологое",
+    "region": "Тверская область",
+    "countryCode": "RU",
+    "latitude": 57.87083,
+    "longitude": 34.07361
+  },
+  {
+    "id": "ru_city_123",
+    "name": "Болотное",
+    "region": "Новосибирская область",
+    "countryCode": "RU",
+    "latitude": 55.66667,
+    "longitude": 84.4
+  },
+  {
+    "id": "ru_city_124",
+    "name": "Болохово",
+    "region": "Тульская область",
+    "countryCode": "RU",
+    "latitude": 54.08333,
+    "longitude": 37.81667
+  },
+  {
+    "id": "ru_city_125",
+    "name": "Болхов",
+    "region": "Орловская область",
+    "countryCode": "RU",
+    "latitude": 53.45,
+    "longitude": 36
+  },
+  {
+    "id": "ru_city_126",
+    "name": "Большой Камень",
+    "region": "Приморский край",
+    "countryCode": "RU",
+    "latitude": 43.11667,
+    "longitude": 132.35
+  },
+  {
+    "id": "ru_city_127",
+    "name": "Бор",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 56.36028,
+    "longitude": 44.05917
+  },
+  {
+    "id": "ru_city_128",
+    "name": "Борзя",
+    "region": "Забайкальский край",
+    "countryCode": "RU",
+    "latitude": 50.38333,
+    "longitude": 116.53333
+  },
+  {
+    "id": "ru_city_129",
+    "name": "Борисоглебск",
+    "region": "Воронежская область",
+    "countryCode": "RU",
+    "latitude": 51.36667,
+    "longitude": 42.08333
+  },
+  {
+    "id": "ru_city_130",
+    "name": "Боровичи",
+    "region": "Новгородская область",
+    "countryCode": "RU",
+    "latitude": 58.38694,
+    "longitude": 33.91139
+  },
+  {
+    "id": "ru_city_131",
+    "name": "Боровск",
+    "region": "Калужская область",
+    "countryCode": "RU",
+    "latitude": 55.2,
+    "longitude": 36.48333
+  },
+  {
+    "id": "ru_city_132",
+    "name": "Бородино",
+    "region": "Красноярский край",
+    "countryCode": "RU",
+    "latitude": 55.9,
+    "longitude": 94.9
+  },
+  {
+    "id": "ru_city_133",
+    "name": "Братск",
+    "region": "Иркутская область",
+    "countryCode": "RU",
+    "latitude": 56.152,
+    "longitude": 101.633
+  },
+  {
+    "id": "ru_city_134",
+    "name": "Бронницы",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.42278,
+    "longitude": 38.25889
+  },
+  {
+    "id": "ru_city_135",
+    "name": "Брянск",
+    "region": "Брянская область",
+    "countryCode": "RU",
+    "latitude": 53.25,
+    "longitude": 34.36667
+  },
+  {
+    "id": "ru_city_136",
+    "name": "Бугульма",
+    "region": "Татарстан",
+    "countryCode": "RU",
+    "latitude": 54.53333,
+    "longitude": 52.78333
+  },
+  {
+    "id": "ru_city_137",
+    "name": "Бугуруслан",
+    "region": "Оренбургская область",
+    "countryCode": "RU",
+    "latitude": 53.61667,
+    "longitude": 52.41667
+  },
+  {
+    "id": "ru_city_138",
+    "name": "Будённовск",
+    "region": "Ставропольский край",
+    "countryCode": "RU",
+    "latitude": 44.79,
+    "longitude": 44.14
+  },
+  {
+    "id": "ru_city_139",
+    "name": "Бузулук",
+    "region": "Оренбургская область",
+    "countryCode": "RU",
+    "latitude": 52.76667,
+    "longitude": 52.26667
+  },
+  {
+    "id": "ru_city_140",
+    "name": "Буинск",
+    "region": "Татарстан",
+    "countryCode": "RU",
+    "latitude": 54.96667,
+    "longitude": 48.28333
+  },
+  {
+    "id": "ru_city_141",
+    "name": "Буй",
+    "region": "Костромская область",
+    "countryCode": "RU",
+    "latitude": 58.48333,
+    "longitude": 41.51667
+  },
+  {
+    "id": "ru_city_142",
+    "name": "Буйнакск",
+    "region": "Дагестан",
+    "countryCode": "RU",
+    "latitude": 42.81667,
+    "longitude": 47.11667
+  },
+  {
+    "id": "ru_city_143",
+    "name": "Бутурлиновка",
+    "region": "Воронежская область",
+    "countryCode": "RU",
+    "latitude": 50.825,
+    "longitude": 40.58889
+  },
+  {
+    "id": "ru_city_144",
+    "name": "Валдай",
+    "region": "Новгородская область",
+    "countryCode": "RU",
+    "latitude": 57.96667,
+    "longitude": 33.25
+  },
+  {
+    "id": "ru_city_145",
+    "name": "Валуйки",
+    "region": "Белгородская область",
+    "countryCode": "RU",
+    "latitude": 50.18333,
+    "longitude": 38.11667
+  },
+  {
+    "id": "ru_city_146",
+    "name": "Велиж",
+    "region": "Смоленская область",
+    "countryCode": "RU",
+    "latitude": 55.6,
+    "longitude": 31.2
+  },
+  {
+    "id": "ru_city_147",
+    "name": "Великие Луки",
+    "region": "Псковская область",
+    "countryCode": "RU",
+    "latitude": 56.35,
+    "longitude": 30.51667
+  },
+  {
+    "id": "ru_city_148",
+    "name": "Великий Новгород",
+    "region": "Новгородская область",
+    "countryCode": "RU",
+    "latitude": 58.525,
+    "longitude": 31.275
+  },
+  {
+    "id": "ru_city_149",
+    "name": "Великий Устюг",
+    "region": "Вологодская область",
+    "countryCode": "RU",
+    "latitude": 60.75889,
+    "longitude": 46.30389
+  },
+  {
+    "id": "ru_city_150",
+    "name": "Вельск",
+    "region": "Архангельская область",
+    "countryCode": "RU",
+    "latitude": 61.06667,
+    "longitude": 42.1
+  },
+  {
+    "id": "ru_city_151",
+    "name": "Венёв",
+    "region": "Тульская область",
+    "countryCode": "RU",
+    "latitude": 54.35,
+    "longitude": 38.26667
+  },
+  {
+    "id": "ru_city_152",
+    "name": "Верещагино",
+    "region": "Пермский край",
+    "countryCode": "RU",
+    "latitude": 58.06667,
+    "longitude": 54.65
+  },
+  {
+    "id": "ru_city_153",
+    "name": "Верея",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.33333,
+    "longitude": 36.18333
+  },
+  {
+    "id": "ru_city_154",
+    "name": "Верхнеуральск",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 53.88333,
+    "longitude": 59.21667
+  },
+  {
+    "id": "ru_city_155",
+    "name": "Верхний Тагил",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 57.38333,
+    "longitude": 59.93333
+  },
+  {
+    "id": "ru_city_156",
+    "name": "Верхний Уфалей",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 56.05,
+    "longitude": 60.23333
+  },
+  {
+    "id": "ru_city_157",
+    "name": "Верхняя Пышма",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 56.966666666667,
+    "longitude": 60.583333333333
+  },
+  {
+    "id": "ru_city_158",
+    "name": "Верхняя Салда",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 58.05,
+    "longitude": 60.55
+  },
+  {
+    "id": "ru_city_159",
+    "name": "Верхняя Тура",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 58.3574333,
+    "longitude": 59.8224444
+  },
+  {
+    "id": "ru_city_160",
+    "name": "Верхотурье",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 58.86667,
+    "longitude": 60.8
+  },
+  {
+    "id": "ru_city_161",
+    "name": "Верхоянск",
+    "region": "Якутия",
+    "countryCode": "RU",
+    "latitude": 67.55,
+    "longitude": 133.38333
+  },
+  {
+    "id": "ru_city_162",
+    "name": "Весьегонск",
+    "region": "Тверская область",
+    "countryCode": "RU",
+    "latitude": 58.65,
+    "longitude": 37.26667
+  },
+  {
+    "id": "ru_city_163",
+    "name": "Ветлуга",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 57.85556,
+    "longitude": 45.78111
+  },
+  {
+    "id": "ru_city_164",
+    "name": "Видное",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.55,
+    "longitude": 37.7
+  },
+  {
+    "id": "ru_city_165",
+    "name": "Вилюйск",
+    "region": "Якутия",
+    "countryCode": "RU",
+    "latitude": 63.75,
+    "longitude": 121.61667
+  },
+  {
+    "id": "ru_city_166",
+    "name": "Вилючинск",
+    "region": "Камчатский край",
+    "countryCode": "RU",
+    "latitude": 52.93333,
+    "longitude": 158.4
+  },
+  {
+    "id": "ru_city_167",
+    "name": "Вихоревка",
+    "region": "Иркутская область",
+    "countryCode": "RU",
+    "latitude": 56.11667,
+    "longitude": 101.16667
+  },
+  {
+    "id": "ru_city_168",
+    "name": "Вичуга",
+    "region": "Ивановская область",
+    "countryCode": "RU",
+    "latitude": 57.2,
+    "longitude": 41.91667
+  },
+  {
+    "id": "ru_city_169",
+    "name": "Владивосток",
+    "region": "Приморский край",
+    "countryCode": "RU",
+    "latitude": 43.116666666667,
+    "longitude": 131.9
+  },
+  {
+    "id": "ru_city_170",
+    "name": "Владикавказ",
+    "region": "Северная Осетия",
+    "countryCode": "RU",
+    "latitude": 43.01667,
+    "longitude": 44.683315
+  },
+  {
+    "id": "ru_city_171",
+    "name": "Владимир",
+    "region": "Владимирская область",
+    "countryCode": "RU",
+    "latitude": 56.13333,
+    "longitude": 40.41667
+  },
+  {
+    "id": "ru_city_172",
+    "name": "Волгоград",
+    "region": "Волгоградская область",
+    "countryCode": "RU",
+    "latitude": 48.71167,
+    "longitude": 44.51389
+  },
+  {
+    "id": "ru_city_173",
+    "name": "Волгодонск",
+    "region": "Ростовская область",
+    "countryCode": "RU",
+    "latitude": 47.54,
+    "longitude": 42.20722
+  },
+  {
+    "id": "ru_city_174",
+    "name": "Волгореченск",
+    "region": "Костромская область",
+    "countryCode": "RU",
+    "latitude": 57.43333,
+    "longitude": 41.16667
+  },
+  {
+    "id": "ru_city_175",
+    "name": "Волжск",
+    "region": "Марий Эл",
+    "countryCode": "RU",
+    "latitude": 55.86667,
+    "longitude": 48.35
+  },
+  {
+    "id": "ru_city_176",
+    "name": "Волжский",
+    "region": "Волгоградская область",
+    "countryCode": "RU",
+    "latitude": 48.783333333333,
+    "longitude": 44.766666666667
+  },
+  {
+    "id": "ru_city_177",
+    "name": "Вологда",
+    "region": "Вологодская область",
+    "countryCode": "RU",
+    "latitude": 59.216666666667,
+    "longitude": 39.9
+  },
+  {
+    "id": "ru_city_178",
+    "name": "Володарск",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 56.23333,
+    "longitude": 43.2
+  },
+  {
+    "id": "ru_city_179",
+    "name": "Волоколамск",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 56.03333,
+    "longitude": 35.95
+  },
+  {
+    "id": "ru_city_180",
+    "name": "Волосово",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 59.447275,
+    "longitude": 29.484819
+  },
+  {
+    "id": "ru_city_181",
+    "name": "Волхов",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 59.900543,
+    "longitude": 32.352681
+  },
+  {
+    "id": "ru_city_182",
+    "name": "Волчанск",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 59.93333,
+    "longitude": 60.05
+  },
+  {
+    "id": "ru_city_183",
+    "name": "Вольск",
+    "region": "Саратовская область",
+    "countryCode": "RU",
+    "latitude": 52.05,
+    "longitude": 47.38333
+  },
+  {
+    "id": "ru_city_184",
+    "name": "Воркута",
+    "region": "Коми",
+    "countryCode": "RU",
+    "latitude": 67.5,
+    "longitude": 64.03333
+  },
+  {
+    "id": "ru_city_185",
+    "name": "Воронеж",
+    "region": "Воронежская область",
+    "countryCode": "RU",
+    "latitude": 51.67167,
+    "longitude": 39.21056
+  },
+  {
+    "id": "ru_city_186",
+    "name": "Ворсма",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 55.98333,
+    "longitude": 43.26667
+  },
+  {
+    "id": "ru_city_187",
+    "name": "Воскресенск",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.32333,
+    "longitude": 38.68056
+  },
+  {
+    "id": "ru_city_188",
+    "name": "Воткинск",
+    "region": "Удмуртия",
+    "countryCode": "RU",
+    "latitude": 57.05,
+    "longitude": 54
+  },
+  {
+    "id": "ru_city_189",
+    "name": "Всеволожск",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 60.021321,
+    "longitude": 30.654084
+  },
+  {
+    "id": "ru_city_190",
+    "name": "Вуктыл",
+    "region": "Коми",
+    "countryCode": "RU",
+    "latitude": 63.86667,
+    "longitude": 57.31667
+  },
+  {
+    "id": "ru_city_191",
+    "name": "Выборг",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 60.710496,
+    "longitude": 28.749781
+  },
+  {
+    "id": "ru_city_192",
+    "name": "Выкса",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 55.31944,
+    "longitude": 42.17306
+  },
+  {
+    "id": "ru_city_193",
+    "name": "Высоковск",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 56.31667,
+    "longitude": 36.55
+  },
+  {
+    "id": "ru_city_194",
+    "name": "Высоцк",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 60.625604,
+    "longitude": 28.568277
+  },
+  {
+    "id": "ru_city_195",
+    "name": "Вытегра",
+    "region": "Вологодская область",
+    "countryCode": "RU",
+    "latitude": 61,
+    "longitude": 36.45
+  },
+  {
+    "id": "ru_city_196",
+    "name": "Вышний Волочёк",
+    "region": "Тверская область",
+    "countryCode": "RU",
+    "latitude": 57.58333,
+    "longitude": 34.56667
+  },
+  {
+    "id": "ru_city_197",
+    "name": "Вяземский",
+    "region": "Хабаровский край",
+    "countryCode": "RU",
+    "latitude": 47.53333,
+    "longitude": 134.75
+  },
+  {
+    "id": "ru_city_198",
+    "name": "Вязники",
+    "region": "Владимирская область",
+    "countryCode": "RU",
+    "latitude": 56.24333,
+    "longitude": 42.12917
+  },
+  {
+    "id": "ru_city_199",
+    "name": "Вязьма",
+    "region": "Смоленская область",
+    "countryCode": "RU",
+    "latitude": 55.21028,
+    "longitude": 34.285
+  },
+  {
+    "id": "ru_city_200",
+    "name": "Вятские Поляны",
+    "region": "Кировская область",
+    "countryCode": "RU",
+    "latitude": 56.218417,
+    "longitude": 51.068583
+  },
+  {
+    "id": "ru_city_201",
+    "name": "Гаврилов Посад",
+    "region": "Ивановская область",
+    "countryCode": "RU",
+    "latitude": 56.56667,
+    "longitude": 40.11667
+  },
+  {
+    "id": "ru_city_202",
+    "name": "Гаврилов-Ям",
+    "region": "Ярославская область",
+    "countryCode": "RU",
+    "latitude": 57.3,
+    "longitude": 39.85
+  },
+  {
+    "id": "ru_city_203",
+    "name": "Гагарин",
+    "region": "Смоленская область",
+    "countryCode": "RU",
+    "latitude": 55.55,
+    "longitude": 35
+  },
+  {
+    "id": "ru_city_204",
+    "name": "Гаджиево",
+    "region": "Мурманская область",
+    "countryCode": "RU",
+    "latitude": 69.25528,
+    "longitude": 33.31667
+  },
+  {
+    "id": "ru_city_205",
+    "name": "Гай",
+    "region": "Оренбургская область",
+    "countryCode": "RU",
+    "latitude": 51.46667,
+    "longitude": 58.45
+  },
+  {
+    "id": "ru_city_206",
+    "name": "Галич",
+    "region": "Костромская область",
+    "countryCode": "RU",
+    "latitude": 58.38333,
+    "longitude": 42.35
+  },
+  {
+    "id": "ru_city_207",
+    "name": "Гатчина",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 59.56841,
+    "longitude": 30.122892
+  },
+  {
+    "id": "ru_city_208",
+    "name": "Гвардейск",
+    "region": "Калининградская область",
+    "countryCode": "RU",
+    "latitude": 54.65,
+    "longitude": 21.06667
+  },
+  {
+    "id": "ru_city_209",
+    "name": "Гдов",
+    "region": "Псковская область",
+    "countryCode": "RU",
+    "latitude": 58.73333,
+    "longitude": 27.81667
+  },
+  {
+    "id": "ru_city_210",
+    "name": "Геленджик",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 44.560999,
+    "longitude": 38.076949
+  },
+  {
+    "id": "ru_city_211",
+    "name": "Георгиевск",
+    "region": "Ставропольский край",
+    "countryCode": "RU",
+    "latitude": 44.15,
+    "longitude": 43.46667
+  },
+  {
+    "id": "ru_city_212",
+    "name": "Глазов",
+    "region": "Удмуртия",
+    "countryCode": "RU",
+    "latitude": 58.14083,
+    "longitude": 52.67417
+  },
+  {
+    "id": "ru_city_213",
+    "name": "Голицыно",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.61472,
+    "longitude": 36.98722
+  },
+  {
+    "id": "ru_city_214",
+    "name": "Горбатов",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 56.13333,
+    "longitude": 43.06667
+  },
+  {
+    "id": "ru_city_215",
+    "name": "Горно-Алтайск",
+    "region": "Алтай",
+    "countryCode": "RU",
+    "latitude": 51.96,
+    "longitude": 85.96
+  },
+  {
+    "id": "ru_city_216",
+    "name": "Горнозаводск",
+    "region": "Пермский край",
+    "countryCode": "RU",
+    "latitude": 58.38333,
+    "longitude": 58.31667
+  },
+  {
+    "id": "ru_city_217",
+    "name": "Горняк",
+    "region": "Алтайский край",
+    "countryCode": "RU",
+    "latitude": 50.993028,
+    "longitude": 81.467934
+  },
+  {
+    "id": "ru_city_218",
+    "name": "Городец",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 56.65028,
+    "longitude": 43.47028
+  },
+  {
+    "id": "ru_city_219",
+    "name": "Городище",
+    "region": "Пензенская область",
+    "countryCode": "RU",
+    "latitude": 53.26667,
+    "longitude": 45.7
+  },
+  {
+    "id": "ru_city_220",
+    "name": "Городовиковск",
+    "region": "Калмыкия",
+    "countryCode": "RU",
+    "latitude": 46.08333,
+    "longitude": 41.93333
+  },
+  {
+    "id": "ru_city_221",
+    "name": "Гороховец",
+    "region": "Владимирская область",
+    "countryCode": "RU",
+    "latitude": 56.20278,
+    "longitude": 42.6925
+  },
+  {
+    "id": "ru_city_222",
+    "name": "Горячий Ключ",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 44.633284,
+    "longitude": 39.133287
+  },
+  {
+    "id": "ru_city_223",
+    "name": "Грайворон",
+    "region": "Белгородская область",
+    "countryCode": "RU",
+    "latitude": 50.48333,
+    "longitude": 35.66667
+  },
+  {
+    "id": "ru_city_224",
+    "name": "Гремячинск",
+    "region": "Пермский край",
+    "countryCode": "RU",
+    "latitude": 58.56667,
+    "longitude": 57.83333
+  },
+  {
+    "id": "ru_city_225",
+    "name": "Грозный",
+    "region": "Чечня",
+    "countryCode": "RU",
+    "latitude": 43.31667,
+    "longitude": 45.7
+  },
+  {
+    "id": "ru_city_226",
+    "name": "Грязи",
+    "region": "Липецкая область",
+    "countryCode": "RU",
+    "latitude": 52.5,
+    "longitude": 39.93333
+  },
+  {
+    "id": "ru_city_227",
+    "name": "Грязовец",
+    "region": "Вологодская область",
+    "countryCode": "RU",
+    "latitude": 58.88333,
+    "longitude": 40.25
+  },
+  {
+    "id": "ru_city_228",
+    "name": "Губаха",
+    "region": "Пермский край",
+    "countryCode": "RU",
+    "latitude": 58.86667,
+    "longitude": 57.58333
+  },
+  {
+    "id": "ru_city_229",
+    "name": "Губкин",
+    "region": "Белгородская область",
+    "countryCode": "RU",
+    "latitude": 51.28333,
+    "longitude": 37.55
+  },
+  {
+    "id": "ru_city_230",
+    "name": "Губкинский",
+    "region": "Ямало-Ненецкий АО",
+    "countryCode": "RU",
+    "latitude": 64.43333,
+    "longitude": 76.5
+  },
+  {
+    "id": "ru_city_231",
+    "name": "Гудермес",
+    "region": "Чечня",
+    "countryCode": "RU",
+    "latitude": 43.34861,
+    "longitude": 46.09611
+  },
+  {
+    "id": "ru_city_232",
+    "name": "Гуково",
+    "region": "Ростовская область",
+    "countryCode": "RU",
+    "latitude": 48.05,
+    "longitude": 39.93333
+  },
+  {
+    "id": "ru_city_233",
+    "name": "Гулькевичи",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 45.36028,
+    "longitude": 40.69444
+  },
+  {
+    "id": "ru_city_234",
+    "name": "Гурьевск",
+    "region": "Калининградская область",
+    "countryCode": "RU",
+    "latitude": 54.76667,
+    "longitude": 20.6
+  },
+  {
+    "id": "ru_city_235",
+    "name": "Гурьевск",
+    "region": "Кемеровская область",
+    "countryCode": "RU",
+    "latitude": 54.28333,
+    "longitude": 85.93333
+  },
+  {
+    "id": "ru_city_236",
+    "name": "Гусев",
+    "region": "Калининградская область",
+    "countryCode": "RU",
+    "latitude": 54.58333,
+    "longitude": 22.2
+  },
+  {
+    "id": "ru_city_237",
+    "name": "Гусиноозёрск",
+    "region": "Бурятия",
+    "countryCode": "RU",
+    "latitude": 51.28556,
+    "longitude": 106.52917
+  },
+  {
+    "id": "ru_city_238",
+    "name": "Гусь-Хрустальный",
+    "region": "Владимирская область",
+    "countryCode": "RU",
+    "latitude": 55.61667,
+    "longitude": 40.65
+  },
+  {
+    "id": "ru_city_239",
+    "name": "Давлеканово",
+    "region": "Башкортостан",
+    "countryCode": "RU",
+    "latitude": 54.21667,
+    "longitude": 55.03333
+  },
+  {
+    "id": "ru_city_240",
+    "name": "Дагестанские Огни",
+    "region": "Дагестан",
+    "countryCode": "RU",
+    "latitude": 42.11667,
+    "longitude": 48.2
+  },
+  {
+    "id": "ru_city_241",
+    "name": "Далматово",
+    "region": "Курганская область",
+    "countryCode": "RU",
+    "latitude": 56.26667,
+    "longitude": 62.91667
+  },
+  {
+    "id": "ru_city_242",
+    "name": "Дальнегорск",
+    "region": "Приморский край",
+    "countryCode": "RU",
+    "latitude": 44.56667,
+    "longitude": 135.61667
+  },
+  {
+    "id": "ru_city_243",
+    "name": "Дальнереченск",
+    "region": "Приморский край",
+    "countryCode": "RU",
+    "latitude": 45.93333,
+    "longitude": 133.73333
+  },
+  {
+    "id": "ru_city_244",
+    "name": "Данилов",
+    "region": "Ярославская область",
+    "countryCode": "RU",
+    "latitude": 58.18333,
+    "longitude": 40.18333
+  },
+  {
+    "id": "ru_city_245",
+    "name": "Данков",
+    "region": "Липецкая область",
+    "countryCode": "RU",
+    "latitude": 53.25,
+    "longitude": 39.15
+  },
+  {
+    "id": "ru_city_246",
+    "name": "Дегтярск",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 56.7,
+    "longitude": 60.1
+  },
+  {
+    "id": "ru_city_247",
+    "name": "Дедовск",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.86667,
+    "longitude": 37.13333
+  },
+  {
+    "id": "ru_city_248",
+    "name": "Демидов",
+    "region": "Смоленская область",
+    "countryCode": "RU",
+    "latitude": 55.26667,
+    "longitude": 31.51667
+  },
+  {
+    "id": "ru_city_249",
+    "name": "Дербент",
+    "region": "Дагестан",
+    "countryCode": "RU",
+    "latitude": 42.069825,
+    "longitude": 48.295025
+  },
+  {
+    "id": "ru_city_250",
+    "name": "Десногорск",
+    "region": "Смоленская область",
+    "countryCode": "RU",
+    "latitude": 54.1530861,
+    "longitude": 33.2902917
+  },
+  {
+    "id": "ru_city_251",
+    "name": "Джанкой",
+    "region": "Крым",
+    "countryCode": "RU",
+    "latitude": 45.70861,
+    "longitude": 34.39333
+  },
+  {
+    "id": "ru_city_252",
+    "name": "Дзержинск",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 56.23333,
+    "longitude": 43.45
+  },
+  {
+    "id": "ru_city_253",
+    "name": "Дзержинский",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.63333,
+    "longitude": 37.85
+  },
+  {
+    "id": "ru_city_254",
+    "name": "Дивногорск",
+    "region": "Красноярский край",
+    "countryCode": "RU",
+    "latitude": 55.95,
+    "longitude": 92.38333
+  },
+  {
+    "id": "ru_city_255",
+    "name": "Дигора",
+    "region": "Северная Осетия",
+    "countryCode": "RU",
+    "latitude": 43.15,
+    "longitude": 44.15
+  },
+  {
+    "id": "ru_city_256",
+    "name": "Димитровград",
+    "region": "Ульяновская область",
+    "countryCode": "RU",
+    "latitude": 54.23333,
+    "longitude": 49.58333
+  },
+  {
+    "id": "ru_city_257",
+    "name": "Дмитриев",
+    "region": "Курская область",
+    "countryCode": "RU",
+    "latitude": 52.12889,
+    "longitude": 35.07556
+  },
+  {
+    "id": "ru_city_258",
+    "name": "Дмитров",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 56.34667,
+    "longitude": 37.52167
+  },
+  {
+    "id": "ru_city_259",
+    "name": "Дмитровск",
+    "region": "Орловская область",
+    "countryCode": "RU",
+    "latitude": 52.505504,
+    "longitude": 35.141478
+  },
+  {
+    "id": "ru_city_260",
+    "name": "Дно",
+    "region": "Псковская область",
+    "countryCode": "RU",
+    "latitude": 57.83333,
+    "longitude": 29.96667
+  },
+  {
+    "id": "ru_city_261",
+    "name": "Добрянка",
+    "region": "Пермский край",
+    "countryCode": "RU",
+    "latitude": 58.45,
+    "longitude": 56.41667
+  },
+  {
+    "id": "ru_city_262",
+    "name": "Долгопрудный",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.93333,
+    "longitude": 37.5
+  },
+  {
+    "id": "ru_city_263",
+    "name": "Долинск",
+    "region": "Сахалинская область",
+    "countryCode": "RU",
+    "latitude": 47.31667,
+    "longitude": 142.8
+  },
+  {
+    "id": "ru_city_264",
+    "name": "Домодедово",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.44389,
+    "longitude": 37.75806
+  },
+  {
+    "id": "ru_city_265",
+    "name": "Донецк",
+    "region": "Ростовская область",
+    "countryCode": "RU",
+    "latitude": 48.33694,
+    "longitude": 39.945
+  },
+  {
+    "id": "ru_city_266",
+    "name": "Донской",
+    "region": "Тульская область",
+    "countryCode": "RU",
+    "latitude": 53.96667,
+    "longitude": 38.31667
+  },
+  {
+    "id": "ru_city_267",
+    "name": "Дорогобуж",
+    "region": "Смоленская область",
+    "countryCode": "RU",
+    "latitude": 54.92,
+    "longitude": 33.307777777778
+  },
+  {
+    "id": "ru_city_268",
+    "name": "Дрезна",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.74444,
+    "longitude": 38.84944
+  },
+  {
+    "id": "ru_city_269",
+    "name": "Дубна",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 56.75,
+    "longitude": 37.15
+  },
+  {
+    "id": "ru_city_270",
+    "name": "Дубовка",
+    "region": "Волгоградская область",
+    "countryCode": "RU",
+    "latitude": 49.05,
+    "longitude": 44.83333
+  },
+  {
+    "id": "ru_city_271",
+    "name": "Дудинка",
+    "region": "Красноярский край",
+    "countryCode": "RU",
+    "latitude": 69.4,
+    "longitude": 86.18333
+  },
+  {
+    "id": "ru_city_272",
+    "name": "Духовщина",
+    "region": "Смоленская область",
+    "countryCode": "RU",
+    "latitude": 55.2,
+    "longitude": 32.41667
+  },
+  {
+    "id": "ru_city_273",
+    "name": "Дюртюли",
+    "region": "Башкортостан",
+    "countryCode": "RU",
+    "latitude": 55.48333,
+    "longitude": 54.86667
+  },
+  {
+    "id": "ru_city_274",
+    "name": "Дятьково",
+    "region": "Брянская область",
+    "countryCode": "RU",
+    "latitude": 53.6,
+    "longitude": 34.33333
+  },
+  {
+    "id": "ru_city_275",
+    "name": "Евпатория",
+    "region": "Крым",
+    "countryCode": "RU",
+    "latitude": 45.2,
+    "longitude": 33.35833
+  },
+  {
+    "id": "ru_city_276",
+    "name": "Егорьевск",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.38333,
+    "longitude": 39.03361
+  },
+  {
+    "id": "ru_city_277",
+    "name": "Ейск",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 46.71056,
+    "longitude": 38.27778
+  },
+  {
+    "id": "ru_city_278",
+    "name": "Екатеринбург",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 56.83333,
+    "longitude": 60.58333
+  },
+  {
+    "id": "ru_city_279",
+    "name": "Елабуга",
+    "region": "Татарстан",
+    "countryCode": "RU",
+    "latitude": 55.76667,
+    "longitude": 52.03333
+  },
+  {
+    "id": "ru_city_280",
+    "name": "Елец",
+    "region": "Липецкая область",
+    "countryCode": "RU",
+    "latitude": 52.61667,
+    "longitude": 38.46667
+  },
+  {
+    "id": "ru_city_281",
+    "name": "Елизово",
+    "region": "Камчатский край",
+    "countryCode": "RU",
+    "latitude": 53.18333,
+    "longitude": 158.38333
+  },
+  {
+    "id": "ru_city_282",
+    "name": "Ельня",
+    "region": "Смоленская область",
+    "countryCode": "RU",
+    "latitude": 54.56667,
+    "longitude": 33.16667
+  },
+  {
+    "id": "ru_city_283",
+    "name": "Еманжелинск",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 54.75,
+    "longitude": 61.31667
+  },
+  {
+    "id": "ru_city_284",
+    "name": "Емва",
+    "region": "Коми",
+    "countryCode": "RU",
+    "latitude": 62.58333,
+    "longitude": 50.85
+  },
+  {
+    "id": "ru_city_285",
+    "name": "Енисейск",
+    "region": "Красноярский край",
+    "countryCode": "RU",
+    "latitude": 58.46667,
+    "longitude": 92.13333
+  },
+  {
+    "id": "ru_city_286",
+    "name": "Ермолино",
+    "region": "Калужская область",
+    "countryCode": "RU",
+    "latitude": 55.20556,
+    "longitude": 36.57
+  },
+  {
+    "id": "ru_city_287",
+    "name": "Ершов",
+    "region": "Саратовская область",
+    "countryCode": "RU",
+    "latitude": 51.35,
+    "longitude": 48.28333
+  },
+  {
+    "id": "ru_city_288",
+    "name": "Ессентуки",
+    "region": "Ставропольский край",
+    "countryCode": "RU",
+    "latitude": 44.04306,
+    "longitude": 42.86417
+  },
+  {
+    "id": "ru_city_289",
+    "name": "Ефремов",
+    "region": "Тульская область",
+    "countryCode": "RU",
+    "latitude": 53.149167,
+    "longitude": 38.082585
+  },
+  {
+    "id": "ru_city_290",
+    "name": "Железноводск",
+    "region": "Ставропольский край",
+    "countryCode": "RU",
+    "latitude": 44.13333,
+    "longitude": 43.03333
+  },
+  {
+    "id": "ru_city_291",
+    "name": "Железногорск-Илимский",
+    "region": "Иркутская область",
+    "countryCode": "RU",
+    "latitude": 56.58333,
+    "longitude": 104.11667
+  },
+  {
+    "id": "ru_city_292",
+    "name": "Железногорск",
+    "region": "Красноярский край",
+    "countryCode": "RU",
+    "latitude": 56.25,
+    "longitude": 93.53333
+  },
+  {
+    "id": "ru_city_293",
+    "name": "Железногорск",
+    "region": "Курская область",
+    "countryCode": "RU",
+    "latitude": 52.339174,
+    "longitude": 35.351582
+  },
+  {
+    "id": "ru_city_294",
+    "name": "Жердевка",
+    "region": "Тамбовская область",
+    "countryCode": "RU",
+    "latitude": 51.83333,
+    "longitude": 41.46667
+  },
+  {
+    "id": "ru_city_295",
+    "name": "Жигулёвск",
+    "region": "Самарская область",
+    "countryCode": "RU",
+    "latitude": 53.4,
+    "longitude": 49.5
+  },
+  {
+    "id": "ru_city_296",
+    "name": "Жиздра",
+    "region": "Калужская область",
+    "countryCode": "RU",
+    "latitude": 53.75028,
+    "longitude": 34.73611
+  },
+  {
+    "id": "ru_city_297",
+    "name": "Жирновск",
+    "region": "Волгоградская область",
+    "countryCode": "RU",
+    "latitude": 50.98028,
+    "longitude": 44.78083
+  },
+  {
+    "id": "ru_city_298",
+    "name": "Жуков",
+    "region": "Калужская область",
+    "countryCode": "RU",
+    "latitude": 55.03333,
+    "longitude": 36.75
+  },
+  {
+    "id": "ru_city_299",
+    "name": "Жуковка",
+    "region": "Брянская область",
+    "countryCode": "RU",
+    "latitude": 53.53333,
+    "longitude": 33.73333
+  },
+  {
+    "id": "ru_city_300",
+    "name": "Жуковский",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.60111,
+    "longitude": 38.11611
+  },
+  {
+    "id": "ru_city_301",
+    "name": "Завитинск",
+    "region": "Амурская область",
+    "countryCode": "RU",
+    "latitude": 50.11667,
+    "longitude": 129.43333
+  },
+  {
+    "id": "ru_city_302",
+    "name": "Заводоуковск",
+    "region": "Тюменская область",
+    "countryCode": "RU",
+    "latitude": 56.5,
+    "longitude": 66.55
+  },
+  {
+    "id": "ru_city_303",
+    "name": "Заволжск",
+    "region": "Ивановская область",
+    "countryCode": "RU",
+    "latitude": 57.48333,
+    "longitude": 42.13333
+  },
+  {
+    "id": "ru_city_304",
+    "name": "Заволжье",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 56.6425,
+    "longitude": 43.39278
+  },
+  {
+    "id": "ru_city_305",
+    "name": "Задонск",
+    "region": "Липецкая область",
+    "countryCode": "RU",
+    "latitude": 52.38333,
+    "longitude": 38.91667
+  },
+  {
+    "id": "ru_city_306",
+    "name": "Заинск",
+    "region": "Татарстан",
+    "countryCode": "RU",
+    "latitude": 55.3,
+    "longitude": 52.01667
+  },
+  {
+    "id": "ru_city_307",
+    "name": "Закаменск",
+    "region": "Бурятия",
+    "countryCode": "RU",
+    "latitude": 50.38333,
+    "longitude": 103.28333
+  },
+  {
+    "id": "ru_city_308",
+    "name": "Заозёрный",
+    "region": "Красноярский край",
+    "countryCode": "RU",
+    "latitude": 55.96667,
+    "longitude": 94.7
+  },
+  {
+    "id": "ru_city_309",
+    "name": "Заозёрск",
+    "region": "Мурманская область",
+    "countryCode": "RU",
+    "latitude": 69.4,
+    "longitude": 32.45
+  },
+  {
+    "id": "ru_city_310",
+    "name": "Западная Двина",
+    "region": "Тверская область",
+    "countryCode": "RU",
+    "latitude": 56.26667,
+    "longitude": 32.08333
+  },
+  {
+    "id": "ru_city_311",
+    "name": "Заполярный",
+    "region": "Мурманская область",
+    "countryCode": "RU",
+    "latitude": 69.41667,
+    "longitude": 30.8
+  },
+  {
+    "id": "ru_city_312",
+    "name": "Зарайск",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 54.76528,
+    "longitude": 38.88361
+  },
+  {
+    "id": "ru_city_313",
+    "name": "Заречный",
+    "region": "Пензенская область",
+    "countryCode": "RU",
+    "latitude": 53.2,
+    "longitude": 45.16667
+  },
+  {
+    "id": "ru_city_314",
+    "name": "Заречный",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 56.81667,
+    "longitude": 61.31667
+  },
+  {
+    "id": "ru_city_315",
+    "name": "Заринск",
+    "region": "Алтайский край",
+    "countryCode": "RU",
+    "latitude": 53.7,
+    "longitude": 84.91667
+  },
+  {
+    "id": "ru_city_316",
+    "name": "Звенигово",
+    "region": "Марий Эл",
+    "countryCode": "RU",
+    "latitude": 55.96667,
+    "longitude": 48.01667
+  },
+  {
+    "id": "ru_city_317",
+    "name": "Звенигород",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.73333,
+    "longitude": 36.85
+  },
+  {
+    "id": "ru_city_318",
+    "name": "Зверево",
+    "region": "Ростовская область",
+    "countryCode": "RU",
+    "latitude": 48.01667,
+    "longitude": 40.11667
+  },
+  {
+    "id": "ru_city_319",
+    "name": "Зеленогорск",
+    "region": "Красноярский край",
+    "countryCode": "RU",
+    "latitude": 56.1,
+    "longitude": 94.58333
+  },
+  {
+    "id": "ru_city_320",
+    "name": "Зеленогорск",
+    "region": "Санкт-Петербург",
+    "countryCode": "RU",
+    "latitude": 60.2,
+    "longitude": 29.7
+  },
+  {
+    "id": "ru_city_321",
+    "name": "Зеленоград",
+    "region": "Москва",
+    "countryCode": "RU",
+    "latitude": 55.997917,
+    "longitude": 37.190417
+  },
+  {
+    "id": "ru_city_322",
+    "name": "Зеленоградск",
+    "region": "Калининградская область",
+    "countryCode": "RU",
+    "latitude": 54.95,
+    "longitude": 20.48333
+  },
+  {
+    "id": "ru_city_323",
+    "name": "Зеленодольск",
+    "region": "Татарстан",
+    "countryCode": "RU",
+    "latitude": 55.85,
+    "longitude": 48.51667
+  },
+  {
+    "id": "ru_city_324",
+    "name": "Зеленокумск",
+    "region": "Ставропольский край",
+    "countryCode": "RU",
+    "latitude": 44.4070115,
+    "longitude": 43.8731235
+  },
+  {
+    "id": "ru_city_325",
+    "name": "Зерноград",
+    "region": "Ростовская область",
+    "countryCode": "RU",
+    "latitude": 46.846525,
+    "longitude": 40.3040333
+  },
+  {
+    "id": "ru_city_326",
+    "name": "Зея",
+    "region": "Амурская область",
+    "countryCode": "RU",
+    "latitude": 53.73333,
+    "longitude": 127.25
+  },
+  {
+    "id": "ru_city_327",
+    "name": "Зима",
+    "region": "Иркутская область",
+    "countryCode": "RU",
+    "latitude": 53.91667,
+    "longitude": 102.05
+  },
+  {
+    "id": "ru_city_328",
+    "name": "Златоуст",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 55.16667,
+    "longitude": 59.66667
+  },
+  {
+    "id": "ru_city_329",
+    "name": "Злынка",
+    "region": "Брянская область",
+    "countryCode": "RU",
+    "latitude": 52.43333,
+    "longitude": 31.73333
+  },
+  {
+    "id": "ru_city_330",
+    "name": "Змеиногорск",
+    "region": "Алтайский край",
+    "countryCode": "RU",
+    "latitude": 51.16667,
+    "longitude": 82.16667
+  },
+  {
+    "id": "ru_city_331",
+    "name": "Знаменск",
+    "region": "Астраханская область",
+    "countryCode": "RU",
+    "latitude": 48.58333,
+    "longitude": 45.75
+  },
+  {
+    "id": "ru_city_332",
+    "name": "Зубцов",
+    "region": "Тверская область",
+    "countryCode": "RU",
+    "latitude": 56.16667,
+    "longitude": 34.58333
+  },
+  {
+    "id": "ru_city_333",
+    "name": "Зуевка",
+    "region": "Кировская область",
+    "countryCode": "RU",
+    "latitude": 58.403333,
+    "longitude": 51.130361
+  },
+  {
+    "id": "ru_city_334",
+    "name": "Ивангород",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 59.37649,
+    "longitude": 28.219712
+  },
+  {
+    "id": "ru_city_335",
+    "name": "Иваново",
+    "region": "Ивановская область",
+    "countryCode": "RU",
+    "latitude": 56.99667,
+    "longitude": 40.98194
+  },
+  {
+    "id": "ru_city_336",
+    "name": "Ивантеевка",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.97,
+    "longitude": 37.92
+  },
+  {
+    "id": "ru_city_337",
+    "name": "Ивдель",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 60.68333,
+    "longitude": 60.43333
+  },
+  {
+    "id": "ru_city_338",
+    "name": "Игарка",
+    "region": "Красноярский край",
+    "countryCode": "RU",
+    "latitude": 67.46667,
+    "longitude": 86.56667
+  },
+  {
+    "id": "ru_city_339",
+    "name": "Ижевск",
+    "region": "Удмуртия",
+    "countryCode": "RU",
+    "latitude": 56.85306,
+    "longitude": 53.21222
+  },
+  {
+    "id": "ru_city_340",
+    "name": "Избербаш",
+    "region": "Дагестан",
+    "countryCode": "RU",
+    "latitude": 42.56667,
+    "longitude": 47.86667
+  },
+  {
+    "id": "ru_city_341",
+    "name": "Изобильный",
+    "region": "Ставропольский край",
+    "countryCode": "RU",
+    "latitude": 45.36667,
+    "longitude": 41.71667
+  },
+  {
+    "id": "ru_city_342",
+    "name": "Иланский",
+    "region": "Красноярский край",
+    "countryCode": "RU",
+    "latitude": 56.23333,
+    "longitude": 96.06667
+  },
+  {
+    "id": "ru_city_343",
+    "name": "Инза",
+    "region": "Ульяновская область",
+    "countryCode": "RU",
+    "latitude": 53.85,
+    "longitude": 46.35
+  },
+  {
+    "id": "ru_city_344",
+    "name": "Инкерман",
+    "region": "Севастополь",
+    "countryCode": "RU",
+    "latitude": 44.61417,
+    "longitude": 33.60833
+  },
+  {
+    "id": "ru_city_345",
+    "name": "Иннополис",
+    "region": "Татарстан",
+    "countryCode": "RU",
+    "latitude": 55.763633,
+    "longitude": 48.736553
+  },
+  {
+    "id": "ru_city_346",
+    "name": "Инсар",
+    "region": "Мордовия",
+    "countryCode": "RU",
+    "latitude": 53.86667,
+    "longitude": 44.36667
+  },
+  {
+    "id": "ru_city_347",
+    "name": "Инта",
+    "region": "Коми",
+    "countryCode": "RU",
+    "latitude": 66.0398139,
+    "longitude": 60.1315194
+  },
+  {
+    "id": "ru_city_348",
+    "name": "Ипатово",
+    "region": "Ставропольский край",
+    "countryCode": "RU",
+    "latitude": 45.71667,
+    "longitude": 42.9
+  },
+  {
+    "id": "ru_city_349",
+    "name": "Ирбит",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 57.66667,
+    "longitude": 63.06667
+  },
+  {
+    "id": "ru_city_350",
+    "name": "Иркутск",
+    "region": "Иркутская область",
+    "countryCode": "RU",
+    "latitude": 52.28333,
+    "longitude": 104.3
+  },
+  {
+    "id": "ru_city_351",
+    "name": "Исилькуль",
+    "region": "Омская область",
+    "countryCode": "RU",
+    "latitude": 54.90889,
+    "longitude": 71.26056
+  },
+  {
+    "id": "ru_city_352",
+    "name": "Искитим",
+    "region": "Новосибирская область",
+    "countryCode": "RU",
+    "latitude": 54.63333,
+    "longitude": 83.3
+  },
+  {
+    "id": "ru_city_353",
+    "name": "Истра",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.91667,
+    "longitude": 36.86667
+  },
+  {
+    "id": "ru_city_354",
+    "name": "Ишим",
+    "region": "Тюменская область",
+    "countryCode": "RU",
+    "latitude": 56.11667,
+    "longitude": 69.5
+  },
+  {
+    "id": "ru_city_355",
+    "name": "Ишимбай",
+    "region": "Башкортостан",
+    "countryCode": "RU",
+    "latitude": 53.45444,
+    "longitude": 56.04389
+  },
+  {
+    "id": "ru_city_356",
+    "name": "Йошкар-Ола",
+    "region": "Марий Эл",
+    "countryCode": "RU",
+    "latitude": 56.632777777778,
+    "longitude": 47.895833333333
+  },
+  {
+    "id": "ru_city_357",
+    "name": "Кадников",
+    "region": "Вологодская область",
+    "countryCode": "RU",
+    "latitude": 59.5,
+    "longitude": 40.33333
+  },
+  {
+    "id": "ru_city_358",
+    "name": "Казань",
+    "region": "Татарстан",
+    "countryCode": "RU",
+    "latitude": 55.79083,
+    "longitude": 49.11444
+  },
+  {
+    "id": "ru_city_359",
+    "name": "Калач-на-Дону",
+    "region": "Волгоградская область",
+    "countryCode": "RU",
+    "latitude": 48.68333,
+    "longitude": 43.53333
+  },
+  {
+    "id": "ru_city_360",
+    "name": "Калач",
+    "region": "Воронежская область",
+    "countryCode": "RU",
+    "latitude": 50.42583,
+    "longitude": 41.01556
+  },
+  {
+    "id": "ru_city_361",
+    "name": "Калачинск",
+    "region": "Омская область",
+    "countryCode": "RU",
+    "latitude": 55.05,
+    "longitude": 74.58333
+  },
+  {
+    "id": "ru_city_362",
+    "name": "Калининград",
+    "region": "Калининградская область",
+    "countryCode": "RU",
+    "latitude": 54.71667,
+    "longitude": 20.5
+  },
+  {
+    "id": "ru_city_363",
+    "name": "Калининск",
+    "region": "Саратовская область",
+    "countryCode": "RU",
+    "latitude": 51.5,
+    "longitude": 44.45
+  },
+  {
+    "id": "ru_city_364",
+    "name": "Калтан",
+    "region": "Кемеровская область",
+    "countryCode": "RU",
+    "latitude": 53.51667,
+    "longitude": 87.26667
+  },
+  {
+    "id": "ru_city_365",
+    "name": "Калуга",
+    "region": "Калужская область",
+    "countryCode": "RU",
+    "latitude": 54.53333,
+    "longitude": 36.26667
+  },
+  {
+    "id": "ru_city_366",
+    "name": "Калязин",
+    "region": "Тверская область",
+    "countryCode": "RU",
+    "latitude": 57.23333,
+    "longitude": 37.85
+  },
+  {
+    "id": "ru_city_367",
+    "name": "Камбарка",
+    "region": "Удмуртия",
+    "countryCode": "RU",
+    "latitude": 56.26667,
+    "longitude": 54.2
+  },
+  {
+    "id": "ru_city_368",
+    "name": "Каменка",
+    "region": "Пензенская область",
+    "countryCode": "RU",
+    "latitude": 53.18333,
+    "longitude": 44.05
+  },
+  {
+    "id": "ru_city_369",
+    "name": "Каменногорск",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 60.95081,
+    "longitude": 29.130882
+  },
+  {
+    "id": "ru_city_370",
+    "name": "Каменск-Уральский",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 56.4,
+    "longitude": 61.93333
+  },
+  {
+    "id": "ru_city_371",
+    "name": "Каменск-Шахтинский",
+    "region": "Ростовская область",
+    "countryCode": "RU",
+    "latitude": 48.31667,
+    "longitude": 40.26667
+  },
+  {
+    "id": "ru_city_372",
+    "name": "Камень-на-Оби",
+    "region": "Алтайский край",
+    "countryCode": "RU",
+    "latitude": 53.79194,
+    "longitude": 81.34861
+  },
+  {
+    "id": "ru_city_373",
+    "name": "Камешково",
+    "region": "Владимирская область",
+    "countryCode": "RU",
+    "latitude": 56.34917,
+    "longitude": 40.99778
+  },
+  {
+    "id": "ru_city_374",
+    "name": "Камызяк",
+    "region": "Астраханская область",
+    "countryCode": "RU",
+    "latitude": 46.11556,
+    "longitude": 48.07694
+  },
+  {
+    "id": "ru_city_375",
+    "name": "Камышин",
+    "region": "Волгоградская область",
+    "countryCode": "RU",
+    "latitude": 50.08333,
+    "longitude": 45.4
+  },
+  {
+    "id": "ru_city_376",
+    "name": "Камышлов",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 56.85,
+    "longitude": 62.71667
+  },
+  {
+    "id": "ru_city_377",
+    "name": "Канаш",
+    "region": "Чувашия",
+    "countryCode": "RU",
+    "latitude": 55.50694,
+    "longitude": 47.49139
+  },
+  {
+    "id": "ru_city_378",
+    "name": "Кандалакша",
+    "region": "Мурманская область",
+    "countryCode": "RU",
+    "latitude": 67.15694,
+    "longitude": 32.41167
+  },
+  {
+    "id": "ru_city_379",
+    "name": "Канск",
+    "region": "Красноярский край",
+    "countryCode": "RU",
+    "latitude": 56.2,
+    "longitude": 95.7
+  },
+  {
+    "id": "ru_city_380",
+    "name": "Карабаново",
+    "region": "Владимирская область",
+    "countryCode": "RU",
+    "latitude": 56.30889,
+    "longitude": 38.70139
+  },
+  {
+    "id": "ru_city_381",
+    "name": "Карабаш",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 55.48333,
+    "longitude": 60.2
+  },
+  {
+    "id": "ru_city_382",
+    "name": "Карабулак",
+    "region": "Ингушетия",
+    "countryCode": "RU",
+    "latitude": 43.306285,
+    "longitude": 44.909763
+  },
+  {
+    "id": "ru_city_383",
+    "name": "Карасук",
+    "region": "Новосибирская область",
+    "countryCode": "RU",
+    "latitude": 53.73333,
+    "longitude": 78.03333
+  },
+  {
+    "id": "ru_city_384",
+    "name": "Карачаевск",
+    "region": "Карачаево-Черкесия",
+    "countryCode": "RU",
+    "latitude": 43.769713,
+    "longitude": 41.911369
+  },
+  {
+    "id": "ru_city_385",
+    "name": "Карачев",
+    "region": "Брянская область",
+    "countryCode": "RU",
+    "latitude": 53.11667,
+    "longitude": 34.98333
+  },
+  {
+    "id": "ru_city_386",
+    "name": "Каргат",
+    "region": "Новосибирская область",
+    "countryCode": "RU",
+    "latitude": 55.2,
+    "longitude": 80.28333
+  },
+  {
+    "id": "ru_city_387",
+    "name": "Каргополь",
+    "region": "Архангельская область",
+    "countryCode": "RU",
+    "latitude": 61.5,
+    "longitude": 38.93333
+  },
+  {
+    "id": "ru_city_388",
+    "name": "Карпинск",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 59.76667,
+    "longitude": 60
+  },
+  {
+    "id": "ru_city_389",
+    "name": "Карталы",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 53.05,
+    "longitude": 60.65
+  },
+  {
+    "id": "ru_city_390",
+    "name": "Касимов",
+    "region": "Рязанская область",
+    "countryCode": "RU",
+    "latitude": 54.95,
+    "longitude": 41.39722
+  },
+  {
+    "id": "ru_city_391",
+    "name": "Касли",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 55.88333,
+    "longitude": 60.75
+  },
+  {
+    "id": "ru_city_392",
+    "name": "Каспийск",
+    "region": "Дагестан",
+    "countryCode": "RU",
+    "latitude": 42.88333,
+    "longitude": 47.63333
+  },
+  {
+    "id": "ru_city_393",
+    "name": "Катав-Ивановск",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 54.75,
+    "longitude": 58.2
+  },
+  {
+    "id": "ru_city_394",
+    "name": "Катайск",
+    "region": "Курганская область",
+    "countryCode": "RU",
+    "latitude": 56.3,
+    "longitude": 62.56667
+  },
+  {
+    "id": "ru_city_395",
+    "name": "Качканар",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 58.7,
+    "longitude": 59.48333
+  },
+  {
+    "id": "ru_city_396",
+    "name": "Кашин",
+    "region": "Тверская область",
+    "countryCode": "RU",
+    "latitude": 57.35,
+    "longitude": 37.61667
+  },
+  {
+    "id": "ru_city_397",
+    "name": "Кашира",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 54.83333,
+    "longitude": 38.15
+  },
+  {
+    "id": "ru_city_398",
+    "name": "Кедровый",
+    "region": "Томская область",
+    "countryCode": "RU",
+    "latitude": 57.56667,
+    "longitude": 79.56667
+  },
+  {
+    "id": "ru_city_399",
+    "name": "Кемерово",
+    "region": "Кемеровская область",
+    "countryCode": "RU",
+    "latitude": 55.35417,
+    "longitude": 86.08972
+  },
+  {
+    "id": "ru_city_400",
+    "name": "Кемь",
+    "region": "Карелия",
+    "countryCode": "RU",
+    "latitude": 64.95,
+    "longitude": 34.6
+  },
+  {
+    "id": "ru_city_401",
+    "name": "Керчь",
+    "region": "Крым",
+    "countryCode": "RU",
+    "latitude": 45.33861,
+    "longitude": 36.46806
+  },
+  {
+    "id": "ru_city_402",
+    "name": "Кизел",
+    "region": "Пермский край",
+    "countryCode": "RU",
+    "latitude": 59.05,
+    "longitude": 57.65
+  },
+  {
+    "id": "ru_city_403",
+    "name": "Кизилюрт",
+    "region": "Дагестан",
+    "countryCode": "RU",
+    "latitude": 43.2,
+    "longitude": 46.86667
+  },
+  {
+    "id": "ru_city_404",
+    "name": "Кизляр",
+    "region": "Дагестан",
+    "countryCode": "RU",
+    "latitude": 43.850245,
+    "longitude": 46.71698
+  },
+  {
+    "id": "ru_city_405",
+    "name": "Кимовск",
+    "region": "Тульская область",
+    "countryCode": "RU",
+    "latitude": 53.96667,
+    "longitude": 38.53333
+  },
+  {
+    "id": "ru_city_406",
+    "name": "Кимры",
+    "region": "Тверская область",
+    "countryCode": "RU",
+    "latitude": 56.86667,
+    "longitude": 37.35
+  },
+  {
+    "id": "ru_city_407",
+    "name": "Кингисепп",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 59.378053,
+    "longitude": 28.601209
+  },
+  {
+    "id": "ru_city_408",
+    "name": "Кинель",
+    "region": "Самарская область",
+    "countryCode": "RU",
+    "latitude": 53.23333,
+    "longitude": 50.61667
+  },
+  {
+    "id": "ru_city_409",
+    "name": "Кинешма",
+    "region": "Ивановская область",
+    "countryCode": "RU",
+    "latitude": 57.45,
+    "longitude": 42.15
+  },
+  {
+    "id": "ru_city_410",
+    "name": "Киреевск",
+    "region": "Тульская область",
+    "countryCode": "RU",
+    "latitude": 53.93333,
+    "longitude": 37.93333
+  },
+  {
+    "id": "ru_city_411",
+    "name": "Киренск",
+    "region": "Иркутская область",
+    "countryCode": "RU",
+    "latitude": 57.78333,
+    "longitude": 108.1
+  },
+  {
+    "id": "ru_city_412",
+    "name": "Киржач",
+    "region": "Владимирская область",
+    "countryCode": "RU",
+    "latitude": 56.15,
+    "longitude": 38.86667
+  },
+  {
+    "id": "ru_city_413",
+    "name": "Кириллов",
+    "region": "Вологодская область",
+    "countryCode": "RU",
+    "latitude": 59.86667,
+    "longitude": 38.38333
+  },
+  {
+    "id": "ru_city_414",
+    "name": "Кириши",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 59.449695,
+    "longitude": 32.008716
+  },
+  {
+    "id": "ru_city_415",
+    "name": "Киров",
+    "region": "Калужская область",
+    "countryCode": "RU",
+    "latitude": 54.08333,
+    "longitude": 34.3
+  },
+  {
+    "id": "ru_city_416",
+    "name": "Киров",
+    "region": "Кировская область",
+    "countryCode": "RU",
+    "latitude": 58.6,
+    "longitude": 49.65
+  },
+  {
+    "id": "ru_city_417",
+    "name": "Кировград",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 57.43333,
+    "longitude": 60.06667
+  },
+  {
+    "id": "ru_city_418",
+    "name": "Кирово-Чепецк",
+    "region": "Кировская область",
+    "countryCode": "RU",
+    "latitude": 58.55,
+    "longitude": 50.01667
+  },
+  {
+    "id": "ru_city_419",
+    "name": "Кировск",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 59.87533,
+    "longitude": 30.981457
+  },
+  {
+    "id": "ru_city_420",
+    "name": "Кировск",
+    "region": "Мурманская область",
+    "countryCode": "RU",
+    "latitude": 67.61417,
+    "longitude": 33.67167
+  },
+  {
+    "id": "ru_city_421",
+    "name": "Кирс",
+    "region": "Кировская область",
+    "countryCode": "RU",
+    "latitude": 59.337167,
+    "longitude": 52.245472
+  },
+  {
+    "id": "ru_city_422",
+    "name": "Кирсанов",
+    "region": "Тамбовская область",
+    "countryCode": "RU",
+    "latitude": 52.65,
+    "longitude": 42.73333
+  },
+  {
+    "id": "ru_city_423",
+    "name": "Киселёвск",
+    "region": "Кемеровская область",
+    "countryCode": "RU",
+    "latitude": 53.98333,
+    "longitude": 86.7
+  },
+  {
+    "id": "ru_city_424",
+    "name": "Кисловодск",
+    "region": "Ставропольский край",
+    "countryCode": "RU",
+    "latitude": 43.90333,
+    "longitude": 42.72444
+  },
+  {
+    "id": "ru_city_425",
+    "name": "Клин",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 56.33389,
+    "longitude": 36.7125
+  },
+  {
+    "id": "ru_city_426",
+    "name": "Клинцы",
+    "region": "Брянская область",
+    "countryCode": "RU",
+    "latitude": 52.75278,
+    "longitude": 32.23611
+  },
+  {
+    "id": "ru_city_427",
+    "name": "Княгинино",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 55.81667,
+    "longitude": 45.03333
+  },
+  {
+    "id": "ru_city_428",
+    "name": "Ковдор",
+    "region": "Мурманская область",
+    "countryCode": "RU",
+    "latitude": 67.55944,
+    "longitude": 30.46667
+  },
+  {
+    "id": "ru_city_429",
+    "name": "Ковров",
+    "region": "Владимирская область",
+    "countryCode": "RU",
+    "latitude": 56.36056,
+    "longitude": 41.31972
+  },
+  {
+    "id": "ru_city_430",
+    "name": "Ковылкино",
+    "region": "Мордовия",
+    "countryCode": "RU",
+    "latitude": 54.03333,
+    "longitude": 43.91667
+  },
+  {
+    "id": "ru_city_431",
+    "name": "Когалым",
+    "region": "Ханты-Мансийский АО",
+    "countryCode": "RU",
+    "latitude": 62.26667,
+    "longitude": 74.48333
+  },
+  {
+    "id": "ru_city_432",
+    "name": "Кодинск",
+    "region": "Красноярский край",
+    "countryCode": "RU",
+    "latitude": 58.6,
+    "longitude": 99.18333
+  },
+  {
+    "id": "ru_city_433",
+    "name": "Козельск",
+    "region": "Калужская область",
+    "countryCode": "RU",
+    "latitude": 54.03333,
+    "longitude": 35.78333
+  },
+  {
+    "id": "ru_city_434",
+    "name": "Козловка",
+    "region": "Чувашия",
+    "countryCode": "RU",
+    "latitude": 55.83333,
+    "longitude": 48.25
+  },
+  {
+    "id": "ru_city_435",
+    "name": "Козьмодемьянск",
+    "region": "Марий Эл",
+    "countryCode": "RU",
+    "latitude": 56.33333,
+    "longitude": 46.56667
+  },
+  {
+    "id": "ru_city_436",
+    "name": "Кола",
+    "region": "Мурманская область",
+    "countryCode": "RU",
+    "latitude": 68.88306,
+    "longitude": 33.02194
+  },
+  {
+    "id": "ru_city_437",
+    "name": "Кологрив",
+    "region": "Костромская область",
+    "countryCode": "RU",
+    "latitude": 58.8252278,
+    "longitude": 44.311444
+  },
+  {
+    "id": "ru_city_438",
+    "name": "Коломна",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.09389,
+    "longitude": 38.76806
+  },
+  {
+    "id": "ru_city_439",
+    "name": "Колпашево",
+    "region": "Томская область",
+    "countryCode": "RU",
+    "latitude": 58.31667,
+    "longitude": 82.91667
+  },
+  {
+    "id": "ru_city_440",
+    "name": "Колпино",
+    "region": "Санкт-Петербург",
+    "countryCode": "RU",
+    "latitude": 59.75,
+    "longitude": 30.6
+  },
+  {
+    "id": "ru_city_441",
+    "name": "Колтуши",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 59.932919,
+    "longitude": 30.655377
+  },
+  {
+    "id": "ru_city_442",
+    "name": "Кольчугино",
+    "region": "Владимирская область",
+    "countryCode": "RU",
+    "latitude": 56.3,
+    "longitude": 39.38333
+  },
+  {
+    "id": "ru_city_443",
+    "name": "Коммунар",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 59.621609,
+    "longitude": 30.393483
+  },
+  {
+    "id": "ru_city_444",
+    "name": "Комсомольск-на-Амуре",
+    "region": "Хабаровский край",
+    "countryCode": "RU",
+    "latitude": 50.55,
+    "longitude": 137
+  },
+  {
+    "id": "ru_city_445",
+    "name": "Комсомольск",
+    "region": "Ивановская область",
+    "countryCode": "RU",
+    "latitude": 57.03333,
+    "longitude": 40.38333
+  },
+  {
+    "id": "ru_city_446",
+    "name": "Конаково",
+    "region": "Тверская область",
+    "countryCode": "RU",
+    "latitude": 56.7,
+    "longitude": 36.76667
+  },
+  {
+    "id": "ru_city_447",
+    "name": "Кондопога",
+    "region": "Карелия",
+    "countryCode": "RU",
+    "latitude": 62.2,
+    "longitude": 34.26667
+  },
+  {
+    "id": "ru_city_448",
+    "name": "Кондрово",
+    "region": "Калужская область",
+    "countryCode": "RU",
+    "latitude": 54.8,
+    "longitude": 35.93333
+  },
+  {
+    "id": "ru_city_449",
+    "name": "Константиновск",
+    "region": "Ростовская область",
+    "countryCode": "RU",
+    "latitude": 47.58333,
+    "longitude": 41.1
+  },
+  {
+    "id": "ru_city_450",
+    "name": "Копейск",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 55.1,
+    "longitude": 61.61667
+  },
+  {
+    "id": "ru_city_451",
+    "name": "Кораблино",
+    "region": "Рязанская область",
+    "countryCode": "RU",
+    "latitude": 53.91667,
+    "longitude": 40.01667
+  },
+  {
+    "id": "ru_city_452",
+    "name": "Кореновск",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 45.46667,
+    "longitude": 39.45
+  },
+  {
+    "id": "ru_city_453",
+    "name": "Коркино",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 54.88333,
+    "longitude": 61.4
+  },
+  {
+    "id": "ru_city_454",
+    "name": "Королёв",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.91667,
+    "longitude": 37.81667
+  },
+  {
+    "id": "ru_city_455",
+    "name": "Короча",
+    "region": "Белгородская область",
+    "countryCode": "RU",
+    "latitude": 50.81361,
+    "longitude": 37.18139
+  },
+  {
+    "id": "ru_city_456",
+    "name": "Корсаков",
+    "region": "Сахалинская область",
+    "countryCode": "RU",
+    "latitude": 46.63333,
+    "longitude": 142.76667
+  },
+  {
+    "id": "ru_city_457",
+    "name": "Коряжма",
+    "region": "Архангельская область",
+    "countryCode": "RU",
+    "latitude": 61.3,
+    "longitude": 47.16667
+  },
+  {
+    "id": "ru_city_458",
+    "name": "Костерёво",
+    "region": "Владимирская область",
+    "countryCode": "RU",
+    "latitude": 55.93333,
+    "longitude": 39.63333
+  },
+  {
+    "id": "ru_city_459",
+    "name": "Костомукша",
+    "region": "Карелия",
+    "countryCode": "RU",
+    "latitude": 64.58333,
+    "longitude": 30.6
+  },
+  {
+    "id": "ru_city_460",
+    "name": "Кострома",
+    "region": "Костромская область",
+    "countryCode": "RU",
+    "latitude": 57.76667,
+    "longitude": 40.93333
+  },
+  {
+    "id": "ru_city_461",
+    "name": "Котельники",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.6625,
+    "longitude": 37.86722
+  },
+  {
+    "id": "ru_city_462",
+    "name": "Котельниково",
+    "region": "Волгоградская область",
+    "countryCode": "RU",
+    "latitude": 47.63333,
+    "longitude": 43.13333
+  },
+  {
+    "id": "ru_city_463",
+    "name": "Котельнич",
+    "region": "Кировская область",
+    "countryCode": "RU",
+    "latitude": 58.3,
+    "longitude": 48.33333
+  },
+  {
+    "id": "ru_city_464",
+    "name": "Котлас",
+    "region": "Архангельская область",
+    "countryCode": "RU",
+    "latitude": 61.25,
+    "longitude": 46.65
+  },
+  {
+    "id": "ru_city_465",
+    "name": "Котово",
+    "region": "Волгоградская область",
+    "countryCode": "RU",
+    "latitude": 50.31667,
+    "longitude": 44.8
+  },
+  {
+    "id": "ru_city_466",
+    "name": "Котовск",
+    "region": "Тамбовская область",
+    "countryCode": "RU",
+    "latitude": 52.58333,
+    "longitude": 41.5
+  },
+  {
+    "id": "ru_city_467",
+    "name": "Кохма",
+    "region": "Ивановская область",
+    "countryCode": "RU",
+    "latitude": 56.93333,
+    "longitude": 41.08333
+  },
+  {
+    "id": "ru_city_468",
+    "name": "Красавино",
+    "region": "Вологодская область",
+    "countryCode": "RU",
+    "latitude": 60.96667,
+    "longitude": 46.48333
+  },
+  {
+    "id": "ru_city_469",
+    "name": "Красноармейск",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 56.12278,
+    "longitude": 38.14611
+  },
+  {
+    "id": "ru_city_470",
+    "name": "Красноармейск",
+    "region": "Саратовская область",
+    "countryCode": "RU",
+    "latitude": 51.01667,
+    "longitude": 45.7
+  },
+  {
+    "id": "ru_city_471",
+    "name": "Красновишерск",
+    "region": "Пермский край",
+    "countryCode": "RU",
+    "latitude": 60.4,
+    "longitude": 57.06667
+  },
+  {
+    "id": "ru_city_472",
+    "name": "Красногорск",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.81667,
+    "longitude": 37.33333
+  },
+  {
+    "id": "ru_city_473",
+    "name": "Краснодар",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 45.03333,
+    "longitude": 38.98333
+  },
+  {
+    "id": "ru_city_474",
+    "name": "Красное Село",
+    "region": "Санкт-Петербург",
+    "countryCode": "RU",
+    "latitude": 59.733745,
+    "longitude": 30.086205
+  },
+  {
+    "id": "ru_city_475",
+    "name": "Краснозаводск",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 56.43806,
+    "longitude": 38.22944
+  },
+  {
+    "id": "ru_city_476",
+    "name": "Краснознаменск",
+    "region": "Калининградская область",
+    "countryCode": "RU",
+    "latitude": 54.95,
+    "longitude": 22.5
+  },
+  {
+    "id": "ru_city_477",
+    "name": "Краснознаменск",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.6,
+    "longitude": 37.03333
+  },
+  {
+    "id": "ru_city_478",
+    "name": "Краснокаменск",
+    "region": "Забайкальский край",
+    "countryCode": "RU",
+    "latitude": 50.1,
+    "longitude": 118.03333
+  },
+  {
+    "id": "ru_city_479",
+    "name": "Краснокамск",
+    "region": "Пермский край",
+    "countryCode": "RU",
+    "latitude": 58.08333,
+    "longitude": 55.75
+  },
+  {
+    "id": "ru_city_480",
+    "name": "Красноперекопск",
+    "region": "Крым",
+    "countryCode": "RU",
+    "latitude": 45.955306,
+    "longitude": 33.795
+  },
+  {
+    "id": "ru_city_481",
+    "name": "Краснослободск",
+    "region": "Волгоградская область",
+    "countryCode": "RU",
+    "latitude": 48.7,
+    "longitude": 44.566666666667
+  },
+  {
+    "id": "ru_city_482",
+    "name": "Краснослободск",
+    "region": "Мордовия",
+    "countryCode": "RU",
+    "latitude": 54.43333,
+    "longitude": 43.78333
+  },
+  {
+    "id": "ru_city_483",
+    "name": "Краснотурьинск",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 59.76667,
+    "longitude": 60.2
+  },
+  {
+    "id": "ru_city_484",
+    "name": "Красноуральск",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 58.35,
+    "longitude": 60.05
+  },
+  {
+    "id": "ru_city_485",
+    "name": "Красноуфимск",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 56.61667,
+    "longitude": 57.76667
+  },
+  {
+    "id": "ru_city_486",
+    "name": "Красноярск",
+    "region": "Красноярский край",
+    "countryCode": "RU",
+    "latitude": 56.012083,
+    "longitude": 92.871295
+  },
+  {
+    "id": "ru_city_487",
+    "name": "Красный Кут",
+    "region": "Саратовская область",
+    "countryCode": "RU",
+    "latitude": 50.95,
+    "longitude": 46.96667
+  },
+  {
+    "id": "ru_city_488",
+    "name": "Красный Сулин",
+    "region": "Ростовская область",
+    "countryCode": "RU",
+    "latitude": 47.88333,
+    "longitude": 40.06667
+  },
+  {
+    "id": "ru_city_489",
+    "name": "Красный Холм",
+    "region": "Тверская область",
+    "countryCode": "RU",
+    "latitude": 58.06329,
+    "longitude": 37.122983
+  },
+  {
+    "id": "ru_city_490",
+    "name": "Кремёнки",
+    "region": "Калужская область",
+    "countryCode": "RU",
+    "latitude": 54.88917,
+    "longitude": 37.12333
+  },
+  {
+    "id": "ru_city_491",
+    "name": "Кронштадт",
+    "region": "Санкт-Петербург",
+    "countryCode": "RU",
+    "latitude": 60,
+    "longitude": 29.76667
+  },
+  {
+    "id": "ru_city_492",
+    "name": "Кропоткин",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 45.43333,
+    "longitude": 40.56667
+  },
+  {
+    "id": "ru_city_493",
+    "name": "Крымск",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 44.93333,
+    "longitude": 38
+  },
+  {
+    "id": "ru_city_494",
+    "name": "Кстово",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 56.15167,
+    "longitude": 44.19556
+  },
+  {
+    "id": "ru_city_495",
+    "name": "Кубинка",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.57639,
+    "longitude": 36.69472
+  },
+  {
+    "id": "ru_city_496",
+    "name": "Кувандык",
+    "region": "Оренбургская область",
+    "countryCode": "RU",
+    "latitude": 51.48333,
+    "longitude": 57.35
+  },
+  {
+    "id": "ru_city_497",
+    "name": "Кувшиново",
+    "region": "Тверская область",
+    "countryCode": "RU",
+    "latitude": 57.03333,
+    "longitude": 34.16667
+  },
+  {
+    "id": "ru_city_498",
+    "name": "Кудрово",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 59.908489,
+    "longitude": 30.513569
+  },
+  {
+    "id": "ru_city_499",
+    "name": "Кудымкар",
+    "region": "Пермский край",
+    "countryCode": "RU",
+    "latitude": 59.01667,
+    "longitude": 54.66667
+  },
+  {
+    "id": "ru_city_500",
+    "name": "Кузнецк",
+    "region": "Пензенская область",
+    "countryCode": "RU",
+    "latitude": 53.11667,
+    "longitude": 46.6
+  },
+  {
+    "id": "ru_city_501",
+    "name": "Куйбышев",
+    "region": "Новосибирская область",
+    "countryCode": "RU",
+    "latitude": 55.45028,
+    "longitude": 78.3075
+  },
+  {
+    "id": "ru_city_502",
+    "name": "Кукмор",
+    "region": "Татарстан",
+    "countryCode": "RU",
+    "latitude": 56.1825,
+    "longitude": 50.90639
+  },
+  {
+    "id": "ru_city_503",
+    "name": "Кулебаки",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 55.41667,
+    "longitude": 42.51667
+  },
+  {
+    "id": "ru_city_504",
+    "name": "Кумертау",
+    "region": "Башкортостан",
+    "countryCode": "RU",
+    "latitude": 52.76667,
+    "longitude": 55.78333
+  },
+  {
+    "id": "ru_city_505",
+    "name": "Кунгур",
+    "region": "Пермский край",
+    "countryCode": "RU",
+    "latitude": 57.43333,
+    "longitude": 56.93333
+  },
+  {
+    "id": "ru_city_506",
+    "name": "Купино",
+    "region": "Новосибирская область",
+    "countryCode": "RU",
+    "latitude": 54.36667,
+    "longitude": 77.3
+  },
+  {
+    "id": "ru_city_507",
+    "name": "Курган",
+    "region": "Курганская область",
+    "countryCode": "RU",
+    "latitude": 55.44083,
+    "longitude": 65.34111
+  },
+  {
+    "id": "ru_city_508",
+    "name": "Курганинск",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 44.88333,
+    "longitude": 40.6
+  },
+  {
+    "id": "ru_city_509",
+    "name": "Курильск",
+    "region": "Сахалинская область",
+    "countryCode": "RU",
+    "latitude": 45.25,
+    "longitude": 147.883333
+  },
+  {
+    "id": "ru_city_510",
+    "name": "Курлово",
+    "region": "Владимирская область",
+    "countryCode": "RU",
+    "latitude": 55.45,
+    "longitude": 40.61667
+  },
+  {
+    "id": "ru_city_511",
+    "name": "Куровское",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.58333,
+    "longitude": 38.91667
+  },
+  {
+    "id": "ru_city_512",
+    "name": "Курск",
+    "region": "Курская область",
+    "countryCode": "RU",
+    "latitude": 51.71667,
+    "longitude": 36.18333
+  },
+  {
+    "id": "ru_city_513",
+    "name": "Куртамыш",
+    "region": "Курганская область",
+    "countryCode": "RU",
+    "latitude": 54.9,
+    "longitude": 64.43333
+  },
+  {
+    "id": "ru_city_514",
+    "name": "Курчалой",
+    "region": "Чечня",
+    "countryCode": "RU",
+    "latitude": 43.20444,
+    "longitude": 46.087812
+  },
+  {
+    "id": "ru_city_515",
+    "name": "Курчатов",
+    "region": "Курская область",
+    "countryCode": "RU",
+    "latitude": 51.66667,
+    "longitude": 35.65
+  },
+  {
+    "id": "ru_city_516",
+    "name": "Куса",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 55.33333,
+    "longitude": 59.43333
+  },
+  {
+    "id": "ru_city_517",
+    "name": "Кушва",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 58.28333,
+    "longitude": 59.73333
+  },
+  {
+    "id": "ru_city_518",
+    "name": "Кызыл",
+    "region": "Тыва",
+    "countryCode": "RU",
+    "latitude": 51.7,
+    "longitude": 94.36667
+  },
+  {
+    "id": "ru_city_519",
+    "name": "Кыштым",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 55.7,
+    "longitude": 60.55
+  },
+  {
+    "id": "ru_city_520",
+    "name": "Кяхта",
+    "region": "Бурятия",
+    "countryCode": "RU",
+    "latitude": 50.35,
+    "longitude": 106.45
+  },
+  {
+    "id": "ru_city_521",
+    "name": "Лабинск",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 44.633338,
+    "longitude": 40.733311
+  },
+  {
+    "id": "ru_city_522",
+    "name": "Лабытнанги",
+    "region": "Ямало-Ненецкий АО",
+    "countryCode": "RU",
+    "latitude": 66.65806,
+    "longitude": 66.38389
+  },
+  {
+    "id": "ru_city_523",
+    "name": "Лагань",
+    "region": "Калмыкия",
+    "countryCode": "RU",
+    "latitude": 45.3925,
+    "longitude": 47.355
+  },
+  {
+    "id": "ru_city_524",
+    "name": "Ладушкин",
+    "region": "Калининградская область",
+    "countryCode": "RU",
+    "latitude": 54.56667,
+    "longitude": 20.16667
+  },
+  {
+    "id": "ru_city_525",
+    "name": "Лаишево",
+    "region": "Татарстан",
+    "countryCode": "RU",
+    "latitude": 55.4,
+    "longitude": 49.55
+  },
+  {
+    "id": "ru_city_526",
+    "name": "Лакинск",
+    "region": "Владимирская область",
+    "countryCode": "RU",
+    "latitude": 56.01694,
+    "longitude": 39.94944
+  },
+  {
+    "id": "ru_city_527",
+    "name": "Лангепас",
+    "region": "Ханты-Мансийский АО",
+    "countryCode": "RU",
+    "latitude": 61.25,
+    "longitude": 75.16667
+  },
+  {
+    "id": "ru_city_528",
+    "name": "Лахденпохья",
+    "region": "Карелия",
+    "countryCode": "RU",
+    "latitude": 61.51667,
+    "longitude": 30.2
+  },
+  {
+    "id": "ru_city_529",
+    "name": "Лебедянь",
+    "region": "Липецкая область",
+    "countryCode": "RU",
+    "latitude": 53.0115528,
+    "longitude": 39.1281167
+  },
+  {
+    "id": "ru_city_530",
+    "name": "Лениногорск",
+    "region": "Татарстан",
+    "countryCode": "RU",
+    "latitude": 54.5988694,
+    "longitude": 52.4422722
+  },
+  {
+    "id": "ru_city_531",
+    "name": "Ленинск-Кузнецкий",
+    "region": "Кемеровская область",
+    "countryCode": "RU",
+    "latitude": 54.65,
+    "longitude": 86.16667
+  },
+  {
+    "id": "ru_city_532",
+    "name": "Ленинск",
+    "region": "Волгоградская область",
+    "countryCode": "RU",
+    "latitude": 48.7,
+    "longitude": 45.2
+  },
+  {
+    "id": "ru_city_533",
+    "name": "Ленск",
+    "region": "Якутия",
+    "countryCode": "RU",
+    "latitude": 60.71667,
+    "longitude": 114.9
+  },
+  {
+    "id": "ru_city_534",
+    "name": "Лермонтов",
+    "region": "Ставропольский край",
+    "countryCode": "RU",
+    "latitude": 44.10528,
+    "longitude": 42.97167
+  },
+  {
+    "id": "ru_city_535",
+    "name": "Лесной",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 58.63333,
+    "longitude": 59.78333
+  },
+  {
+    "id": "ru_city_536",
+    "name": "Лесозаводск",
+    "region": "Приморский край",
+    "countryCode": "RU",
+    "latitude": 45.46667,
+    "longitude": 133.4
+  },
+  {
+    "id": "ru_city_537",
+    "name": "Лесосибирск",
+    "region": "Красноярский край",
+    "countryCode": "RU",
+    "latitude": 58.23333,
+    "longitude": 92.48333
+  },
+  {
+    "id": "ru_city_538",
+    "name": "Ливны",
+    "region": "Орловская область",
+    "countryCode": "RU",
+    "latitude": 52.425306,
+    "longitude": 37.608306
+  },
+  {
+    "id": "ru_city_539",
+    "name": "Ликино-Дулёво",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.71528,
+    "longitude": 38.95778
+  },
+  {
+    "id": "ru_city_540",
+    "name": "Липецк",
+    "region": "Липецкая область",
+    "countryCode": "RU",
+    "latitude": 52.61667,
+    "longitude": 39.6
+  },
+  {
+    "id": "ru_city_541",
+    "name": "Липки",
+    "region": "Тульская область",
+    "countryCode": "RU",
+    "latitude": 53.95,
+    "longitude": 37.7
+  },
+  {
+    "id": "ru_city_542",
+    "name": "Лиски",
+    "region": "Воронежская область",
+    "countryCode": "RU",
+    "latitude": 50.98222,
+    "longitude": 39.49944
+  },
+  {
+    "id": "ru_city_543",
+    "name": "Лихославль",
+    "region": "Тверская область",
+    "countryCode": "RU",
+    "latitude": 57.11667,
+    "longitude": 35.46667
+  },
+  {
+    "id": "ru_city_544",
+    "name": "Лобня",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 56.01194,
+    "longitude": 37.47444
+  },
+  {
+    "id": "ru_city_545",
+    "name": "Лодейное Поле",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 60.734305,
+    "longitude": 33.543183
+  },
+  {
+    "id": "ru_city_546",
+    "name": "Ломоносов",
+    "region": "Санкт-Петербург",
+    "countryCode": "RU",
+    "latitude": 59.91074,
+    "longitude": 29.776466
+  },
+  {
+    "id": "ru_city_547",
+    "name": "Лосино-Петровский",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.86667,
+    "longitude": 38.2
+  },
+  {
+    "id": "ru_city_548",
+    "name": "Луга",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 58.733333333333,
+    "longitude": 29.85
+  },
+  {
+    "id": "ru_city_549",
+    "name": "Луза",
+    "region": "Кировская область",
+    "countryCode": "RU",
+    "latitude": 60.61667,
+    "longitude": 47.28333
+  },
+  {
+    "id": "ru_city_550",
+    "name": "Лукоянов",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 55.03833,
+    "longitude": 44.49778
+  },
+  {
+    "id": "ru_city_551",
+    "name": "Луховицы",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 54.96667,
+    "longitude": 39.025
+  },
+  {
+    "id": "ru_city_552",
+    "name": "Лысково",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 56.01278,
+    "longitude": 45.02528
+  },
+  {
+    "id": "ru_city_553",
+    "name": "Лысьва",
+    "region": "Пермский край",
+    "countryCode": "RU",
+    "latitude": 58.1003806,
+    "longitude": 57.8043278
+  },
+  {
+    "id": "ru_city_554",
+    "name": "Лыткарино",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.58361,
+    "longitude": 37.90556
+  },
+  {
+    "id": "ru_city_555",
+    "name": "Льгов",
+    "region": "Курская область",
+    "countryCode": "RU",
+    "latitude": 51.66667,
+    "longitude": 35.26667
+  },
+  {
+    "id": "ru_city_556",
+    "name": "Любань",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 59.349301,
+    "longitude": 31.24858
+  },
+  {
+    "id": "ru_city_557",
+    "name": "Люберцы",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.68139,
+    "longitude": 37.89389
+  },
+  {
+    "id": "ru_city_558",
+    "name": "Любим",
+    "region": "Ярославская область",
+    "countryCode": "RU",
+    "latitude": 58.35,
+    "longitude": 40.7
+  },
+  {
+    "id": "ru_city_559",
+    "name": "Людиново",
+    "region": "Калужская область",
+    "countryCode": "RU",
+    "latitude": 53.86667,
+    "longitude": 34.46667
+  },
+  {
+    "id": "ru_city_560",
+    "name": "Лянтор",
+    "region": "Ханты-Мансийский АО",
+    "countryCode": "RU",
+    "latitude": 61.61667,
+    "longitude": 72.16667
+  },
+  {
+    "id": "ru_city_561",
+    "name": "Магадан",
+    "region": "Магаданская область",
+    "countryCode": "RU",
+    "latitude": 59.56667,
+    "longitude": 150.8
+  },
+  {
+    "id": "ru_city_562",
+    "name": "Магас",
+    "region": "Ингушетия",
+    "countryCode": "RU",
+    "latitude": 43.16667,
+    "longitude": 44.81667
+  },
+  {
+    "id": "ru_city_563",
+    "name": "Магнитогорск",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 53.38333,
+    "longitude": 59.03333
+  },
+  {
+    "id": "ru_city_564",
+    "name": "Майкоп",
+    "region": "Адыгея",
+    "countryCode": "RU",
+    "latitude": 44.611,
+    "longitude": 40.111
+  },
+  {
+    "id": "ru_city_565",
+    "name": "Майский",
+    "region": "Кабардино-Балкария",
+    "countryCode": "RU",
+    "latitude": 43.630508,
+    "longitude": 44.067733
+  },
+  {
+    "id": "ru_city_566",
+    "name": "Макаров",
+    "region": "Сахалинская область",
+    "countryCode": "RU",
+    "latitude": 48.61667,
+    "longitude": 142.78333
+  },
+  {
+    "id": "ru_city_567",
+    "name": "Макарьев",
+    "region": "Костромская область",
+    "countryCode": "RU",
+    "latitude": 57.88333,
+    "longitude": 43.8
+  },
+  {
+    "id": "ru_city_568",
+    "name": "Макушино",
+    "region": "Курганская область",
+    "countryCode": "RU",
+    "latitude": 55.2,
+    "longitude": 67.25
+  },
+  {
+    "id": "ru_city_569",
+    "name": "Малая Вишера",
+    "region": "Новгородская область",
+    "countryCode": "RU",
+    "latitude": 58.85,
+    "longitude": 32.21667
+  },
+  {
+    "id": "ru_city_570",
+    "name": "Малгобек",
+    "region": "Ингушетия",
+    "countryCode": "RU",
+    "latitude": 43.508882,
+    "longitude": 44.585563
+  },
+  {
+    "id": "ru_city_571",
+    "name": "Малмыж",
+    "region": "Кировская область",
+    "countryCode": "RU",
+    "latitude": 56.52278,
+    "longitude": 50.68083
+  },
+  {
+    "id": "ru_city_572",
+    "name": "Малоархангельск",
+    "region": "Орловская область",
+    "countryCode": "RU",
+    "latitude": 52.4,
+    "longitude": 36.5
+  },
+  {
+    "id": "ru_city_573",
+    "name": "Малоярославец",
+    "region": "Калужская область",
+    "countryCode": "RU",
+    "latitude": 55,
+    "longitude": 36.46667
+  },
+  {
+    "id": "ru_city_574",
+    "name": "Мамадыш",
+    "region": "Татарстан",
+    "countryCode": "RU",
+    "latitude": 55.7,
+    "longitude": 51.4
+  },
+  {
+    "id": "ru_city_575",
+    "name": "Мамоново",
+    "region": "Калининградская область",
+    "countryCode": "RU",
+    "latitude": 54.46667,
+    "longitude": 19.93333
+  },
+  {
+    "id": "ru_city_576",
+    "name": "Мантурово",
+    "region": "Костромская область",
+    "countryCode": "RU",
+    "latitude": 58.33333,
+    "longitude": 44.76667
+  },
+  {
+    "id": "ru_city_577",
+    "name": "Мариинск",
+    "region": "Кемеровская область",
+    "countryCode": "RU",
+    "latitude": 56.21667,
+    "longitude": 87.75
+  },
+  {
+    "id": "ru_city_578",
+    "name": "Мариинский Посад",
+    "region": "Чувашия",
+    "countryCode": "RU",
+    "latitude": 56.11667,
+    "longitude": 47.71667
+  },
+  {
+    "id": "ru_city_579",
+    "name": "Маркс",
+    "region": "Саратовская область",
+    "countryCode": "RU",
+    "latitude": 51.7,
+    "longitude": 46.75
+  },
+  {
+    "id": "ru_city_580",
+    "name": "Махачкала",
+    "region": "Дагестан",
+    "countryCode": "RU",
+    "latitude": 42.98333,
+    "longitude": 47.5
+  },
+  {
+    "id": "ru_city_581",
+    "name": "Мглин",
+    "region": "Брянская область",
+    "countryCode": "RU",
+    "latitude": 53.06111,
+    "longitude": 32.84833
+  },
+  {
+    "id": "ru_city_582",
+    "name": "Мегион",
+    "region": "Ханты-Мансийский АО",
+    "countryCode": "RU",
+    "latitude": 61.033055555556,
+    "longitude": 76.109722222222
+  },
+  {
+    "id": "ru_city_583",
+    "name": "Медвежьегорск",
+    "region": "Карелия",
+    "countryCode": "RU",
+    "latitude": 62.91667,
+    "longitude": 34.45
+  },
+  {
+    "id": "ru_city_584",
+    "name": "Медногорск",
+    "region": "Оренбургская область",
+    "countryCode": "RU",
+    "latitude": 51.422085,
+    "longitude": 57.595296
+  },
+  {
+    "id": "ru_city_585",
+    "name": "Медынь",
+    "region": "Калужская область",
+    "countryCode": "RU",
+    "latitude": 54.96667,
+    "longitude": 35.86667
+  },
+  {
+    "id": "ru_city_586",
+    "name": "Межгорье",
+    "region": "Башкортостан",
+    "countryCode": "RU",
+    "latitude": 54.24167,
+    "longitude": 57.96778
+  },
+  {
+    "id": "ru_city_587",
+    "name": "Междуреченск",
+    "region": "Кемеровская область",
+    "countryCode": "RU",
+    "latitude": 53.68333,
+    "longitude": 88.05
+  },
+  {
+    "id": "ru_city_588",
+    "name": "Мезень",
+    "region": "Архангельская область",
+    "countryCode": "RU",
+    "latitude": 65.85,
+    "longitude": 44.23333
+  },
+  {
+    "id": "ru_city_589",
+    "name": "Меленки",
+    "region": "Владимирская область",
+    "countryCode": "RU",
+    "latitude": 55.33333,
+    "longitude": 41.63333
+  },
+  {
+    "id": "ru_city_590",
+    "name": "Мелеуз",
+    "region": "Башкортостан",
+    "countryCode": "RU",
+    "latitude": 52.95,
+    "longitude": 55.93333
+  },
+  {
+    "id": "ru_city_591",
+    "name": "Менделеевск",
+    "region": "Татарстан",
+    "countryCode": "RU",
+    "latitude": 55.9,
+    "longitude": 52.316666666667
+  },
+  {
+    "id": "ru_city_592",
+    "name": "Мензелинск",
+    "region": "Татарстан",
+    "countryCode": "RU",
+    "latitude": 55.71667,
+    "longitude": 53.08333
+  },
+  {
+    "id": "ru_city_593",
+    "name": "Мещовск",
+    "region": "Калужская область",
+    "countryCode": "RU",
+    "latitude": 54.31667,
+    "longitude": 35.28333
+  },
+  {
+    "id": "ru_city_594",
+    "name": "Миасс",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 55.05,
+    "longitude": 60.1
+  },
+  {
+    "id": "ru_city_595",
+    "name": "Микунь",
+    "region": "Коми",
+    "countryCode": "RU",
+    "latitude": 62.35,
+    "longitude": 50.06667
+  },
+  {
+    "id": "ru_city_596",
+    "name": "Миллерово",
+    "region": "Ростовская область",
+    "countryCode": "RU",
+    "latitude": 48.91667,
+    "longitude": 40.4
+  },
+  {
+    "id": "ru_city_597",
+    "name": "Минеральные Воды",
+    "region": "Ставропольский край",
+    "countryCode": "RU",
+    "latitude": 44.20083,
+    "longitude": 43.1125
+  },
+  {
+    "id": "ru_city_598",
+    "name": "Минусинск",
+    "region": "Красноярский край",
+    "countryCode": "RU",
+    "latitude": 53.7,
+    "longitude": 91.68333
+  },
+  {
+    "id": "ru_city_599",
+    "name": "Миньяр",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 55.06667,
+    "longitude": 57.55
+  },
+  {
+    "id": "ru_city_600",
+    "name": "Мирный",
+    "region": "Архангельская область",
+    "countryCode": "RU",
+    "latitude": 62.76028,
+    "longitude": 40.33528
+  },
+  {
+    "id": "ru_city_601",
+    "name": "Мирный",
+    "region": "Якутия",
+    "countryCode": "RU",
+    "latitude": 62.53333,
+    "longitude": 113.95
+  },
+  {
+    "id": "ru_city_602",
+    "name": "Михайлов",
+    "region": "Рязанская область",
+    "countryCode": "RU",
+    "latitude": 54.23333,
+    "longitude": 39.03333
+  },
+  {
+    "id": "ru_city_603",
+    "name": "Михайловка",
+    "region": "Волгоградская область",
+    "countryCode": "RU",
+    "latitude": 50.06667,
+    "longitude": 43.23333
+  },
+  {
+    "id": "ru_city_604",
+    "name": "Михайловск",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 56.43333,
+    "longitude": 59.11667
+  },
+  {
+    "id": "ru_city_605",
+    "name": "Михайловск",
+    "region": "Ставропольский край",
+    "countryCode": "RU",
+    "latitude": 45.130012,
+    "longitude": 42.027487
+  },
+  {
+    "id": "ru_city_606",
+    "name": "Мичуринск",
+    "region": "Тамбовская область",
+    "countryCode": "RU",
+    "latitude": 52.89222,
+    "longitude": 40.49278
+  },
+  {
+    "id": "ru_city_607",
+    "name": "Могоча",
+    "region": "Забайкальский край",
+    "countryCode": "RU",
+    "latitude": 53.73333,
+    "longitude": 119.76667
+  },
+  {
+    "id": "ru_city_608",
+    "name": "Можайск",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.5,
+    "longitude": 36.03333
+  },
+  {
+    "id": "ru_city_609",
+    "name": "Можга",
+    "region": "Удмуртия",
+    "countryCode": "RU",
+    "latitude": 56.45,
+    "longitude": 52.21667
+  },
+  {
+    "id": "ru_city_610",
+    "name": "Моздок",
+    "region": "Северная Осетия",
+    "countryCode": "RU",
+    "latitude": 43.736575,
+    "longitude": 44.652834
+  },
+  {
+    "id": "ru_city_611",
+    "name": "Мончегорск",
+    "region": "Мурманская область",
+    "countryCode": "RU",
+    "latitude": 67.93944,
+    "longitude": 32.91556
+  },
+  {
+    "id": "ru_city_612",
+    "name": "Морозовск",
+    "region": "Ростовская область",
+    "countryCode": "RU",
+    "latitude": 48.35,
+    "longitude": 41.833333333333
+  },
+  {
+    "id": "ru_city_613",
+    "name": "Моршанск",
+    "region": "Тамбовская область",
+    "countryCode": "RU",
+    "latitude": 53.45,
+    "longitude": 41.8
+  },
+  {
+    "id": "ru_city_614",
+    "name": "Мосальск",
+    "region": "Калужская область",
+    "countryCode": "RU",
+    "latitude": 54.48333,
+    "longitude": 34.98333
+  },
+  {
+    "id": "ru_city_615",
+    "name": "Москва",
+    "region": "Москва",
+    "countryCode": "RU",
+    "latitude": 55.755833333333,
+    "longitude": 37.617777777778
+  },
+  {
+    "id": "ru_city_616",
+    "name": "Московский",
+    "region": "Москва",
+    "countryCode": "RU",
+    "latitude": 55.6,
+    "longitude": 37.35
+  },
+  {
+    "id": "ru_city_617",
+    "name": "Муравленко",
+    "region": "Ямало-Ненецкий АО",
+    "countryCode": "RU",
+    "latitude": 63.79444,
+    "longitude": 74.49722
+  },
+  {
+    "id": "ru_city_618",
+    "name": "Мураши",
+    "region": "Кировская область",
+    "countryCode": "RU",
+    "latitude": 59.38333,
+    "longitude": 48.96667
+  },
+  {
+    "id": "ru_city_619",
+    "name": "Мурино",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 60.051284,
+    "longitude": 30.438578
+  },
+  {
+    "id": "ru_city_620",
+    "name": "Мурманск",
+    "region": "Мурманская область",
+    "countryCode": "RU",
+    "latitude": 68.96667,
+    "longitude": 33.08333
+  },
+  {
+    "id": "ru_city_621",
+    "name": "Муром",
+    "region": "Владимирская область",
+    "countryCode": "RU",
+    "latitude": 55.5725,
+    "longitude": 42.05139
+  },
+  {
+    "id": "ru_city_622",
+    "name": "Мценск",
+    "region": "Орловская область",
+    "countryCode": "RU",
+    "latitude": 53.27833,
+    "longitude": 36.575
+  },
+  {
+    "id": "ru_city_623",
+    "name": "Мыски",
+    "region": "Кемеровская область",
+    "countryCode": "RU",
+    "latitude": 53.7,
+    "longitude": 87.81667
+  },
+  {
+    "id": "ru_city_624",
+    "name": "Мытищи",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.91667,
+    "longitude": 37.73333
+  },
+  {
+    "id": "ru_city_625",
+    "name": "Мышкин",
+    "region": "Ярославская область",
+    "countryCode": "RU",
+    "latitude": 57.78333,
+    "longitude": 38.45
+  },
+  {
+    "id": "ru_city_626",
+    "name": "Набережные Челны",
+    "region": "Татарстан",
+    "countryCode": "RU",
+    "latitude": 55.7,
+    "longitude": 52.33333
+  },
+  {
+    "id": "ru_city_627",
+    "name": "Навашино",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 55.53333,
+    "longitude": 42.2
+  },
+  {
+    "id": "ru_city_628",
+    "name": "Наволоки",
+    "region": "Ивановская область",
+    "countryCode": "RU",
+    "latitude": 57.46667,
+    "longitude": 41.96667
+  },
+  {
+    "id": "ru_city_629",
+    "name": "Надым",
+    "region": "Ямало-Ненецкий АО",
+    "countryCode": "RU",
+    "latitude": 65.53333,
+    "longitude": 72.51667
+  },
+  {
+    "id": "ru_city_630",
+    "name": "Назарово",
+    "region": "Красноярский край",
+    "countryCode": "RU",
+    "latitude": 56.00639,
+    "longitude": 90.39139
+  },
+  {
+    "id": "ru_city_631",
+    "name": "Назрань",
+    "region": "Ингушетия",
+    "countryCode": "RU",
+    "latitude": 43.21667,
+    "longitude": 44.76667
+  },
+  {
+    "id": "ru_city_632",
+    "name": "Называевск",
+    "region": "Омская область",
+    "countryCode": "RU",
+    "latitude": 55.56667,
+    "longitude": 71.35
+  },
+  {
+    "id": "ru_city_633",
+    "name": "Нальчик",
+    "region": "Кабардино-Балкария",
+    "countryCode": "RU",
+    "latitude": 43.485259,
+    "longitude": 43.607072
+  },
+  {
+    "id": "ru_city_634",
+    "name": "Нариманов",
+    "region": "Астраханская область",
+    "countryCode": "RU",
+    "latitude": 46.68333,
+    "longitude": 47.85
+  },
+  {
+    "id": "ru_city_635",
+    "name": "Наро-Фоминск",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.38333,
+    "longitude": 36.73333
+  },
+  {
+    "id": "ru_city_636",
+    "name": "Нарткала",
+    "region": "Кабардино-Балкария",
+    "countryCode": "RU",
+    "latitude": 43.556734,
+    "longitude": 43.862222
+  },
+  {
+    "id": "ru_city_637",
+    "name": "Нарьян-Мар",
+    "region": "Ненецкий АО",
+    "countryCode": "RU",
+    "latitude": 67.63778,
+    "longitude": 53.00667
+  },
+  {
+    "id": "ru_city_638",
+    "name": "Находка",
+    "region": "Приморский край",
+    "countryCode": "RU",
+    "latitude": 42.81667,
+    "longitude": 132.88333
+  },
+  {
+    "id": "ru_city_639",
+    "name": "Невель",
+    "region": "Псковская область",
+    "countryCode": "RU",
+    "latitude": 56.01667,
+    "longitude": 29.93333
+  },
+  {
+    "id": "ru_city_640",
+    "name": "Невельск",
+    "region": "Сахалинская область",
+    "countryCode": "RU",
+    "latitude": 46.65,
+    "longitude": 141.86667
+  },
+  {
+    "id": "ru_city_641",
+    "name": "Невинномысск",
+    "region": "Ставропольский край",
+    "countryCode": "RU",
+    "latitude": 44.63333,
+    "longitude": 41.93333
+  },
+  {
+    "id": "ru_city_642",
+    "name": "Невьянск",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 57.48333,
+    "longitude": 60.2
+  },
+  {
+    "id": "ru_city_643",
+    "name": "Нелидово",
+    "region": "Тверская область",
+    "countryCode": "RU",
+    "latitude": 56.21667,
+    "longitude": 32.78333
+  },
+  {
+    "id": "ru_city_644",
+    "name": "Неман",
+    "region": "Калининградская область",
+    "countryCode": "RU",
+    "latitude": 55.03333,
+    "longitude": 22.03333
+  },
+  {
+    "id": "ru_city_645",
+    "name": "Нерехта",
+    "region": "Костромская область",
+    "countryCode": "RU",
+    "latitude": 57.45,
+    "longitude": 40.58333
+  },
+  {
+    "id": "ru_city_646",
+    "name": "Нерчинск",
+    "region": "Забайкальский край",
+    "countryCode": "RU",
+    "latitude": 51.98333,
+    "longitude": 116.58333
+  },
+  {
+    "id": "ru_city_647",
+    "name": "Нерюнгри",
+    "region": "Якутия",
+    "countryCode": "RU",
+    "latitude": 56.65833,
+    "longitude": 124.725
+  },
+  {
+    "id": "ru_city_648",
+    "name": "Нестеров",
+    "region": "Калининградская область",
+    "countryCode": "RU",
+    "latitude": 54.63333,
+    "longitude": 22.56667
+  },
+  {
+    "id": "ru_city_649",
+    "name": "Нефтегорск",
+    "region": "Самарская область",
+    "countryCode": "RU",
+    "latitude": 52.8,
+    "longitude": 51.16667
+  },
+  {
+    "id": "ru_city_650",
+    "name": "Нефтекамск",
+    "region": "Башкортостан",
+    "countryCode": "RU",
+    "latitude": 56.08889,
+    "longitude": 54.24639
+  },
+  {
+    "id": "ru_city_651",
+    "name": "Нефтекумск",
+    "region": "Ставропольский край",
+    "countryCode": "RU",
+    "latitude": 44.75056,
+    "longitude": 44.97972
+  },
+  {
+    "id": "ru_city_652",
+    "name": "Нефтеюганск",
+    "region": "Ханты-Мансийский АО",
+    "countryCode": "RU",
+    "latitude": 61.1,
+    "longitude": 72.6
+  },
+  {
+    "id": "ru_city_653",
+    "name": "Нея",
+    "region": "Костромская область",
+    "countryCode": "RU",
+    "latitude": 58.29444,
+    "longitude": 43.87806
+  },
+  {
+    "id": "ru_city_654",
+    "name": "Нижневартовск",
+    "region": "Ханты-Мансийский АО",
+    "countryCode": "RU",
+    "latitude": 60.93389,
+    "longitude": 76.58111
+  },
+  {
+    "id": "ru_city_655",
+    "name": "Нижнекамск",
+    "region": "Татарстан",
+    "countryCode": "RU",
+    "latitude": 55.63333,
+    "longitude": 51.81667
+  },
+  {
+    "id": "ru_city_656",
+    "name": "Нижнеудинск",
+    "region": "Иркутская область",
+    "countryCode": "RU",
+    "latitude": 54.9,
+    "longitude": 99.01667
+  },
+  {
+    "id": "ru_city_657",
+    "name": "Нижние Серги",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 56.66667,
+    "longitude": 59.3
+  },
+  {
+    "id": "ru_city_658",
+    "name": "Нижний Ломов",
+    "region": "Пензенская область",
+    "countryCode": "RU",
+    "latitude": 53.53333,
+    "longitude": 43.68333
+  },
+  {
+    "id": "ru_city_659",
+    "name": "Нижний Новгород",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 56.32694,
+    "longitude": 44.0075
+  },
+  {
+    "id": "ru_city_660",
+    "name": "Нижний Тагил",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 57.91667,
+    "longitude": 59.96667
+  },
+  {
+    "id": "ru_city_661",
+    "name": "Нижняя Салда",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 58.08333,
+    "longitude": 60.71667
+  },
+  {
+    "id": "ru_city_662",
+    "name": "Нижняя Тура",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 58.62083,
+    "longitude": 59.84778
+  },
+  {
+    "id": "ru_city_663",
+    "name": "Николаевск-на-Амуре",
+    "region": "Хабаровский край",
+    "countryCode": "RU",
+    "latitude": 53.15,
+    "longitude": 140.73333
+  },
+  {
+    "id": "ru_city_664",
+    "name": "Николаевск",
+    "region": "Волгоградская область",
+    "countryCode": "RU",
+    "latitude": 50.02722,
+    "longitude": 45.46306
+  },
+  {
+    "id": "ru_city_665",
+    "name": "Никольск",
+    "region": "Вологодская область",
+    "countryCode": "RU",
+    "latitude": 59.53333,
+    "longitude": 45.45
+  },
+  {
+    "id": "ru_city_666",
+    "name": "Никольск",
+    "region": "Пензенская область",
+    "countryCode": "RU",
+    "latitude": 53.71667,
+    "longitude": 46.08333
+  },
+  {
+    "id": "ru_city_667",
+    "name": "Никольское",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 59.704642,
+    "longitude": 30.788975
+  },
+  {
+    "id": "ru_city_668",
+    "name": "Новая Ладога",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 60.106401,
+    "longitude": 32.316183
+  },
+  {
+    "id": "ru_city_669",
+    "name": "Новая Ляля",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 59.05,
+    "longitude": 60.6
+  },
+  {
+    "id": "ru_city_670",
+    "name": "Новоалександровск",
+    "region": "Ставропольский край",
+    "countryCode": "RU",
+    "latitude": 45.49333,
+    "longitude": 41.21694
+  },
+  {
+    "id": "ru_city_671",
+    "name": "Новоалтайск",
+    "region": "Алтайский край",
+    "countryCode": "RU",
+    "latitude": 53.4,
+    "longitude": 83.93333
+  },
+  {
+    "id": "ru_city_672",
+    "name": "Новоаннинский",
+    "region": "Волгоградская область",
+    "countryCode": "RU",
+    "latitude": 50.51667,
+    "longitude": 42.66667
+  },
+  {
+    "id": "ru_city_673",
+    "name": "Нововоронеж",
+    "region": "Воронежская область",
+    "countryCode": "RU",
+    "latitude": 51.31667,
+    "longitude": 39.21667
+  },
+  {
+    "id": "ru_city_674",
+    "name": "Новодвинск",
+    "region": "Архангельская область",
+    "countryCode": "RU",
+    "latitude": 64.41667,
+    "longitude": 40.81667
+  },
+  {
+    "id": "ru_city_675",
+    "name": "Новозыбков",
+    "region": "Брянская область",
+    "countryCode": "RU",
+    "latitude": 52.53333,
+    "longitude": 31.93333
+  },
+  {
+    "id": "ru_city_676",
+    "name": "Новокубанск",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 45.1,
+    "longitude": 41.05
+  },
+  {
+    "id": "ru_city_677",
+    "name": "Новокузнецк",
+    "region": "Кемеровская область",
+    "countryCode": "RU",
+    "latitude": 53.73333,
+    "longitude": 87.08333
+  },
+  {
+    "id": "ru_city_678",
+    "name": "Новокуйбышевск",
+    "region": "Самарская область",
+    "countryCode": "RU",
+    "latitude": 53.1,
+    "longitude": 49.91667
+  },
+  {
+    "id": "ru_city_679",
+    "name": "Новомичуринск",
+    "region": "Рязанская область",
+    "countryCode": "RU",
+    "latitude": 54.03333,
+    "longitude": 39.75
+  },
+  {
+    "id": "ru_city_680",
+    "name": "Новомосковск",
+    "region": "Тульская область",
+    "countryCode": "RU",
+    "latitude": 54.03333,
+    "longitude": 38.26667
+  },
+  {
+    "id": "ru_city_681",
+    "name": "Новопавловск",
+    "region": "Ставропольский край",
+    "countryCode": "RU",
+    "latitude": 43.96361,
+    "longitude": 43.63944
+  },
+  {
+    "id": "ru_city_682",
+    "name": "Новоржев",
+    "region": "Псковская область",
+    "countryCode": "RU",
+    "latitude": 57.03333,
+    "longitude": 29.33333
+  },
+  {
+    "id": "ru_city_683",
+    "name": "Новороссийск",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 44.71667,
+    "longitude": 37.76667
+  },
+  {
+    "id": "ru_city_684",
+    "name": "Новосибирск",
+    "region": "Новосибирская область",
+    "countryCode": "RU",
+    "latitude": 55.01667,
+    "longitude": 82.91667
+  },
+  {
+    "id": "ru_city_685",
+    "name": "Новосиль",
+    "region": "Орловская область",
+    "countryCode": "RU",
+    "latitude": 52.96667,
+    "longitude": 37.05
+  },
+  {
+    "id": "ru_city_686",
+    "name": "Новосокольники",
+    "region": "Псковская область",
+    "countryCode": "RU",
+    "latitude": 56.33333,
+    "longitude": 30.15
+  },
+  {
+    "id": "ru_city_687",
+    "name": "Новотроицк",
+    "region": "Оренбургская область",
+    "countryCode": "RU",
+    "latitude": 51.20667,
+    "longitude": 58.32806
+  },
+  {
+    "id": "ru_city_688",
+    "name": "Новоузенск",
+    "region": "Саратовская область",
+    "countryCode": "RU",
+    "latitude": 50.45,
+    "longitude": 48.15
+  },
+  {
+    "id": "ru_city_689",
+    "name": "Новоульяновск",
+    "region": "Ульяновская область",
+    "countryCode": "RU",
+    "latitude": 54.15,
+    "longitude": 48.38333
+  },
+  {
+    "id": "ru_city_690",
+    "name": "Новоуральск",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 57.25,
+    "longitude": 60.08333
+  },
+  {
+    "id": "ru_city_691",
+    "name": "Новохопёрск",
+    "region": "Воронежская область",
+    "countryCode": "RU",
+    "latitude": 51.1,
+    "longitude": 41.61667
+  },
+  {
+    "id": "ru_city_692",
+    "name": "Новочебоксарск",
+    "region": "Чувашия",
+    "countryCode": "RU",
+    "latitude": 56.12194,
+    "longitude": 47.4925
+  },
+  {
+    "id": "ru_city_693",
+    "name": "Новочеркасск",
+    "region": "Ростовская область",
+    "countryCode": "RU",
+    "latitude": 47.43583,
+    "longitude": 40.09861
+  },
+  {
+    "id": "ru_city_694",
+    "name": "Новошахтинск",
+    "region": "Ростовская область",
+    "countryCode": "RU",
+    "latitude": 47.76667,
+    "longitude": 39.91667
+  },
+  {
+    "id": "ru_city_695",
+    "name": "Новый Оскол",
+    "region": "Белгородская область",
+    "countryCode": "RU",
+    "latitude": 50.76667,
+    "longitude": 37.86667
+  },
+  {
+    "id": "ru_city_696",
+    "name": "Новый Уренгой",
+    "region": "Ямало-Ненецкий АО",
+    "countryCode": "RU",
+    "latitude": 66.08472,
+    "longitude": 76.67889
+  },
+  {
+    "id": "ru_city_697",
+    "name": "Ногинск",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.85,
+    "longitude": 38.43333
+  },
+  {
+    "id": "ru_city_698",
+    "name": "Нолинск",
+    "region": "Кировская область",
+    "countryCode": "RU",
+    "latitude": 57.55722,
+    "longitude": 49.93417
+  },
+  {
+    "id": "ru_city_699",
+    "name": "Норильск",
+    "region": "Красноярский край",
+    "countryCode": "RU",
+    "latitude": 69.33333,
+    "longitude": 88.21667
+  },
+  {
+    "id": "ru_city_700",
+    "name": "Ноябрьск",
+    "region": "Ямало-Ненецкий АО",
+    "countryCode": "RU",
+    "latitude": 63.20167,
+    "longitude": 75.45167
+  },
+  {
+    "id": "ru_city_701",
+    "name": "Нурлат",
+    "region": "Татарстан",
+    "countryCode": "RU",
+    "latitude": 54.43333,
+    "longitude": 50.8
+  },
+  {
+    "id": "ru_city_702",
+    "name": "Нытва",
+    "region": "Пермский край",
+    "countryCode": "RU",
+    "latitude": 57.93333,
+    "longitude": 55.33333
+  },
+  {
+    "id": "ru_city_703",
+    "name": "Нюрба",
+    "region": "Якутия",
+    "countryCode": "RU",
+    "latitude": 63.28333,
+    "longitude": 118.33333
+  },
+  {
+    "id": "ru_city_704",
+    "name": "Нягань",
+    "region": "Ханты-Мансийский АО",
+    "countryCode": "RU",
+    "latitude": 62.13333,
+    "longitude": 65.38333
+  },
+  {
+    "id": "ru_city_705",
+    "name": "Нязепетровск",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 56.05,
+    "longitude": 59.6
+  },
+  {
+    "id": "ru_city_706",
+    "name": "Няндома",
+    "region": "Архангельская область",
+    "countryCode": "RU",
+    "latitude": 61.666666666667,
+    "longitude": 40.2
+  },
+  {
+    "id": "ru_city_707",
+    "name": "Облучье",
+    "region": "Еврейская АО",
+    "countryCode": "RU",
+    "latitude": 49,
+    "longitude": 131.05
+  },
+  {
+    "id": "ru_city_708",
+    "name": "Обнинск",
+    "region": "Калужская область",
+    "countryCode": "RU",
+    "latitude": 55.1,
+    "longitude": 36.61667
+  },
+  {
+    "id": "ru_city_709",
+    "name": "Обоянь",
+    "region": "Курская область",
+    "countryCode": "RU",
+    "latitude": 51.21111,
+    "longitude": 36.27639
+  },
+  {
+    "id": "ru_city_710",
+    "name": "Обь",
+    "region": "Новосибирская область",
+    "countryCode": "RU",
+    "latitude": 54.99167,
+    "longitude": 82.7125
+  },
+  {
+    "id": "ru_city_711",
+    "name": "Одинцово",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.67333,
+    "longitude": 37.27333
+  },
+  {
+    "id": "ru_city_712",
+    "name": "Озёрск",
+    "region": "Калининградская область",
+    "countryCode": "RU",
+    "latitude": 54.41667,
+    "longitude": 22.01667
+  },
+  {
+    "id": "ru_city_713",
+    "name": "Озёрск",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 55.75,
+    "longitude": 60.71667
+  },
+  {
+    "id": "ru_city_714",
+    "name": "Озёры",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 54.857875,
+    "longitude": 38.5438194
+  },
+  {
+    "id": "ru_city_715",
+    "name": "Октябрьск",
+    "region": "Самарская область",
+    "countryCode": "RU",
+    "latitude": 53.16667,
+    "longitude": 48.66667
+  },
+  {
+    "id": "ru_city_716",
+    "name": "Октябрьский",
+    "region": "Башкортостан",
+    "countryCode": "RU",
+    "latitude": 54.48333,
+    "longitude": 53.48333
+  },
+  {
+    "id": "ru_city_717",
+    "name": "Окуловка",
+    "region": "Новгородская область",
+    "countryCode": "RU",
+    "latitude": 58.38333,
+    "longitude": 33.3
+  },
+  {
+    "id": "ru_city_718",
+    "name": "Оленегорск",
+    "region": "Мурманская область",
+    "countryCode": "RU",
+    "latitude": 68.15,
+    "longitude": 33.28333
+  },
+  {
+    "id": "ru_city_719",
+    "name": "Олонец",
+    "region": "Карелия",
+    "countryCode": "RU",
+    "latitude": 60.98333,
+    "longitude": 32.96667
+  },
+  {
+    "id": "ru_city_720",
+    "name": "Олёкминск",
+    "region": "Якутия",
+    "countryCode": "RU",
+    "latitude": 60.38333,
+    "longitude": 120.43333
+  },
+  {
+    "id": "ru_city_721",
+    "name": "Омск",
+    "region": "Омская область",
+    "countryCode": "RU",
+    "latitude": 54.96667,
+    "longitude": 73.38333
+  },
+  {
+    "id": "ru_city_722",
+    "name": "Омутнинск",
+    "region": "Кировская область",
+    "countryCode": "RU",
+    "latitude": 58.66667,
+    "longitude": 52.18333
+  },
+  {
+    "id": "ru_city_723",
+    "name": "Онега",
+    "region": "Архангельская область",
+    "countryCode": "RU",
+    "latitude": 63.91667,
+    "longitude": 38.08333
+  },
+  {
+    "id": "ru_city_724",
+    "name": "Опочка",
+    "region": "Псковская область",
+    "countryCode": "RU",
+    "latitude": 56.71667,
+    "longitude": 28.65
+  },
+  {
+    "id": "ru_city_725",
+    "name": "Оренбург",
+    "region": "Оренбургская область",
+    "countryCode": "RU",
+    "latitude": 51.76667,
+    "longitude": 55.1
+  },
+  {
+    "id": "ru_city_726",
+    "name": "Орехово-Зуево",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.8,
+    "longitude": 38.96667
+  },
+  {
+    "id": "ru_city_727",
+    "name": "Орлов",
+    "region": "Кировская область",
+    "countryCode": "RU",
+    "latitude": 58.53889,
+    "longitude": 48.89861
+  },
+  {
+    "id": "ru_city_728",
+    "name": "Орск",
+    "region": "Оренбургская область",
+    "countryCode": "RU",
+    "latitude": 51.2,
+    "longitude": 58.61667
+  },
+  {
+    "id": "ru_city_729",
+    "name": "Орёл",
+    "region": "Орловская область",
+    "countryCode": "RU",
+    "latitude": 52.96667,
+    "longitude": 36.08333
+  },
+  {
+    "id": "ru_city_730",
+    "name": "Оса",
+    "region": "Пермский край",
+    "countryCode": "RU",
+    "latitude": 57.28333,
+    "longitude": 55.45
+  },
+  {
+    "id": "ru_city_731",
+    "name": "Осинники",
+    "region": "Кемеровская область",
+    "countryCode": "RU",
+    "latitude": 53.61667,
+    "longitude": 87.33333
+  },
+  {
+    "id": "ru_city_732",
+    "name": "Осташков",
+    "region": "Тверская область",
+    "countryCode": "RU",
+    "latitude": 57.15,
+    "longitude": 33.1
+  },
+  {
+    "id": "ru_city_733",
+    "name": "Остров",
+    "region": "Псковская область",
+    "countryCode": "RU",
+    "latitude": 57.33333,
+    "longitude": 28.35
+  },
+  {
+    "id": "ru_city_734",
+    "name": "Островной",
+    "region": "Мурманская область",
+    "countryCode": "RU",
+    "latitude": 68.05306,
+    "longitude": 39.51306
+  },
+  {
+    "id": "ru_city_735",
+    "name": "Острогожск",
+    "region": "Воронежская область",
+    "countryCode": "RU",
+    "latitude": 50.86667,
+    "longitude": 39.06667
+  },
+  {
+    "id": "ru_city_736",
+    "name": "Отрадное",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 59.77409,
+    "longitude": 30.794553
+  },
+  {
+    "id": "ru_city_737",
+    "name": "Отрадный",
+    "region": "Самарская область",
+    "countryCode": "RU",
+    "latitude": 53.36667,
+    "longitude": 51.35
+  },
+  {
+    "id": "ru_city_738",
+    "name": "Оха",
+    "region": "Сахалинская область",
+    "countryCode": "RU",
+    "latitude": 53.58333,
+    "longitude": 142.95
+  },
+  {
+    "id": "ru_city_739",
+    "name": "Оханск",
+    "region": "Пермский край",
+    "countryCode": "RU",
+    "latitude": 57.71667,
+    "longitude": 55.38333
+  },
+  {
+    "id": "ru_city_740",
+    "name": "Очёр",
+    "region": "Пермский край",
+    "countryCode": "RU",
+    "latitude": 57.88333,
+    "longitude": 54.71667
+  },
+  {
+    "id": "ru_city_741",
+    "name": "Павлово",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 55.96194,
+    "longitude": 43.09
+  },
+  {
+    "id": "ru_city_742",
+    "name": "Павловск",
+    "region": "Воронежская область",
+    "countryCode": "RU",
+    "latitude": 50.45,
+    "longitude": 40.06667
+  },
+  {
+    "id": "ru_city_743",
+    "name": "Павловск",
+    "region": "Санкт-Петербург",
+    "countryCode": "RU",
+    "latitude": 59.68333,
+    "longitude": 30.43333
+  },
+  {
+    "id": "ru_city_744",
+    "name": "Павловский Посад",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.78333,
+    "longitude": 38.65
+  },
+  {
+    "id": "ru_city_745",
+    "name": "Палласовка",
+    "region": "Волгоградская область",
+    "countryCode": "RU",
+    "latitude": 50.05,
+    "longitude": 46.88333
+  },
+  {
+    "id": "ru_city_746",
+    "name": "Партизанск",
+    "region": "Приморский край",
+    "countryCode": "RU",
+    "latitude": 43.13333,
+    "longitude": 133.13333
+  },
+  {
+    "id": "ru_city_747",
+    "name": "Певек",
+    "region": "Чукотский АО",
+    "countryCode": "RU",
+    "latitude": 69.7,
+    "longitude": 170.31667
+  },
+  {
+    "id": "ru_city_748",
+    "name": "Пенза",
+    "region": "Пензенская область",
+    "countryCode": "RU",
+    "latitude": 53.2,
+    "longitude": 45
+  },
+  {
+    "id": "ru_city_749",
+    "name": "Первомайск",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 54.86667,
+    "longitude": 43.8
+  },
+  {
+    "id": "ru_city_750",
+    "name": "Первоуральск",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 56.91667,
+    "longitude": 59.95
+  },
+  {
+    "id": "ru_city_751",
+    "name": "Перевоз",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 55.6,
+    "longitude": 44.55
+  },
+  {
+    "id": "ru_city_752",
+    "name": "Пересвет",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 56.41667,
+    "longitude": 38.175
+  },
+  {
+    "id": "ru_city_753",
+    "name": "Переславль-Залесский",
+    "region": "Ярославская область",
+    "countryCode": "RU",
+    "latitude": 56.7381333,
+    "longitude": 38.8561528
+  },
+  {
+    "id": "ru_city_754",
+    "name": "Пермь",
+    "region": "Пермский край",
+    "countryCode": "RU",
+    "latitude": 58.01389,
+    "longitude": 56.24889
+  },
+  {
+    "id": "ru_city_755",
+    "name": "Пестово",
+    "region": "Новгородская область",
+    "countryCode": "RU",
+    "latitude": 58.6,
+    "longitude": 35.81667
+  },
+  {
+    "id": "ru_city_756",
+    "name": "Петергоф",
+    "region": "Санкт-Петербург",
+    "countryCode": "RU",
+    "latitude": 59.88333,
+    "longitude": 29.9
+  },
+  {
+    "id": "ru_city_757",
+    "name": "Петров Вал",
+    "region": "Волгоградская область",
+    "countryCode": "RU",
+    "latitude": 50.13333,
+    "longitude": 45.21667
+  },
+  {
+    "id": "ru_city_758",
+    "name": "Петровск-Забайкальский",
+    "region": "Забайкальский край",
+    "countryCode": "RU",
+    "latitude": 51.28333,
+    "longitude": 108.83333
+  },
+  {
+    "id": "ru_city_759",
+    "name": "Петровск",
+    "region": "Саратовская область",
+    "countryCode": "RU",
+    "latitude": 52.31667,
+    "longitude": 45.38333
+  },
+  {
+    "id": "ru_city_760",
+    "name": "Петрозаводск",
+    "region": "Карелия",
+    "countryCode": "RU",
+    "latitude": 61.79611,
+    "longitude": 34.34917
+  },
+  {
+    "id": "ru_city_761",
+    "name": "Петропавловск-Камчатский",
+    "region": "Камчатский край",
+    "countryCode": "RU",
+    "latitude": 53.01667,
+    "longitude": 158.65
+  },
+  {
+    "id": "ru_city_762",
+    "name": "Петухово",
+    "region": "Курганская область",
+    "countryCode": "RU",
+    "latitude": 55.06667,
+    "longitude": 67.88333
+  },
+  {
+    "id": "ru_city_763",
+    "name": "Петушки",
+    "region": "Владимирская область",
+    "countryCode": "RU",
+    "latitude": 55.93333,
+    "longitude": 39.46667
+  },
+  {
+    "id": "ru_city_764",
+    "name": "Печора",
+    "region": "Коми",
+    "countryCode": "RU",
+    "latitude": 65.11667,
+    "longitude": 57.11667
+  },
+  {
+    "id": "ru_city_765",
+    "name": "Печоры",
+    "region": "Псковская область",
+    "countryCode": "RU",
+    "latitude": 57.81667,
+    "longitude": 27.6
+  },
+  {
+    "id": "ru_city_766",
+    "name": "Пикалёво",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 59.512684,
+    "longitude": 34.177483
+  },
+  {
+    "id": "ru_city_767",
+    "name": "Пионерский",
+    "region": "Калининградская область",
+    "countryCode": "RU",
+    "latitude": 54.95,
+    "longitude": 20.21667
+  },
+  {
+    "id": "ru_city_768",
+    "name": "Питкяранта",
+    "region": "Карелия",
+    "countryCode": "RU",
+    "latitude": 61.56667,
+    "longitude": 31.48333
+  },
+  {
+    "id": "ru_city_769",
+    "name": "Плавск",
+    "region": "Тульская область",
+    "countryCode": "RU",
+    "latitude": 53.7,
+    "longitude": 37.3
+  },
+  {
+    "id": "ru_city_770",
+    "name": "Пласт",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 54.36667,
+    "longitude": 60.81667
+  },
+  {
+    "id": "ru_city_771",
+    "name": "Плёс",
+    "region": "Ивановская область",
+    "countryCode": "RU",
+    "latitude": 57.45,
+    "longitude": 41.5
+  },
+  {
+    "id": "ru_city_772",
+    "name": "Поворино",
+    "region": "Воронежская область",
+    "countryCode": "RU",
+    "latitude": 51.2,
+    "longitude": 42.25
+  },
+  {
+    "id": "ru_city_773",
+    "name": "Подольск",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.42972,
+    "longitude": 37.54444
+  },
+  {
+    "id": "ru_city_774",
+    "name": "Подпорожье",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 60.912097,
+    "longitude": 34.167952
+  },
+  {
+    "id": "ru_city_775",
+    "name": "Покачи",
+    "region": "Ханты-Мансийский АО",
+    "countryCode": "RU",
+    "latitude": 61.75,
+    "longitude": 75.58333
+  },
+  {
+    "id": "ru_city_776",
+    "name": "Покров",
+    "region": "Владимирская область",
+    "countryCode": "RU",
+    "latitude": 55.91778,
+    "longitude": 39.175
+  },
+  {
+    "id": "ru_city_777",
+    "name": "Покровск",
+    "region": "Якутия",
+    "countryCode": "RU",
+    "latitude": 61.48333,
+    "longitude": 129.15
+  },
+  {
+    "id": "ru_city_778",
+    "name": "Полевской",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 56.45,
+    "longitude": 60.18333
+  },
+  {
+    "id": "ru_city_779",
+    "name": "Полесск",
+    "region": "Калининградская область",
+    "countryCode": "RU",
+    "latitude": 54.86667,
+    "longitude": 21.1
+  },
+  {
+    "id": "ru_city_780",
+    "name": "Полысаево",
+    "region": "Кемеровская область",
+    "countryCode": "RU",
+    "latitude": 54.6,
+    "longitude": 86.28333
+  },
+  {
+    "id": "ru_city_781",
+    "name": "Полярные Зори",
+    "region": "Мурманская область",
+    "countryCode": "RU",
+    "latitude": 67.36583,
+    "longitude": 32.49806
+  },
+  {
+    "id": "ru_city_782",
+    "name": "Полярный",
+    "region": "Мурманская область",
+    "countryCode": "RU",
+    "latitude": 69.19833,
+    "longitude": 33.45611
+  },
+  {
+    "id": "ru_city_783",
+    "name": "Поронайск",
+    "region": "Сахалинская область",
+    "countryCode": "RU",
+    "latitude": 49.21667,
+    "longitude": 143.1
+  },
+  {
+    "id": "ru_city_784",
+    "name": "Порхов",
+    "region": "Псковская область",
+    "countryCode": "RU",
+    "latitude": 57.76667,
+    "longitude": 29.55
+  },
+  {
+    "id": "ru_city_785",
+    "name": "Похвистнево",
+    "region": "Самарская область",
+    "countryCode": "RU",
+    "latitude": 53.65,
+    "longitude": 52.13333
+  },
+  {
+    "id": "ru_city_786",
+    "name": "Почеп",
+    "region": "Брянская область",
+    "countryCode": "RU",
+    "latitude": 52.93333,
+    "longitude": 33.45
+  },
+  {
+    "id": "ru_city_787",
+    "name": "Починок",
+    "region": "Смоленская область",
+    "countryCode": "RU",
+    "latitude": 54.4,
+    "longitude": 32.45
+  },
+  {
+    "id": "ru_city_788",
+    "name": "Пошехонье",
+    "region": "Ярославская область",
+    "countryCode": "RU",
+    "latitude": 58.5,
+    "longitude": 39.11667
+  },
+  {
+    "id": "ru_city_789",
+    "name": "Правдинск",
+    "region": "Калининградская область",
+    "countryCode": "RU",
+    "latitude": 54.45,
+    "longitude": 21.01667
+  },
+  {
+    "id": "ru_city_790",
+    "name": "Приволжск",
+    "region": "Ивановская область",
+    "countryCode": "RU",
+    "latitude": 57.38333,
+    "longitude": 41.28333
+  },
+  {
+    "id": "ru_city_791",
+    "name": "Приморск",
+    "region": "Калининградская область",
+    "countryCode": "RU",
+    "latitude": 54.73333,
+    "longitude": 20
+  },
+  {
+    "id": "ru_city_792",
+    "name": "Приморск",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 60.366014,
+    "longitude": 28.613561
+  },
+  {
+    "id": "ru_city_793",
+    "name": "Приморско-Ахтарск",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 46.05,
+    "longitude": 38.18333
+  },
+  {
+    "id": "ru_city_794",
+    "name": "Приозерск",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 61.035979,
+    "longitude": 30.115589
+  },
+  {
+    "id": "ru_city_795",
+    "name": "Прокопьевск",
+    "region": "Кемеровская область",
+    "countryCode": "RU",
+    "latitude": 53.88333,
+    "longitude": 86.71667
+  },
+  {
+    "id": "ru_city_796",
+    "name": "Пролетарск",
+    "region": "Ростовская область",
+    "countryCode": "RU",
+    "latitude": 46.70306,
+    "longitude": 41.71917
+  },
+  {
+    "id": "ru_city_797",
+    "name": "Протвино",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 54.87944,
+    "longitude": 37.21389
+  },
+  {
+    "id": "ru_city_798",
+    "name": "Прохладный",
+    "region": "Кабардино-Балкария",
+    "countryCode": "RU",
+    "latitude": 43.750055,
+    "longitude": 44.033333
+  },
+  {
+    "id": "ru_city_799",
+    "name": "Псков",
+    "region": "Псковская область",
+    "countryCode": "RU",
+    "latitude": 57.81667,
+    "longitude": 28.33333
+  },
+  {
+    "id": "ru_city_800",
+    "name": "Пугачёв",
+    "region": "Саратовская область",
+    "countryCode": "RU",
+    "latitude": 52.01667,
+    "longitude": 48.8
+  },
+  {
+    "id": "ru_city_801",
+    "name": "Пудож",
+    "region": "Карелия",
+    "countryCode": "RU",
+    "latitude": 61.8,
+    "longitude": 36.53333
+  },
+  {
+    "id": "ru_city_802",
+    "name": "Пустошка",
+    "region": "Псковская область",
+    "countryCode": "RU",
+    "latitude": 56.33333,
+    "longitude": 29.36667
+  },
+  {
+    "id": "ru_city_803",
+    "name": "Пучеж",
+    "region": "Ивановская область",
+    "countryCode": "RU",
+    "latitude": 56.98333,
+    "longitude": 43.16667
+  },
+  {
+    "id": "ru_city_804",
+    "name": "Пушкин",
+    "region": "Санкт-Петербург",
+    "countryCode": "RU",
+    "latitude": 59.71667,
+    "longitude": 30.41667
+  },
+  {
+    "id": "ru_city_805",
+    "name": "Пушкино",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 56.01667,
+    "longitude": 37.85
+  },
+  {
+    "id": "ru_city_806",
+    "name": "Пущино",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 54.83333,
+    "longitude": 37.61667
+  },
+  {
+    "id": "ru_city_807",
+    "name": "Пыталово",
+    "region": "Псковская область",
+    "countryCode": "RU",
+    "latitude": 57.066666666667,
+    "longitude": 27.916666666667
+  },
+  {
+    "id": "ru_city_808",
+    "name": "Пыть-Ях",
+    "region": "Ханты-Мансийский АО",
+    "countryCode": "RU",
+    "latitude": 60.75,
+    "longitude": 72.78333
+  },
+  {
+    "id": "ru_city_809",
+    "name": "Пятигорск",
+    "region": "Ставропольский край",
+    "countryCode": "RU",
+    "latitude": 44.0499664,
+    "longitude": 43.0600548
+  },
+  {
+    "id": "ru_city_810",
+    "name": "Радужный",
+    "region": "Владимирская область",
+    "countryCode": "RU",
+    "latitude": 55.99778,
+    "longitude": 40.32972
+  },
+  {
+    "id": "ru_city_811",
+    "name": "Радужный",
+    "region": "Ханты-Мансийский АО",
+    "countryCode": "RU",
+    "latitude": 62.13333,
+    "longitude": 77.46667
+  },
+  {
+    "id": "ru_city_812",
+    "name": "Райчихинск",
+    "region": "Амурская область",
+    "countryCode": "RU",
+    "latitude": 49.8,
+    "longitude": 129.4
+  },
+  {
+    "id": "ru_city_813",
+    "name": "Раменское",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.56667,
+    "longitude": 38.21667
+  },
+  {
+    "id": "ru_city_814",
+    "name": "Рассказово",
+    "region": "Тамбовская область",
+    "countryCode": "RU",
+    "latitude": 52.66667,
+    "longitude": 41.88333
+  },
+  {
+    "id": "ru_city_815",
+    "name": "Ревда",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 56.8,
+    "longitude": 59.91667
+  },
+  {
+    "id": "ru_city_816",
+    "name": "Реж",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 57.36667,
+    "longitude": 61.4
+  },
+  {
+    "id": "ru_city_817",
+    "name": "Реутов",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.760611,
+    "longitude": 37.855194
+  },
+  {
+    "id": "ru_city_818",
+    "name": "Ржев",
+    "region": "Тверская область",
+    "countryCode": "RU",
+    "latitude": 56.26556,
+    "longitude": 34.3275
+  },
+  {
+    "id": "ru_city_819",
+    "name": "Родники",
+    "region": "Ивановская область",
+    "countryCode": "RU",
+    "latitude": 57.1,
+    "longitude": 41.73333
+  },
+  {
+    "id": "ru_city_820",
+    "name": "Рославль",
+    "region": "Смоленская область",
+    "countryCode": "RU",
+    "latitude": 53.949166666667,
+    "longitude": 32.856944444444
+  },
+  {
+    "id": "ru_city_821",
+    "name": "Россошь",
+    "region": "Воронежская область",
+    "countryCode": "RU",
+    "latitude": 50.2,
+    "longitude": 39.58333
+  },
+  {
+    "id": "ru_city_822",
+    "name": "Ростов-на-Дону",
+    "region": "Ростовская область",
+    "countryCode": "RU",
+    "latitude": 47.24056,
+    "longitude": 39.71056
+  },
+  {
+    "id": "ru_city_823",
+    "name": "Ростов",
+    "region": "Ярославская область",
+    "countryCode": "RU",
+    "latitude": 57.18333,
+    "longitude": 39.41667
+  },
+  {
+    "id": "ru_city_824",
+    "name": "Рошаль",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.66361,
+    "longitude": 39.865
+  },
+  {
+    "id": "ru_city_825",
+    "name": "Ртищево",
+    "region": "Саратовская область",
+    "countryCode": "RU",
+    "latitude": 52.25,
+    "longitude": 43.78333
+  },
+  {
+    "id": "ru_city_826",
+    "name": "Рубцовск",
+    "region": "Алтайский край",
+    "countryCode": "RU",
+    "latitude": 51.52722,
+    "longitude": 81.218806
+  },
+  {
+    "id": "ru_city_827",
+    "name": "Рудня",
+    "region": "Смоленская область",
+    "countryCode": "RU",
+    "latitude": 54.95,
+    "longitude": 31.06667
+  },
+  {
+    "id": "ru_city_828",
+    "name": "Руза",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.698888888889,
+    "longitude": 36.195277777778
+  },
+  {
+    "id": "ru_city_829",
+    "name": "Рузаевка",
+    "region": "Мордовия",
+    "countryCode": "RU",
+    "latitude": 54.06667,
+    "longitude": 44.95
+  },
+  {
+    "id": "ru_city_830",
+    "name": "Рыбинск",
+    "region": "Ярославская область",
+    "countryCode": "RU",
+    "latitude": 58.05,
+    "longitude": 38.83333
+  },
+  {
+    "id": "ru_city_831",
+    "name": "Рыбное",
+    "region": "Рязанская область",
+    "countryCode": "RU",
+    "latitude": 54.73333,
+    "longitude": 39.51667
+  },
+  {
+    "id": "ru_city_832",
+    "name": "Рыльск",
+    "region": "Курская область",
+    "countryCode": "RU",
+    "latitude": 51.56667,
+    "longitude": 34.68333
+  },
+  {
+    "id": "ru_city_833",
+    "name": "Ряжск",
+    "region": "Рязанская область",
+    "countryCode": "RU",
+    "latitude": 53.71667,
+    "longitude": 40.06667
+  },
+  {
+    "id": "ru_city_834",
+    "name": "Рязань",
+    "region": "Рязанская область",
+    "countryCode": "RU",
+    "latitude": 54.61667,
+    "longitude": 39.71667
+  },
+  {
+    "id": "ru_city_835",
+    "name": "Саки",
+    "region": "Крым",
+    "countryCode": "RU",
+    "latitude": 45.13361,
+    "longitude": 33.57722
+  },
+  {
+    "id": "ru_city_836",
+    "name": "Салават",
+    "region": "Башкортостан",
+    "countryCode": "RU",
+    "latitude": 53.36667,
+    "longitude": 55.93333
+  },
+  {
+    "id": "ru_city_837",
+    "name": "Салаир",
+    "region": "Кемеровская область",
+    "countryCode": "RU",
+    "latitude": 54.23333,
+    "longitude": 85.8
+  },
+  {
+    "id": "ru_city_838",
+    "name": "Салехард",
+    "region": "Ямало-Ненецкий АО",
+    "countryCode": "RU",
+    "latitude": 66.53333,
+    "longitude": 66.63333
+  },
+  {
+    "id": "ru_city_839",
+    "name": "Сальск",
+    "region": "Ростовская область",
+    "countryCode": "RU",
+    "latitude": 46.48333,
+    "longitude": 41.53333
+  },
+  {
+    "id": "ru_city_840",
+    "name": "Самара",
+    "region": "Самарская область",
+    "countryCode": "RU",
+    "latitude": 53.18333,
+    "longitude": 50.11667
+  },
+  {
+    "id": "ru_city_841",
+    "name": "Санкт-Петербург",
+    "region": "Санкт-Петербург",
+    "countryCode": "RU",
+    "latitude": 59.95,
+    "longitude": 30.31667
+  },
+  {
+    "id": "ru_city_842",
+    "name": "Саранск",
+    "region": "Мордовия",
+    "countryCode": "RU",
+    "latitude": 54.18333,
+    "longitude": 45.18333
+  },
+  {
+    "id": "ru_city_843",
+    "name": "Сарапул",
+    "region": "Удмуртия",
+    "countryCode": "RU",
+    "latitude": 56.46667,
+    "longitude": 53.8
+  },
+  {
+    "id": "ru_city_844",
+    "name": "Саратов",
+    "region": "Саратовская область",
+    "countryCode": "RU",
+    "latitude": 51.53333,
+    "longitude": 46
+  },
+  {
+    "id": "ru_city_845",
+    "name": "Саров",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 54.93333,
+    "longitude": 43.31667
+  },
+  {
+    "id": "ru_city_846",
+    "name": "Сасово",
+    "region": "Рязанская область",
+    "countryCode": "RU",
+    "latitude": 54.35,
+    "longitude": 41.91667
+  },
+  {
+    "id": "ru_city_847",
+    "name": "Сатка",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 55.05,
+    "longitude": 59.05
+  },
+  {
+    "id": "ru_city_848",
+    "name": "Сафоново",
+    "region": "Смоленская область",
+    "countryCode": "RU",
+    "latitude": 55.1,
+    "longitude": 33.25
+  },
+  {
+    "id": "ru_city_849",
+    "name": "Саяногорск",
+    "region": "Хакасия",
+    "countryCode": "RU",
+    "latitude": 53.1,
+    "longitude": 91.4
+  },
+  {
+    "id": "ru_city_850",
+    "name": "Саянск",
+    "region": "Иркутская область",
+    "countryCode": "RU",
+    "latitude": 54.11667,
+    "longitude": 102.16667
+  },
+  {
+    "id": "ru_city_851",
+    "name": "Светлогорск",
+    "region": "Калининградская область",
+    "countryCode": "RU",
+    "latitude": 54.9394,
+    "longitude": 20.1565
+  },
+  {
+    "id": "ru_city_852",
+    "name": "Светлоград",
+    "region": "Ставропольский край",
+    "countryCode": "RU",
+    "latitude": 45.33083,
+    "longitude": 42.85111
+  },
+  {
+    "id": "ru_city_853",
+    "name": "Светлый",
+    "region": "Калининградская область",
+    "countryCode": "RU",
+    "latitude": 54.68333,
+    "longitude": 20.13333
+  },
+  {
+    "id": "ru_city_854",
+    "name": "Светогорск",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 61.10833,
+    "longitude": 28.85833
+  },
+  {
+    "id": "ru_city_855",
+    "name": "Свирск",
+    "region": "Иркутская область",
+    "countryCode": "RU",
+    "latitude": 53.08333,
+    "longitude": 103.33333
+  },
+  {
+    "id": "ru_city_856",
+    "name": "Свободный",
+    "region": "Амурская область",
+    "countryCode": "RU",
+    "latitude": 51.38333,
+    "longitude": 128.13333
+  },
+  {
+    "id": "ru_city_857",
+    "name": "Себеж",
+    "region": "Псковская область",
+    "countryCode": "RU",
+    "latitude": 56.28333,
+    "longitude": 28.48333
+  },
+  {
+    "id": "ru_city_858",
+    "name": "Севастополь",
+    "region": "Севастополь",
+    "countryCode": "RU",
+    "latitude": 44.6,
+    "longitude": 33.53333
+  },
+  {
+    "id": "ru_city_859",
+    "name": "Северо-Курильск",
+    "region": "Сахалинская область",
+    "countryCode": "RU",
+    "latitude": 50.66667,
+    "longitude": 156.11667
+  },
+  {
+    "id": "ru_city_860",
+    "name": "Северобайкальск",
+    "region": "Бурятия",
+    "countryCode": "RU",
+    "latitude": 55.63333,
+    "longitude": 109.31667
+  },
+  {
+    "id": "ru_city_861",
+    "name": "Северодвинск",
+    "region": "Архангельская область",
+    "countryCode": "RU",
+    "latitude": 64.56667,
+    "longitude": 39.85
+  },
+  {
+    "id": "ru_city_862",
+    "name": "Североморск",
+    "region": "Мурманская область",
+    "countryCode": "RU",
+    "latitude": 69.06917,
+    "longitude": 33.41667
+  },
+  {
+    "id": "ru_city_863",
+    "name": "Североуральск",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 60.15,
+    "longitude": 59.93333
+  },
+  {
+    "id": "ru_city_864",
+    "name": "Северск",
+    "region": "Томская область",
+    "countryCode": "RU",
+    "latitude": 56.6,
+    "longitude": 84.85
+  },
+  {
+    "id": "ru_city_865",
+    "name": "Севск",
+    "region": "Брянская область",
+    "countryCode": "RU",
+    "latitude": 52.15,
+    "longitude": 34.49389
+  },
+  {
+    "id": "ru_city_866",
+    "name": "Сегежа",
+    "region": "Карелия",
+    "countryCode": "RU",
+    "latitude": 63.73333,
+    "longitude": 34.31667
+  },
+  {
+    "id": "ru_city_867",
+    "name": "Сельцо",
+    "region": "Брянская область",
+    "countryCode": "RU",
+    "latitude": 53.36944,
+    "longitude": 34.1
+  },
+  {
+    "id": "ru_city_868",
+    "name": "Семикаракорск",
+    "region": "Ростовская область",
+    "countryCode": "RU",
+    "latitude": 47.51667,
+    "longitude": 40.8
+  },
+  {
+    "id": "ru_city_869",
+    "name": "Семилуки",
+    "region": "Воронежская область",
+    "countryCode": "RU",
+    "latitude": 51.68333,
+    "longitude": 39.03333
+  },
+  {
+    "id": "ru_city_870",
+    "name": "Семёнов",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 56.78944,
+    "longitude": 44.49056
+  },
+  {
+    "id": "ru_city_871",
+    "name": "Сенгилей",
+    "region": "Ульяновская область",
+    "countryCode": "RU",
+    "latitude": 53.96667,
+    "longitude": 48.8
+  },
+  {
+    "id": "ru_city_872",
+    "name": "Серафимович",
+    "region": "Волгоградская область",
+    "countryCode": "RU",
+    "latitude": 49.58333,
+    "longitude": 42.73333
+  },
+  {
+    "id": "ru_city_873",
+    "name": "Сергач",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 55.53333,
+    "longitude": 45.46667
+  },
+  {
+    "id": "ru_city_874",
+    "name": "Сергиев Посад",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 56.3,
+    "longitude": 38.13333
+  },
+  {
+    "id": "ru_city_875",
+    "name": "Сердобск",
+    "region": "Пензенская область",
+    "countryCode": "RU",
+    "latitude": 52.46667,
+    "longitude": 44.21667
+  },
+  {
+    "id": "ru_city_876",
+    "name": "Серов",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 59.58333,
+    "longitude": 60.56667
+  },
+  {
+    "id": "ru_city_877",
+    "name": "Серпухов",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 54.91667,
+    "longitude": 37.4
+  },
+  {
+    "id": "ru_city_878",
+    "name": "Сертолово",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 60.141613,
+    "longitude": 30.211879
+  },
+  {
+    "id": "ru_city_879",
+    "name": "Сестрорецк",
+    "region": "Санкт-Петербург",
+    "countryCode": "RU",
+    "latitude": 60.1,
+    "longitude": 29.96667
+  },
+  {
+    "id": "ru_city_880",
+    "name": "Сибай",
+    "region": "Башкортостан",
+    "countryCode": "RU",
+    "latitude": 52.7,
+    "longitude": 58.65
+  },
+  {
+    "id": "ru_city_881",
+    "name": "Сим",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 54.98333,
+    "longitude": 57.68333
+  },
+  {
+    "id": "ru_city_882",
+    "name": "Симферополь",
+    "region": "Крым",
+    "countryCode": "RU",
+    "latitude": 44.94806,
+    "longitude": 34.10417
+  },
+  {
+    "id": "ru_city_883",
+    "name": "Сковородино",
+    "region": "Амурская область",
+    "countryCode": "RU",
+    "latitude": 53.98333,
+    "longitude": 123.93333
+  },
+  {
+    "id": "ru_city_884",
+    "name": "Скопин",
+    "region": "Рязанская область",
+    "countryCode": "RU",
+    "latitude": 53.81667,
+    "longitude": 39.55
+  },
+  {
+    "id": "ru_city_885",
+    "name": "Славгород",
+    "region": "Алтайский край",
+    "countryCode": "RU",
+    "latitude": 53,
+    "longitude": 78.65
+  },
+  {
+    "id": "ru_city_886",
+    "name": "Славск",
+    "region": "Калининградская область",
+    "countryCode": "RU",
+    "latitude": 55.05,
+    "longitude": 21.66667
+  },
+  {
+    "id": "ru_city_887",
+    "name": "Славянск-на-Кубани",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 45.25861,
+    "longitude": 38.12472
+  },
+  {
+    "id": "ru_city_888",
+    "name": "Сланцы",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 59.11779,
+    "longitude": 28.088145
+  },
+  {
+    "id": "ru_city_889",
+    "name": "Слободской",
+    "region": "Кировская область",
+    "countryCode": "RU",
+    "latitude": 58.724167,
+    "longitude": 50.161167
+  },
+  {
+    "id": "ru_city_890",
+    "name": "Слюдянка",
+    "region": "Иркутская область",
+    "countryCode": "RU",
+    "latitude": 51.66667,
+    "longitude": 103.7
+  },
+  {
+    "id": "ru_city_891",
+    "name": "Смоленск",
+    "region": "Смоленская область",
+    "countryCode": "RU",
+    "latitude": 54.78278,
+    "longitude": 32.04528
+  },
+  {
+    "id": "ru_city_892",
+    "name": "Снежинск",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 56.08333,
+    "longitude": 60.73333
+  },
+  {
+    "id": "ru_city_893",
+    "name": "Снежногорск",
+    "region": "Мурманская область",
+    "countryCode": "RU",
+    "latitude": 69.19417,
+    "longitude": 33.23306
+  },
+  {
+    "id": "ru_city_894",
+    "name": "Собинка",
+    "region": "Владимирская область",
+    "countryCode": "RU",
+    "latitude": 55.99,
+    "longitude": 40.01667
+  },
+  {
+    "id": "ru_city_895",
+    "name": "Советск",
+    "region": "Калининградская область",
+    "countryCode": "RU",
+    "latitude": 55.08333,
+    "longitude": 21.88333
+  },
+  {
+    "id": "ru_city_896",
+    "name": "Советск",
+    "region": "Кировская область",
+    "countryCode": "RU",
+    "latitude": 57.601306,
+    "longitude": 48.938611
+  },
+  {
+    "id": "ru_city_897",
+    "name": "Советск",
+    "region": "Тульская область",
+    "countryCode": "RU",
+    "latitude": 53.93333,
+    "longitude": 37.63333
+  },
+  {
+    "id": "ru_city_898",
+    "name": "Советская Гавань",
+    "region": "Хабаровский край",
+    "countryCode": "RU",
+    "latitude": 48.966373,
+    "longitude": 140.285189
+  },
+  {
+    "id": "ru_city_899",
+    "name": "Советский",
+    "region": "Ханты-Мансийский АО",
+    "countryCode": "RU",
+    "latitude": 61.36667,
+    "longitude": 63.56667
+  },
+  {
+    "id": "ru_city_900",
+    "name": "Сокол",
+    "region": "Вологодская область",
+    "countryCode": "RU",
+    "latitude": 59.46667,
+    "longitude": 40.11667
+  },
+  {
+    "id": "ru_city_901",
+    "name": "Солигалич",
+    "region": "Костромская область",
+    "countryCode": "RU",
+    "latitude": 59.08333,
+    "longitude": 42.28333
+  },
+  {
+    "id": "ru_city_902",
+    "name": "Соликамск",
+    "region": "Пермский край",
+    "countryCode": "RU",
+    "latitude": 59.63333,
+    "longitude": 56.76667
+  },
+  {
+    "id": "ru_city_903",
+    "name": "Солнечногорск",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 56.185114,
+    "longitude": 36.977618
+  },
+  {
+    "id": "ru_city_904",
+    "name": "Соль-Илецк",
+    "region": "Оренбургская область",
+    "countryCode": "RU",
+    "latitude": 51.16667,
+    "longitude": 54.98333
+  },
+  {
+    "id": "ru_city_905",
+    "name": "Сольвычегодск",
+    "region": "Архангельская область",
+    "countryCode": "RU",
+    "latitude": 61.33333,
+    "longitude": 46.91667
+  },
+  {
+    "id": "ru_city_906",
+    "name": "Сольцы",
+    "region": "Новгородская область",
+    "countryCode": "RU",
+    "latitude": 58.11667,
+    "longitude": 30.31667
+  },
+  {
+    "id": "ru_city_907",
+    "name": "Сорочинск",
+    "region": "Оренбургская область",
+    "countryCode": "RU",
+    "latitude": 52.43333,
+    "longitude": 53.15
+  },
+  {
+    "id": "ru_city_908",
+    "name": "Сорск",
+    "region": "Хакасия",
+    "countryCode": "RU",
+    "latitude": 54,
+    "longitude": 90.25
+  },
+  {
+    "id": "ru_city_909",
+    "name": "Сортавала",
+    "region": "Карелия",
+    "countryCode": "RU",
+    "latitude": 61.7,
+    "longitude": 30.66667
+  },
+  {
+    "id": "ru_city_910",
+    "name": "Сосенский",
+    "region": "Калужская область",
+    "countryCode": "RU",
+    "latitude": 54.05,
+    "longitude": 35.96667
+  },
+  {
+    "id": "ru_city_911",
+    "name": "Сосновка",
+    "region": "Кировская область",
+    "countryCode": "RU",
+    "latitude": 56.2543,
+    "longitude": 51.2812
+  },
+  {
+    "id": "ru_city_912",
+    "name": "Сосновоборск",
+    "region": "Красноярский край",
+    "countryCode": "RU",
+    "latitude": 56.13333,
+    "longitude": 93.36667
+  },
+  {
+    "id": "ru_city_913",
+    "name": "Сосновый Бор",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 59.9,
+    "longitude": 29.08611
+  },
+  {
+    "id": "ru_city_914",
+    "name": "Сосногорск",
+    "region": "Коми",
+    "countryCode": "RU",
+    "latitude": 63.58333,
+    "longitude": 53.93333
+  },
+  {
+    "id": "ru_city_915",
+    "name": "Сочи",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 43.58528,
+    "longitude": 39.72028
+  },
+  {
+    "id": "ru_city_916",
+    "name": "Спас-Деменск",
+    "region": "Калужская область",
+    "countryCode": "RU",
+    "latitude": 54.409808,
+    "longitude": 34.018992
+  },
+  {
+    "id": "ru_city_917",
+    "name": "Спас-Клепики",
+    "region": "Рязанская область",
+    "countryCode": "RU",
+    "latitude": 55.13333,
+    "longitude": 40.16667
+  },
+  {
+    "id": "ru_city_918",
+    "name": "Спасск-Дальний",
+    "region": "Приморский край",
+    "countryCode": "RU",
+    "latitude": 44.6,
+    "longitude": 132.81667
+  },
+  {
+    "id": "ru_city_919",
+    "name": "Спасск-Рязанский",
+    "region": "Рязанская область",
+    "countryCode": "RU",
+    "latitude": 54.4,
+    "longitude": 40.38333
+  },
+  {
+    "id": "ru_city_920",
+    "name": "Спасск",
+    "region": "Пензенская область",
+    "countryCode": "RU",
+    "latitude": 53.93333,
+    "longitude": 43.18333
+  },
+  {
+    "id": "ru_city_921",
+    "name": "Среднеколымск",
+    "region": "Якутия",
+    "countryCode": "RU",
+    "latitude": 67.458,
+    "longitude": 153.706
+  },
+  {
+    "id": "ru_city_922",
+    "name": "Среднеуральск",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 56.98333,
+    "longitude": 60.46667
+  },
+  {
+    "id": "ru_city_923",
+    "name": "Сретенск",
+    "region": "Забайкальский край",
+    "countryCode": "RU",
+    "latitude": 52.25,
+    "longitude": 117.71667
+  },
+  {
+    "id": "ru_city_924",
+    "name": "Ставрополь",
+    "region": "Ставропольский край",
+    "countryCode": "RU",
+    "latitude": 45.03333,
+    "longitude": 41.96667
+  },
+  {
+    "id": "ru_city_925",
+    "name": "Старая Купавна",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.8,
+    "longitude": 38.18333
+  },
+  {
+    "id": "ru_city_926",
+    "name": "Старая Русса",
+    "region": "Новгородская область",
+    "countryCode": "RU",
+    "latitude": 57.98333,
+    "longitude": 31.35
+  },
+  {
+    "id": "ru_city_927",
+    "name": "Старица",
+    "region": "Тверская область",
+    "countryCode": "RU",
+    "latitude": 56.51667,
+    "longitude": 34.93333
+  },
+  {
+    "id": "ru_city_928",
+    "name": "Стародуб",
+    "region": "Брянская область",
+    "countryCode": "RU",
+    "latitude": 52.58333,
+    "longitude": 32.76667
+  },
+  {
+    "id": "ru_city_929",
+    "name": "Старый Крым",
+    "region": "Крым",
+    "countryCode": "RU",
+    "latitude": 45.02917,
+    "longitude": 35.08861
+  },
+  {
+    "id": "ru_city_930",
+    "name": "Старый Оскол",
+    "region": "Белгородская область",
+    "countryCode": "RU",
+    "latitude": 51.29806,
+    "longitude": 37.835
+  },
+  {
+    "id": "ru_city_931",
+    "name": "Стерлитамак",
+    "region": "Башкортостан",
+    "countryCode": "RU",
+    "latitude": 53.63333,
+    "longitude": 55.95
+  },
+  {
+    "id": "ru_city_932",
+    "name": "Стрежевой",
+    "region": "Томская область",
+    "countryCode": "RU",
+    "latitude": 60.73333,
+    "longitude": 77.58333
+  },
+  {
+    "id": "ru_city_933",
+    "name": "Строитель",
+    "region": "Белгородская область",
+    "countryCode": "RU",
+    "latitude": 50.78333,
+    "longitude": 36.48333
+  },
+  {
+    "id": "ru_city_934",
+    "name": "Струнино",
+    "region": "Владимирская область",
+    "countryCode": "RU",
+    "latitude": 56.37333,
+    "longitude": 38.585
+  },
+  {
+    "id": "ru_city_935",
+    "name": "Ступино",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 54.88694,
+    "longitude": 38.07722
+  },
+  {
+    "id": "ru_city_936",
+    "name": "Суворов",
+    "region": "Тульская область",
+    "countryCode": "RU",
+    "latitude": 54.11667,
+    "longitude": 36.5
+  },
+  {
+    "id": "ru_city_937",
+    "name": "Судак",
+    "region": "Крым",
+    "countryCode": "RU",
+    "latitude": 44.85139,
+    "longitude": 34.9725
+  },
+  {
+    "id": "ru_city_938",
+    "name": "Суджа",
+    "region": "Курская область",
+    "countryCode": "RU",
+    "latitude": 51.190694,
+    "longitude": 35.27083
+  },
+  {
+    "id": "ru_city_939",
+    "name": "Судогда",
+    "region": "Владимирская область",
+    "countryCode": "RU",
+    "latitude": 55.95,
+    "longitude": 40.86667
+  },
+  {
+    "id": "ru_city_940",
+    "name": "Суздаль",
+    "region": "Владимирская область",
+    "countryCode": "RU",
+    "latitude": 56.42111,
+    "longitude": 40.44889
+  },
+  {
+    "id": "ru_city_941",
+    "name": "Сунжа",
+    "region": "Ингушетия",
+    "countryCode": "RU",
+    "latitude": 43.313475,
+    "longitude": 45.051581
+  },
+  {
+    "id": "ru_city_942",
+    "name": "Суоярви",
+    "region": "Карелия",
+    "countryCode": "RU",
+    "latitude": 62.08333,
+    "longitude": 32.36667
+  },
+  {
+    "id": "ru_city_943",
+    "name": "Сураж",
+    "region": "Брянская область",
+    "countryCode": "RU",
+    "latitude": 53.01667,
+    "longitude": 32.4
+  },
+  {
+    "id": "ru_city_944",
+    "name": "Сургут",
+    "region": "Ханты-Мансийский АО",
+    "countryCode": "RU",
+    "latitude": 61.25,
+    "longitude": 73.43333
+  },
+  {
+    "id": "ru_city_945",
+    "name": "Суровикино",
+    "region": "Волгоградская область",
+    "countryCode": "RU",
+    "latitude": 48.6,
+    "longitude": 42.85
+  },
+  {
+    "id": "ru_city_946",
+    "name": "Сурск",
+    "region": "Пензенская область",
+    "countryCode": "RU",
+    "latitude": 53.08333,
+    "longitude": 45.7
+  },
+  {
+    "id": "ru_city_947",
+    "name": "Сусуман",
+    "region": "Магаданская область",
+    "countryCode": "RU",
+    "latitude": 62.78333,
+    "longitude": 148.15
+  },
+  {
+    "id": "ru_city_948",
+    "name": "Сухиничи",
+    "region": "Калужская область",
+    "countryCode": "RU",
+    "latitude": 54.1,
+    "longitude": 35.35
+  },
+  {
+    "id": "ru_city_949",
+    "name": "Сухой Лог",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 56.90583,
+    "longitude": 62.03417
+  },
+  {
+    "id": "ru_city_950",
+    "name": "Сызрань",
+    "region": "Самарская область",
+    "countryCode": "RU",
+    "latitude": 53.16667,
+    "longitude": 48.46667
+  },
+  {
+    "id": "ru_city_951",
+    "name": "Сыктывкар",
+    "region": "Коми",
+    "countryCode": "RU",
+    "latitude": 61.66667,
+    "longitude": 50.81667
+  },
+  {
+    "id": "ru_city_952",
+    "name": "Сысерть",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 56.5,
+    "longitude": 60.81667
+  },
+  {
+    "id": "ru_city_953",
+    "name": "Сычёвка",
+    "region": "Смоленская область",
+    "countryCode": "RU",
+    "latitude": 55.83333,
+    "longitude": 34.28333
+  },
+  {
+    "id": "ru_city_954",
+    "name": "Сясьстрой",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 60.137057,
+    "longitude": 32.561279
+  },
+  {
+    "id": "ru_city_955",
+    "name": "Тавда",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 58.05,
+    "longitude": 65.26667
+  },
+  {
+    "id": "ru_city_956",
+    "name": "Таганрог",
+    "region": "Ростовская область",
+    "countryCode": "RU",
+    "latitude": 47.23917,
+    "longitude": 38.88333
+  },
+  {
+    "id": "ru_city_957",
+    "name": "Тайга",
+    "region": "Кемеровская область",
+    "countryCode": "RU",
+    "latitude": 56.06667,
+    "longitude": 85.61667
+  },
+  {
+    "id": "ru_city_958",
+    "name": "Тайшет",
+    "region": "Иркутская область",
+    "countryCode": "RU",
+    "latitude": 55.93333,
+    "longitude": 98.01667
+  },
+  {
+    "id": "ru_city_959",
+    "name": "Талдом",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 56.73333,
+    "longitude": 37.53333
+  },
+  {
+    "id": "ru_city_960",
+    "name": "Талица",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 57.0125,
+    "longitude": 63.72917
+  },
+  {
+    "id": "ru_city_961",
+    "name": "Тамбов",
+    "region": "Тамбовская область",
+    "countryCode": "RU",
+    "latitude": 52.71667,
+    "longitude": 41.43333
+  },
+  {
+    "id": "ru_city_962",
+    "name": "Тара",
+    "region": "Омская область",
+    "countryCode": "RU",
+    "latitude": 56.902383,
+    "longitude": 74.37079
+  },
+  {
+    "id": "ru_city_963",
+    "name": "Тарко-Сале",
+    "region": "Ямало-Ненецкий АО",
+    "countryCode": "RU",
+    "latitude": 64.91472,
+    "longitude": 77.77278
+  },
+  {
+    "id": "ru_city_964",
+    "name": "Таруса",
+    "region": "Калужская область",
+    "countryCode": "RU",
+    "latitude": 54.71667,
+    "longitude": 37.18333
+  },
+  {
+    "id": "ru_city_965",
+    "name": "Татарск",
+    "region": "Новосибирская область",
+    "countryCode": "RU",
+    "latitude": 55.21667,
+    "longitude": 75.96667
+  },
+  {
+    "id": "ru_city_966",
+    "name": "Таштагол",
+    "region": "Кемеровская область",
+    "countryCode": "RU",
+    "latitude": 52.76667,
+    "longitude": 87.86667
+  },
+  {
+    "id": "ru_city_967",
+    "name": "Тверь",
+    "region": "Тверская область",
+    "countryCode": "RU",
+    "latitude": 56.8578278,
+    "longitude": 35.9219278
+  },
+  {
+    "id": "ru_city_968",
+    "name": "Теберда",
+    "region": "Карачаево-Черкесия",
+    "countryCode": "RU",
+    "latitude": 43.449437,
+    "longitude": 41.74382
+  },
+  {
+    "id": "ru_city_969",
+    "name": "Тейково",
+    "region": "Ивановская область",
+    "countryCode": "RU",
+    "latitude": 56.85,
+    "longitude": 40.55
+  },
+  {
+    "id": "ru_city_970",
+    "name": "Темников",
+    "region": "Мордовия",
+    "countryCode": "RU",
+    "latitude": 54.63333,
+    "longitude": 43.21667
+  },
+  {
+    "id": "ru_city_971",
+    "name": "Темрюк",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 45.26667,
+    "longitude": 37.38333
+  },
+  {
+    "id": "ru_city_972",
+    "name": "Терек",
+    "region": "Кабардино-Балкария",
+    "countryCode": "RU",
+    "latitude": 43.483317,
+    "longitude": 44.138871
+  },
+  {
+    "id": "ru_city_973",
+    "name": "Тетюши",
+    "region": "Татарстан",
+    "countryCode": "RU",
+    "latitude": 54.93333,
+    "longitude": 48.83333
+  },
+  {
+    "id": "ru_city_974",
+    "name": "Тимашёвск",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 45.61667,
+    "longitude": 38.93333
+  },
+  {
+    "id": "ru_city_975",
+    "name": "Тихвин",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 59.644213,
+    "longitude": 33.542105
+  },
+  {
+    "id": "ru_city_976",
+    "name": "Тихорецк",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 45.85,
+    "longitude": 40.11667
+  },
+  {
+    "id": "ru_city_977",
+    "name": "Тобольск",
+    "region": "Тюменская область",
+    "countryCode": "RU",
+    "latitude": 58.19528,
+    "longitude": 68.25806
+  },
+  {
+    "id": "ru_city_978",
+    "name": "Тогучин",
+    "region": "Новосибирская область",
+    "countryCode": "RU",
+    "latitude": 55.23333,
+    "longitude": 84.38333
+  },
+  {
+    "id": "ru_city_979",
+    "name": "Тольятти",
+    "region": "Самарская область",
+    "countryCode": "RU",
+    "latitude": 53.516666666667,
+    "longitude": 49.416666666667
+  },
+  {
+    "id": "ru_city_980",
+    "name": "Томари",
+    "region": "Сахалинская область",
+    "countryCode": "RU",
+    "latitude": 47.76667,
+    "longitude": 142.06667
+  },
+  {
+    "id": "ru_city_981",
+    "name": "Томмот",
+    "region": "Якутия",
+    "countryCode": "RU",
+    "latitude": 58.96667,
+    "longitude": 126.26667
+  },
+  {
+    "id": "ru_city_982",
+    "name": "Томск",
+    "region": "Томская область",
+    "countryCode": "RU",
+    "latitude": 56.48861,
+    "longitude": 84.95222
+  },
+  {
+    "id": "ru_city_983",
+    "name": "Топки",
+    "region": "Кемеровская область",
+    "countryCode": "RU",
+    "latitude": 55.28333,
+    "longitude": 85.61667
+  },
+  {
+    "id": "ru_city_984",
+    "name": "Торжок",
+    "region": "Тверская область",
+    "countryCode": "RU",
+    "latitude": 57.03333,
+    "longitude": 34.96667
+  },
+  {
+    "id": "ru_city_985",
+    "name": "Торопец",
+    "region": "Тверская область",
+    "countryCode": "RU",
+    "latitude": 56.5,
+    "longitude": 31.63333
+  },
+  {
+    "id": "ru_city_986",
+    "name": "Тосно",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 59.541179,
+    "longitude": 30.875006
+  },
+  {
+    "id": "ru_city_987",
+    "name": "Тотьма",
+    "region": "Вологодская область",
+    "countryCode": "RU",
+    "latitude": 59.98333,
+    "longitude": 42.76667
+  },
+  {
+    "id": "ru_city_988",
+    "name": "Троицк",
+    "region": "Москва",
+    "countryCode": "RU",
+    "latitude": 55.467,
+    "longitude": 37.3
+  },
+  {
+    "id": "ru_city_989",
+    "name": "Троицк",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 54.08333,
+    "longitude": 61.56667
+  },
+  {
+    "id": "ru_city_990",
+    "name": "Трубчевск",
+    "region": "Брянская область",
+    "countryCode": "RU",
+    "latitude": 52.58333,
+    "longitude": 33.76667
+  },
+  {
+    "id": "ru_city_991",
+    "name": "Трёхгорный",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 54.8,
+    "longitude": 58.45
+  },
+  {
+    "id": "ru_city_992",
+    "name": "Туапсе",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 44.100016,
+    "longitude": 39.083223
+  },
+  {
+    "id": "ru_city_993",
+    "name": "Туймазы",
+    "region": "Башкортостан",
+    "countryCode": "RU",
+    "latitude": 54.6,
+    "longitude": 53.7
+  },
+  {
+    "id": "ru_city_994",
+    "name": "Тула",
+    "region": "Тульская область",
+    "countryCode": "RU",
+    "latitude": 54.2,
+    "longitude": 37.61667
+  },
+  {
+    "id": "ru_city_995",
+    "name": "Тулун",
+    "region": "Иркутская область",
+    "countryCode": "RU",
+    "latitude": 54.56667,
+    "longitude": 100.56667
+  },
+  {
+    "id": "ru_city_996",
+    "name": "Туран",
+    "region": "Тыва",
+    "countryCode": "RU",
+    "latitude": 52.1446,
+    "longitude": 93.9181
+  },
+  {
+    "id": "ru_city_997",
+    "name": "Туринск",
+    "region": "Свердловская область",
+    "countryCode": "RU",
+    "latitude": 58.03333,
+    "longitude": 63.7
+  },
+  {
+    "id": "ru_city_998",
+    "name": "Тутаев",
+    "region": "Ярославская область",
+    "countryCode": "RU",
+    "latitude": 57.88333,
+    "longitude": 39.53333
+  },
+  {
+    "id": "ru_city_999",
+    "name": "Тында",
+    "region": "Амурская область",
+    "countryCode": "RU",
+    "latitude": 55.15,
+    "longitude": 124.71667
+  },
+  {
+    "id": "ru_city_1000",
+    "name": "Тырныауз",
+    "region": "Кабардино-Балкария",
+    "countryCode": "RU",
+    "latitude": 43.3892665,
+    "longitude": 42.9189065
+  },
+  {
+    "id": "ru_city_1001",
+    "name": "Тюкалинск",
+    "region": "Омская область",
+    "countryCode": "RU",
+    "latitude": 55.86667,
+    "longitude": 72.2
+  },
+  {
+    "id": "ru_city_1002",
+    "name": "Тюмень",
+    "region": "Тюменская область",
+    "countryCode": "RU",
+    "latitude": 57.15,
+    "longitude": 65.53333
+  },
+  {
+    "id": "ru_city_1003",
+    "name": "Уварово",
+    "region": "Тамбовская область",
+    "countryCode": "RU",
+    "latitude": 51.98333,
+    "longitude": 42.26667
+  },
+  {
+    "id": "ru_city_1004",
+    "name": "Углегорск",
+    "region": "Сахалинская область",
+    "countryCode": "RU",
+    "latitude": 49.06667,
+    "longitude": 142.03333
+  },
+  {
+    "id": "ru_city_1005",
+    "name": "Углич",
+    "region": "Ярославская область",
+    "countryCode": "RU",
+    "latitude": 57.53333,
+    "longitude": 38.33333
+  },
+  {
+    "id": "ru_city_1006",
+    "name": "Удачный",
+    "region": "Якутия",
+    "countryCode": "RU",
+    "latitude": 66.4,
+    "longitude": 112.3
+  },
+  {
+    "id": "ru_city_1007",
+    "name": "Удомля",
+    "region": "Тверская область",
+    "countryCode": "RU",
+    "latitude": 57.88333,
+    "longitude": 35.01667
+  },
+  {
+    "id": "ru_city_1008",
+    "name": "Ужур",
+    "region": "Красноярский край",
+    "countryCode": "RU",
+    "latitude": 55.31667,
+    "longitude": 89.81667
+  },
+  {
+    "id": "ru_city_1009",
+    "name": "Узловая",
+    "region": "Тульская область",
+    "countryCode": "RU",
+    "latitude": 53.9791417,
+    "longitude": 38.1600833
+  },
+  {
+    "id": "ru_city_1010",
+    "name": "Улан-Удэ",
+    "region": "Бурятия",
+    "countryCode": "RU",
+    "latitude": 51.83333,
+    "longitude": 107.61667
+  },
+  {
+    "id": "ru_city_1011",
+    "name": "Ульяновск",
+    "region": "Ульяновская область",
+    "countryCode": "RU",
+    "latitude": 54.316666666667,
+    "longitude": 48.366666666667
+  },
+  {
+    "id": "ru_city_1012",
+    "name": "Унеча",
+    "region": "Брянская область",
+    "countryCode": "RU",
+    "latitude": 52.85,
+    "longitude": 32.68333
+  },
+  {
+    "id": "ru_city_1013",
+    "name": "Урай",
+    "region": "Ханты-Мансийский АО",
+    "countryCode": "RU",
+    "latitude": 60.13333,
+    "longitude": 64.78333
+  },
+  {
+    "id": "ru_city_1014",
+    "name": "Урень",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 57.46667,
+    "longitude": 45.78333
+  },
+  {
+    "id": "ru_city_1015",
+    "name": "Уржум",
+    "region": "Кировская область",
+    "countryCode": "RU",
+    "latitude": 57.11667,
+    "longitude": 50
+  },
+  {
+    "id": "ru_city_1016",
+    "name": "Урус-Мартан",
+    "region": "Чечня",
+    "countryCode": "RU",
+    "latitude": 43.129123,
+    "longitude": 45.54167
+  },
+  {
+    "id": "ru_city_1017",
+    "name": "Урюпинск",
+    "region": "Волгоградская область",
+    "countryCode": "RU",
+    "latitude": 50.8,
+    "longitude": 42.01667
+  },
+  {
+    "id": "ru_city_1018",
+    "name": "Усинск",
+    "region": "Коми",
+    "countryCode": "RU",
+    "latitude": 65.995028,
+    "longitude": 57.557139
+  },
+  {
+    "id": "ru_city_1019",
+    "name": "Усмань",
+    "region": "Липецкая область",
+    "countryCode": "RU",
+    "latitude": 52.05,
+    "longitude": 39.73333
+  },
+  {
+    "id": "ru_city_1020",
+    "name": "Усолье-Сибирское",
+    "region": "Иркутская область",
+    "countryCode": "RU",
+    "latitude": 52.75,
+    "longitude": 103.65
+  },
+  {
+    "id": "ru_city_1021",
+    "name": "Усолье",
+    "region": "Пермский край",
+    "countryCode": "RU",
+    "latitude": 59.41667,
+    "longitude": 56.68333
+  },
+  {
+    "id": "ru_city_1022",
+    "name": "Уссурийск",
+    "region": "Приморский край",
+    "countryCode": "RU",
+    "latitude": 43.8,
+    "longitude": 131.95
+  },
+  {
+    "id": "ru_city_1023",
+    "name": "Усть-Джегута",
+    "region": "Карачаево-Черкесия",
+    "countryCode": "RU",
+    "latitude": 44.08611,
+    "longitude": 41.97194
+  },
+  {
+    "id": "ru_city_1024",
+    "name": "Усть-Илимск",
+    "region": "Иркутская область",
+    "countryCode": "RU",
+    "latitude": 58,
+    "longitude": 102.66667
+  },
+  {
+    "id": "ru_city_1025",
+    "name": "Усть-Катав",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 54.93333,
+    "longitude": 58.16667
+  },
+  {
+    "id": "ru_city_1026",
+    "name": "Усть-Кут",
+    "region": "Иркутская область",
+    "countryCode": "RU",
+    "latitude": 56.8,
+    "longitude": 105.83333
+  },
+  {
+    "id": "ru_city_1027",
+    "name": "Усть-Лабинск",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 45.21528,
+    "longitude": 39.68944
+  },
+  {
+    "id": "ru_city_1028",
+    "name": "Устюжна",
+    "region": "Вологодская область",
+    "countryCode": "RU",
+    "latitude": 58.83333,
+    "longitude": 36.43333
+  },
+  {
+    "id": "ru_city_1029",
+    "name": "Уфа",
+    "region": "Башкортостан",
+    "countryCode": "RU",
+    "latitude": 54.73333,
+    "longitude": 55.96667
+  },
+  {
+    "id": "ru_city_1030",
+    "name": "Ухта",
+    "region": "Коми",
+    "countryCode": "RU",
+    "latitude": 63.56667,
+    "longitude": 53.7
+  },
+  {
+    "id": "ru_city_1031",
+    "name": "Учалы",
+    "region": "Башкортостан",
+    "countryCode": "RU",
+    "latitude": 54.31667,
+    "longitude": 59.38333
+  },
+  {
+    "id": "ru_city_1032",
+    "name": "Уяр",
+    "region": "Красноярский край",
+    "countryCode": "RU",
+    "latitude": 55.81667,
+    "longitude": 94.31667
+  },
+  {
+    "id": "ru_city_1033",
+    "name": "Фатеж",
+    "region": "Курская область",
+    "countryCode": "RU",
+    "latitude": 52.08944,
+    "longitude": 35.85889
+  },
+  {
+    "id": "ru_city_1034",
+    "name": "Феодосия",
+    "region": "Крым",
+    "countryCode": "RU",
+    "latitude": 45.04889,
+    "longitude": 35.37917
+  },
+  {
+    "id": "ru_city_1035",
+    "name": "Фокино",
+    "region": "Брянская область",
+    "countryCode": "RU",
+    "latitude": 53.45,
+    "longitude": 34.41667
+  },
+  {
+    "id": "ru_city_1036",
+    "name": "Фокино",
+    "region": "Приморский край",
+    "countryCode": "RU",
+    "latitude": 42.96667,
+    "longitude": 132.4
+  },
+  {
+    "id": "ru_city_1037",
+    "name": "Фролово",
+    "region": "Волгоградская область",
+    "countryCode": "RU",
+    "latitude": 49.76667,
+    "longitude": 43.65
+  },
+  {
+    "id": "ru_city_1038",
+    "name": "Фрязино",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.95,
+    "longitude": 38.05
+  },
+  {
+    "id": "ru_city_1039",
+    "name": "Фурманов",
+    "region": "Ивановская область",
+    "countryCode": "RU",
+    "latitude": 57.25,
+    "longitude": 41.1
+  },
+  {
+    "id": "ru_city_1040",
+    "name": "Хабаровск",
+    "region": "Хабаровский край",
+    "countryCode": "RU",
+    "latitude": 48.48333,
+    "longitude": 135.06667
+  },
+  {
+    "id": "ru_city_1041",
+    "name": "Хадыженск",
+    "region": "Краснодарский край",
+    "countryCode": "RU",
+    "latitude": 44.42389,
+    "longitude": 39.53722
+  },
+  {
+    "id": "ru_city_1042",
+    "name": "Ханты-Мансийск",
+    "region": "Ханты-Мансийский АО",
+    "countryCode": "RU",
+    "latitude": 61,
+    "longitude": 69
+  },
+  {
+    "id": "ru_city_1043",
+    "name": "Харабали",
+    "region": "Астраханская область",
+    "countryCode": "RU",
+    "latitude": 47.4,
+    "longitude": 47.25
+  },
+  {
+    "id": "ru_city_1044",
+    "name": "Харовск",
+    "region": "Вологодская область",
+    "countryCode": "RU",
+    "latitude": 59.95,
+    "longitude": 40.2
+  },
+  {
+    "id": "ru_city_1045",
+    "name": "Хасавюрт",
+    "region": "Дагестан",
+    "countryCode": "RU",
+    "latitude": 43.249937,
+    "longitude": 46.583247
+  },
+  {
+    "id": "ru_city_1046",
+    "name": "Хвалынск",
+    "region": "Саратовская область",
+    "countryCode": "RU",
+    "latitude": 52.48333,
+    "longitude": 48.1
+  },
+  {
+    "id": "ru_city_1047",
+    "name": "Хилок",
+    "region": "Забайкальский край",
+    "countryCode": "RU",
+    "latitude": 51.35,
+    "longitude": 110.45
+  },
+  {
+    "id": "ru_city_1048",
+    "name": "Химки",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.88917,
+    "longitude": 37.445
+  },
+  {
+    "id": "ru_city_1049",
+    "name": "Холм",
+    "region": "Новгородская область",
+    "countryCode": "RU",
+    "latitude": 57.15,
+    "longitude": 31.18333
+  },
+  {
+    "id": "ru_city_1050",
+    "name": "Холмск",
+    "region": "Сахалинская область",
+    "countryCode": "RU",
+    "latitude": 47.04028,
+    "longitude": 142.04306
+  },
+  {
+    "id": "ru_city_1051",
+    "name": "Хотьково",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 56.25,
+    "longitude": 37.98333
+  },
+  {
+    "id": "ru_city_1052",
+    "name": "Цивильск",
+    "region": "Чувашия",
+    "countryCode": "RU",
+    "latitude": 55.86667,
+    "longitude": 47.48333
+  },
+  {
+    "id": "ru_city_1053",
+    "name": "Цимлянск",
+    "region": "Ростовская область",
+    "countryCode": "RU",
+    "latitude": 47.64667,
+    "longitude": 42.09472
+  },
+  {
+    "id": "ru_city_1054",
+    "name": "Циолковский",
+    "region": "Амурская область",
+    "countryCode": "RU",
+    "latitude": 51.7602528,
+    "longitude": 128.121175
+  },
+  {
+    "id": "ru_city_1055",
+    "name": "Чадан",
+    "region": "Тыва",
+    "countryCode": "RU",
+    "latitude": 51.28333,
+    "longitude": 91.56667
+  },
+  {
+    "id": "ru_city_1056",
+    "name": "Чайковский",
+    "region": "Пермский край",
+    "countryCode": "RU",
+    "latitude": 56.773291,
+    "longitude": 54.140386
+  },
+  {
+    "id": "ru_city_1057",
+    "name": "Чапаевск",
+    "region": "Самарская область",
+    "countryCode": "RU",
+    "latitude": 52.98333,
+    "longitude": 49.71667
+  },
+  {
+    "id": "ru_city_1058",
+    "name": "Чаплыгин",
+    "region": "Липецкая область",
+    "countryCode": "RU",
+    "latitude": 53.24167,
+    "longitude": 39.96667
+  },
+  {
+    "id": "ru_city_1059",
+    "name": "Чебаркуль",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 54.97778,
+    "longitude": 60.37
+  },
+  {
+    "id": "ru_city_1060",
+    "name": "Чебоксары",
+    "region": "Чувашия",
+    "countryCode": "RU",
+    "latitude": 56.11667,
+    "longitude": 47.23333
+  },
+  {
+    "id": "ru_city_1061",
+    "name": "Чегем",
+    "region": "Кабардино-Балкария",
+    "countryCode": "RU",
+    "latitude": 43.566657,
+    "longitude": 43.583325
+  },
+  {
+    "id": "ru_city_1062",
+    "name": "Чекалин",
+    "region": "Тульская область",
+    "countryCode": "RU",
+    "latitude": 54.1,
+    "longitude": 36.25
+  },
+  {
+    "id": "ru_city_1063",
+    "name": "Челябинск",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 55.15,
+    "longitude": 61.4
+  },
+  {
+    "id": "ru_city_1064",
+    "name": "Чердынь",
+    "region": "Пермский край",
+    "countryCode": "RU",
+    "latitude": 60.4,
+    "longitude": 56.48333
+  },
+  {
+    "id": "ru_city_1065",
+    "name": "Черемхово",
+    "region": "Иркутская область",
+    "countryCode": "RU",
+    "latitude": 53.15,
+    "longitude": 103.06667
+  },
+  {
+    "id": "ru_city_1066",
+    "name": "Черепаново",
+    "region": "Новосибирская область",
+    "countryCode": "RU",
+    "latitude": 54.21667,
+    "longitude": 83.36667
+  },
+  {
+    "id": "ru_city_1067",
+    "name": "Череповец",
+    "region": "Вологодская область",
+    "countryCode": "RU",
+    "latitude": 59.11667,
+    "longitude": 37.9
+  },
+  {
+    "id": "ru_city_1068",
+    "name": "Черкесск",
+    "region": "Карачаево-Черкесия",
+    "countryCode": "RU",
+    "latitude": 44.213888,
+    "longitude": 42.04431
+  },
+  {
+    "id": "ru_city_1069",
+    "name": "Черноголовка",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 56.01472,
+    "longitude": 38.38972
+  },
+  {
+    "id": "ru_city_1070",
+    "name": "Черногорск",
+    "region": "Хакасия",
+    "countryCode": "RU",
+    "latitude": 53.81667,
+    "longitude": 91.28333
+  },
+  {
+    "id": "ru_city_1071",
+    "name": "Чернушка",
+    "region": "Пермский край",
+    "countryCode": "RU",
+    "latitude": 56.5,
+    "longitude": 56.08333
+  },
+  {
+    "id": "ru_city_1072",
+    "name": "Черняховск",
+    "region": "Калининградская область",
+    "countryCode": "RU",
+    "latitude": 54.63333,
+    "longitude": 21.81667
+  },
+  {
+    "id": "ru_city_1073",
+    "name": "Чехов",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.145,
+    "longitude": 37.45556
+  },
+  {
+    "id": "ru_city_1074",
+    "name": "Чистополь",
+    "region": "Татарстан",
+    "countryCode": "RU",
+    "latitude": 55.36667,
+    "longitude": 50.63333
+  },
+  {
+    "id": "ru_city_1075",
+    "name": "Чита",
+    "region": "Забайкальский край",
+    "countryCode": "RU",
+    "latitude": 52.03333,
+    "longitude": 113.5
+  },
+  {
+    "id": "ru_city_1076",
+    "name": "Чкаловск",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 56.76667,
+    "longitude": 43.25
+  },
+  {
+    "id": "ru_city_1077",
+    "name": "Чудово",
+    "region": "Новгородская область",
+    "countryCode": "RU",
+    "latitude": 59.12806,
+    "longitude": 31.65917
+  },
+  {
+    "id": "ru_city_1078",
+    "name": "Чулым",
+    "region": "Новосибирская область",
+    "countryCode": "RU",
+    "latitude": 55.1,
+    "longitude": 80.96667
+  },
+  {
+    "id": "ru_city_1079",
+    "name": "Чусовой",
+    "region": "Пермский край",
+    "countryCode": "RU",
+    "latitude": 58.28333,
+    "longitude": 57.81667
+  },
+  {
+    "id": "ru_city_1080",
+    "name": "Чухлома",
+    "region": "Костромская область",
+    "countryCode": "RU",
+    "latitude": 58.75,
+    "longitude": 42.7
+  },
+  {
+    "id": "ru_city_1081",
+    "name": "Чёрмоз",
+    "region": "Пермский край",
+    "countryCode": "RU",
+    "latitude": 58.78333,
+    "longitude": 56.15
+  },
+  {
+    "id": "ru_city_1082",
+    "name": "Шагонар",
+    "region": "Тыва",
+    "countryCode": "RU",
+    "latitude": 51.53333,
+    "longitude": 92.9
+  },
+  {
+    "id": "ru_city_1083",
+    "name": "Шадринск",
+    "region": "Курганская область",
+    "countryCode": "RU",
+    "latitude": 56.08333,
+    "longitude": 63.63333
+  },
+  {
+    "id": "ru_city_1084",
+    "name": "Шали",
+    "region": "Чечня",
+    "countryCode": "RU",
+    "latitude": 43.145,
+    "longitude": 45.903847
+  },
+  {
+    "id": "ru_city_1085",
+    "name": "Шарыпово",
+    "region": "Красноярский край",
+    "countryCode": "RU",
+    "latitude": 55.525,
+    "longitude": 89.2
+  },
+  {
+    "id": "ru_city_1086",
+    "name": "Шарья",
+    "region": "Костромская область",
+    "countryCode": "RU",
+    "latitude": 58.36667,
+    "longitude": 45.5
+  },
+  {
+    "id": "ru_city_1087",
+    "name": "Шатура",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.5776722,
+    "longitude": 39.5446333
+  },
+  {
+    "id": "ru_city_1088",
+    "name": "Шахты",
+    "region": "Ростовская область",
+    "countryCode": "RU",
+    "latitude": 47.7122111,
+    "longitude": 40.2083694
+  },
+  {
+    "id": "ru_city_1089",
+    "name": "Шахунья",
+    "region": "Нижегородская область",
+    "countryCode": "RU",
+    "latitude": 57.67472,
+    "longitude": 46.62083
+  },
+  {
+    "id": "ru_city_1090",
+    "name": "Шацк",
+    "region": "Рязанская область",
+    "countryCode": "RU",
+    "latitude": 54.03333,
+    "longitude": 41.7
+  },
+  {
+    "id": "ru_city_1091",
+    "name": "Шебекино",
+    "region": "Белгородская область",
+    "countryCode": "RU",
+    "latitude": 50.40778,
+    "longitude": 36.89694
+  },
+  {
+    "id": "ru_city_1092",
+    "name": "Шелехов",
+    "region": "Иркутская область",
+    "countryCode": "RU",
+    "latitude": 52.2,
+    "longitude": 104.1
+  },
+  {
+    "id": "ru_city_1093",
+    "name": "Шенкурск",
+    "region": "Архангельская область",
+    "countryCode": "RU",
+    "latitude": 62.1,
+    "longitude": 42.9
+  },
+  {
+    "id": "ru_city_1094",
+    "name": "Шилка",
+    "region": "Забайкальский край",
+    "countryCode": "RU",
+    "latitude": 51.85,
+    "longitude": 116.03333
+  },
+  {
+    "id": "ru_city_1095",
+    "name": "Шимановск",
+    "region": "Амурская область",
+    "countryCode": "RU",
+    "latitude": 52,
+    "longitude": 127.66667
+  },
+  {
+    "id": "ru_city_1096",
+    "name": "Шиханы",
+    "region": "Саратовская область",
+    "countryCode": "RU",
+    "latitude": 52.1137809,
+    "longitude": 47.199229
+  },
+  {
+    "id": "ru_city_1097",
+    "name": "Шлиссельбург",
+    "region": "Ленинградская область",
+    "countryCode": "RU",
+    "latitude": 59.944959,
+    "longitude": 31.034754
+  },
+  {
+    "id": "ru_city_1098",
+    "name": "Шумерля",
+    "region": "Чувашия",
+    "countryCode": "RU",
+    "latitude": 55.5,
+    "longitude": 46.41667
+  },
+  {
+    "id": "ru_city_1099",
+    "name": "Шумиха",
+    "region": "Курганская область",
+    "countryCode": "RU",
+    "latitude": 55.23333,
+    "longitude": 63.28333
+  },
+  {
+    "id": "ru_city_1100",
+    "name": "Шуя",
+    "region": "Ивановская область",
+    "countryCode": "RU",
+    "latitude": 56.85,
+    "longitude": 41.36667
+  },
+  {
+    "id": "ru_city_1101",
+    "name": "Щербинка",
+    "region": "Москва",
+    "countryCode": "RU",
+    "latitude": 55.5,
+    "longitude": 37.56667
+  },
+  {
+    "id": "ru_city_1102",
+    "name": "Щигры",
+    "region": "Курская область",
+    "countryCode": "RU",
+    "latitude": 51.88111,
+    "longitude": 36.90306
+  },
+  {
+    "id": "ru_city_1103",
+    "name": "Щучье",
+    "region": "Курганская область",
+    "countryCode": "RU",
+    "latitude": 55.21667,
+    "longitude": 62.76667
+  },
+  {
+    "id": "ru_city_1104",
+    "name": "Щёкино",
+    "region": "Тульская область",
+    "countryCode": "RU",
+    "latitude": 54,
+    "longitude": 37.51667
+  },
+  {
+    "id": "ru_city_1105",
+    "name": "Щёлкино",
+    "region": "Крым",
+    "countryCode": "RU",
+    "latitude": 45.42361,
+    "longitude": 35.81861
+  },
+  {
+    "id": "ru_city_1106",
+    "name": "Щёлково",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.91667,
+    "longitude": 38
+  },
+  {
+    "id": "ru_city_1107",
+    "name": "Электрогорск",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.88333,
+    "longitude": 38.78333
+  },
+  {
+    "id": "ru_city_1108",
+    "name": "Электросталь",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.8,
+    "longitude": 38.45
+  },
+  {
+    "id": "ru_city_1109",
+    "name": "Электроугли",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 55.71667,
+    "longitude": 38.21667
+  },
+  {
+    "id": "ru_city_1110",
+    "name": "Элиста",
+    "region": "Калмыкия",
+    "countryCode": "RU",
+    "latitude": 46.31667,
+    "longitude": 44.26667
+  },
+  {
+    "id": "ru_city_1111",
+    "name": "Энгельс",
+    "region": "Саратовская область",
+    "countryCode": "RU",
+    "latitude": 51.46667,
+    "longitude": 46.11667
+  },
+  {
+    "id": "ru_city_1112",
+    "name": "Эртиль",
+    "region": "Воронежская область",
+    "countryCode": "RU",
+    "latitude": 51.83333,
+    "longitude": 40.8
+  },
+  {
+    "id": "ru_city_1113",
+    "name": "Югорск",
+    "region": "Ханты-Мансийский АО",
+    "countryCode": "RU",
+    "latitude": 61.31667,
+    "longitude": 63.35
+  },
+  {
+    "id": "ru_city_1114",
+    "name": "Южа",
+    "region": "Ивановская область",
+    "countryCode": "RU",
+    "latitude": 56.58333,
+    "longitude": 42.01667
+  },
+  {
+    "id": "ru_city_1115",
+    "name": "Южно-Сахалинск",
+    "region": "Сахалинская область",
+    "countryCode": "RU",
+    "latitude": 46.95,
+    "longitude": 142.73333
+  },
+  {
+    "id": "ru_city_1116",
+    "name": "Южно-Сухокумск",
+    "region": "Дагестан",
+    "countryCode": "RU",
+    "latitude": 44.66667,
+    "longitude": 45.65
+  },
+  {
+    "id": "ru_city_1117",
+    "name": "Южноуральск",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 54.45,
+    "longitude": 61.25
+  },
+  {
+    "id": "ru_city_1118",
+    "name": "Юрга",
+    "region": "Кемеровская область",
+    "countryCode": "RU",
+    "latitude": 55.73333,
+    "longitude": 84.9
+  },
+  {
+    "id": "ru_city_1119",
+    "name": "Юрьев-Польский",
+    "region": "Владимирская область",
+    "countryCode": "RU",
+    "latitude": 56.5,
+    "longitude": 39.68333
+  },
+  {
+    "id": "ru_city_1120",
+    "name": "Юрьевец",
+    "region": "Ивановская область",
+    "countryCode": "RU",
+    "latitude": 57.31667,
+    "longitude": 43.1
+  },
+  {
+    "id": "ru_city_1121",
+    "name": "Юрюзань",
+    "region": "Челябинская область",
+    "countryCode": "RU",
+    "latitude": 54.86667,
+    "longitude": 58.43333
+  },
+  {
+    "id": "ru_city_1122",
+    "name": "Юхнов",
+    "region": "Калужская область",
+    "countryCode": "RU",
+    "latitude": 54.75,
+    "longitude": 35.23333
+  },
+  {
+    "id": "ru_city_1123",
+    "name": "Ядрин",
+    "region": "Чувашия",
+    "countryCode": "RU",
+    "latitude": 55.95,
+    "longitude": 46.2
+  },
+  {
+    "id": "ru_city_1124",
+    "name": "Якутск",
+    "region": "Якутия",
+    "countryCode": "RU",
+    "latitude": 62.027222222222,
+    "longitude": 129.73194444444
+  },
+  {
+    "id": "ru_city_1125",
+    "name": "Ялта",
+    "region": "Крым",
+    "countryCode": "RU",
+    "latitude": 44.49944,
+    "longitude": 34.15528
+  },
+  {
+    "id": "ru_city_1126",
+    "name": "Ялуторовск",
+    "region": "Тюменская область",
+    "countryCode": "RU",
+    "latitude": 56.65,
+    "longitude": 66.3
+  },
+  {
+    "id": "ru_city_1127",
+    "name": "Янаул",
+    "region": "Башкортостан",
+    "countryCode": "RU",
+    "latitude": 56.26667,
+    "longitude": 54.93333
+  },
+  {
+    "id": "ru_city_1128",
+    "name": "Яранск",
+    "region": "Кировская область",
+    "countryCode": "RU",
+    "latitude": 57.303306,
+    "longitude": 47.868806
+  },
+  {
+    "id": "ru_city_1129",
+    "name": "Яровое",
+    "region": "Алтайский край",
+    "countryCode": "RU",
+    "latitude": 52.93333,
+    "longitude": 78.58333
+  },
+  {
+    "id": "ru_city_1130",
+    "name": "Ярославль",
+    "region": "Ярославская область",
+    "countryCode": "RU",
+    "latitude": 57.61667,
+    "longitude": 39.85
+  },
+  {
+    "id": "ru_city_1131",
+    "name": "Ярцево",
+    "region": "Смоленская область",
+    "countryCode": "RU",
+    "latitude": 55.06667,
+    "longitude": 32.68333
+  },
+  {
+    "id": "ru_city_1132",
+    "name": "Ясногорск",
+    "region": "Тульская область",
+    "countryCode": "RU",
+    "latitude": 54.4793833,
+    "longitude": 37.6933556
+  },
+  {
+    "id": "ru_city_1133",
+    "name": "Ясный",
+    "region": "Оренбургская область",
+    "countryCode": "RU",
+    "latitude": 51.03333,
+    "longitude": 59.86667
+  },
+  {
+    "id": "ru_city_1134",
+    "name": "Яхрома",
+    "region": "Московская область",
+    "countryCode": "RU",
+    "latitude": 56.28333,
+    "longitude": 37.48333
+  }
+]
