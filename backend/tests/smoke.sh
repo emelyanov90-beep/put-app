@@ -106,13 +106,38 @@ standard_trip="$(jq -er '.items[] | select(.booking_mode == "standard") | .id' <
 instant_trip="$(jq -er '.items[] | select(.booking_mode == "instant") | .id' <<<"${search}")"
 driver_vehicle="$(jq -er '.items[] | select(.booking_mode == "standard") | .vehicle.id' <<<"${search}")"
 
+# Moderation is switched off: a vehicle is usable as soon as it is saved, and
+# editing it does not take it out of service. The status still comes from the
+# server — the client cannot set it.
 vehicle_update="$(curl -fsS \
   "${BASE_URL}/api/collections/vehicles/records/${driver_vehicle}" \
   -X PATCH -H "Authorization: Bearer ${driver_one}" \
   -H 'Content-Type: application/json' -d '{"plate_number":"А002АА77"}')"
 assert_json "${vehicle_update}" \
-  '.plate_number == "А002АА77" and .verification_status == "draft"' \
-  "vehicle update did not reset verification status"
+  '.plate_number == "А002АА77" and .verification_status == "approved"' \
+  "an edited vehicle must stay approved while auto-approval is on"
+
+# The status is still the server's to decide, even with moderation switched off.
+status_write="$(curl -sS -o /dev/null -w '%{http_code}' \
+  "${BASE_URL}/api/collections/vehicles/records/${driver_vehicle}" \
+  -X PATCH -H "Authorization: Bearer ${driver_one}" \
+  -H 'Content-Type: application/json' -d '{"verification_status":"rejected"}')"
+[[ "${status_write}" == "404" ]] || \
+  fail "a client set verification_status directly (HTTP ${status_write})"
+
+driver_one_id="$(jq -er '.owner_id' <<<"${vehicle_update}")"
+new_vehicle="$(curl -fsS "${BASE_URL}/api/collections/vehicles/records" \
+  -H "Authorization: Bearer ${driver_one}" -H 'Content-Type: application/json' \
+  -d "{\"owner_id\":\"${driver_one_id}\",\"transport_type\":\"car\",\"brand\":\"Lada\",\"model\":\"Vesta\",\"plate_number\":\"А123АА77\",\"color\":\"Белый\",\"year\":2021,\"seat_count\":4,\"verification_status\":\"draft\"}")"
+assert_json "${new_vehicle}" '.verification_status == "approved"' \
+  "a new vehicle must be usable without an administrator review"
+
+new_vehicle_id="$(jq -er '.id' <<<"${new_vehicle}")"
+submitted="$(curl -fsS \
+  "${BASE_URL}/api/app/vehicles/${new_vehicle_id}/submit-verification" \
+  -X POST -H "Authorization: Bearer ${driver_one}")"
+assert_json "${submitted}" '.vehicle.verification_status == "approved"' \
+  "sending an already approved vehicle for review must stay a no-op"
 
 created="$(curl -fsS "${BASE_URL}/api/app/bookings" \
   -H "Authorization: Bearer ${passenger_one}" \
@@ -273,4 +298,4 @@ assert_json "${cancelled_trip}" '.trip.status == "cancelled" and .trip.accepting
 assert_json "${cancelled_trip_again}" '.trip.status == "cancelled"' \
   "driver trip cancellation retry failed"
 
-echo "PASS: migrations, auth, safe DTOs, trips, booking, payment, refund, access rules, parcels, complaints, notifications, and seat race"
+echo "PASS: migrations, auth, safe DTOs, trips, booking, payment, refund, access rules, vehicle auto-approval, parcels, complaints, notifications, and seat race"

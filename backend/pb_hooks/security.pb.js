@@ -1,7 +1,23 @@
 /// <reference path="../pb_data/types.d.ts" />
 
+// A vehicle's verification state is decided by the server, never by the client.
+// With `app_settings.vehicle_auto_approve` on it is approved as soon as it is
+// saved; with the setting off, changing the vehicle data invalidates an earlier
+// review and sends the record back to `draft`.
+onRecordCreateRequest((e) => {
+  if (e.auth && !e.auth.isSuperuser()) {
+    require(`${__hooks}/lib/app.js`).applyVehicleVerification(e.app, e.record)
+  }
+  return e.next()
+}, "vehicles")
+
 onRecordUpdateRequest((e) => {
   if (e.auth && !e.auth.isSuperuser()) {
+    const h = require(`${__hooks}/lib/app.js`)
+    if (h.vehicleAutoApprove(e.app)) {
+      h.applyVehicleVerification(e.app, e.record)
+      return e.next()
+    }
     const original = e.record.original()
     const changed = [
       "transport_type",
@@ -17,9 +33,7 @@ onRecordUpdateRequest((e) => {
       e.record.getUnsavedFiles("photo").length > 0 ||
       e.record.getUnsavedFiles("registration_document").length > 0
     if (changed) {
-      e.record.set("verification_status", "draft")
-      e.record.set("verification_comment", "")
-      e.record.set("verified_at", "")
+      h.applyVehicleVerification(e.app, e.record)
     }
   }
   return e.next()

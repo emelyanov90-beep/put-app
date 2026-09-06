@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vput/app/theme/app_colors.dart';
 import 'package:vput/features/trips/application/trip_draft_controller.dart';
+import 'package:vput/features/trips/data/preview_trip_publication_settings.dart';
 import 'package:vput/features/trips/presentation/widgets/create_trip_controls.dart';
 import 'package:vput/features/vehicles/application/driver_vehicles_controller.dart';
 import 'package:vput/features/vehicles/domain/driver_vehicle.dart';
@@ -197,14 +198,17 @@ class _RadioMark extends StatelessWidget {
   }
 }
 
-/// State of the design for a driver with no verified car yet.
-class DriverVehicleEmptyCard extends StatelessWidget {
+/// State of the design for a driver with no usable car yet.
+class DriverVehicleEmptyCard extends ConsumerWidget {
   const DriverVehicleEmptyCard({required this.onAddVehicle, super.key});
 
   final VoidCallback onAddVehicle;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    // With moderation switched off a car is ready the moment it is saved, so
+    // the hint must not promise an administrator review.
+    final autoApprove = ref.watch(vehicleAutoApproveProvider);
     return CreateTripCard(
       key: DriverVehiclePicker.emptyStateKey,
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
@@ -227,11 +231,14 @@ class DriverVehicleEmptyCard extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 4),
-          const Text(
-            'Чтобы создать поездку, добавьте автомобиль и пришлите СТС на '
-            'проверку администратору',
+          Text(
+            autoApprove
+                ? 'Чтобы создать поездку, добавьте автомобиль — он сразу '
+                      'будет доступен для публикации'
+                : 'Чтобы создать поездку, добавьте автомобиль и пришлите СТС '
+                      'на проверку администратору',
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: const TextStyle(
               color: Color(0xFF95969C),
               fontSize: 15,
               height: 1.33,

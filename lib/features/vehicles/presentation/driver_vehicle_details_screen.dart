@@ -4,6 +4,7 @@ import 'package:vput/features/profile/presentation/widgets/photo_source_sheet.da
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vput/app/theme/app_colors.dart';
 import 'package:vput/app/widgets/screen_header.dart';
+import 'package:vput/features/trips/data/preview_trip_publication_settings.dart';
 import 'package:vput/features/vehicles/application/driver_vehicles_controller.dart';
 import 'package:vput/features/vehicles/domain/driver_vehicle.dart';
 import 'package:vput/features/vehicles/presentation/widgets/vehicle_photo.dart';
@@ -68,6 +69,7 @@ class _DriverVehicleDetailsState
   @override
   Widget build(BuildContext context) {
     ref.watch(driverVehiclesProvider);
+    final autoApprove = ref.watch(vehicleAutoApproveProvider);
     final vehicle = ref
         .read(driverVehiclesProvider.notifier)
         .findById(vehicleId);
@@ -210,11 +212,19 @@ class _DriverVehicleDetailsState
                                 ),
                                 if (!vehicle.hasRegistrationDocument) ...[
                                   const SizedBox(height: 4),
-                                  const Text(
-                                    'Не загружено — без него авто не пройдёт '
-                                    'проверку',
+                                  // Without moderation a missing СТС does not
+                                  // stop the car from being used, so it is a
+                                  // reminder rather than an error.
+                                  Text(
+                                    autoApprove
+                                        ? 'Не загружено — добавьте, когда '
+                                              'будет под рукой'
+                                        : 'Не загружено — без него авто не '
+                                              'пройдёт проверку',
                                     style: TextStyle(
-                                      color: AppColors.errorText,
+                                      color: autoApprove
+                                          ? AppColors.textSecondary
+                                          : AppColors.errorText,
                                       fontSize: 13,
                                       height: 1.38,
                                     ),

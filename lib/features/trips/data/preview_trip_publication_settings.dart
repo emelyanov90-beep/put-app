@@ -64,6 +64,13 @@ final tripCommissionPolicyProvider = Provider<TripCommissionPolicy>((ref) {
   );
 });
 
+/// Whether a vehicle is usable as soon as it is saved, with no administrator
+/// review. The server decides it; the client only adapts its wording.
+final vehicleAutoApproveProvider = Provider<bool>((ref) {
+  final raw = ref.watch(_runtimeTripConfigProvider).value;
+  return raw?['vehicle_auto_approve'] != false;
+});
+
 /// Preview prices of the seat extras. The driver switches a service on, the
 /// price comes from the catalogue.
 const previewExtraServicePrices = <TripExtraService, int>{

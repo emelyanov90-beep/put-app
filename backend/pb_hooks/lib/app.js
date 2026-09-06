@@ -473,6 +473,7 @@ function runtimeConfigHandler(e) {
         pets: 150,
       }),
       parcel_size_specs: settingValue(e.app, "parcel_size_specs", {}),
+      vehicle_auto_approve: vehicleAutoApprove(e.app),
     })
   } catch (error) {
     return writeError(e, error)
@@ -818,6 +819,7 @@ function createVehicleHandler(e) {
       verification_status: "draft",
     })
     applyVehicleBody(record, body)
+    applyVehicleVerification(e.app, record)
     e.app.save(record)
     return e.json(200, { vehicle: vehicleDto(record, true) })
   } catch (error) {
@@ -831,11 +833,7 @@ function patchVehicleHandler(e) {
     const record = e.app.findRecordById("vehicles", e.request.pathValue("id"))
     requireOwnRecord(record, e.auth.id, "owner_id")
     applyVehicleBody(record, body)
-    if (record.getString("verification_status") !== "draft") {
-      record.set("verification_status", "draft")
-      record.set("verified_at", "")
-      record.set("verification_comment", "")
-    }
+    applyVehicleVerification(e.app, record)
     e.app.save(record)
     return e.json(200, { vehicle: vehicleDto(record, true) })
   } catch (error) {
@@ -847,6 +845,12 @@ function submitVehicleHandler(e) {
   try {
     const record = e.app.findRecordById("vehicles", e.request.pathValue("id"))
     requireOwnRecord(record, e.auth.id, "owner_id")
+    if (vehicleAutoApprove(e.app)) {
+      // Nothing to send: the vehicle was approved when it was saved.
+      applyVehicleVerification(e.app, record)
+      e.app.save(record)
+      return e.json(200, { vehicle: vehicleDto(record, true) })
+    }
     if (!record.getString("registration_document")) {
       throw businessError("DOCUMENT_REQUIRED", "Загрузите СТС перед отправкой.", 409)
     }
@@ -1150,6 +1154,34 @@ function mirroredFareTable(source, stopCount) {
   return mirrored
 }
 
+/// Whether a vehicle is usable as soon as the driver saves it.
+///
+/// Moderation is a product switch, not a code branch: with
+/// `app_settings.vehicle_auto_approve` on, the server approves a vehicle
+/// itself, and turning the setting off restores the administrator review
+/// without a redeploy. The transition stays server-side either way — a client
+/// still cannot set `verification_status`.
+function vehicleAutoApprove(app) {
+  const setting = firstByData(app, "app_settings", "key", "vehicle_auto_approve")
+  return setting ? setting.get("value") !== false : true
+}
+
+/// Sets the verification state a saved vehicle should carry.
+///
+/// Under auto-approval the vehicle is immediately approved; otherwise editing
+/// it invalidates an earlier review and sends it back to `draft`, as before.
+function applyVehicleVerification(app, record) {
+  if (vehicleAutoApprove(app)) {
+    record.set("verification_status", "approved")
+    record.set("verification_comment", "")
+    record.set("verified_at", new DateTime())
+    return
+  }
+  record.set("verification_status", "draft")
+  record.set("verification_comment", "")
+  record.set("verified_at", "")
+}
+
 module.exports = {
   activeBooking,
   bodyOf,
@@ -1188,6 +1220,8 @@ module.exports = {
   sendMessageHandler,
   tripDto,
   submitVehicleHandler,
+  applyVehicleVerification,
+  vehicleAutoApprove,
   vehicleDto,
   writeError,
 }

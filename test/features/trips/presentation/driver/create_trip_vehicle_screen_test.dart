@@ -104,10 +104,11 @@ void main() {
 
     expect(find.byKey(DriverVehiclePicker.emptyStateKey), findsOneWidget);
     expect(find.text('Нет добавленных авто'), findsOneWidget);
+    // Moderation is switched off, so the hint promises no administrator review.
     expect(
       find.text(
-        'Чтобы создать поездку, добавьте автомобиль и пришлите СТС на '
-        'проверку администратору',
+        'Чтобы создать поездку, добавьте автомобиль — он сразу будет '
+        'доступен для публикации',
       ),
       findsOneWidget,
     );
