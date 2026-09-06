@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pocketbase/pocketbase.dart';
@@ -5,7 +7,14 @@ import 'package:vput/core/api/pocketbase_provider.dart';
 import 'package:vput/core/config/app_config.dart';
 import 'package:vput/features/auth/data/preview_blocked_account.dart';
 
-final initialAuthStateProvider = Provider<bool>((ref) => false);
+/// Whether a session was restored from secure storage at startup.
+///
+/// Derived from the client rather than overridden in a nested scope, so the
+/// session controller — which lives in the root container — actually sees it.
+final initialAuthStateProvider = Provider<bool>((ref) {
+  if (AppConfig.isPreviewMode) return false;
+  return ref.watch(startupClientProvider).value?.authStore.isValid ?? false;
+});
 
 @immutable
 class AuthVerificationResult {
@@ -40,7 +49,13 @@ class PreviewSessionController extends Notifier<bool> {
             '/api/app/auth/request-code',
             method: 'POST',
             body: {'phone': phone},
-          );
+          )
+          .timeout(const Duration(seconds: 10));
+    } on TimeoutException {
+      throw const AuthFailure(
+        'Сервер не ответил вовремя. Проверьте интернет и попробуйте снова.',
+        code: 'REQUEST_TIMEOUT',
+      );
     } on ClientException catch (error) {
       final code = error.response['code'] as String?;
       throw AuthFailure(
@@ -213,5 +228,13 @@ final currentLocalAccountIdProvider = Provider<String>((ref) {
       (AppConfig.isPreviewMode ? 'preview_user' : 'signed_out');
 });
 
-/// main() binds this to the real SDK auth store; widget tests need no storage.
-final clearStoredAuthProvider = Provider<VoidCallback>((ref) => () {});
+/// Clears the stored session on logout. Resolves to a no-op until the client is
+/// ready, and in widget tests that never build one.
+final clearStoredAuthProvider = Provider<VoidCallback>((ref) {
+  // A preview build keeps no session on disk, and reading secure storage in a
+  // widget test would fail for want of a platform channel.
+  if (AppConfig.isPreviewMode) return () {};
+  final client = ref.watch(startupClientProvider).value;
+  if (client == null) return () {};
+  return client.authStore.clear;
+});

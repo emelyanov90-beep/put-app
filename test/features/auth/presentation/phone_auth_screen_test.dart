@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:vput/features/auth/presentation/phone_auth_screen.dart';
@@ -70,6 +72,42 @@ void main() {
     await tester.tap(find.byKey(PhoneAuthScreen.getCodeButtonKey));
 
     expect(requestedPhone, '+7 912 345 67 89');
+  });
+
+  testWidgets('shows progress and prevents repeated code requests', (
+    tester,
+  ) async {
+    final request = Completer<void>();
+    var requestCount = 0;
+    await tester.pumpWidget(
+      MaterialApp(
+        home: PhoneAuthScreen(
+          onCodeRequested: (_) {
+            requestCount++;
+            return request.future;
+          },
+          onOpenTermsOfService: () {},
+          onOpenPrivacyPolicy: () {},
+        ),
+      ),
+    );
+
+    await tester.enterText(find.byType(TextField), '9123456789');
+    await tester.pump();
+    await tester.tap(find.byKey(PhoneAuthScreen.getCodeButtonKey));
+    await tester.pump();
+
+    expect(requestCount, 1);
+    expect(find.byType(CircularProgressIndicator), findsOneWidget);
+    final button = tester.widget<FilledButton>(
+      find.byKey(PhoneAuthScreen.getCodeButtonKey),
+    );
+    expect(button.onPressed, isNull);
+
+    request.complete();
+    await tester.pumpAndSettle();
+
+    expect(find.text('Получить код'), findsOneWidget);
   });
 
   testWidgets(

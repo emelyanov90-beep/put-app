@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -17,7 +19,7 @@ class PhoneAuthScreen extends StatefulWidget {
   static const phoneFieldKey = Key('phone_auth_phone_field');
   static const getCodeButtonKey = Key('phone_auth_get_code');
 
-  final ValueChanged<String> onCodeRequested;
+  final FutureOr<void> Function(String phone) onCodeRequested;
   final VoidCallback onOpenTermsOfService;
   final VoidCallback onOpenPrivacyPolicy;
 
@@ -28,6 +30,7 @@ class PhoneAuthScreen extends StatefulWidget {
 class _PhoneAuthScreenState extends State<PhoneAuthScreen> {
   final _phoneController = TextEditingController();
   final _phoneFocusNode = FocusNode();
+  bool _isSubmitting = false;
   late final _termsRecognizer = TapGestureRecognizer()
     ..onTap = widget.onOpenTermsOfService;
   late final _privacyRecognizer = TapGestureRecognizer()
@@ -36,25 +39,18 @@ class _PhoneAuthScreenState extends State<PhoneAuthScreen> {
   @override
   void initState() {
     super.initState();
-    _phoneFocusNode.addListener(_handleFocusChange);
     _phoneController.addListener(_handleTextChange);
   }
 
   @override
   void dispose() {
-    _phoneFocusNode
-      ..removeListener(_handleFocusChange)
-      ..dispose();
+    _phoneFocusNode.dispose();
     _phoneController
       ..removeListener(_handleTextChange)
       ..dispose();
     _termsRecognizer.dispose();
     _privacyRecognizer.dispose();
     super.dispose();
-  }
-
-  void _handleFocusChange() {
-    if (mounted) setState(() {});
   }
 
   void _handleTextChange() {
@@ -65,10 +61,17 @@ class _PhoneAuthScreenState extends State<PhoneAuthScreen> {
       RussianPhoneFormatter.nationalDigitsOf(_phoneController.text) ==
       RussianPhoneFormatter.nationalDigitCount;
 
-  void _submit() {
-    if (!_isPhoneComplete) return;
+  Future<void> _submit() async {
+    if (!_isPhoneComplete || _isSubmitting) return;
     _phoneFocusNode.unfocus();
-    widget.onCodeRequested(_phoneController.text);
+    setState(() => _isSubmitting = true);
+    try {
+      await Future<void>.sync(
+        () => widget.onCodeRequested(_phoneController.text),
+      );
+    } finally {
+      if (mounted) setState(() => _isSubmitting = false);
+    }
   }
 
   @override
@@ -88,98 +91,111 @@ class _PhoneAuthScreenState extends State<PhoneAuthScreen> {
         resizeToAvoidBottomInset: true,
         backgroundColor: AppColors.background,
         body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: LayoutBuilder(
-              builder: (context, constraints) => SingleChildScrollView(
-                child: ConstrainedBox(
-                  constraints: BoxConstraints(minHeight: constraints.maxHeight),
-                  child: IntrinsicHeight(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(height: 16),
-                        const Text(
-                          'Добро пожаловать в «Путь»!',
-                          key: PhoneAuthScreen.titleKey,
-                          style: TextStyle(
-                            color: AppColors.accentBlack,
-                            fontSize: 24,
-                            fontWeight: FontWeight.w700,
-                            height: 1.25,
-                          ),
+          child: Column(
+            children: [
+              Expanded(
+                child: SingleChildScrollView(
+                  padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'Добро пожаловать в «Путь»!',
+                        key: PhoneAuthScreen.titleKey,
+                        style: TextStyle(
+                          color: AppColors.accentBlack,
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700,
+                          height: 1.25,
                         ),
-                        const SizedBox(height: 8),
-                        const Text(
-                          'Находите выгодные поездки и договаривайтесь на своих условиях',
-                          key: PhoneAuthScreen.descriptionKey,
-                          style: TextStyle(
-                            color: AppColors.textSecondary,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w400,
-                            height: 1.33,
-                          ),
+                      ),
+                      const SizedBox(height: 8),
+                      const Text(
+                        'Находите выгодные поездки и договаривайтесь на своих условиях',
+                        key: PhoneAuthScreen.descriptionKey,
+                        style: TextStyle(
+                          color: AppColors.textSecondary,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w400,
+                          height: 1.33,
                         ),
-                        const SizedBox(height: 32),
-                        _PhoneField(
-                          controller: _phoneController,
-                          focusNode: _phoneFocusNode,
-                          onSubmitted: (_) => _submit(),
+                      ),
+                      const SizedBox(height: 32),
+                      _PhoneField(
+                        controller: _phoneController,
+                        focusNode: _phoneFocusNode,
+                        onSubmitted: (_) => _submit(),
+                      ),
+                      const SizedBox(height: 8),
+                      const Text(
+                        'Мы отправим вам СМС с кодом для входа в приложение',
+                        style: TextStyle(
+                          color: AppColors.textSecondary,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                          height: 1.33,
                         ),
-                        const SizedBox(height: 8),
-                        const Text(
-                          'Мы отправим вам СМС с кодом для входа в приложение',
-                          style: TextStyle(
-                            color: AppColors.textSecondary,
-                            fontSize: 12,
-                            fontWeight: FontWeight.w400,
-                            height: 1.33,
-                          ),
-                        ),
-                        const Spacer(),
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 8),
-                          child: _TermsText(
-                            termsRecognizer: _termsRecognizer,
-                            privacyRecognizer: _privacyRecognizer,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 16),
-                          child: SizedBox(
-                            width: double.infinity,
-                            height: 48,
-                            child: FilledButton(
-                              key: PhoneAuthScreen.getCodeButtonKey,
-                              onPressed: _isPhoneComplete ? _submit : null,
-                              style: FilledButton.styleFrom(
-                                disabledBackgroundColor: AppColors.background,
-                                disabledForegroundColor:
-                                    AppColors.textSecondary,
-                                foregroundColor: AppColors.accentWhite,
-                                backgroundColor: AppColors.brandGreen,
-                                side: const BorderSide(
-                                  color: AppColors.divider,
-                                ),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(12),
-                                ),
-                                textStyle: const TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w600,
-                                  height: 1.33,
-                                ),
-                              ),
-                              child: const Text('Получить код'),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
               ),
-            ),
+              TextFieldTapRegion(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 8),
+                        child: _TermsText(
+                          termsRecognizer: _termsRecognizer,
+                          privacyRecognizer: _privacyRecognizer,
+                        ),
+                      ),
+                      SizedBox(
+                        width: double.infinity,
+                        height: 48,
+                        child: FilledButton(
+                          key: PhoneAuthScreen.getCodeButtonKey,
+                          onPressed: _isPhoneComplete && !_isSubmitting
+                              ? _submit
+                              : null,
+                          style: FilledButton.styleFrom(
+                            disabledBackgroundColor: _isSubmitting
+                                ? AppColors.brandGreen
+                                : AppColors.background,
+                            disabledForegroundColor: _isSubmitting
+                                ? AppColors.accentWhite
+                                : AppColors.textSecondary,
+                            foregroundColor: AppColors.accentWhite,
+                            backgroundColor: AppColors.brandGreen,
+                            side: const BorderSide(color: AppColors.divider),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            textStyle: const TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600,
+                              height: 1.33,
+                            ),
+                          ),
+                          child: _isSubmitting
+                              ? const SizedBox.square(
+                                  dimension: 20,
+                                  child: CircularProgressIndicator(
+                                    strokeWidth: 2,
+                                    color: AppColors.accentWhite,
+                                  ),
+                                )
+                              : const Text('Получить код'),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),
