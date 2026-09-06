@@ -34,6 +34,9 @@ migrate_working_dir/
 /android/build/
 /coverage/
 
+# Release artifacts prepared for hand-off
+/dist/
+
 # Local build configuration and secrets
 config/*.json
 !config/*.example.json
