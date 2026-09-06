@@ -4,6 +4,8 @@ import 'package:vput/app/widgets/screen_header.dart';
 import 'package:vput/features/trips/data/preview_trip_catalog_repository.dart';
 import 'package:vput/features/trips/domain/passenger_booking_request.dart';
 import 'package:vput/features/trips/presentation/booking/passenger_booking_sheet.dart';
+import 'package:vput/features/trips/domain/trip_extras.dart';
+import 'package:vput/features/trips/presentation/booking/passenger_parcel_sheet.dart';
 import 'package:vput/features/trips/presentation/trip_details_screen.dart';
 
 void main() {
@@ -16,7 +18,7 @@ void main() {
     addTearDown(tester.view.resetDevicePixelRatio);
     var backTaps = 0;
     PassengerBookingRequest? booking;
-    var parcelTaps = 0;
+    PassengerParcelRequest? parcel;
 
     await tester.pumpWidget(
       MaterialApp(
@@ -25,7 +27,7 @@ void main() {
           onBack: () => backTaps++,
           onDriver: () {},
           onBookingSubmitted: (request) => booking = request,
-          onSendParcel: () => parcelTaps++,
+          onParcelSubmitted: (request) => parcel = request,
         ),
       ),
     );
@@ -43,8 +45,30 @@ void main() {
     );
     expect(bookingButton.onPressed, isNull);
 
+    // «Отправить посылку» opens its own sheet instead of a pending stub.
     await tester.tap(find.byKey(TripDetailsScreen.sendParcelButtonKey));
-    expect(parcelTaps, 1);
+    await tester.pumpAndSettle();
+    expect(find.byKey(PassengerParcelSheet.sheetKey), findsOneWidget);
+
+    final submit = tester.widget<FilledButton>(
+      find.byKey(PassengerParcelSheet.submitButtonKey),
+    );
+    expect(submit.onPressed, isNull, reason: 'a size has to be picked first');
+
+    await tester.tap(
+      find.byKey(PassengerParcelSheet.sizeKey(ParcelSize.medium)),
+    );
+    await tester.pump();
+    await tester.ensureVisible(
+      find.byKey(PassengerParcelSheet.submitButtonKey),
+    );
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(PassengerParcelSheet.submitButtonKey));
+    await tester.pumpAndSettle();
+
+    expect(parcel, isNotNull);
+    expect(parcel!.sizeCode, 'M');
+    expect(parcel!.amountRubles, 250);
     expect(booking, isNull);
 
     await tester.tap(find.byKey(ScreenHeader.backButtonKey));
@@ -68,7 +92,7 @@ void main() {
           onBack: () {},
           onDriver: () {},
           onBookingSubmitted: (request) => booking = request,
-          onSendParcel: () {},
+          onParcelSubmitted: (_) {},
         ),
       ),
     );

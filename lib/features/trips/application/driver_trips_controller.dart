@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vput/core/api/pocketbase_provider.dart';
 import 'package:vput/core/config/app_config.dart';
+import 'package:vput/features/auth/application/preview_session_controller.dart';
 import 'package:vput/features/trips/data/pocketbase_driver_trip_repository.dart';
 import 'package:vput/features/trips/application/trip_draft_controller.dart';
 import 'package:vput/features/trips/domain/driver_trip.dart';
@@ -18,22 +19,32 @@ import 'package:vput/features/trips/domain/trip_publication_limits.dart';
 /// state and never creates a second copy.
 class DriverTripsController extends Notifier<List<DriverTrip>> {
   var _nextId = 1;
+  var _accountGeneration = 0;
 
   @override
   List<DriverTrip> build() {
-    if (AppConfig.hasPocketBaseUrl) {
+    _accountGeneration++;
+    final userId = ref.watch(currentSessionUserIdProvider);
+    if (!AppConfig.isPreviewMode && userId != null) {
       unawaited(Future<void>.microtask(_load));
     }
     return const [];
   }
 
-  DriverTripRepository? get _repository => AppConfig.hasPocketBaseUrl
+  DriverTripRepository? get _repository => !AppConfig.isPreviewMode
       ? PocketBaseDriverTripRepository(ref.read(pocketBaseProvider))
       : null;
 
   Future<void> _load() async {
+    final generation = _accountGeneration;
+    final userId = ref.read(currentSessionUserIdProvider);
+    if (userId == null) return;
     final trips = await _repository!.list();
-    if (ref.mounted) state = trips;
+    if (ref.mounted &&
+        generation == _accountGeneration &&
+        ref.read(currentSessionUserIdProvider) == userId) {
+      state = trips;
+    }
   }
 
   Future<void> reload() => _repository == null ? Future.value() : _load();

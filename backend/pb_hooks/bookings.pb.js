@@ -1,8 +1,5 @@
 /// <reference path="../pb_data/types.d.ts" />
 
-const RESERVED = ["awaiting_payment", "confirmed"]
-const ACTIVE = ["pending_driver", "awaiting_payment", "confirmed"]
-
 routerAdd(
   "GET",
   "/api/app/bookings/mine",
@@ -35,9 +32,21 @@ routerAdd("POST", "/api/app/bookings", (e) => {
         throw h.businessError("BOOKING_EXISTS", "Активная заявка уже существует.", 409)
       }
 
-      const seatCount = Number(body.seat_count || 1)
-      if (!Number.isInteger(seatCount) || seatCount < 1) {
+      const bookingKind = String(body.booking_kind || "passenger")
+      if (bookingKind !== "passenger" && bookingKind !== "parcel") {
+        throw h.businessError("INVALID_BOOKING", "Неизвестный тип заявки.")
+      }
+      const isParcel = bookingKind === "parcel"
+
+      // A parcel travels without its sender, so it reserves no seat.
+      const seatCount = isParcel ? 0 : Number(body.seat_count || 1)
+      if (!isParcel && (!Number.isInteger(seatCount) || seatCount < 1)) {
         throw h.businessError("INVALID_BOOKING", "Некорректное количество мест.")
+      }
+
+      const parcelSize = isParcel ? String(body.parcel_size || "") : ""
+      if (isParcel && ["S", "M", "L"].indexOf(parcelSize) < 0) {
+        throw h.businessError("INVALID_PARCEL_SIZE", "Некорректный размер посылки.")
       }
       const stops = h.recordsByFilter(
         tx,
@@ -53,14 +62,30 @@ routerAdd("POST", "/api/app/bookings", (e) => {
           pickupIndex < 0 || dropoffIndex <= pickupIndex || dropoffIndex >= stops.length) {
         throw h.businessError("INVALID_ROUTE", "Некорректные точки посадки и высадки.")
       }
-      if (trip.getString("booking_mode") === "instant") {
+      if (!isParcel && trip.getString("booking_mode") === "instant") {
         h.ensureSeats(tx, trip, seatCount)
       }
 
-      let total = trip.getInt("base_price") * seatCount
-      const selectedCodes = Array.isArray(body.extra_service_codes)
-        ? body.extra_service_codes
-        : []
+      // A parcel is priced by its size from the platform catalogue; a seat is
+      // priced by the fare the driver set for exactly this pair of stops.
+      // The driver never prices a parcel himself.
+      let fare
+      if (isParcel) {
+        fare = h.parcelPrice(tx, trip, parcelSize)
+      } else {
+        const legPrice = h.legFare(trip, pickupIndex, dropoffIndex)
+        if (legPrice === null) {
+          throw h.businessError(
+            "LEG_NOT_SOLD",
+            "Водитель не назначил цену за этот участок.",
+            409,
+          )
+        }
+        fare = legPrice * seatCount
+      }
+      const selectedCodes = isParcel || !Array.isArray(body.extra_service_codes)
+        ? []
+        : body.extra_service_codes
       const selected = {}
       for (const code of selectedCodes) selected[String(code)] = true
       const enabledExtras = h.recordsByFilter(
@@ -80,7 +105,7 @@ routerAdd("POST", "/api/app/bookings", (e) => {
         const code = service.getString("code")
         if (selected[code]) {
           const amount = enabled.getInt("price")
-          total += amount
+          fare += amount
           extraRows.push({ service_id: service.id, amount: amount })
           delete selected[code]
         }
@@ -92,13 +117,9 @@ routerAdd("POST", "/api/app/bookings", (e) => {
         )
       }
 
+      // The fare is what the driver receives; the commission is added on top of
+      // it, so the passenger total is fare + commission.
       let commission = 0
-      const commissionSetting = h.firstByData(
-        tx,
-        "app_settings",
-        "key",
-        "commission_fixed_rub",
-      )
       const monetizationSetting = h.firstByData(
         tx,
         "app_settings",
@@ -106,11 +127,9 @@ routerAdd("POST", "/api/app/bookings", (e) => {
         "monetization_enabled",
       )
       if (!monetizationSetting || monetizationSetting.get("value") !== false) {
-        commission = commissionSetting
-          ? Number(commissionSetting.get("value"))
-          : 50
+        commission = Math.round((fare * h.commissionPercent(tx)) / 100)
       }
-      commission = Math.max(0, Math.min(total, Math.round(commission)))
+      const total = fare + commission
 
       const status = trip.getString("booking_mode") === "instant"
         ? "awaiting_payment"
@@ -121,17 +140,26 @@ routerAdd("POST", "/api/app/bookings", (e) => {
         passenger_id: passengerId,
         pickup_stop_id: stops[pickupIndex].id,
         dropoff_stop_id: stops[dropoffIndex].id,
-        booking_kind: String(body.booking_kind || "passenger"),
+        booking_kind: bookingKind,
         status: status,
         payment_status: paymentStatus,
         seat_count: seatCount,
         amount: total,
         commission_amount: commission,
-        driver_amount: total - commission,
+        driver_amount: fare,
         currency: trip.getString("currency"),
         idempotency_key: $security.randomString(24),
       })
       tx.save(booking)
+      if (isParcel) {
+        tx.save(new Record(tx.findCollectionByNameOrId("parcels"), {
+          booking_id: booking.id,
+          weight_category: parcelSize,
+          description: String(body.parcel_description || ""),
+          comment: String(body.parcel_comment || ""),
+          amount: fare,
+        }))
+      }
       for (const row of extraRows) {
         tx.save(new Record(tx.findCollectionByNameOrId("booking_extras"), {
           booking_id: booking.id,
@@ -145,8 +173,10 @@ routerAdd("POST", "/api/app/bookings", (e) => {
         tx,
         trip.getString("driver_id"),
         "booking_created",
-        "Новая заявка",
-        "Пассажир отправил заявку на поездку.",
+        isParcel ? "Новая посылка" : "Новая заявка",
+        isParcel
+          ? "Пассажир отправил заявку на перевозку посылки."
+          : "Пассажир отправил заявку на поездку.",
         { booking_id: booking.id },
       )
       result = h.bookingDto(booking)

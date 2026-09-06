@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vput/core/api/pocketbase_provider.dart';
 import 'package:vput/core/config/app_config.dart';
+import 'package:vput/features/auth/application/preview_session_controller.dart';
 import 'package:vput/features/trips/application/driver_trips_controller.dart';
 import 'package:vput/features/trips/domain/passenger_trip.dart';
 import 'package:vput/features/trips/domain/trip_commission.dart';
@@ -13,7 +14,10 @@ const previewTripPublicationLimits = TripPublicationLimits(
 );
 
 final _runtimeTripConfigProvider = FutureProvider<Map<String, dynamic>>((ref) {
-  if (!AppConfig.hasPocketBaseUrl) return Future.value(const {});
+  if (AppConfig.isPreviewMode) return Future.value(const {});
+  if (ref.watch(currentSessionUserIdProvider) == null) {
+    return Future.value(const {});
+  }
   return ref
       .watch(pocketBaseProvider)
       .send<Map<String, dynamic>>('/api/app/config');
@@ -48,14 +52,15 @@ final tripPublicationUsageProvider = Provider<TripPublicationUsage>((ref) {
   );
 });
 
-const previewTripCommission = TripCommissionPolicy(fixedRubles: 50);
+/// Offline/demo rate mirroring the seeded `commission_percent` setting.
+const previewTripCommission = TripCommissionPolicy(percent: 10);
 
 final tripCommissionPolicyProvider = Provider<TripCommissionPolicy>((ref) {
   final raw = ref.watch(_runtimeTripConfigProvider).value;
   return TripCommissionPolicy(
-    fixedRubles:
-        (raw?['commission_fixed_rub'] as num?)?.toInt() ??
-        previewTripCommission.fixedRubles,
+    percent:
+        (raw?['commission_percent'] as num?)?.toInt() ??
+        previewTripCommission.percent,
   );
 });
 

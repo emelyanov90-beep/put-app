@@ -4,6 +4,7 @@ import 'package:vput/features/trips/domain/driver_trip_repository.dart';
 import 'package:vput/features/trips/domain/passenger_trip.dart';
 import 'package:vput/features/trips/domain/trip_draft.dart';
 import 'package:vput/features/trips/domain/trip_extras.dart';
+import 'package:vput/features/trips/domain/trip_fare_table.dart';
 import 'package:vput/features/trips/domain/trip_route_point.dart';
 
 class PocketBaseDriverTripRepository implements DriverTripRepository {
@@ -100,9 +101,11 @@ class PocketBaseDriverTripRepository implements DriverTripRepository {
     'departure_at': draft.departureAt?.toUtc().toIso8601String(),
     'arrival_at': draft.arrivalAt?.toUtc().toIso8601String(),
     'seat_capacity': draft.seatCount,
+    // `base_price` is what the driver receives; the server adds its commission
+    // on top of it when a booking is priced.
     'base_price': draft.fullRoutePrice,
     'minimum_boarding_price': draft.minimumBoardingPrice ?? 0,
-    'segment_prices': draft.segmentPrices,
+    'fare_table': draft.fares.toJson(),
     'paired_trip_id': draft.pairedTripId,
     'stops': [
       for (final point in draft.points)
@@ -179,11 +182,8 @@ class PocketBaseDriverTripRepository implements DriverTripRepository {
         departureAt: _date(json['departure_at']),
         arrivalAt: _date(json['arrival_at']),
         seatCount: (json['seat_capacity'] as num?)?.toInt() ?? 0,
-        fullRoutePrice: (json['base_price'] as num?)?.toInt(),
         minimumBoardingPrice: (json['minimum_boarding_price'] as num?)?.toInt(),
-        segmentPrices: (json['segment_prices'] as List? ?? const [])
-            .map((value) => (value as num?)?.toInt())
-            .toList(growable: false),
+        fares: TripFareTable.fromJson(json['fare_table']),
         extras: seatOffers,
         parcel: TripParcelOffer(
           enabled: parcelOffer != null,

@@ -131,6 +131,9 @@ void main() {
       ),
     );
 
+    // The badge counts unread notifications, which arrive asynchronously.
+    await tester.pumpAndSettle();
+
     expect(find.byKey(ProfileScreen.notificationsBadgeKey), findsOneWidget);
     expect(find.text('1'), findsOneWidget);
   });

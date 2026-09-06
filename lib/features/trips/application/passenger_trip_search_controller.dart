@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:vput/core/config/app_config.dart';
+import 'package:vput/features/auth/application/preview_session_controller.dart';
 import 'package:vput/features/trips/data/preview_trip_catalog_repository.dart';
 import 'package:vput/features/trips/domain/passenger_trip.dart';
 
@@ -48,6 +50,10 @@ class PassengerTripSearchController extends Notifier<PassengerTripSearchState> {
 
   @override
   PassengerTripSearchState build() {
+    final userId = ref.watch(currentSessionUserIdProvider);
+    if (!AppConfig.isPreviewMode && userId == null) {
+      return const PassengerTripSearchState();
+    }
     unawaited(
       Future<void>.microtask(() => _startLoad(PassengerTransportType.car)),
     );

@@ -260,12 +260,15 @@ function tripDto(app, trip) {
     arrival_at: trip.getDateTime("arrival_at").string(),
     seat_capacity: trip.getInt("seat_capacity"),
     available_seats: Math.max(0, trip.getInt("seat_capacity") - reservedSeats(app, trip.id)),
+    // `base_price` is what the driver receives; `passenger_price` is what the
+    // passenger pays for the whole route, commission included.
     base_price: trip.getInt("base_price"),
+    passenger_price: trip.getInt("base_price") + trip.getInt("commission_amount"),
     minimum_boarding_price: trip.getInt("minimum_boarding_price"),
     commission_amount: trip.getInt("commission_amount"),
     driver_amount: trip.getInt("driver_amount"),
     currency: trip.getString("currency"),
-    segment_prices: trip.get("segment_prices") || [],
+    fare_table: tripFareTable(trip),
     paired_trip_id: trip.getString("paired_trip_id"),
     published_at: trip.getDateTime("published_at").string(),
     stops: stops,
@@ -402,12 +405,50 @@ function replaceTripStops(app, trip, stops) {
   }
 }
 
-function tripAmounts(app, basePrice) {
-  let commission = 50
-  const setting = firstByData(app, "app_settings", "key", "commission_fixed_rub")
-  if (setting) commission = Number(setting.get("value"))
-  commission = Math.max(0, Math.min(basePrice, Math.round(commission)))
-  return { commission: commission, driver: basePrice - commission }
+/// Commission rate in percent, from `app_settings.commission_percent`.
+function commissionPercent(app) {
+  const setting = firstByData(app, "app_settings", "key", "commission_percent")
+  const value = setting ? Number(setting.get("value")) : 10
+  if (!Number.isFinite(value) || value < 0 || value > 100) return 10
+  return value
+}
+
+/// Splits a fare the driver entered into what they keep and what is added.
+///
+/// The driver names the amount they receive and the commission goes on top of
+/// it, so a 1000 fare at 10 % means the passenger pays 1100. The stored
+/// `total_price` is the passenger amount, keeping `driver_amount =
+/// total_price - commission_amount` true.
+function tripAmounts(app, driverFare) {
+  const fare = Math.max(0, Math.round(driverFare))
+  const monetization = firstByData(app, "app_settings", "key", "monetization_enabled")
+  if (monetization && monetization.get("value") === false) {
+    return { commission: 0, driver: fare, total: fare }
+  }
+  const commission = Math.round((fare * commissionPercent(app)) / 100)
+  return { commission: commission, driver: fare, total: fare + commission }
+}
+
+/// Fare of the leg between two stop positions, as the driver priced it.
+///
+/// Each pair carries its own price: a short leg is deliberately dearer per
+/// kilometre, so a fare is never derived by adding shorter legs together. An
+/// unpriced pair is not sold.
+function legFare(trip, fromIndex, toIndex) {
+  let table = trip.get("fare_table")
+  if (typeof table !== "object" || table === null || Array.isArray(table)) {
+    try {
+      table = JSON.parse(String(table || "{}"))
+    } catch (_) {
+      table = {}
+    }
+  }
+  const price = table[fromIndex + "-" + toIndex]
+  if (price === undefined || price === null) return null
+  const fare = Number(price)
+  if (!Number.isInteger(fare) || fare <= 0) return null
+  const minimum = trip.getInt("minimum_boarding_price")
+  return minimum > fare ? minimum : fare
 }
 
 function settingValue(app, key, fallback) {
@@ -419,7 +460,7 @@ function runtimeConfigHandler(e) {
   try {
     return e.json(200, {
       monetization_enabled: settingValue(e.app, "monetization_enabled", true),
-      commission_fixed_rub: Number(settingValue(e.app, "commission_fixed_rub", 50)),
+      commission_percent: commissionPercent(e.app),
       trip_publication_limits: settingValue(e.app, "trip_publication_limits", {
         driver_trip_limit_per_day: 2,
         driver_trip_limit_per_week: 10,
@@ -469,7 +510,12 @@ function applyTripBody(app, trip, body) {
   trip.set("commission_amount", amounts.commission)
   trip.set("driver_amount", amounts.driver)
   trip.set("currency", "RUB")
-  trip.set("segment_prices", Array.isArray(body.segment_prices) ? body.segment_prices : [])
+  // The stops of a brand-new trip are written after this call, so the incoming
+  // body is the only place the route length can be read from there.
+  const stopCount = Array.isArray(body.stops) && body.stops.length
+    ? body.stops.length
+    : stopCountOf(app, trip)
+  trip.set("fare_table", normalizedFareTable(body.fare_table, basePrice, stopCount))
   if (body.paired_trip_id !== undefined) trip.set("paired_trip_id", String(body.paired_trip_id || ""))
   if (body.accepting_bookings !== undefined) {
     trip.set("accepting_bookings", body.accepting_bookings === true)
@@ -854,7 +900,7 @@ function createReturnTripHandler(e) {
         commission_amount: source.getInt("commission_amount"),
         driver_amount: source.getInt("driver_amount"),
         currency: source.getString("currency"),
-        segment_prices: (source.get("segment_prices") || []).slice().reverse(),
+        fare_table: mirroredFareTable(source, sourceStops.length),
         paired_trip_id: source.id,
       })
       tx.save(trip)
@@ -993,11 +1039,124 @@ function listOwnChatsHandler(e) {
   }
 }
 
+const PARCEL_SIZE_KEYS = { S: "small", M: "medium", L: "large" }
+
+/// Price of a parcel of `size` on `trip`, taken from the platform catalogue.
+///
+/// The driver only switches the «parcel» service on for a trip; the amount
+/// always comes from `app_settings.parcel_size_specs`, never from the client.
+function parcelPrice(app, trip, size) {
+  const offers = recordsByFilter(
+    app,
+    "trip_extra_services",
+    "trip_id = {:trip}",
+    "",
+    100,
+    { trip: trip.id },
+  )
+  let offered = false
+  for (const offer of offers) {
+    const service = app.findRecordById("extra_services", offer.getString("service_id"))
+    if (service.getString("code") === "parcel") {
+      offered = true
+      break
+    }
+  }
+  if (!offered) {
+    throw businessError("PARCEL_UNAVAILABLE", "Водитель не возит посылки на этой поездке.", 409)
+  }
+
+  const setting = firstByData(app, "app_settings", "key", "parcel_size_specs")
+  // A JSON field comes back as raw bytes, so it has to be parsed before the
+  // sizes can be indexed; `runtimeConfigHandler` only ever passes it through.
+  let specs = null
+  if (setting) {
+    try {
+      specs = JSON.parse(String(setting.get("value")))
+    } catch (_) {
+      specs = null
+    }
+  }
+  const spec = specs ? specs[PARCEL_SIZE_KEYS[size]] : null
+  const price = spec ? Number(spec.price_rub) : NaN
+  if (!Number.isInteger(price) || price < 0) {
+    throw businessError("PARCEL_UNAVAILABLE", "Стоимость посылки не настроена.", 409)
+  }
+  return price
+}
+
+function complaintDto(record) {
+  return {
+    id: record.id,
+    subject: record.getString("subject"),
+    text: record.getString("text"),
+    status: record.getString("status"),
+    admin_comment: record.getString("admin_comment"),
+    booking_id: record.getString("booking_id"),
+    created: record.getDateTime("created_at").string(),
+  }
+}
+
+/// Fares of a trip as a plain object, whatever shape the JSON field returns.
+function tripFareTable(trip) {
+  const raw = trip.get("fare_table")
+  if (typeof raw === "object" && raw !== null && !Array.isArray(raw)) return raw
+  try {
+    return JSON.parse(String(raw || "{}"))
+  } catch (_) {
+    return {}
+  }
+}
+
+function stopCountOf(app, trip) {
+  if (!trip.id) return 0
+  return recordsByFilter(app, "trip_stops", "trip_id = {:trip}", "sort_order", 100, { trip: trip.id }).length
+}
+
+/// Keeps only well-formed legs and always stores the whole route at the price
+/// the driver entered, so a published trip can never lack its main fare.
+function normalizedFareTable(raw, basePrice, stopCount) {
+  const source = typeof raw === "object" && raw !== null && !Array.isArray(raw) ? raw : {}
+  const table = {}
+  for (const key of Object.keys(source)) {
+    const parts = String(key).split("-")
+    if (parts.length !== 2) continue
+    const from = Number(parts[0])
+    const to = Number(parts[1])
+    const price = Number(source[key])
+    if (!Number.isInteger(from) || !Number.isInteger(to) || to <= from || from < 0) continue
+    if (stopCount > 0 && to >= stopCount) continue
+    if (!Number.isInteger(price) || price <= 0) continue
+    table[from + "-" + to] = price
+  }
+  if (stopCount > 1) table["0-" + (stopCount - 1)] = basePrice
+  return table
+}
+
+/// Fares of a trip running the other way round: «A → C» becomes «C → A» at the
+/// same price.
+function mirroredFareTable(source, stopCount) {
+  const table = tripFareTable(source)
+  const last = stopCount - 1
+  const mirrored = {}
+  for (const key of Object.keys(table)) {
+    const parts = String(key).split("-")
+    if (parts.length !== 2) continue
+    const from = Number(parts[0])
+    const to = Number(parts[1])
+    if (!Number.isInteger(from) || !Number.isInteger(to)) continue
+    mirrored[(last - to) + "-" + (last - from)] = table[key]
+  }
+  return mirrored
+}
+
 module.exports = {
   activeBooking,
   bodyOf,
   bookingDto,
   businessError,
+  commissionPercent,
+  complaintDto,
   driverDecisionHandler,
   cancelTripHandler,
   createTripHandler,
@@ -1005,6 +1164,7 @@ module.exports = {
   createVehicleHandler,
   ensureChat,
   ensureSeats,
+  legFare,
   firstByData,
   getTripHandler,
   listVehiclesHandler,
@@ -1015,6 +1175,7 @@ module.exports = {
   normalizedPhone,
   notify,
   ownUserDto,
+  parcelPrice,
   publicUserDto,
   runtimeConfigHandler,
   patchTripHandler,

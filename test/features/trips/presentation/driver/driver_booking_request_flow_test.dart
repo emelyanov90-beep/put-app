@@ -15,6 +15,8 @@ import 'package:vput/features/trips/presentation/widgets/create_trip_controls.da
 import 'package:vput/features/trips/presentation/widgets/new_booking_request_dialog.dart';
 import 'package:vput/features/trips/presentation/widgets/passenger_paid_dialog.dart';
 
+import '../../../../support/trip_fares.dart';
+
 const _request = DriverTripPassengerBooking(
   id: 'booking_1',
   passengerId: 'passenger_1',
@@ -35,7 +37,9 @@ TripDraft _draft() {
     departureAt: DateTime.now().add(const Duration(days: 1)),
     arrivalAt: DateTime.now().add(const Duration(days: 1, hours: 6)),
     seatCount: 4,
-    fullRoutePrice: 600,
+    fares: fares({
+      [0, 2]: 600,
+    }),
     vehicleId: 'preview_vehicle_largus',
   );
 }

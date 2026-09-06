@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:vput/features/trips/application/passenger_order_draft_controller.dart';
+import 'package:vput/features/trips/domain/trip_route_point.dart';
 import 'package:vput/features/trips/presentation/passenger_order_schedule_screen.dart';
 
 void main() {
@@ -11,6 +12,11 @@ void main() {
     final container = ProviderContainer();
     addTearDown(container.dispose);
     var continued = 0;
+
+    // A new order starts with an empty route, so the passenger fills it in.
+    container.read(passengerOrderDraftProvider.notifier)
+      ..setPointAt(0, const TripRoutePoint(address: 'Москва'))
+      ..setPointAt(1, const TripRoutePoint(address: 'Тверь'));
 
     await tester.pumpWidget(
       UncontrolledProviderScope(
@@ -28,7 +34,8 @@ void main() {
     expect(find.text('Новый заказ'), findsOneWidget);
     expect(find.text('Шаг 2 из 4'), findsOneWidget);
     expect(find.text('Маршрут'), findsOneWidget);
-    expect(find.text('Победителей 1, Минск'), findsOneWidget);
+    expect(find.text('Москва'), findsOneWidget);
+    expect(find.text('Тверь'), findsOneWidget);
     expect(find.text('Количество мест:'), findsOneWidget);
 
     var continueButton = tester.widget<FilledButton>(

@@ -163,13 +163,16 @@ class CreateTripSummaryScreen extends ConsumerWidget {
               label: 'Весь маршрут',
               value: _price(draft.fullRoutePrice),
             ),
-            if (draft.segmentCount > 1)
-              for (var index = 0; index < draft.segmentCount; index++)
+            for (final leg in draft.fareLegs)
+              if (leg.toIndex - leg.fromIndex != draft.segmentCount ||
+                  leg.fromIndex != 0)
                 _SummaryRow(
                   label:
-                      '${draft.points[index].address} → '
-                      '${draft.points[index + 1].address}',
-                  value: _price(draft.segmentPrices[index]),
+                      '${draft.points[leg.fromIndex].address} → '
+                      '${draft.points[leg.toIndex].address}',
+                  value: _price(
+                    draft.fares.priceFor(leg.fromIndex, leg.toIndex),
+                  ),
                 ),
             _SummaryRow(
               label: 'Стоимость посадки',
@@ -217,7 +220,10 @@ class CreateTripSummaryScreen extends ConsumerWidget {
     final money = commission.breakdownFor(fullRoutePrice);
     return [
       _SummaryRow(label: 'Общая стоимость', value: '${money.total} ₽'),
-      _SummaryRow(label: 'Комиссия', value: '${money.commission} ₽'),
+      _SummaryRow(
+        label: 'Комиссия ${commission.percent} %',
+        value: '+${money.commission} ₽',
+      ),
       _SummaryRow(label: 'Вы получите', value: '${money.driverAmount} ₽'),
     ];
   }

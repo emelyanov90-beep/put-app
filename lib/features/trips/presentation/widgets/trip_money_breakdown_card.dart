@@ -4,13 +4,23 @@ import 'package:vput/features/trips/domain/trip_commission.dart';
 import 'package:vput/features/trips/presentation/widgets/create_trip_controls.dart';
 
 /// «Общая стоимость / Комиссия / Вы получите» — what the passenger pays, what
-/// the platform keeps and what stays with the driver.
+/// the platform adds on top and what stays with the driver.
+///
+/// The driver enters the amount they keep, so «Вы получите» equals the fare
+/// they typed and «Общая стоимость» is that fare plus the commission.
 class TripMoneyBreakdownCard extends StatelessWidget {
-  const TripMoneyBreakdownCard({required this.breakdown, super.key});
+  const TripMoneyBreakdownCard({
+    required this.breakdown,
+    this.commissionPercent,
+    super.key,
+  });
 
   static const cardKey = Key('create_trip_money_breakdown');
 
   final TripMoneyBreakdown breakdown;
+
+  /// Shown next to the commission, e.g. «Комиссия 10 %».
+  final int? commissionPercent;
 
   @override
   Widget build(BuildContext context) {
@@ -31,8 +41,10 @@ class TripMoneyBreakdownCard extends StatelessWidget {
               const SizedBox(width: 4),
               Expanded(
                 child: _Tile(
-                  label: 'Комиссия',
-                  value: '${breakdown.commission} ₽',
+                  label: commissionPercent == null
+                      ? 'Комиссия'
+                      : 'Комиссия $commissionPercent %',
+                  value: '+${breakdown.commission} ₽',
                 ),
               ),
             ],

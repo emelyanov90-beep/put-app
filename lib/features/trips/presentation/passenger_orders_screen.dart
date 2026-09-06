@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:vput/app/theme/app_colors.dart';
-import 'package:vput/features/trips/data/preview_passenger_orders.dart';
 import 'package:vput/features/trips/domain/passenger_order.dart';
 import 'package:vput/features/trips/domain/passenger_trip.dart';
 import 'package:vput/features/trips/presentation/widgets/passenger_bottom_bar.dart';
@@ -14,7 +13,7 @@ class PassengerOrdersScreen extends StatefulWidget {
     required this.onChats,
     required this.onProfile,
     required this.onOrderSelected,
-    this.orders = previewPassengerOrders,
+    required this.orders,
     super.key,
   });
 

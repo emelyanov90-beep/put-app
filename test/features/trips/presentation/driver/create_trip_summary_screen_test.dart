@@ -75,10 +75,10 @@ void main() {
     expect(find.text('Автомобиль'), findsNWidgets(2));
     expect(find.text('1800 ₽'), findsNWidgets(2));
     expect(find.text('Общая стоимость'), findsOneWidget);
-    expect(find.text('Комиссия'), findsOneWidget);
-    expect(find.text('50 ₽'), findsOneWidget);
+    expect(find.text('Комиссия 10 %'), findsOneWidget);
+    expect(find.text('+180 ₽'), findsOneWidget);
     expect(find.text('Вы получите'), findsOneWidget);
-    expect(find.text('1750 ₽'), findsOneWidget);
+    expect(find.text('1980 ₽'), findsOneWidget);
     expect(find.text('LADA Largus · А 777 АА 7'), findsOneWidget);
     expect(find.text('Стандартное'), findsOneWidget);
     expect(

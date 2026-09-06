@@ -20,9 +20,9 @@ cp config/dev.example.json config/dev.json
 ./tool/bootstrap_pocketbase.sh
 ```
 
-Change `PB_BASE_URL` in `config/dev.json` to the appropriate HTTPS backend.
-For a local simulator you may deliberately use a simulator-reachable local URL;
-never use it in a release configuration.
+The example points to the deployed HTTPS backend. Change `PB_BASE_URL` only
+when deliberately testing another environment. For a local simulator you may
+use a simulator-reachable local URL; never use it in a release configuration.
 
 Run the backend and application in separate terminals:
 
@@ -30,6 +30,16 @@ Run the backend and application in separate terminals:
 ./tool/run_pocketbase.sh
 flutter run --dart-define-from-file=config/dev.json
 ```
+
+Preview fixtures are opt-in and are never used just because the backend URL is
+missing:
+
+```sh
+flutter run --dart-define=PREVIEW_MODE=true
+```
+
+A regular app build without `PB_BASE_URL` stops on the configuration error
+screen instead of creating local users or showing demo vehicles/orders.
 
 Run quality checks:
 

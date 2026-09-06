@@ -26,6 +26,17 @@ class PocketBaseBookingRepository implements BookingRepository {
       });
 
   @override
+  Future<BookingActionResult> createParcel(PassengerParcelRequest request) =>
+      _action('/api/app/bookings', {
+        'trip_id': request.tripId,
+        'booking_kind': 'parcel',
+        'pickup_index': request.pickupIndex,
+        'dropoff_index': request.dropoffIndex,
+        'parcel_size': request.sizeCode,
+        'parcel_comment': request.comment,
+      });
+
+  @override
   Future<BookingActionResult> pay(String bookingId) => _action(
     '/api/app/bookings/${Uri.encodeComponent(bookingId)}/pay',
     const {},
@@ -108,6 +119,8 @@ class PocketBaseBookingRepository implements BookingRepository {
         'BOOKING_EXISTS' => 'У вас уже есть заявка на эту поездку.',
         'BOOKING_BLOCKED' =>
           'Новые бронирования недоступны до решения администратора.',
+        'PARCEL_UNAVAILABLE' => 'Водитель не возит посылки на этой поездке.',
+        'INVALID_PARCEL_SIZE' => 'Выберите размер посылки.',
         'TRIP_UNAVAILABLE' =>
           'Поездка больше недоступна. Выберите другую поездку.',
         'OWN_TRIP' => 'Нельзя забронировать собственную поездку.',
@@ -139,11 +152,17 @@ class UnconfiguredBookingRepository implements BookingRepository {
         'Сервис бронирования недоступен. Попробуйте позже.',
       );
   @override
+  Future<BookingActionResult> createParcel(
+    PassengerParcelRequest request,
+  ) async => throw const BookingFailure(
+    'Сервис отправки посылок недоступен. Попробуйте позже.',
+  );
+  @override
   Future<BookingActionResult> pay(String bookingId) async =>
       throw const BookingFailure('Сервис оплаты недоступен. Попробуйте позже.');
 }
 
 final bookingRepositoryProvider = Provider<BookingRepository>((ref) {
-  if (!AppConfig.hasPocketBaseUrl) return const UnconfiguredBookingRepository();
+  if (AppConfig.isPreviewMode) return const UnconfiguredBookingRepository();
   return PocketBaseBookingRepository(ref.watch(pocketBaseProvider));
 });

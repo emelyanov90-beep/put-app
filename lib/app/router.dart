@@ -15,6 +15,10 @@ import 'package:vput/features/auth/data/preview_sms_code.dart';
 import 'package:vput/features/auth/presentation/phone_auth_screen.dart';
 import 'package:vput/features/auth/presentation/sms_code_screen.dart';
 import 'package:vput/features/chat/application/chats_controller.dart';
+import 'package:vput/features/complaints/application/complaints_controller.dart';
+import 'package:vput/features/notifications/application/notifications_controller.dart';
+import 'package:vput/features/payment/application/payment_methods_controller.dart';
+import 'package:vput/features/saved_routes/application/saved_routes_controller.dart';
 import 'package:vput/features/chat/presentation/chat_screen.dart';
 import 'package:vput/features/chat/presentation/chats_screen.dart';
 import 'package:vput/features/city/presentation/city_selection_page.dart';
@@ -27,7 +31,14 @@ import 'package:vput/features/onboarding/presentation/onboarding_slide_three_scr
 import 'package:vput/features/onboarding/presentation/onboarding_slide_two_screen.dart';
 import 'package:vput/features/onboarding/presentation/welcome_screen.dart';
 import 'package:vput/features/profile/application/profile_draft_controller.dart';
+import 'package:vput/features/complaints/presentation/complaints_screen.dart';
+import 'package:vput/features/notifications/presentation/notifications_screen.dart';
+import 'package:vput/features/payment/presentation/payment_methods_screen.dart';
+import 'package:vput/features/profile/presentation/about_app_screen.dart';
 import 'package:vput/features/profile/presentation/create_profile_screen.dart';
+import 'package:vput/features/profile/presentation/faq_screen.dart';
+import 'package:vput/features/profile/presentation/order_history_screen.dart';
+import 'package:vput/features/saved_routes/presentation/saved_routes_screen.dart';
 import 'package:vput/features/profile/presentation/personal_data_screen.dart';
 import 'package:vput/features/profile/presentation/profile_loading_screen.dart';
 import 'package:vput/features/profile/presentation/profile_screen.dart';
@@ -65,6 +76,9 @@ import 'package:vput/features/vehicles/presentation/driver_vehicles_screen.dart'
 import 'package:vput/features/trips/presentation/booking/passenger_booking_success_screen.dart';
 import 'package:vput/features/trips/presentation/passenger_booking_cancellation_result_screen.dart';
 import 'package:vput/features/trips/presentation/passenger_order_schedule_screen.dart';
+import 'package:vput/features/trips/presentation/passenger_order_extras_screen.dart';
+import 'package:vput/features/trips/presentation/passenger_order_summary_screen.dart';
+import 'package:vput/features/trips/presentation/passenger_order_type_screen.dart';
 import 'package:vput/features/trips/presentation/passenger_order_details_screen.dart';
 import 'package:vput/features/trips/presentation/passenger_orders_screen.dart';
 import 'package:vput/features/trips/presentation/passenger_trips_page.dart';
@@ -91,8 +105,10 @@ abstract final class AppRoutes {
   static const bookingSuccess = '/trips/:tripId/booking/success';
   static const orders = '/orders';
   static const orderDetails = '/orders/:orderId';
+  static const createPassengerOrderType = '/orders/create/type';
   static const createPassengerOrderSchedule = '/orders/create/schedule';
-  static const createPassengerOrderNext = '/orders/create/options';
+  static const createPassengerOrderExtras = '/orders/create/extras';
+  static const createPassengerOrderSummary = '/orders/create/summary';
   static const driverTrips = '/trips/mine';
   static const driverBookingRequest = '/trips/mine/:tripId/requests/:bookingId';
   static const createTrip = '/trips/create';
@@ -184,7 +200,7 @@ void _leaveCreateTrip(BuildContext context) {
 
 void _startPassengerOrder(BuildContext context, Ref ref) {
   ref.read(passengerOrderDraftProvider.notifier).reset();
-  context.push(AppRoutes.createPassengerOrderSchedule);
+  context.push(AppRoutes.createPassengerOrderType);
 }
 
 Future<void> _handlePassengerBookingSubmitted(
@@ -192,9 +208,38 @@ Future<void> _handlePassengerBookingSubmitted(
   Ref ref,
   PassengerTrip trip,
   PassengerBookingRequest request,
-) async {
+) => _handleBookingCreated(
+  context,
+  ref,
+  trip,
+  () => ref.read(bookingControllerProvider.notifier).create(request),
+  pendingMessage: 'Заявка отправлена. Ожидайте решения водителя.',
+);
+
+Future<void> _handlePassengerParcelSubmitted(
+  BuildContext context,
+  Ref ref,
+  PassengerTrip trip,
+  PassengerParcelRequest request,
+) => _handleBookingCreated(
+  context,
+  ref,
+  trip,
+  () => ref.read(bookingControllerProvider.notifier).createParcel(request),
+  pendingMessage: 'Заявка на посылку отправлена. Ожидайте решения водителя.',
+);
+
+/// Shared tail of both passenger requests: a seat and a parcel differ only in
+/// how the booking is created, then follow the same approval/payment path.
+Future<void> _handleBookingCreated(
+  BuildContext context,
+  Ref ref,
+  PassengerTrip trip,
+  Future<BookingActionResult?> Function() create, {
+  required String pendingMessage,
+}) async {
   final controller = ref.read(bookingControllerProvider.notifier);
-  final result = await controller.create(request);
+  final result = await create();
   if (!context.mounted) return;
   if (result == null) {
     final error = ref.read(bookingControllerProvider).error;
@@ -209,11 +254,8 @@ Future<void> _handlePassengerBookingSubmitted(
     return;
   }
   if (result.status == PassengerBookingStatus.pendingDriver) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Заявка отправлена. Ожидайте решения водителя.'),
-      ),
-    );
+    ScaffoldMessenger.of(context)
+        .showSnackBar(SnackBar(content: Text(pendingMessage)));
     return;
   }
   final pay = await showDialog<bool>(
@@ -493,30 +535,15 @@ final routerProvider = Provider<GoRouter>((ref) {
           );
           return role == OnboardingRole.driver ? AppRoutes.createTrip : null;
         },
-        builder: (context, state) {
-          final role = ref.read(
-            onboardingDraftProvider.select((draft) => draft.role),
-          );
-          if (role == OnboardingRole.passenger) {
-            return PassengerTripsPage(
-              onOrders: () => context.go(AppRoutes.orders),
-              onCreate: () => _startPassengerOrder(context, ref),
-              onChats: () => context.go(AppRoutes.chats),
-              onProfile: () => context.go(AppRoutes.profile),
-              onTripSelected: (trip) =>
-                  context.push('/trips/${trip.id}', extra: trip),
-            );
-          }
-
-          return PassengerTripsPage(
-            onOrders: () => context.go(AppRoutes.orders),
-            onCreate: () => _startPassengerOrder(context, ref),
-            onChats: () => context.go(AppRoutes.chats),
-            onProfile: () => context.go(AppRoutes.profile),
-            onTripSelected: (trip) =>
-                context.push('/trips/${trip.id}', extra: trip),
-          );
-        },
+        // Only a passenger reaches the builder: a driver is redirected above.
+        builder: (context, state) => PassengerTripsPage(
+          onOrders: () => context.go(AppRoutes.orders),
+          onCreate: () => _startPassengerOrder(context, ref),
+          onChats: () => context.go(AppRoutes.chats),
+          onProfile: () => context.go(AppRoutes.profile),
+          onTripSelected: (trip) =>
+              context.push('/trips/${trip.id}', extra: trip),
+        ),
       ),
       GoRoute(
         path: AppRoutes.driverTrips,
@@ -861,7 +888,7 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: AppRoutes.tripPublished,
         builder: (context, state) => TripPublishedScreen(
-          isPreview: !AppConfig.hasPocketBaseUrl,
+          isPreview: AppConfig.isPreviewMode,
           onMyTrips: () {
             ref.read(tripDraftProvider.notifier).reset();
             context.go(AppRoutes.driverTrips);
@@ -886,7 +913,8 @@ final routerProvider = Provider<GoRouter>((ref) {
               onDriver: () => context.push('/drivers/${trip.id}'),
               onBookingSubmitted: (booking) =>
                   _handlePassengerBookingSubmitted(context, ref, trip, booking),
-              onSendParcel: () => context.push('/trips/${trip.id}/parcel'),
+              onParcelSubmitted: (parcel) =>
+                  _handlePassengerParcelSubmitted(context, ref, trip, parcel),
             ),
           );
         },
@@ -897,10 +925,12 @@ final routerProvider = Provider<GoRouter>((ref) {
           final id = state.pathParameters['tripId']!;
           final trip =
               ref.read(tripCatalogRepositoryProvider).findById(id) ??
-              previewPassengerOrders
-                  .where((order) => order.trip.id == id)
-                  .firstOrNull
-                  ?.trip;
+              (AppConfig.isPreviewMode
+                  ? previewPassengerOrders
+                        .where((order) => order.trip.id == id)
+                        .firstOrNull
+                        ?.trip
+                  : null);
           if (trip == null) {
             return const PendingFlowScreen(title: 'Водитель не найден');
           }
@@ -943,16 +973,6 @@ final routerProvider = Provider<GoRouter>((ref) {
         ),
       ),
       GoRoute(
-        path: '/trips/:tripId/booking',
-        builder: (context, state) =>
-            const PendingFlowScreen(title: 'Бронирование места'),
-      ),
-      GoRoute(
-        path: '/trips/:tripId/parcel',
-        builder: (context, state) =>
-            const PendingFlowScreen(title: 'Отправить посылку'),
-      ),
-      GoRoute(
         path: AppRoutes.orders,
         builder: (context, state) => Consumer(
           builder: (context, widgetRef, _) => widgetRef
@@ -991,7 +1011,9 @@ final routerProvider = Provider<GoRouter>((ref) {
                         .value
                         ?.where((item) => item.id == id)
                         .firstOrNull ??
-                    findPreviewPassengerOrderById(id);
+                    (AppConfig.isPreviewMode
+                        ? findPreviewPassengerOrderById(id)
+                        : null);
           if (order == null) {
             return const PendingFlowScreen(title: 'Заказ не найден');
           }
@@ -1037,17 +1059,45 @@ final routerProvider = Provider<GoRouter>((ref) {
         },
       ),
       GoRoute(
+        path: AppRoutes.createPassengerOrderType,
+        builder: (context, state) => PassengerOrderTypeScreen(
+          onBack: () =>
+              context.canPop() ? context.pop() : context.go(AppRoutes.orders),
+          onContinue: () =>
+              context.push(AppRoutes.createPassengerOrderSchedule),
+        ),
+      ),
+      GoRoute(
         path: AppRoutes.createPassengerOrderSchedule,
         builder: (context, state) => PassengerOrderScheduleScreen(
           onBack: () =>
               context.canPop() ? context.pop() : context.go(AppRoutes.orders),
-          onContinue: () => context.push(AppRoutes.createPassengerOrderNext),
+          onContinue: () => context.push(AppRoutes.createPassengerOrderExtras),
         ),
       ),
       GoRoute(
-        path: AppRoutes.createPassengerOrderNext,
-        builder: (context, state) =>
-            const PendingFlowScreen(title: 'Новый заказ'),
+        path: AppRoutes.createPassengerOrderExtras,
+        builder: (context, state) => PassengerOrderExtrasScreen(
+          onBack: () =>
+              context.canPop() ? context.pop() : context.go(AppRoutes.orders),
+          onContinue: () => context.push(AppRoutes.createPassengerOrderSummary),
+        ),
+      ),
+      GoRoute(
+        path: AppRoutes.createPassengerOrderSummary,
+        builder: (context, state) => PassengerOrderSummaryScreen(
+          onBack: () =>
+              context.canPop() ? context.pop() : context.go(AppRoutes.orders),
+          onFindTrips: (draft) {
+            ref.read(passengerTripSearchProvider.notifier)
+              ..selectTransport(draft.transportType)
+              ..applyFilters(
+                origin: draft.points.first.address,
+                destination: draft.points.last.address,
+              );
+            context.go(AppRoutes.home);
+          },
+        ),
       ),
       GoRoute(
         path: '/orders/:orderId/cancelled',
@@ -1122,6 +1172,11 @@ final routerProvider = Provider<GoRouter>((ref) {
               ref.invalidate(bookingControllerProvider);
               ref.invalidate(bookingCancellationProvider);
               ref.invalidate(chatsProvider);
+              ref.invalidate(complaintsProvider);
+              ref.invalidate(notificationsProvider);
+              ref.invalidate(paymentMethodsProvider);
+              ref.invalidate(savedRoutesProvider);
+              ref.invalidate(passengerOrdersProvider);
               ref.invalidate(driverTripsProvider);
               ref.invalidate(driverVehiclesProvider);
               ref.invalidate(tripDraftProvider);
@@ -1233,37 +1288,55 @@ final routerProvider = Provider<GoRouter>((ref) {
       ),
       GoRoute(
         path: AppRoutes.profileSavedRoutes,
-        builder: (context, state) =>
-            const PendingFlowScreen(title: 'Сохраненные маршруты'),
+        builder: (context, state) => SavedRoutesScreen(
+          onBack: () => _backOrHome(context),
+          onRouteSelected: (route) {
+            ref
+                .read(passengerTripSearchProvider.notifier)
+                .applyFilters(
+                  origin: route.origin,
+                  destination: route.destination,
+                );
+            context.go(AppRoutes.home);
+          },
+        ),
       ),
       GoRoute(
         path: AppRoutes.profileOrderHistory,
-        builder: (context, state) =>
-            const PendingFlowScreen(title: 'История заказов'),
+        builder: (context, state) => OrderHistoryScreen(
+          onBack: () => _backOrHome(context),
+          onOrderSelected: (order) =>
+              context.push('/orders/${order.id}', extra: order),
+          onTripSelected: (trip) => context.push('/driver-trips/${trip.id}'),
+        ),
       ),
       GoRoute(
         path: AppRoutes.profileComplaints,
-        builder: (context, state) => const PendingFlowScreen(title: 'Жалобы'),
+        builder: (context, state) =>
+            ComplaintsScreen(onBack: () => _backOrHome(context)),
       ),
       GoRoute(
         path: AppRoutes.profileNotifications,
         builder: (context, state) =>
-            const PendingFlowScreen(title: 'Уведомления'),
+            NotificationsScreen(onBack: () => _backOrHome(context)),
       ),
       GoRoute(
         path: AppRoutes.profilePaymentMethod,
         builder: (context, state) =>
-            const PendingFlowScreen(title: 'Способ оплаты'),
+            PaymentMethodsScreen(onBack: () => _backOrHome(context)),
       ),
       GoRoute(
         path: AppRoutes.profileFaq,
         builder: (context, state) =>
-            const PendingFlowScreen(title: 'Частые вопросы'),
+            FaqScreen(onBack: () => _backOrHome(context)),
       ),
       GoRoute(
         path: AppRoutes.profileAbout,
-        builder: (context, state) =>
-            const PendingFlowScreen(title: 'О приложении'),
+        builder: (context, state) => AboutAppScreen(
+          onBack: () => _backOrHome(context),
+          onTerms: () => context.push(AppRoutes.termsOfService),
+          onPrivacy: () => context.push(AppRoutes.privacyPolicy),
+        ),
       ),
     ],
   );

@@ -6,6 +6,8 @@ import 'package:vput/features/trips/domain/trip_draft.dart';
 import 'package:vput/features/trips/domain/trip_route_point.dart';
 import 'package:vput/features/trips/presentation/driver/driver_booking_request_screen.dart';
 
+import '../../../../support/trip_fares.dart';
+
 const _booking = DriverTripPassengerBooking(
   id: 'booking_1',
   passengerId: 'passenger_1',
@@ -32,7 +34,9 @@ DriverTrip _trip({DriverTripPassengerBooking booking = _booking}) {
       departureAt: DateTime(2026, 5, 15, 8),
       arrivalAt: DateTime(2026, 5, 15, 18),
       seatCount: 24,
-      fullRoutePrice: 600,
+      fares: fares({
+        [0, 3]: 600,
+      }),
     ),
   );
 }
@@ -75,11 +79,11 @@ void main() {
 
     expect(find.text('Поездка'), findsOneWidget);
     expect(find.text('Стоимость'), findsOneWidget);
-    expect(find.text('600 ₽'), findsOneWidget);
-    expect(find.text('Комиссия'), findsOneWidget);
-    expect(find.text('50 ₽'), findsOneWidget);
+    expect(find.text('660 ₽'), findsOneWidget);
+    expect(find.text('Комиссия 10 %'), findsOneWidget);
+    expect(find.text('+60 ₽'), findsOneWidget);
     expect(find.text('К оплате водителю'), findsOneWidget);
-    expect(find.text('550 ₽'), findsOneWidget);
+    expect(find.text('600 ₽'), findsOneWidget);
 
     expect(find.text('Маршрут поездки'), findsOneWidget);
     expect(find.text('Улица Солнечная, дом 1'), findsOneWidget);

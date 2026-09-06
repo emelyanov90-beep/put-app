@@ -13,6 +13,8 @@ import 'package:vput/features/trips/presentation/driver/trip_published_screen.da
 import 'package:vput/features/trips/presentation/widgets/publish_confirmation_sheet.dart';
 import 'package:vput/features/trips/presentation/widgets/trip_schedule_sheets.dart';
 
+import '../../../../support/trip_fares.dart';
+
 TripDraft _publishedDraft() {
   return TripDraft(
     points: const [
@@ -23,8 +25,11 @@ TripDraft _publishedDraft() {
     departureAt: DateTime.now().add(const Duration(days: 1)),
     arrivalAt: DateTime.now().add(const Duration(days: 1, hours: 4)),
     seatCount: 3,
-    fullRoutePrice: 1200,
-    segmentPrices: const [600, 600],
+    fares: fares({
+      [0, 2]: 1200,
+      [0, 1]: 600,
+      [1, 2]: 600,
+    }),
     vehicleId: 'preview_vehicle_largus',
   );
 }
@@ -68,8 +73,8 @@ void main() {
       expect(find.text('Рынок местный, Могилев'), findsOneWidget);
       expect(find.text('Победителей 1, Минск'), findsOneWidget);
       expect(find.text('Общая стоимость'), findsOneWidget);
+      expect(find.text('1320 ₽'), findsOneWidget);
       expect(find.text('1200 ₽'), findsOneWidget);
-      expect(find.text('1150 ₽'), findsOneWidget);
 
       final started = container.read(tripDraftProvider);
       expect(started.origin.address, 'Рынок местный, Могилев');

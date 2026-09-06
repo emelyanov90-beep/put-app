@@ -32,7 +32,7 @@ class PreviewSessionController extends Notifier<bool> {
   bool build() => ref.watch(initialAuthStateProvider);
 
   Future<void> requestCode(String phone) async {
-    if (!AppConfig.hasPocketBaseUrl) return;
+    if (AppConfig.isPreviewMode) return;
     try {
       await ref
           .read(pocketBaseProvider)
@@ -57,7 +57,7 @@ class PreviewSessionController extends Notifier<bool> {
     String code, {
     bool previewProfileCompleted = false,
   }) async {
-    if (!AppConfig.hasPocketBaseUrl) {
+    if (AppConfig.isPreviewMode) {
       if (isPreviewBlockedAccount(phone)) {
         throw const AuthFailure(
           'Аккаунт заблокирован.',
@@ -117,7 +117,7 @@ class PreviewSessionController extends Notifier<bool> {
     required String cityId,
     required String role,
   }) async {
-    if (!AppConfig.hasPocketBaseUrl) {
+    if (AppConfig.isPreviewMode) {
       return {
         'id': 'preview_user',
         'name': name,
@@ -158,7 +158,7 @@ class PreviewSessionController extends Notifier<bool> {
   }
 
   Future<Map<String, dynamic>> updateRole(String role) async {
-    if (!AppConfig.hasPocketBaseUrl) {
+    if (AppConfig.isPreviewMode) {
       return {
         'id': 'preview_user',
         'primary_role': role,
@@ -198,6 +198,20 @@ class PreviewSessionController extends Notifier<bool> {
 final previewSessionProvider = NotifierProvider<PreviewSessionController, bool>(
   PreviewSessionController.new,
 );
+
+/// Reactive identity key for every provider that owns user-specific state.
+/// Watching this provider prevents data cached for one account from surviving
+/// logout and appearing in the next account in the same app process.
+final currentSessionUserIdProvider = Provider<String?>((ref) {
+  if (!ref.watch(previewSessionProvider)) return null;
+  if (AppConfig.isPreviewMode) return 'preview_user';
+  return ref.watch(pocketBaseProvider).authStore.record?.id;
+});
+
+final currentLocalAccountIdProvider = Provider<String>((ref) {
+  return ref.watch(currentSessionUserIdProvider) ??
+      (AppConfig.isPreviewMode ? 'preview_user' : 'signed_out');
+});
 
 /// main() binds this to the real SDK auth store; widget tests need no storage.
 final clearStoredAuthProvider = Provider<VoidCallback>((ref) => () {});

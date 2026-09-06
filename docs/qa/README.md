@@ -59,17 +59,20 @@ adb -s emulator-5556 shell wm density 320
 adb -s emulator-5556 shell wm size 750x1624
 VPUT_QA_SCREENSHOTS=/tmp/vput-qa-375 flutter drive \
   --driver=test_driver/frontend_audit_driver.dart \
-  --target=integration_test/frontend_audit_test.dart -d emulator-5556
+  --target=integration_test/frontend_audit_test.dart -d emulator-5556 \
+  --dart-define=PREVIEW_MODE=true
 adb -s emulator-5556 shell wm size 640x1136
 VPUT_QA_SCREENSHOTS=/tmp/vput-qa-320 flutter drive \
   --driver=test_driver/frontend_audit_driver.dart \
-  --target=integration_test/frontend_audit_test.dart -d emulator-5556
+  --target=integration_test/frontend_audit_test.dart -d emulator-5556 \
+  --dart-define=PREVIEW_MODE=true
 flutter build apk --release
 flutter build ios --release --no-codesign
 ```
 
-Без `PB_BASE_URL` APK служит проверке frontend preview. Для серверного режима
-используется `--dart-define=PB_BASE_URL=https://pb.bookingtest26.ru`. Текущая
+Frontend preview включается явно через `--dart-define=PREVIEW_MODE=true`. Для
+серверного режима используется
+`--dart-define=PB_BASE_URL=https://pb.bookingtest26.ru`. Текущая
 Android release-конфигурация использует debug signing key: успешная
 release-компиляция не означает готовность публикации в магазине.
 

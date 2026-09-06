@@ -60,10 +60,10 @@ void main() {
     expect(find.text('Шаг 4 из 6'), findsOneWidget);
     expect(find.byKey(TripMoneyBreakdownCard.cardKey), findsOneWidget);
     expect(find.text('Общая стоимость'), findsOneWidget);
-    expect(find.text('1200 ₽'), findsOneWidget);
-    expect(find.text('50 ₽'), findsOneWidget);
+    expect(find.text('1320 ₽'), findsOneWidget);
+    expect(find.text('+120 ₽'), findsOneWidget);
     expect(find.text('Вы получите'), findsOneWidget);
-    expect(find.text('1150 ₽'), findsOneWidget);
+    expect(find.text('1200 ₽'), findsOneWidget);
     expect(_primaryAction(tester), isNull);
 
     await tester.tap(

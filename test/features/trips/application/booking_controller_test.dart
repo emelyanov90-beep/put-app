@@ -28,10 +28,17 @@ class FakeRepository implements BookingRepository {
       );
   final pending = Completer<BookingActionResult>();
   int creates = 0;
+  int parcels = 0;
   int payments = 0;
   @override
   Future<BookingActionResult> create(PassengerBookingRequest request) {
     creates++;
+    return pending.future;
+  }
+
+  @override
+  Future<BookingActionResult> createParcel(PassengerParcelRequest request) {
+    parcels++;
     return pending.future;
   }
 

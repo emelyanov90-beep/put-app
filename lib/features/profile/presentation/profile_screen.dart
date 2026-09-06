@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vput/app/theme/app_colors.dart';
+import 'package:vput/features/notifications/application/notifications_controller.dart';
 import 'package:vput/features/onboarding/application/onboarding_draft_controller.dart';
 import 'package:vput/features/profile/application/user_profile_controller.dart';
 import 'package:vput/features/profile/domain/user_profile.dart';
@@ -76,6 +77,7 @@ class ProfileScreen extends ConsumerWidget {
 
     final profile = ref.watch(userProfileProvider.select((s) => s.profile));
     final role = ref.watch(onboardingDraftProvider.select((d) => d.role));
+    final unreadNotifications = ref.watch(unreadNotificationsProvider);
     final isDriver = role == OnboardingRole.driver;
     final switchRoleLabel = isDriver
         ? 'Перейти в режим пассажира'
@@ -165,7 +167,7 @@ class ProfileScreen extends ConsumerWidget {
                         icon: Icons.notifications_none_rounded,
                         title: 'Уведомления',
                         subtitle: 'Push-уведомления',
-                        badgeCount: profile.unreadNotifications,
+                        badgeCount: unreadNotifications,
                         badgeKey: notificationsBadgeKey,
                         onTap: onNotifications,
                       ),

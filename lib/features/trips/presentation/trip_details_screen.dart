@@ -5,6 +5,7 @@ import 'package:vput/app/widgets/screen_header.dart';
 import 'package:vput/features/trips/domain/passenger_booking_request.dart';
 import 'package:vput/features/trips/domain/passenger_trip.dart';
 import 'package:vput/features/trips/presentation/booking/passenger_booking_sheet.dart';
+import 'package:vput/features/trips/presentation/booking/passenger_parcel_sheet.dart';
 import 'package:vput/features/trips/presentation/widgets/trip_route_timeline.dart';
 
 class TripDetailsScreen extends StatelessWidget {
@@ -13,7 +14,7 @@ class TripDetailsScreen extends StatelessWidget {
     required this.onBack,
     required this.onDriver,
     required this.onBookingSubmitted,
-    required this.onSendParcel,
+    required this.onParcelSubmitted,
     this.isBooking = false,
     super.key,
   });
@@ -28,7 +29,7 @@ class TripDetailsScreen extends StatelessWidget {
   final VoidCallback onBack;
   final VoidCallback onDriver;
   final ValueChanged<PassengerBookingRequest> onBookingSubmitted;
-  final VoidCallback onSendParcel;
+  final ValueChanged<PassengerParcelRequest> onParcelSubmitted;
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +79,7 @@ class TripDetailsScreen extends StatelessWidget {
           isBooking: isBooking,
           acceptsParcels: trip.acceptsParcels,
           onBookSeat: () => _openBooking(context),
-          onSendParcel: onSendParcel,
+          onSendParcel: () => _openParcel(context),
         ),
       ),
     );
@@ -94,6 +95,18 @@ class TripDetailsScreen extends StatelessWidget {
     );
     if (request == null || !context.mounted) return;
     onBookingSubmitted(request);
+  }
+
+  Future<void> _openParcel(BuildContext context) async {
+    final request = await showModalBottomSheet<PassengerParcelRequest>(
+      context: context,
+      isScrollControlled: true,
+      useSafeArea: true,
+      backgroundColor: Colors.transparent,
+      builder: (_) => PassengerParcelSheet(trip: trip),
+    );
+    if (request == null || !context.mounted) return;
+    onParcelSubmitted(request);
   }
 }
 

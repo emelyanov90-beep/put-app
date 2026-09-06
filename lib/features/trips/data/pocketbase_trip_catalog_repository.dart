@@ -1,6 +1,7 @@
 import 'package:pocketbase/pocketbase.dart';
 import 'package:vput/features/trips/domain/passenger_trip.dart';
 import 'package:vput/features/trips/domain/trip_catalog_repository.dart';
+import 'package:vput/features/trips/domain/trip_fare_table.dart';
 
 class PocketBaseTripCatalogRepository implements TripCatalogRepository {
   PocketBaseTripCatalogRepository(this._client);
@@ -67,8 +68,13 @@ class PocketBaseTripCatalogRepository implements TripCatalogRepository {
       departureLabel: _dateLabel(departure),
       detailsDepartureLabel: _dateLabel(departure),
       arrivalLabel: 'Прибытие ~${_timeLabel(arrival)}',
-      priceRubles: (json['base_price'] as num).toInt(),
-      detailsPriceRubles: (json['base_price'] as num).toInt(),
+      // The passenger is quoted what they pay: the driver fare plus commission.
+      priceRubles:
+          (json['passenger_price'] as num? ?? json['base_price'] as num)
+              .toInt(),
+      detailsPriceRubles:
+          (json['passenger_price'] as num? ?? json['base_price'] as num)
+              .toInt(),
       availableSeats: (json['available_seats'] as num).toInt(),
       totalSeats: (json['seat_capacity'] as num).toInt(),
       services: services,
@@ -84,7 +90,30 @@ class PocketBaseTripCatalogRepository implements TripCatalogRepository {
       bookingMode: json['booking_mode'] == 'instant'
           ? PassengerTripBookingMode.instant
           : PassengerTripBookingMode.standard,
+      fares: TripFareTable.fromJson(json['fare_table']),
+      minimumBoardingPriceRubles: (json['minimum_boarding_price'] as num?)
+          ?.toInt(),
+      extraServicePrices: _extraServicePrices(json['service_offers']),
     );
+  }
+
+  /// Prices of the extra services this trip offers, set by the platform.
+  static Map<TripExtraService, int> _extraServicePrices(dynamic raw) {
+    if (raw is! List) return const {};
+    final prices = <TripExtraService, int>{};
+    for (final offer in raw.whereType<Map>()) {
+      final service = switch (offer['code']) {
+        'child_seat' => TripExtraService.childSeat,
+        'luggage' => TripExtraService.luggage,
+        'pets' => TripExtraService.pets,
+        'parcel' => TripExtraService.parcel,
+        _ => null,
+      };
+      final price = offer['price'];
+      if (service == null || price is! num) continue;
+      prices[service] = price.toInt();
+    }
+    return prices;
   }
 
   static String _dateLabel(DateTime value) {

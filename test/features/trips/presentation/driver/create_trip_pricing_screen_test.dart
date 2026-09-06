@@ -93,12 +93,14 @@ void main() {
       find.byKey(CreateTripPricingScreen.moneyBreakdownKey),
       findsOneWidget,
     );
+    // The driver names what they receive and the commission goes on top:
+    // 1200 + 10 % = 1320 for the passenger.
     expect(find.text('Общая стоимость'), findsOneWidget);
-    expect(find.text('1200 ₽'), findsOneWidget);
-    expect(find.text('Комиссия'), findsOneWidget);
-    expect(find.text('50 ₽'), findsOneWidget);
+    expect(find.text('1320 ₽'), findsOneWidget);
+    expect(find.text('Комиссия 10 %'), findsOneWidget);
+    expect(find.text('+120 ₽'), findsOneWidget);
     expect(find.text('Вы получите'), findsOneWidget);
-    expect(find.text('1150 ₽'), findsOneWidget);
+    expect(find.text('1200 ₽'), findsOneWidget);
   });
 
   testWidgets('a stop adds a fare line for every leg, both optional', (
@@ -114,14 +116,17 @@ void main() {
       '1200',
     );
     await tester.enterText(
-      find.byKey(CreateTripPricingScreen.segmentFieldKey(0)),
+      find.byKey(CreateTripPricingScreen.legFieldKey(0, 1)),
       '600',
     );
     await tester.pump();
 
-    // The design lets the driver move on with the second leg still empty.
+    // The driver may move on with the other pairs still empty; each pair is
+    // priced by hand, never derived from the ones around it.
     final draft = container.read(tripDraftProvider);
-    expect(draft.segmentPrices, [600, null]);
+    expect(draft.fares.priceFor(0, 1), 600);
+    expect(draft.fares.priceFor(1, 2), isNull);
+    expect(draft.fullRoutePrice, 1200);
     expect(_primaryAction(tester), isNotNull);
   });
 

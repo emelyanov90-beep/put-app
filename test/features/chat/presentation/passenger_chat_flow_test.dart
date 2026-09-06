@@ -13,6 +13,8 @@ import 'package:vput/features/trips/domain/trip_route_point.dart';
 import 'package:vput/features/trips/presentation/driver/passenger_profile_screen.dart';
 import 'package:vput/features/trips/presentation/widgets/passenger_bottom_bar.dart';
 
+import '../../../support/trip_fares.dart';
+
 const _passenger = DriverTripPassengerBooking(
   id: 'booking_1',
   passengerId: 'passenger_1',
@@ -31,7 +33,9 @@ TripDraft _draft() {
     departureAt: DateTime.now().add(const Duration(days: 1)),
     arrivalAt: DateTime.now().add(const Duration(days: 1, hours: 5)),
     seatCount: 4,
-    fullRoutePrice: 600,
+    fares: fares({
+      [0, 1]: 600,
+    }),
     vehicleId: 'preview_vehicle_largus',
   );
 }

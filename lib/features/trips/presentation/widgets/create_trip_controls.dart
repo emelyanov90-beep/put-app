@@ -3,8 +3,11 @@ import 'package:flutter/services.dart';
 import 'package:vput/app/theme/app_colors.dart';
 import 'package:vput/app/widgets/screen_header.dart';
 
-/// Number of steps in the «Новый заказ» wizard, as in the design.
+/// Number of steps in the driver «Новый заказ» wizard, as in the design.
 const createTripStepCount = 6;
+
+/// Number of steps in the passenger «Новый заказ» wizard, as in the design.
+const passengerOrderStepCount = 4;
 
 /// Shared frame of a wizard step: «Новый заказ» header, right-aligned step
 /// counter, scrollable content and a sticky primary action.
@@ -15,6 +18,7 @@ class CreateTripStepScaffold extends StatelessWidget {
     required this.onPrimary,
     required this.children,
     this.step,
+    this.stepCount = createTripStepCount,
     this.title = 'Новый заказ',
     this.subtitle,
     this.secondaryLabel,
@@ -27,8 +31,12 @@ class CreateTripStepScaffold extends StatelessWidget {
   static const primaryButtonKey = Key('create_trip_primary');
   static const secondaryButtonKey = Key('create_trip_secondary');
 
-  /// Step number shown as «Шаг N из 4»; omitted on screens outside the count.
+  /// Step number shown as «Шаг N из [stepCount]»; omitted on screens outside
+  /// the count.
   final int? step;
+
+  /// Total steps of the wizard this screen belongs to.
+  final int stepCount;
   final String title;
   final String? subtitle;
   final VoidCallback onBack;
@@ -71,7 +79,7 @@ class CreateTripStepScaffold extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 16),
                         child: Text(
-                          'Шаг $stepNumber из $createTripStepCount',
+                          'Шаг $stepNumber из $stepCount',
                           textAlign: TextAlign.right,
                           style: const TextStyle(
                             color: AppColors.accentBlack,

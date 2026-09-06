@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:vput/app/theme/app_colors.dart';
 import 'package:vput/features/trips/domain/passenger_booking_request.dart';
 import 'package:vput/features/trips/domain/passenger_trip.dart';
+import 'package:vput/features/trips/presentation/booking/booking_sheet_parts.dart';
 
 class PassengerBookingSheet extends StatefulWidget {
   const PassengerBookingSheet({required this.trip, super.key});
@@ -26,8 +27,6 @@ class PassengerBookingSheet extends StatefulWidget {
 }
 
 class _PassengerBookingSheetState extends State<PassengerBookingSheet> {
-  static const _extraPriceRubles = 150;
-
   late int _pickupIndex;
   late int _dropoffIndex;
   late int _passengerCount;
@@ -51,11 +50,26 @@ class _PassengerBookingSheetState extends State<PassengerBookingSheet> {
     _passengerCount = 1;
   }
 
+  /// Stops the passenger may board at: at least one pair starting there is
+  /// priced by the driver.
+  List<int> get _pickupChoices => [
+    for (var index = 0; index < _trip.stops.length - 1; index++)
+      if (_dropoffChoicesFrom(index).isNotEmpty) index,
+  ];
+
+  /// Stops the passenger may leave at, given where they get on. A pair the
+  /// driver did not price is not sold, so it is not offered.
+  List<int> _dropoffChoicesFrom(int pickupIndex) => [
+    for (var index = pickupIndex + 1; index < _trip.stops.length; index++)
+      if (_trip.isLegSold(pickupIndex, index)) index,
+  ];
+
   void _setPickup(int index) {
     setState(() {
       _pickupIndex = index;
-      if (_dropoffIndex <= _pickupIndex) {
-        _dropoffIndex = _pickupIndex + 1;
+      final choices = _dropoffChoicesFrom(index);
+      if (!choices.contains(_dropoffIndex)) {
+        _dropoffIndex = choices.isEmpty ? index + 1 : choices.first;
       }
     });
   }
@@ -78,13 +92,15 @@ class _PassengerBookingSheetState extends State<PassengerBookingSheet> {
     });
   }
 
-  int _fareRubles() {
-    final segmentCount = _dropoffIndex - _pickupIndex;
-    final fullRouteSegments = _trip.stops.length - 1;
-    final baseFare = _pickupIndex == 0 && _dropoffIndex == fullRouteSegments
-        ? _trip.detailsPriceRubles
-        : segmentCount * 150;
-    final extras = _selectedExtras.length * _extraPriceRubles;
+  /// What the driver receives for this booking: the fare of the chosen pair
+  /// plus the extras, for every seat. The platform commission is added on top
+  /// of it by the server, and shown separately.
+  int _driverFareRubles() {
+    final baseFare = _trip.fareBetween(_pickupIndex, _dropoffIndex) ?? 0;
+    var extras = 0;
+    for (final service in _selectedExtras) {
+      extras += _trip.extraServicePrices[service] ?? 0;
+    }
     return (baseFare + extras) * _passengerCount;
   }
 
@@ -96,7 +112,7 @@ class _PassengerBookingSheetState extends State<PassengerBookingSheet> {
       dropoffIndex: _dropoffIndex,
       seatCount: _passengerCount,
       selectedExtras: Set.unmodifiable(_selectedExtras),
-      amountRubles: _fareRubles(),
+      amountRubles: _driverFareRubles(),
       status: isInstant
           ? PassengerBookingStatus.awaitingPayment
           : PassengerBookingStatus.pendingDriver,
@@ -104,8 +120,13 @@ class _PassengerBookingSheetState extends State<PassengerBookingSheet> {
     );
   }
 
+  bool get _canSubmit =>
+      _trip.hasAvailableSeats &&
+      _trip.stops.length >= 2 &&
+      _trip.isLegSold(_pickupIndex, _dropoffIndex);
+
   void _submit() {
-    if (!_trip.hasAvailableSeats || _trip.stops.length < 2) return;
+    if (!_canSubmit) return;
     Navigator.of(context).pop(_buildRequest());
   }
 
@@ -123,7 +144,7 @@ class _PassengerBookingSheetState extends State<PassengerBookingSheet> {
           child: Column(
             children: [
               const SizedBox(height: 10),
-              const _DragHandle(),
+              const BookingSheetDragHandle(),
               Expanded(
                 child: SingleChildScrollView(
                   padding: const EdgeInsets.fromLTRB(16, 14, 16, 18),
@@ -140,16 +161,12 @@ class _PassengerBookingSheetState extends State<PassengerBookingSheet> {
                         ),
                       ),
                       const SizedBox(height: 26),
-                      const _BookingSectionTitle('Точка отправления'),
+                      const BookingSheetSectionTitle('Точка отправления'),
                       const SizedBox(height: 12),
-                      _RouteChoiceCard(
+                      BookingSheetRouteCard(
                         children: [
-                          for (
-                            var index = 0;
-                            index < _trip.stops.length - 1;
-                            index++
-                          )
-                            _RouteChoiceTile(
+                          for (final index in _pickupChoices)
+                            BookingSheetRouteTile(
                               key: PassengerBookingSheet.pickupKey(index),
                               label: _trip.stops[index].address,
                               selected: _pickupIndex == index,
@@ -158,16 +175,12 @@ class _PassengerBookingSheetState extends State<PassengerBookingSheet> {
                         ],
                       ),
                       const SizedBox(height: 20),
-                      const _BookingSectionTitle('Конечная точка'),
+                      const BookingSheetSectionTitle('Конечная точка'),
                       const SizedBox(height: 12),
-                      _RouteChoiceCard(
+                      BookingSheetRouteCard(
                         children: [
-                          for (
-                            var index = _pickupIndex + 1;
-                            index < _trip.stops.length;
-                            index++
-                          )
-                            _RouteChoiceTile(
+                          for (final index in _dropoffChoicesFrom(_pickupIndex))
+                            BookingSheetRouteTile(
                               key: PassengerBookingSheet.dropoffKey(index),
                               label: _trip.stops[index].address,
                               selected: _dropoffIndex == index,
@@ -177,7 +190,7 @@ class _PassengerBookingSheetState extends State<PassengerBookingSheet> {
                       ),
                       if (_availableSeatExtras.isNotEmpty) ...[
                         const SizedBox(height: 22),
-                        const _BookingSectionTitle('Доп. услуги'),
+                        const BookingSheetSectionTitle('Доп. услуги'),
                         const SizedBox(height: 12),
                         _ExtrasCard(
                           services: _availableSeatExtras,
@@ -199,10 +212,7 @@ class _PassengerBookingSheetState extends State<PassengerBookingSheet> {
                         height: 52,
                         child: FilledButton(
                           key: PassengerBookingSheet.submitButtonKey,
-                          onPressed:
-                              _trip.hasAvailableSeats && _trip.stops.length >= 2
-                              ? _submit
-                              : null,
+                          onPressed: _canSubmit ? _submit : null,
                           style: FilledButton.styleFrom(
                             backgroundColor: AppColors.brandGreen,
                             shape: RoundedRectangleBorder(
@@ -226,137 +236,6 @@ class _PassengerBookingSheetState extends State<PassengerBookingSheet> {
           ),
         ),
       ),
-    );
-  }
-}
-
-class _DragHandle extends StatelessWidget {
-  const _DragHandle();
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 43,
-      height: 5,
-      decoration: BoxDecoration(
-        color: const Color(0xFFCACBCE),
-        borderRadius: BorderRadius.circular(16),
-      ),
-    );
-  }
-}
-
-class _BookingSectionTitle extends StatelessWidget {
-  const _BookingSectionTitle(this.text);
-
-  final String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: const TextStyle(
-        color: AppColors.accentBlack,
-        fontSize: 17,
-        fontWeight: FontWeight.w600,
-        height: 1.3,
-      ),
-    );
-  }
-}
-
-class _RouteChoiceCard extends StatelessWidget {
-  const _RouteChoiceCard({required this.children});
-
-  final List<Widget> children;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-      decoration: BoxDecoration(
-        color: AppColors.accentWhite,
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: Stack(
-        children: [
-          const Positioned.fill(child: _RoadWatermark()),
-          Column(children: children),
-        ],
-      ),
-    );
-  }
-}
-
-class _RouteChoiceTile extends StatelessWidget {
-  const _RouteChoiceTile({
-    required this.label,
-    required this.selected,
-    required this.onTap,
-    super.key,
-  });
-
-  final String label;
-  final bool selected;
-  final VoidCallback onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      borderRadius: BorderRadius.circular(8),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 8),
-        child: Row(
-          children: [
-            _RadioMark(selected: selected),
-            const SizedBox(width: 12),
-            Expanded(
-              child: Text(
-                label,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                style: const TextStyle(
-                  color: AppColors.accentBlack,
-                  fontSize: 15,
-                  height: 1.33,
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class _RadioMark extends StatelessWidget {
-  const _RadioMark({required this.selected});
-
-  final bool selected;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 22,
-      height: 22,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        border: Border.all(color: AppColors.brandGreen, width: 2),
-      ),
-      child: selected
-          ? Center(
-              child: Container(
-                width: 14,
-                height: 14,
-                decoration: const BoxDecoration(
-                  color: AppColors.brandGreen,
-                  shape: BoxShape.circle,
-                ),
-              ),
-            )
-          : null,
     );
   }
 }
@@ -468,40 +347,8 @@ class _ExtraTile extends StatelessWidget {
                 ],
               ),
             ),
-            _BookingSwitch(value: selected),
+            BookingSheetSwitch(value: selected),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class _BookingSwitch extends StatelessWidget {
-  const _BookingSwitch({required this.value});
-
-  final bool value;
-
-  @override
-  Widget build(BuildContext context) {
-    return AnimatedContainer(
-      duration: const Duration(milliseconds: 160),
-      width: 42,
-      height: 26,
-      padding: const EdgeInsets.all(3),
-      decoration: BoxDecoration(
-        color: value ? AppColors.brandGreen : AppColors.accentWhite,
-        border: Border.all(color: AppColors.brandGreen, width: 2),
-        borderRadius: BorderRadius.circular(999),
-      ),
-      child: Align(
-        alignment: value ? Alignment.centerRight : Alignment.centerLeft,
-        child: Container(
-          width: 18,
-          height: 18,
-          decoration: BoxDecoration(
-            color: value ? AppColors.accentWhite : AppColors.brandGreen,
-            shape: BoxShape.circle,
-          ),
         ),
       ),
     );
@@ -545,7 +392,7 @@ class _PassengerCounterCard extends StatelessWidget {
               ),
             ),
           ),
-          _CounterButton(
+          BookingSheetCounterButton(
             key: PassengerBookingSheet.passengerMinusKey,
             icon: Icons.remove_rounded,
             enabled: canDecrease,
@@ -565,7 +412,7 @@ class _PassengerCounterCard extends StatelessWidget {
               ),
             ),
           ),
-          _CounterButton(
+          BookingSheetCounterButton(
             key: PassengerBookingSheet.passengerPlusKey,
             icon: Icons.add_rounded,
             enabled: canIncrease,
@@ -576,90 +423,4 @@ class _PassengerCounterCard extends StatelessWidget {
       ),
     );
   }
-}
-
-class _CounterButton extends StatelessWidget {
-  const _CounterButton({
-    required this.icon,
-    required this.enabled,
-    required this.primary,
-    required this.onTap,
-    super.key,
-  });
-
-  final IconData icon;
-  final bool enabled;
-  final bool primary;
-  final VoidCallback onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    final background = primary
-        ? AppColors.accentBlack
-        : const Color(0xFF898A8D);
-    return IconButton.outlined(
-      onPressed: enabled ? onTap : null,
-      icon: Icon(icon, size: 20),
-      style: IconButton.styleFrom(
-        fixedSize: const Size(40, 40),
-        backgroundColor: enabled ? background : AppColors.surfaceMuted,
-        foregroundColor: AppColors.accentWhite,
-        disabledForegroundColor: AppColors.accentWhite,
-        side: const BorderSide(color: AppColors.divider),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      ),
-    );
-  }
-}
-
-class _RoadWatermark extends StatelessWidget {
-  const _RoadWatermark();
-
-  @override
-  Widget build(BuildContext context) {
-    return IgnorePointer(child: CustomPaint(painter: _RoadWatermarkPainter()));
-  }
-}
-
-class _RoadWatermarkPainter extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    final path = Path()
-      ..moveTo(size.width * .54, -14)
-      ..cubicTo(
-        size.width * 1.02,
-        size.height * .14,
-        size.width * .5,
-        size.height * .38,
-        size.width * .68,
-        size.height * .64,
-      )
-      ..cubicTo(
-        size.width * .84,
-        size.height * .86,
-        size.width * .95,
-        size.height * .82,
-        size.width * 1.05,
-        size.height * 1.08,
-      );
-    canvas.drawPath(
-      path,
-      Paint()
-        ..color = const Color(0xFFF1F2F3)
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = 48
-        ..strokeCap = StrokeCap.round,
-    );
-    canvas.drawPath(
-      path,
-      Paint()
-        ..color = Colors.white
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = 2
-        ..strokeCap = StrokeCap.round,
-    );
-  }
-
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }

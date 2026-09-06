@@ -4,9 +4,14 @@ import 'package:vput/app/theme/app_colors.dart';
 import 'package:vput/app/widgets/screen_header.dart';
 import 'package:vput/features/system/presentation/system_message_view.dart';
 
-/// Explicit unavailable state for preview sections that await backend integration.
+/// Shown when a record a route points at is gone — a deleted trip, an order
+/// that no longer belongs to the user, a stale deep link.
+///
+/// Every section of the application is implemented, so this screen is never a
+/// «coming soon» placeholder: if it appears, the data is genuinely missing.
 class PendingFlowScreen extends StatelessWidget {
   const PendingFlowScreen({required this.title, super.key});
+
   final String title;
 
   @override
@@ -28,12 +33,10 @@ class PendingFlowScreen extends StatelessWidget {
             Expanded(
               child: SystemMessageView(
                 assetPath: 'docs/imgs/notinternet.png',
-                title: title.contains('не найден')
-                    ? title
-                    : 'Раздел пока недоступен',
-                description: title.contains('не найден')
-                    ? 'Данные больше недоступны. Вернитесь к списку и выберите другую запись.'
-                    : 'Этот раздел ещё не подключён. Вы можете вернуться к поездкам.',
+                title: title,
+                description:
+                    'Данные больше недоступны. Вернитесь к списку и выберите '
+                    'другую запись.',
                 actionLabel: 'Вернуться',
                 onAction: back,
               ),

@@ -7,6 +7,8 @@ import 'package:vput/features/trips/domain/trip_draft.dart';
 import 'package:vput/features/trips/domain/trip_route_point.dart';
 import 'package:vput/features/trips/presentation/driver/driver_trips_screen.dart';
 
+import '../../../../support/trip_fares.dart';
+
 TripDraft _draft({String destination = 'Тверь'}) {
   return TripDraft(
     points: [
@@ -16,7 +18,9 @@ TripDraft _draft({String destination = 'Тверь'}) {
     departureAt: DateTime(2026, 5, 16, 9, 30),
     arrivalAt: DateTime(2026, 5, 16, 18),
     seatCount: 3,
-    fullRoutePrice: 1800,
+    fares: fares({
+      [0, 1]: 1800,
+    }),
     vehicleId: 'preview_vehicle_largus',
   );
 }

@@ -85,10 +85,15 @@ passenger_three="$(auth_token '+79990000003')"
 driver_one="$(auth_token '+79990000011')"
 driver_two="$(auth_token '+79990000012')"
 
+passenger_vehicles="$(curl -fsS "${BASE_URL}/api/app/vehicles" \
+  -H "Authorization: Bearer ${passenger_one}")"
+assert_json "${passenger_vehicles}" '.items | length == 0' \
+  "an account without vehicles received another owner's garage"
+
 config="$(curl -fsS "${BASE_URL}/api/app/config" \
   -H "Authorization: Bearer ${passenger_one}")"
 assert_json "${config}" \
-  '.commission_fixed_rub == 50 and .trip_publication_limits.driver_trip_limit_per_day == 2 and .extra_service_prices.child_seat == 150 and .parcel_size_specs.large.price_rub == 350' \
+  '.commission_percent == 10 and .trip_publication_limits.driver_trip_limit_per_day == 2 and .extra_service_prices.child_seat == 150 and .parcel_size_specs.large.price_rub == 350' \
   "runtime application settings are incomplete"
 
 search="$(curl -fsS "${BASE_URL}/api/app/trips/search?transport_type=car" \
@@ -113,9 +118,31 @@ created="$(curl -fsS "${BASE_URL}/api/app/bookings" \
   -H "Authorization: Bearer ${passenger_one}" \
   -H 'Content-Type: application/json' \
   -d "{\"trip_id\":\"${standard_trip}\",\"pickup_index\":0,\"dropoff_index\":2,\"seat_count\":1,\"extra_service_codes\":[\"child_seat\"]}")"
-assert_json "${created}" '.booking.status == "pending_driver" and .booking.amount == 1350' \
-  "standard booking price or status is wrong"
+assert_json "${created}" \
+  '.booking.status == "pending_driver" and .booking.driver_amount == 1350 and .booking.commission_amount == 135 and .booking.amount == 1485' \
+  "commission must be added on top of the fare the driver receives"
 booking_id="$(jq -er '.booking.id' <<<"${created}")"
+
+# A leg is charged at the price set for that exact pair, never at the sum of
+# the shorter legs inside it: a short leg is dearer per kilometre on purpose.
+leg="$(curl -fsS "${BASE_URL}/api/app/bookings" \
+  -H "Authorization: Bearer ${passenger_three}" \
+  -H 'Content-Type: application/json' \
+  -d "{\"trip_id\":\"${standard_trip}\",\"pickup_index\":0,\"dropoff_index\":1,\"seat_count\":1}")"
+assert_json "${leg}" \
+  '.booking.driver_amount == 500 and .booking.commission_amount == 50 and .booking.amount == 550' \
+  "a partial leg must be charged at its own fare"
+leg_id="$(jq -er '.booking.id' <<<"${leg}")"
+curl -fsS "${BASE_URL}/api/app/bookings/${leg_id}/cancel" \
+  -H "Authorization: Bearer ${passenger_three}" \
+  -H 'Content-Type: application/json' -d '{"reason":"smoke"}' >/dev/null
+
+unpriced_status="$(curl -sS -o "${DATA_DIR}/unpriced.json" -w '%{http_code}' \
+  "${BASE_URL}/api/app/bookings" \
+  -H "Authorization: Bearer ${passenger_three}" \
+  -H 'Content-Type: application/json' \
+  -d "{\"trip_id\":\"${instant_trip}\",\"pickup_index\":0,\"dropoff_index\":1,\"seat_count\":99}")"
+[[ "${unpriced_status}" == "409" ]] || fail "oversized booking returned HTTP ${unpriced_status}"
 
 approved="$(curl -fsS "${BASE_URL}/api/app/bookings/${booking_id}/approve" \
   -H "Authorization: Bearer ${driver_one}" -X POST)"
@@ -145,12 +172,38 @@ cancelled_again="$(curl -fsS "${BASE_URL}/api/app/bookings/${booking_id}/cancel"
   -H "Authorization: Bearer ${passenger_one}" \
   -H 'Content-Type: application/json' -d '{"reason":"smoke"}')"
 assert_json "${cancelled}" \
-  '.booking.status == "cancelled_by_passenger" and .booking.payment_status == "refund_requested" and .refund_amount == 50' \
+  '.booking.status == "cancelled_by_passenger" and .booking.payment_status == "refund_requested" and .refund_amount == 135' \
   "paid cancellation did not request the mock refund"
 jq -e --arg id "${booking_id}" \
-  '.booking.id == $id and .booking.status == "cancelled_by_passenger" and .booking.payment_status == "refund_requested" and .refund_amount == 50' \
+  '.booking.id == $id and .booking.status == "cancelled_by_passenger" and .booking.payment_status == "refund_requested" and .refund_amount == 135' \
   >/dev/null <<<"${cancelled_again}" || \
   fail "cancellation retry changed the business result"
+
+# A parcel books no seat and is priced by the platform catalogue, not the fare.
+parcel="$(curl -fsS "${BASE_URL}/api/app/bookings" \
+  -H "Authorization: Bearer ${passenger_three}" \
+  -H 'Content-Type: application/json' \
+  -d "{\"trip_id\":\"${standard_trip}\",\"booking_kind\":\"parcel\",\"pickup_index\":0,\"dropoff_index\":2,\"parcel_size\":\"M\",\"parcel_comment\":\"smoke\"}")"
+assert_json "${parcel}" \
+  '.booking.booking_kind == "parcel" and .booking.status == "pending_driver" and .booking.seat_count == 0 and .booking.driver_amount == 250 and .booking.amount == 275' \
+  "parcel booking price, kind or seat count is wrong"
+parcel_id="$(jq -er '.booking.id' <<<"${parcel}")"
+
+parcel_record="$(curl -fsS \
+  "${BASE_URL}/api/collections/parcels/records?filter=$(printf 'booking_id="%s"' "${parcel_id}" | jq -sRr @uri)" \
+  -H "Authorization: Bearer ${passenger_three}")"
+assert_json "${parcel_record}" \
+  '.totalItems == 1 and .items[0].weight_category == "M" and .items[0].amount == 250' \
+  "parcel record was not stored next to the booking"
+
+bad_size_status="$(curl -sS -o "${DATA_DIR}/bad_parcel.json" -w '%{http_code}' \
+  "${BASE_URL}/api/app/bookings" \
+  -H "Authorization: Bearer ${passenger_one}" \
+  -H 'Content-Type: application/json' \
+  -d "{\"trip_id\":\"${standard_trip}\",\"booking_kind\":\"parcel\",\"pickup_index\":0,\"dropoff_index\":2,\"parcel_size\":\"XL\"}")"
+[[ "${bad_size_status}" == "400" ]] || fail "unknown parcel size returned HTTP ${bad_size_status}"
+assert_json "$(cat "${DATA_DIR}/bad_parcel.json")" '.code == "INVALID_PARCEL_SIZE"' \
+  "unknown parcel size error code is wrong"
 
 curl -sS -o "${DATA_DIR}/race_one.json" -w '%{http_code}' \
   "${BASE_URL}/api/app/bookings" \
@@ -171,6 +224,40 @@ wait "${race_two_pid}"
 race_statuses="$(sort "${DATA_DIR}/race_one.status" "${DATA_DIR}/race_two.status" | tr '\n' ' ')"
 [[ "${race_statuses}" == "200 409 " ]] || fail "last-seat race returned ${race_statuses}"
 
+complaint="$(curl -fsS "${BASE_URL}/api/app/complaints" \
+  -H "Authorization: Bearer ${passenger_one}" \
+  -H 'Content-Type: application/json' \
+  -X POST -d '{"subject":"trip","text":"Водитель опоздал на час и не отвечал."}')"
+assert_json "${complaint}" '.complaint.status == "new" and .complaint.subject == "trip"' \
+  "complaint was not created"
+
+complaints="$(curl -fsS "${BASE_URL}/api/app/complaints" \
+  -H "Authorization: Bearer ${passenger_one}")"
+assert_json "${complaints}" '.items | length == 1' "own complaints list is wrong"
+
+others_complaints="$(curl -fsS "${BASE_URL}/api/app/complaints" \
+  -H "Authorization: Bearer ${driver_two}")"
+assert_json "${others_complaints}" '.items | length == 0' \
+  "complaints leaked to another user"
+
+short_status="$(curl -sS -o /dev/null -w '%{http_code}' \
+  "${BASE_URL}/api/app/complaints" \
+  -H "Authorization: Bearer ${passenger_one}" \
+  -H 'Content-Type: application/json' \
+  -X POST -d '{"subject":"trip","text":"коротко"}')"
+[[ "${short_status}" == "400" ]] || fail "short complaint returned HTTP ${short_status}"
+
+notifications_read="$(curl -fsS "${BASE_URL}/api/app/notifications/read" \
+  -H "Authorization: Bearer ${driver_one}" \
+  -H 'Content-Type: application/json' -X POST -d '{"ids":[]}')"
+assert_json "${notifications_read}" '.updated >= 1' \
+  "marking notifications read did not update anything"
+notifications_again="$(curl -fsS "${BASE_URL}/api/app/notifications/read" \
+  -H "Authorization: Bearer ${driver_one}" \
+  -H 'Content-Type: application/json' -X POST -d '{"ids":[]}')"
+assert_json "${notifications_again}" '.updated == 0' \
+  "marking notifications read is not idempotent"
+
 driver_trips="$(curl -fsS "${BASE_URL}/api/app/trips/mine" \
   -H "Authorization: Bearer ${driver_two}")"
 assert_json "${driver_trips}" \
@@ -186,4 +273,4 @@ assert_json "${cancelled_trip}" '.trip.status == "cancelled" and .trip.accepting
 assert_json "${cancelled_trip_again}" '.trip.status == "cancelled"' \
   "driver trip cancellation retry failed"
 
-echo "PASS: migrations, auth, safe DTOs, trips, booking, payment, refund, access rules, and seat race"
+echo "PASS: migrations, auth, safe DTOs, trips, booking, payment, refund, access rules, parcels, complaints, notifications, and seat race"

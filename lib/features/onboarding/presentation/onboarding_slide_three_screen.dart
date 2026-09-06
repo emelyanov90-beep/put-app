@@ -215,7 +215,7 @@ class _RoleSelectionCard extends StatelessWidget {
                       child: SizedBox(
                         width: 343,
                         child: Text(
-                          'От чего лица вы хотите\nсоздать поездку?',
+                          'Кем вы будете\nв этой поездке?',
                           key: OnboardingSlideThreeScreen.descriptionKey,
                           textAlign: TextAlign.center,
                           style: const TextStyle(

@@ -10,6 +10,8 @@ import 'package:vput/features/trips/presentation/driver/driver_trip_details_scre
 import 'package:vput/features/trips/presentation/driver/passenger_profile_screen.dart';
 import 'package:vput/features/trips/presentation/widgets/create_trip_controls.dart';
 
+import '../../../../support/trip_fares.dart';
+
 TripDraft _draft() {
   return TripDraft(
     points: const [
@@ -21,7 +23,9 @@ TripDraft _draft() {
     departureAt: DateTime(2026, 5, 15, 8),
     arrivalAt: DateTime(2026, 5, 15, 18),
     seatCount: 24,
-    fullRoutePrice: 600,
+    fares: fares({
+      [0, 3]: 600,
+    }),
     extras: const [
       TripExtraOffer(service: TripExtraService.childSeat),
       TripExtraOffer(service: TripExtraService.pets, enabled: true, price: 150),
@@ -95,9 +99,9 @@ void main() {
       expect(find.text('Улица Ленина, дом 5'), findsOneWidget);
       expect(find.text('Улица Пушкина, дом 10'), findsOneWidget);
       expect(find.text('Улица Лунная, дом 2'), findsOneWidget);
+      expect(find.text('660 ₽'), findsOneWidget);
+      expect(find.text('+60 ₽'), findsOneWidget);
       expect(find.text('600 ₽'), findsOneWidget);
-      expect(find.text('50 ₽'), findsOneWidget);
-      expect(find.text('550 ₽'), findsOneWidget);
       expect(find.text('24 из 24'), findsOneWidget);
       expect(find.text('Водитель'), findsOneWidget);
       expect(

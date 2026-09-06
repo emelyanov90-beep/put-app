@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vput/core/api/pocketbase_provider.dart';
 import 'package:vput/core/config/app_config.dart';
+import 'package:vput/features/auth/application/preview_session_controller.dart';
 import 'package:vput/features/chat/domain/chat_thread.dart';
 
 /// Conversations of the current user.
@@ -10,16 +11,21 @@ import 'package:vput/features/chat/domain/chat_thread.dart';
 class ChatsController extends Notifier<List<ChatThread>> {
   var _nextThreadId = 1;
   var _nextMessageId = 1;
+  var _accountGeneration = 0;
 
   @override
   List<ChatThread> build() {
-    if (AppConfig.hasPocketBaseUrl) {
-      unawaited(Future<void>.microtask(_loadFromServer));
+    final generation = ++_accountGeneration;
+    final userId = ref.watch(currentSessionUserIdProvider);
+    if (!AppConfig.isPreviewMode && userId != null) {
+      unawaited(
+        Future<void>.microtask(() => _loadFromServer(generation, userId)),
+      );
     }
     return const [];
   }
 
-  Future<void> _loadFromServer() async {
+  Future<void> _loadFromServer(int generation, String userId) async {
     try {
       final client = ref.read(pocketBaseProvider);
       final response = await client.send<Map<String, dynamic>>(
@@ -27,7 +33,12 @@ class ChatsController extends Notifier<List<ChatThread>> {
       );
       final currentId = client.authStore.record?.id;
       final items = response['items'];
-      if (!ref.mounted || items is! List) return;
+      if (!ref.mounted ||
+          generation != _accountGeneration ||
+          ref.read(currentSessionUserIdProvider) != userId ||
+          items is! List) {
+        return;
+      }
       state = items
           .whereType<Map>()
           .map((raw) {
@@ -94,7 +105,7 @@ class ChatsController extends Notifier<List<ChatThread>> {
     if (trimmed.isEmpty) return;
     final thread = findById(threadId);
     if (thread == null) return;
-    if (AppConfig.hasPocketBaseUrl) {
+    if (!AppConfig.isPreviewMode) {
       unawaited(_sendToServer(threadId, trimmed));
       return;
     }

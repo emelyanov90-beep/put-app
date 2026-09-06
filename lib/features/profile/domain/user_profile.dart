@@ -9,7 +9,6 @@ class UserProfile {
     required this.completedTrips,
     required this.cancelledTrips,
     this.avatarBytes,
-    this.unreadNotifications = 0,
     this.ratingAvg,
     this.reviewsCount = 0,
   });
@@ -19,7 +18,6 @@ class UserProfile {
   final int completedTrips;
   final int cancelledTrips;
   final Uint8List? avatarBytes;
-  final int unreadNotifications;
 
   final double? ratingAvg;
   final int reviewsCount;
@@ -27,11 +25,7 @@ class UserProfile {
   String get ratingLabel =>
       RatingCalculator.label(average: ratingAvg, count: reviewsCount);
 
-  UserProfile copyWith({
-    String? name,
-    Uint8List? avatarBytes,
-    int? unreadNotifications,
-  }) {
+  UserProfile copyWith({String? name, Uint8List? avatarBytes}) {
     return UserProfile(
       name: name ?? this.name,
       phone: phone,
@@ -40,7 +34,6 @@ class UserProfile {
       completedTrips: completedTrips,
       cancelledTrips: cancelledTrips,
       avatarBytes: avatarBytes ?? this.avatarBytes,
-      unreadNotifications: unreadNotifications ?? this.unreadNotifications,
     );
   }
 }

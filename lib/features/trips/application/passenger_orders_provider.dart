@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vput/core/api/pocketbase_provider.dart';
 import 'package:vput/core/config/app_config.dart';
+import 'package:vput/features/auth/application/preview_session_controller.dart';
 import 'package:vput/features/trips/data/pocketbase_trip_catalog_repository.dart';
 import 'package:vput/features/trips/data/preview_passenger_orders.dart';
 import 'package:vput/features/trips/domain/passenger_order.dart';
@@ -8,7 +9,8 @@ import 'package:vput/features/trips/domain/passenger_order.dart';
 final passengerOrdersProvider = FutureProvider<List<PassengerOrder>>((
   ref,
 ) async {
-  if (!AppConfig.hasPocketBaseUrl) return previewPassengerOrders;
+  if (AppConfig.isPreviewMode) return previewPassengerOrders;
+  if (ref.watch(currentSessionUserIdProvider) == null) return const [];
   final client = ref.watch(pocketBaseProvider);
   final response = await client.send<Map<String, dynamic>>(
     '/api/app/bookings/mine',

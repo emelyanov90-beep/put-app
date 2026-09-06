@@ -15,8 +15,9 @@
   публикацию/возврат/отмену, поиск, standard/instant бронирование,
   approve/reject, mock pay/refund и чат. Критичные статусы нельзя произвольно
   менять через collection API.
-- Flutter выбирает PocketBase repositories при заданном `PB_BASE_URL`; без URL
-  остаётся автономный preview для UI-разработки. Production URL передаётся
+- Flutter выбирает PocketBase repositories при заданном `PB_BASE_URL`.
+  Автономный preview включается только через `PREVIEW_MODE=true`; отсутствие
+  обоих параметров считается ошибкой конфигурации. Production URL передаётся
   через `--dart-define` или файл конфигурации сборки.
 - Локальный smoke-тест проверяет чистую миграцию, auth, privacy, цены, поездки,
   гонку за последнее место, идемпотентные pay/cancel и запрет прямого PATCH.

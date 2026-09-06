@@ -3,6 +3,7 @@ import 'package:http/http.dart' as http;
 import 'package:pocketbase/pocketbase.dart';
 import 'package:vput/core/api/pocketbase_provider.dart';
 import 'package:vput/core/config/app_config.dart';
+import 'package:vput/features/auth/application/preview_session_controller.dart';
 import 'package:vput/features/profile/application/profile_draft_controller.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vput/features/profile/data/device_profile_image_repository.dart';
@@ -41,7 +42,6 @@ const _previewProfile = UserProfile(
   phone: '+7 900 123 45 67',
   completedTrips: 120,
   cancelledTrips: 6,
-  unreadNotifications: 1,
 );
 
 class UserProfileController extends Notifier<UserProfileState> {
@@ -49,11 +49,20 @@ class UserProfileController extends Notifier<UserProfileState> {
   @override
   UserProfileState build() {
     _generation++;
-    if (AppConfig.hasPocketBaseUrl) {
+    ref.watch(currentSessionUserIdProvider);
+    if (!AppConfig.isPreviewMode) {
       final record = ref.read(pocketBaseProvider).authStore.record;
       if (record != null) {
         return UserProfileState(profile: _fromRecord(record.toJson()));
       }
+      return const UserProfileState(
+        profile: UserProfile(
+          name: '',
+          phone: '',
+          completedTrips: 0,
+          cancelledTrips: 0,
+        ),
+      );
     }
     return const UserProfileState(profile: _previewProfile);
   }
@@ -100,7 +109,7 @@ class UserProfileController extends Notifier<UserProfileState> {
   Future<void> updateName(String name) async {
     final trimmed = name.trim();
     if (trimmed.isEmpty) return;
-    if (AppConfig.hasPocketBaseUrl) {
+    if (!AppConfig.isPreviewMode) {
       final client = ref.read(pocketBaseProvider);
       final response = await client.send<Map<String, dynamic>>(
         '/api/app/me',
@@ -129,7 +138,7 @@ class UserProfileController extends Notifier<UserProfileState> {
     try {
       final bytes = await ref.read(profileImageRepositoryProvider).pick(source);
       if (!ref.mounted || generation != _generation) return;
-      if (bytes != null && AppConfig.hasPocketBaseUrl) {
+      if (bytes != null && !AppConfig.isPreviewMode) {
         await ref
             .read(pocketBaseProvider)
             .send<Map<String, dynamic>>(

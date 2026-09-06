@@ -1,11 +1,15 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vput/core/api/pocketbase_provider.dart';
 import 'package:vput/core/config/app_config.dart';
+import 'package:vput/features/auth/application/preview_session_controller.dart';
 import 'package:vput/features/trips/data/pocketbase_trip_catalog_repository.dart';
 import 'package:vput/features/trips/domain/passenger_trip.dart';
 import 'package:vput/features/trips/domain/trip_catalog_repository.dart';
+import 'package:vput/features/trips/domain/trip_fare_table.dart';
 
-const previewPassengerTrips = <PassengerTrip>[
+/// Not `const`: a fare table is keyed by [TripFareLeg], which defines its own
+/// equality, and such keys are not allowed in a constant map.
+final previewPassengerTrips = <PassengerTrip>[
   PassengerTrip(
     id: 'preview_trip_viktor',
     transportType: PassengerTransportType.car,
@@ -24,10 +28,23 @@ const previewPassengerTrips = <PassengerTrip>[
     departureLabel: '15 мая, 09:00',
     detailsDepartureLabel: '15 мая, 09:00',
     arrivalLabel: 'Прибытие ~18:00',
-    priceRubles: 1200,
-    detailsPriceRubles: 1200,
+    priceRubles: 1320,
+    detailsPriceRubles: 1320,
     availableSeats: 0,
     totalSeats: 3,
+    fares: TripFareTable({
+      TripFareLeg(0, 1): 500,
+      TripFareLeg(0, 2): 850,
+      TripFareLeg(0, 3): 1200,
+      TripFareLeg(1, 2): 450,
+      TripFareLeg(1, 3): 800,
+      TripFareLeg(2, 3): 400,
+    }),
+    extraServicePrices: {
+      TripExtraService.pets: 150,
+      TripExtraService.luggage: 150,
+      TripExtraService.childSeat: 150,
+    },
     services: [
       TripExtraService.pets,
       TripExtraService.luggage,
@@ -56,10 +73,16 @@ const previewPassengerTrips = <PassengerTrip>[
     departureLabel: '15 мая, 09:00',
     detailsDepartureLabel: '15 мая, 09:00',
     arrivalLabel: 'Прибытие ~18:00',
-    priceRubles: 1200,
-    detailsPriceRubles: 1200,
+    priceRubles: 1320,
+    detailsPriceRubles: 1320,
     availableSeats: 1,
     totalSeats: 3,
+    fares: TripFareTable({TripFareLeg(0, 1): 1200}),
+    extraServicePrices: {
+      TripExtraService.pets: 150,
+      TripExtraService.luggage: 150,
+      TripExtraService.childSeat: 150,
+    },
     services: [
       TripExtraService.pets,
       TripExtraService.luggage,
@@ -97,8 +120,8 @@ class PreviewTripCatalogRepository implements TripCatalogRepository {
 }
 
 final tripCatalogRepositoryProvider = Provider<TripCatalogRepository>((ref) {
-  if (AppConfig.hasPocketBaseUrl) {
-    return PocketBaseTripCatalogRepository(ref.watch(pocketBaseProvider));
-  }
-  return const PreviewTripCatalogRepository();
+  ref.watch(currentSessionUserIdProvider);
+  return AppConfig.isPreviewMode
+      ? const PreviewTripCatalogRepository()
+      : PocketBaseTripCatalogRepository(ref.watch(pocketBaseProvider));
 });

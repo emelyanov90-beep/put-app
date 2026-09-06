@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:vput/features/trips/domain/passenger_trip.dart';
 import 'package:vput/features/trips/domain/trip_departure_slots.dart';
 import 'package:vput/features/trips/domain/trip_extras.dart';
+import 'package:vput/features/trips/domain/trip_fare_table.dart';
 import 'package:vput/features/trips/domain/trip_route_point.dart';
 
 /// How a passenger joins the trip (`trips.booking_mode`).
@@ -39,8 +40,7 @@ class TripDraft {
     this.departureAt,
     this.arrivalAt,
     this.seatCount = 0,
-    this.fullRoutePrice,
-    this.segmentPrices = const <int?>[null],
+    this.fares = const TripFareTable(),
     this.minimumBoardingPrice,
     this.extras = _emptyExtras,
     this.parcel = const TripParcelOffer(),
@@ -63,12 +63,8 @@ class TripDraft {
   /// Seats offered to passengers. Starts at zero, as in the design.
   final int seatCount;
 
-  /// Fare for the whole route, from the first point to the last one.
-  final int? fullRoutePrice;
-
-  /// Fare of every leg between two neighbouring points. Length always equals
-  /// `points.length - 1`.
-  final List<int?> segmentPrices;
+  /// Fare of every leg the driver priced, including the whole route.
+  final TripFareTable fares;
 
   /// Lowest fare charged for boarding, whatever the legs add up to.
   final int? minimumBoardingPrice;
@@ -87,6 +83,13 @@ class TripDraft {
       points.sublist(1, points.length - 1);
   int get segmentCount => points.length - 1;
 
+  /// Every pair of points the driver can price on this route.
+  List<TripFareLeg> get fareLegs => TripFareTable.legsFor(points.length);
+
+  /// Fare of the whole route — the leg from the first point to the last one.
+  /// It is the only fare a trip cannot be published without.
+  int? get fullRoutePrice => fares.priceFor(0, points.length - 1);
+
   TripStopKind kindAt(int index) {
     if (index == 0) return TripStopKind.origin;
     if (index == points.length - 1) return TripStopKind.destination;
@@ -98,23 +101,16 @@ class TripDraft {
 
   /// Fare from point [fromIndex] to point [toIndex].
   ///
-  /// Legs on the way are summed up and the result never drops below the
-  /// minimum boarding price. Returns `null` while a leg on the way is unpriced.
+  /// The fare is the one the driver entered for exactly this pair, never a sum
+  /// of shorter legs: a short leg is priced higher per kilometre on purpose.
+  /// The result never drops below the minimum boarding price. Returns `null`
+  /// when the driver did not price this pair, and the leg is then not sold.
   int? fareBetween(int fromIndex, int toIndex) {
     if (fromIndex < 0 || toIndex > segmentCount || fromIndex >= toIndex) {
       return null;
     }
-    if (fromIndex == 0 && toIndex == segmentCount && fullRoutePrice != null) {
-      return _atLeastBoardingPrice(fullRoutePrice!);
-    }
-
-    var total = 0;
-    for (var index = fromIndex; index < toIndex; index++) {
-      final price = segmentPrices[index];
-      if (price == null) return null;
-      total += price;
-    }
-    return _atLeastBoardingPrice(total);
+    final price = fares.priceFor(fromIndex, toIndex);
+    return price == null ? null : _atLeastBoardingPrice(price);
   }
 
   int _atLeastBoardingPrice(int fare) {
@@ -141,13 +137,15 @@ class TripDraft {
 
   bool get isSeatCountValid => seatCount >= 1;
 
-  /// The fare of the whole route is required; leg fares and the boarding
-  /// price are optional, and a leg left empty simply is not sold separately.
+  /// The fare of the whole route is required; the other legs and the boarding
+  /// price are optional, and a leg left empty simply is not sold.
   bool get isPricingValid {
     final full = fullRoutePrice;
     if (full == null || full <= 0) return false;
-    if (segmentPrices.length != segmentCount) return false;
-    if (segmentPrices.any((price) => price != null && price <= 0)) return false;
+    if (fares.prices.values.any((price) => price <= 0)) return false;
+    if (fares.prices.keys.any((leg) => leg.toIndex >= points.length)) {
+      return false;
+    }
     final minimum = minimumBoardingPrice;
     return minimum == null || (minimum >= 0 && minimum <= full);
   }
@@ -176,10 +174,18 @@ class TripDraft {
 
   /// Copy of this trip running the other way round: the route is reversed, the
   /// leg prices follow it, and the driver supplies a new departure time.
+  ///
+  /// A leg keeps its fare when it is mirrored, so «A → C» of the outbound trip
+  /// becomes «C → A» of the return one at the same price.
   TripDraft reversed({DateTime? departureAt, String? pairedTripId}) {
+    final last = points.length - 1;
     return copyWith(
       points: points.reversed.toList(growable: false),
-      segmentPrices: segmentPrices.reversed.toList(growable: false),
+      fares: TripFareTable({
+        for (final entry in fares.prices.entries)
+          TripFareLeg(last - entry.key.toIndex, last - entry.key.fromIndex):
+              entry.value,
+      }),
       departureAt: departureAt,
       clearDepartureAt: departureAt == null,
       clearArrivalAt: true,
@@ -195,8 +201,7 @@ class TripDraft {
         other.departureAt == departureAt &&
         other.arrivalAt == arrivalAt &&
         other.seatCount == seatCount &&
-        other.fullRoutePrice == fullRoutePrice &&
-        listEquals(other.segmentPrices, segmentPrices) &&
+        other.fares == fares &&
         other.minimumBoardingPrice == minimumBoardingPrice &&
         listEquals(other.extras, extras) &&
         other.parcel == parcel &&
@@ -212,8 +217,7 @@ class TripDraft {
     departureAt,
     arrivalAt,
     seatCount,
-    fullRoutePrice,
-    Object.hashAll(segmentPrices),
+    fares,
     minimumBoardingPrice,
     Object.hashAll(extras),
     parcel,
@@ -230,9 +234,7 @@ class TripDraft {
     DateTime? arrivalAt,
     bool clearArrivalAt = false,
     int? seatCount,
-    int? fullRoutePrice,
-    bool clearFullRoutePrice = false,
-    List<int?>? segmentPrices,
+    TripFareTable? fares,
     int? minimumBoardingPrice,
     bool clearMinimumBoardingPrice = false,
     List<TripExtraOffer>? extras,
@@ -249,10 +251,7 @@ class TripDraft {
       departureAt: clearDepartureAt ? null : departureAt ?? this.departureAt,
       arrivalAt: clearArrivalAt ? null : arrivalAt ?? this.arrivalAt,
       seatCount: seatCount ?? this.seatCount,
-      fullRoutePrice: clearFullRoutePrice
-          ? null
-          : fullRoutePrice ?? this.fullRoutePrice,
-      segmentPrices: segmentPrices ?? this.segmentPrices,
+      fares: fares ?? this.fares,
       minimumBoardingPrice: clearMinimumBoardingPrice
           ? null
           : minimumBoardingPrice ?? this.minimumBoardingPrice,

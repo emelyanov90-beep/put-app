@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:typed_data';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:vput/features/auth/application/preview_session_controller.dart';
 import 'package:vput/features/vehicles/data/preview_driver_vehicle_repository.dart';
 import 'package:vput/features/vehicles/domain/driver_vehicle.dart';
 import 'package:vput/features/vehicles/domain/driver_vehicle_repository.dart';
@@ -11,23 +12,31 @@ import 'package:vput/features/vehicles/domain/driver_vehicle_repository.dart';
 ///
 class DriverVehiclesController extends Notifier<List<DriverVehicle>> {
   var _nextId = 1;
+  var _loadGeneration = 0;
 
   @override
   List<DriverVehicle> build() {
+    final generation = ++_loadGeneration;
+    final userId = ref.watch(currentSessionUserIdProvider);
     final repository = ref.watch(driverVehicleRepositoryProvider);
     if (repository is PreviewDriverVehicleRepository) {
       return repository.vehicles;
     }
-    unawaited(Future<void>.microtask(_load));
+    if (userId == null) return const [];
+    unawaited(Future<void>.microtask(() => _load(generation, userId)));
     return const [];
   }
 
   DriverVehicleRepository get _repository =>
       ref.read(driverVehicleRepositoryProvider);
 
-  Future<void> _load() async {
+  Future<void> _load(int generation, String userId) async {
     final vehicles = await _repository.list();
-    if (ref.mounted) state = vehicles;
+    if (ref.mounted &&
+        generation == _loadGeneration &&
+        ref.read(currentSessionUserIdProvider) == userId) {
+      state = vehicles;
+    }
   }
 
   DriverVehicle? findById(String id) {

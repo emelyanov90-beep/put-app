@@ -390,9 +390,8 @@ class _RouteAndMoneyCard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final policy = ref.watch(tripCommissionPolicyProvider);
-    final price = trip.draft.fullRoutePrice ?? 0;
-    final commission = policy.fixedRubles.clamp(0, price);
-    final driverAmount = price - commission;
+    // The driver entered what they keep; the passenger pays that plus commission.
+    final money = policy.breakdownFor(trip.draft.fullRoutePrice ?? 0);
     return Container(
       key: DriverTripDetailsScreen.routeCardKey,
       width: double.infinity,
@@ -420,19 +419,22 @@ class _RouteAndMoneyCard extends ConsumerWidget {
               Row(
                 children: [
                   Expanded(
-                    child: _MoneyTile(label: 'Стоимость', value: '$price ₽'),
+                    child: _MoneyTile(
+                      label: 'Стоимость',
+                      value: '${money.total} ₽',
+                    ),
                   ),
                   const SizedBox(width: 8),
                   Expanded(
                     child: _MoneyTile(
-                      label: 'Комиссия',
-                      value: '$commission ₽',
+                      label: 'Комиссия ${policy.percent} %',
+                      value: '+${money.commission} ₽',
                     ),
                   ),
                 ],
               ),
               const SizedBox(height: 8),
-              _DriverPaymentLine(amount: driverAmount),
+              _DriverPaymentLine(amount: money.driverAmount),
             ],
           ),
         ],
@@ -513,7 +515,14 @@ class _MoneyTile extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(label, style: const TextStyle(fontSize: 13, height: 1.2)),
+          // The tile has a fixed height, so a longer caption such as
+          // «Комиссия 10 %» must stay on one line instead of wrapping.
+          Text(
+            label,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: const TextStyle(fontSize: 13, height: 1.2),
+          ),
           const SizedBox(height: 3),
           Text(
             value,

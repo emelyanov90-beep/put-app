@@ -141,16 +141,23 @@ class _PublishConfirmationSheetState
                             ),
                           ),
                           if (_segmentsExpanded)
-                            for (var i = 0; i < draft.segmentCount; i++)
-                              _Row(
-                                label:
-                                    '${draft.points[i].address} – '
-                                    '${draft.points[i + 1].address}',
-                                value: draft.segmentPrices[i] == null
-                                    ? '—'
-                                    : '${draft.segmentPrices[i]}₽',
-                                labelOnTop: true,
-                              ),
+                            for (final leg in draft.fareLegs)
+                              if (leg.fromIndex != 0 ||
+                                  leg.toIndex != draft.segmentCount)
+                                _Row(
+                                  label:
+                                      '${draft.points[leg.fromIndex].address} – '
+                                      '${draft.points[leg.toIndex].address}',
+                                  value:
+                                      draft.fares.priceFor(
+                                            leg.fromIndex,
+                                            leg.toIndex,
+                                          ) ==
+                                          null
+                                      ? '—'
+                                      : '${draft.fares.priceFor(leg.fromIndex, leg.toIndex)}₽',
+                                  labelOnTop: true,
+                                ),
                         ],
                         _Row(
                           label: 'Цена доп. услуг',

@@ -3,6 +3,7 @@ import 'dart:typed_data';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vput/core/api/pocketbase_provider.dart';
 import 'package:vput/core/config/app_config.dart';
+import 'package:vput/features/auth/application/preview_session_controller.dart';
 import 'package:vput/features/vehicles/data/pocketbase_driver_vehicle_repository.dart';
 import 'package:vput/features/vehicles/domain/driver_vehicle.dart';
 import 'package:vput/features/vehicles/domain/driver_vehicle_repository.dart';
@@ -83,8 +84,11 @@ class PreviewDriverVehicleRepository implements DriverVehicleRepository {
   Future<DriverVehicle> update(DriverVehicle vehicle) async => vehicle;
 }
 
-final driverVehicleRepositoryProvider = Provider<DriverVehicleRepository>(
-  (ref) => AppConfig.hasPocketBaseUrl
-      ? PocketBaseDriverVehicleRepository(ref.watch(pocketBaseProvider))
-      : const PreviewDriverVehicleRepository(),
-);
+final driverVehicleRepositoryProvider = Provider<DriverVehicleRepository>((
+  ref,
+) {
+  ref.watch(currentSessionUserIdProvider);
+  return AppConfig.isPreviewMode
+      ? const PreviewDriverVehicleRepository()
+      : PocketBaseDriverVehicleRepository(ref.watch(pocketBaseProvider));
+});

@@ -33,26 +33,27 @@ class TripDraftController extends Notifier<TripDraft> {
   void setDestination(TripRoutePoint point) =>
       setPointAt(state.points.length - 1, point);
 
-  /// Adds a planned stop right before the destination. Both halves of the leg
-  /// it splits lose their price, because that leg no longer exists.
+  /// Adds a planned stop right before the destination. Existing fares keep
+  /// their meaning: they follow the points they were set for, and the legs the
+  /// new stop introduces start out unpriced.
   void addStop([TripRoutePoint point = const TripRoutePoint(address: '')]) {
     final insertAt = state.points.length - 1;
     final points = [...state.points]..insert(insertAt, point);
-    final prices = [...state.segmentPrices];
-    final splitAt = insertAt - 1;
-    prices[splitAt] = null;
-    prices.insert(splitAt, null);
-    state = state.copyWith(points: points, segmentPrices: prices);
+    state = state.copyWith(
+      points: points,
+      fares: state.fares.withPointInserted(insertAt),
+    );
   }
 
   /// Removes a planned stop. The origin and the destination cannot be removed.
+  /// The fares of the legs that ended at that stop go with it.
   void removeStopAt(int index) {
     if (index <= 0 || index >= state.points.length - 1) return;
     final points = [...state.points]..removeAt(index);
-    final prices = [...state.segmentPrices]
-      ..removeAt(index)
-      ..[index - 1] = null;
-    state = state.copyWith(points: points, segmentPrices: prices);
+    state = state.copyWith(
+      points: points,
+      fares: state.fares.withPointRemoved(index),
+    );
   }
 
   void setTransportType(PassengerTransportType type) {
@@ -99,16 +100,16 @@ class TripDraftController extends Notifier<TripDraft> {
     );
   }
 
-  void setFullRoutePrice(int? value) {
-    state = value == null
-        ? state.copyWith(clearFullRoutePrice: true)
-        : state.copyWith(fullRoutePrice: value);
-  }
+  void setFullRoutePrice(int? value) =>
+      setLegPrice(0, state.points.length - 1, value);
 
-  void setSegmentPrice(int index, int? value) {
-    if (index < 0 || index >= state.segmentPrices.length) return;
-    final prices = [...state.segmentPrices]..[index] = value;
-    state = state.copyWith(segmentPrices: prices);
+  /// Prices one pair of points. Every pair is set by hand: the driver does not
+  /// give a rate per kilometre, so nothing here is derived from another leg.
+  void setLegPrice(int fromIndex, int toIndex, int? value) {
+    if (toIndex >= state.points.length) return;
+    state = state.copyWith(
+      fares: state.fares.withPrice(fromIndex, toIndex, value),
+    );
   }
 
   void setMinimumBoardingPrice(int? value) {

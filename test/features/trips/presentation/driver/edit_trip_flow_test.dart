@@ -8,6 +8,8 @@ import 'package:vput/features/trips/domain/trip_route_point.dart';
 import 'package:vput/features/trips/presentation/driver/create_trip_route_screen.dart';
 import 'package:vput/features/trips/presentation/driver/edit_trip_pricing_screen.dart';
 
+import '../../../../support/trip_fares.dart';
+
 final _now = DateTime(2026, 6, 1, 9);
 
 TripDraft _savedDraft() {
@@ -20,8 +22,11 @@ TripDraft _savedDraft() {
     departureAt: DateTime(2026, 6, 4, 8),
     arrivalAt: DateTime(2026, 6, 4, 12),
     seatCount: 4,
-    fullRoutePrice: 1200,
-    segmentPrices: const [600, 600],
+    fares: fares({
+      [0, 2]: 1200,
+      [0, 1]: 600,
+      [1, 2]: 600,
+    }),
     minimumBoardingPrice: 300,
     vehicleId: 'preview_vehicle_largus',
   );
@@ -170,12 +175,12 @@ void main() {
     );
 
     await tester.enterText(
-      find.byKey(EditTripPricingScreen.segmentFieldKey(0)),
+      find.byKey(EditTripPricingScreen.legFieldKey(0, 1)),
       '700',
     );
     await tester.pump();
 
-    expect(container.read(tripDraftProvider).segmentPrices, [700, 600]);
+    expect(container.read(tripDraftProvider).fares.priceFor(0, 1), 700);
 
     await tester.tap(find.byKey(EditTripPricingScreen.saveButtonKey));
     await tester.pump();
@@ -184,7 +189,8 @@ void main() {
     // The trip keeps its published state after the edit.
     final stored = container.read(driverTripsProvider).single;
     expect(stored.isPublished, isTrue);
-    expect(stored.draft.segmentPrices, [700, 600]);
+    expect(stored.draft.fares.priceFor(0, 1), 700);
+    expect(stored.draft.fares.priceFor(1, 2), 600);
     expect(container.read(tripDraftHasChangesProvider), isFalse);
   });
 }

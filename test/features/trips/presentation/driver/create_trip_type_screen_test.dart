@@ -31,8 +31,10 @@ void main() {
     expect(find.text('Новый заказ'), findsOneWidget);
     expect(find.text('Шаг 1 из 6'), findsOneWidget);
     expect(find.text('Тип заказа'), findsOneWidget);
-    expect(find.text('Найти водителя для себя'), findsOneWidget);
-    expect(find.text('Отправить груз или посылку'), findsOneWidget);
+    // Driver-facing wording: the passenger pair lives in the passenger wizard.
+    expect(find.text('Взять попутчиков в свою поездку'), findsOneWidget);
+    expect(find.text('Перевозить пассажиров и посылки'), findsOneWidget);
+    expect(find.text('Найти водителя для себя'), findsNothing);
     expect(
       container.read(tripDraftProvider).transportType,
       PassengerTransportType.car,

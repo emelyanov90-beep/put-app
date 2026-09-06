@@ -1,5 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vput/features/trips/domain/passenger_order_draft.dart';
+import 'package:vput/features/trips/domain/passenger_trip.dart';
+import 'package:vput/features/trips/domain/trip_extras.dart';
 import 'package:vput/features/trips/domain/trip_route_point.dart';
 
 class PassengerOrderDraftController extends Notifier<PassengerOrderDraft> {
@@ -8,6 +10,30 @@ class PassengerOrderDraftController extends Notifier<PassengerOrderDraft> {
 
   void reset() {
     state = const PassengerOrderDraft();
+  }
+
+  void setTransportType(PassengerTransportType value) {
+    if (state.transportType == value) return;
+    // The extras of the previous kind of order do not carry over.
+    state = state.copyWith(
+      transportType: value,
+      extras: const {},
+      clearParcelSize: true,
+    );
+  }
+
+  void setExtraSelected(TripExtraService service, bool selected) {
+    final extras = {...state.extras};
+    if (selected) {
+      extras.add(service);
+    } else {
+      extras.remove(service);
+    }
+    state = state.copyWith(extras: extras);
+  }
+
+  void setParcelSize(ParcelSize size) {
+    state = state.copyWith(parcelSize: size);
   }
 
   void setPointAt(int index, TripRoutePoint point) {

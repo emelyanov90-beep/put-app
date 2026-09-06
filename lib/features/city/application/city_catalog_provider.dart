@@ -7,10 +7,9 @@ import 'package:vput/features/city/domain/city_option.dart';
 import 'package:vput/features/city/domain/city_repository.dart';
 
 final cityRepositoryProvider = Provider<CityRepository>((ref) {
-  if (AppConfig.hasPocketBaseUrl) {
-    return PocketBaseCityRepository(ref.watch(pocketBaseProvider));
-  }
-  return AssetCityRepository();
+  return AppConfig.isPreviewMode
+      ? AssetCityRepository()
+      : PocketBaseCityRepository(ref.watch(pocketBaseProvider));
 });
 
 final cityCatalogProvider = FutureProvider<List<CityOption>>((ref) {

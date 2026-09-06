@@ -4,12 +4,25 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:pocketbase/pocketbase.dart';
 import 'package:vput/app/bootstrap.dart';
+import 'package:vput/core/config/app_config.dart';
 import 'package:vput/features/onboarding/presentation/welcome_screen.dart';
 import 'package:vput/features/system/application/connection_status_provider.dart';
 import 'package:vput/features/system/presentation/system_loading_screen.dart';
 import 'package:vput/features/system/presentation/system_failure_view.dart';
 
 void main() {
+  testWidgets('blocks a normal build when the backend URL is missing', (
+    tester,
+  ) async {
+    AppConfig.disablePreviewModeForTests();
+    addTearDown(AppConfig.enablePreviewModeForTests);
+
+    await tester.pumpWidget(const ProviderScope(child: ApplicationBootstrap()));
+    await tester.pumpAndSettle();
+
+    expect(find.byType(SystemFailureScreen), findsOneWidget);
+  });
+
   testWidgets(
     'renders a first frame while storage is pending then starts app',
     (tester) async {

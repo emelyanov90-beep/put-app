@@ -23,6 +23,8 @@ import 'package:vput/features/profile/presentation/role_switch_screen.dart';
 import 'package:vput/features/system/presentation/account_blocked_screen.dart';
 import 'package:vput/features/trips/presentation/driver/create_trip_type_screen.dart';
 import 'package:vput/features/trips/presentation/passenger_order_schedule_screen.dart';
+import 'package:vput/features/trips/presentation/passenger_order_type_screen.dart';
+import 'package:vput/features/trips/presentation/widgets/create_trip_controls.dart';
 import 'package:vput/features/trips/presentation/passenger_trips_screen.dart';
 import 'package:vput/features/trips/presentation/trip_details_screen.dart';
 import 'package:vput/features/trips/presentation/widgets/passenger_bottom_bar.dart';
@@ -248,6 +250,15 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.tap(find.byKey(PassengerBottomBar.createButtonKey));
+    await tester.pumpAndSettle();
+
+    // Step 1 is the passenger order type, with passenger-facing wording.
+    expect(find.byType(PassengerOrderTypeScreen), findsOneWidget);
+    expect(find.text('Шаг 1 из 4'), findsOneWidget);
+    expect(find.text('Найти водителя для себя'), findsOneWidget);
+    expect(find.text('Отправить груз или посылку'), findsOneWidget);
+
+    await tester.tap(find.byKey(CreateTripStepScaffold.primaryButtonKey));
     await tester.pumpAndSettle();
 
     expect(find.byType(PassengerOrderScheduleScreen), findsOneWidget);

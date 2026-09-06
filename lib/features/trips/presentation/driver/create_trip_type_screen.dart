@@ -5,7 +5,11 @@ import 'package:vput/features/trips/application/trip_draft_controller.dart';
 import 'package:vput/features/trips/domain/passenger_trip.dart';
 import 'package:vput/features/trips/presentation/widgets/create_trip_controls.dart';
 
-/// Step 1: car or bus order.
+/// Step 1: the transport the driver publishes the trip on.
+///
+/// The wording is driver-facing on purpose: the passenger-facing pair («найти
+/// водителя для себя» / «отправить груз или посылку») belongs to the passenger
+/// wizard step 1, see [PassengerOrderTypeScreen].
 class CreateTripTypeScreen extends ConsumerWidget {
   const CreateTripTypeScreen({
     required this.onBack,
@@ -43,7 +47,7 @@ class CreateTripTypeScreen extends ConsumerWidget {
               CreateTripOptionCard(
                 key: carOptionKey,
                 title: 'Автомобиль',
-                description: 'Найти водителя для себя',
+                description: 'Взять попутчиков в свою поездку',
                 selected: type == PassengerTransportType.car,
                 onTap: () =>
                     controller.setTransportType(PassengerTransportType.car),
@@ -55,7 +59,7 @@ class CreateTripTypeScreen extends ConsumerWidget {
               CreateTripOptionCard(
                 key: busOptionKey,
                 title: 'Автобус',
-                description: 'Отправить груз или посылку',
+                description: 'Перевозить пассажиров и посылки',
                 selected: type == PassengerTransportType.bus,
                 onTap: () =>
                     controller.setTransportType(PassengerTransportType.bus),

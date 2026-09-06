@@ -29,23 +29,30 @@ void main() {
         'Клин',
         'Тверь',
       ]);
-      expect(draft.segmentPrices.length, 2);
+      // Three points make six sellable pairs, all of them priced by hand.
+      expect(draft.fareLegs.length, 3);
     });
 
-    test('a new stop clears the price of the leg it splits', () {
+    test('a new stop keeps the fares already set and adds unpriced legs', () {
       final container = _container();
       final controller = container.read(tripDraftProvider.notifier);
 
       controller
         ..setOrigin(const TripRoutePoint(address: 'Москва'))
         ..setDestination(const TripRoutePoint(address: 'Тверь'))
-        ..setSegmentPrice(0, 1800)
+        ..setFullRoutePrice(1800)
         ..addStop(const TripRoutePoint(address: 'Клин'));
 
-      expect(container.read(tripDraftProvider).segmentPrices, [null, null]);
+      final draft = container.read(tripDraftProvider);
+      // «Москва → Тверь» still costs what the driver named for it.
+      expect(draft.fullRoutePrice, 1800);
+      expect(draft.fares.priceFor(0, 2), 1800);
+      // The legs the new stop introduces start out unpriced.
+      expect(draft.fares.priceFor(0, 1), isNull);
+      expect(draft.fares.priceFor(1, 2), isNull);
     });
 
-    test('removing a stop merges the legs around it into an unpriced one', () {
+    test('removing a stop drops only the fares that ended at it', () {
       final container = _container();
       final controller = container.read(tripDraftProvider.notifier);
 
@@ -54,9 +61,10 @@ void main() {
         ..setDestination(const TripRoutePoint(address: 'Тверь'))
         ..addStop(const TripRoutePoint(address: 'Клин'))
         ..addStop(const TripRoutePoint(address: 'Завидово'))
-        ..setSegmentPrice(0, 500)
-        ..setSegmentPrice(1, 600)
-        ..setSegmentPrice(2, 700)
+        ..setLegPrice(0, 1, 500)
+        ..setLegPrice(1, 2, 600)
+        ..setLegPrice(2, 3, 700)
+        ..setLegPrice(0, 2, 900)
         ..removeStopAt(1);
 
       final draft = container.read(tripDraftProvider);
@@ -65,7 +73,13 @@ void main() {
         'Завидово',
         'Тверь',
       ]);
-      expect(draft.segmentPrices, [null, 700]);
+      // «Москва → Завидово» keeps its own fare, re-addressed to the shorter
+      // route, and so does «Завидово → Тверь».
+      expect(draft.fares.priceFor(0, 1), 900);
+      expect(draft.fares.priceFor(1, 2), 700);
+      // The fares that ended at «Клин» went with it: nothing was merged or
+      // summed to replace them.
+      expect(draft.fares.prices.length, 2);
     });
 
     test('the origin and the destination cannot be removed', () {

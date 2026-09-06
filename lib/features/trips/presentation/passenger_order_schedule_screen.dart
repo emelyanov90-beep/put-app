@@ -143,7 +143,7 @@ class _PassengerOrderScheduleScreenState
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       const Text(
-                        'Шаг 2 из 4',
+                        'Шаг 2 из $passengerOrderStepCount',
                         textAlign: TextAlign.right,
                         style: TextStyle(
                           color: AppColors.accentBlack,

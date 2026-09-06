@@ -47,8 +47,9 @@ class _DriverBookingRequestScreenState
     final trip = widget.trip;
     final draft = trip.draft;
     final commission = ref.watch(tripCommissionPolicyProvider);
-    final total = draft.fullRoutePrice ?? 0;
-    final money = commission.breakdownFor(total);
+    // The driver named what they receive; the passenger pays that plus the
+    // platform commission.
+    final money = commission.breakdownFor(draft.fullRoutePrice ?? 0);
     final departure = draft.departureAt;
     final arrival = draft.arrivalAt;
 
@@ -103,8 +104,8 @@ class _DriverBookingRequestScreenState
                         const SizedBox(width: 4),
                         Expanded(
                           child: _MoneyTile(
-                            label: 'Комиссия',
-                            value: '${money.commission} ₽',
+                            label: 'Комиссия ${commission.percent} %',
+                            value: '+${money.commission} ₽',
                           ),
                         ),
                       ],

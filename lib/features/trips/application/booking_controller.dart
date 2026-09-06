@@ -22,6 +22,17 @@ class BookingController extends Notifier<AsyncValue<BookingActionResult?>> {
     return _run(() => ref.read(bookingRepositoryProvider).create(request));
   }
 
+  Future<BookingActionResult?> createParcel(
+    PassengerParcelRequest request,
+  ) async {
+    if (state.isLoading) return null;
+    final existing = forTrip(request.tripId);
+    if (existing != null) return existing;
+    return _run(
+      () => ref.read(bookingRepositoryProvider).createParcel(request),
+    );
+  }
+
   Future<BookingActionResult?> pay(BookingActionResult booking) async {
     if (state.isLoading) return null;
     if (booking.isPaid) return booking;

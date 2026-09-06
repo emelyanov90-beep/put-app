@@ -18,6 +18,7 @@ class BookingActionResult {
 
 abstract interface class BookingRepository {
   Future<BookingActionResult> create(PassengerBookingRequest request);
+  Future<BookingActionResult> createParcel(PassengerParcelRequest request);
   Future<BookingActionResult> pay(String bookingId);
   Future<BookingCancellationResult> cancel(String bookingId);
 }

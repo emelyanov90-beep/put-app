@@ -4,6 +4,8 @@ import 'package:vput/features/trips/domain/trip_draft.dart';
 import 'package:vput/features/trips/domain/trip_extras.dart';
 import 'package:vput/features/trips/domain/trip_route_point.dart';
 
+import '../../../support/trip_fares.dart';
+
 TripDraft _filledDraft({DateTime? departureAt}) {
   return TripDraft(
     points: const [
@@ -14,8 +16,11 @@ TripDraft _filledDraft({DateTime? departureAt}) {
     departureAt: departureAt ?? DateTime(2026, 5, 15, 9, 30),
     arrivalAt: DateTime(2026, 5, 15, 18),
     seatCount: 3,
-    fullRoutePrice: 1800,
-    segmentPrices: const [700, 800],
+    fares: fares({
+      [0, 2]: 1800,
+      [0, 1]: 700,
+      [1, 2]: 800,
+    }),
     minimumBoardingPrice: 300,
     vehicleId: 'preview_vehicle_largus',
   );
@@ -27,7 +32,9 @@ void main() {
       expect(_filledDraft().fareBetween(0, 2), 1800);
     });
 
-    test('a fare between stops sums up the legs on the way', () {
+    test('a leg costs what the driver set for that exact pair', () {
+      // A short leg is dearer per kilometre, so «A → C» is deliberately less
+      // than «A → B» plus «B → C» and must never be their sum.
       final draft = _filledDraft().copyWith(
         points: const [
           TripRoutePoint(address: 'A'),
@@ -35,24 +42,39 @@ void main() {
           TripRoutePoint(address: 'C'),
           TripRoutePoint(address: 'D'),
         ],
-        segmentPrices: const [400, 500, 600],
+        fares: fares({
+          [0, 1]: 400,
+          [1, 2]: 500,
+          [0, 2]: 700,
+          [1, 3]: 900,
+          [0, 3]: 1200,
+        }),
       );
 
-      expect(draft.fareBetween(0, 2), 900);
-      expect(draft.fareBetween(1, 3), 1100);
+      expect(draft.fareBetween(0, 2), 700);
+      expect(draft.fareBetween(1, 3), 900);
     });
 
     test('a fare never drops below the minimum boarding price', () {
       final draft = _filledDraft().copyWith(
-        segmentPrices: const [100, 800],
+        fares: fares({
+          [0, 2]: 1800,
+          [0, 1]: 100,
+          [1, 2]: 800,
+        }),
         minimumBoardingPrice: 300,
       );
 
       expect(draft.fareBetween(0, 1), 300);
     });
 
-    test('an unpriced leg on the way leaves the fare unknown', () {
-      final draft = _filledDraft().copyWith(segmentPrices: const [700, null]);
+    test('a pair the driver did not price has no fare and is not sold', () {
+      final draft = _filledDraft().copyWith(
+        fares: fares({
+          [0, 2]: 1800,
+          [0, 1]: 700,
+        }),
+      );
 
       expect(draft.fareBetween(1, 2), isNull);
     });
@@ -88,7 +110,9 @@ void main() {
           TripRoutePoint(address: 'Улица Солнечная, дом 1'),
           TripRoutePoint(address: 'улица солнечная, дом 1 '),
         ],
-        segmentPrices: const [1800],
+        fares: fares({
+          [0, 1]: 1800,
+        }),
       );
 
       expect(draft.isRouteValid, isFalse);
@@ -128,14 +152,25 @@ void main() {
     });
 
     test('a leg left unpriced is simply not sold separately', () {
-      final draft = _filledDraft().copyWith(segmentPrices: const [700, null]);
+      final draft = _filledDraft().copyWith(
+        fares: fares({
+          [0, 2]: 1800,
+          [0, 1]: 700,
+        }),
+      );
 
       expect(draft.isPricingValid, isTrue);
       expect(draft.fareBetween(1, 2), isNull);
     });
 
     test('a leg priced at zero is rejected', () {
-      final draft = _filledDraft().copyWith(segmentPrices: const [700, 0]);
+      final draft = _filledDraft().copyWith(
+        fares: fares({
+          [0, 2]: 1800,
+          [0, 1]: 700,
+          [1, 2]: 0,
+        }),
+      );
 
       expect(draft.issues(now: now), contains(TripDraftIssue.pricing));
     });
@@ -187,7 +222,10 @@ void main() {
         'Улица Ленина, дом 5',
         'Улица Солнечная, дом 1',
       ]);
-      expect(back.segmentPrices, [800, 700]);
+      // «Улица Ленина → Улица Лунная» at 800 becomes the mirrored first leg.
+      expect(back.fares.priceFor(0, 1), 800);
+      expect(back.fares.priceFor(1, 2), 700);
+      expect(back.fullRoutePrice, 1800);
       expect(back.departureAt, isNull);
       expect(back.arrivalAt, isNull);
       expect(back.pairedTripId, 'trip_1');

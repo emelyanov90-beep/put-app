@@ -32,11 +32,16 @@ request="$(curl -fsS "${BASE_URL}/api/app/auth/request-code" \
   -d '{"phone":"+79990000003"}')"
 assert_json "${request}" '.success == true' "request-code failed"
 
-passenger="$(auth_token '+79990000003')"
+passenger="$(auth_token '+79990000001')"
+passenger_vehicles="$(curl -fsS "${BASE_URL}/api/app/vehicles" \
+  -H "Authorization: Bearer ${passenger}")"
+assert_json "${passenger_vehicles}" '.items | length == 0' \
+  "an account without vehicles received another owner's garage"
+
 config="$(curl -fsS "${BASE_URL}/api/app/config" \
   -H "Authorization: Bearer ${passenger}")"
 assert_json "${config}" \
-  '.commission_fixed_rub == 50 and .trip_publication_limits.driver_trip_limit_per_day == 2 and .extra_service_prices.child_seat == 150 and .parcel_size_specs.large.price_rub == 350' \
+  '.commission_percent == 10 and .trip_publication_limits.driver_trip_limit_per_day == 2 and .extra_service_prices.child_seat == 150 and .parcel_size_specs.large.price_rub == 350' \
   "runtime application settings are incomplete"
 
 search="$(curl -fsS "${BASE_URL}/api/app/trips/search?transport_type=car" \
