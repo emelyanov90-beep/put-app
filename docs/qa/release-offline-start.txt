@@ -1,0 +1,7 @@
+Starting: Intent { cmp=ru.vput.vput/.MainActivity }
+Status: ok
+LaunchState: COLD
+Activity: ru.vput.vput/.MainActivity
+TotalTime: 2228
+WaitTime: 2230
+Complete

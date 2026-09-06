@@ -29,7 +29,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>Камера нужна для фото профиля, автомобиля и СТС.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Геопозиция помогает показать приблизительное расстояние до места отправления.</string>
+	<string>Точная геопозиция нужна, чтобы показывать поездки поблизости, рассчитывать расстояние и улучшать результаты поиска.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Медиатека нужна для выбора фото профиля, автомобиля и СТС.</string>
 	<key>UIApplicationSceneManifest</key>

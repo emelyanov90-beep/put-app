@@ -45,8 +45,11 @@ dependencies:
   cached_network_image: ^4.0.0
   freezed_annotation: ^3.1.0
   json_annotation: ^4.12.0
+  http: ^1.6.0
 
 dev_dependencies:
+  integration_test:
+    sdk: flutter
   flutter_test:
     sdk: flutter
 
@@ -79,6 +82,11 @@ flutter:
     - docs/imgs/car.png
     - docs/imgs/driver.png
     - docs/imgs/passagire.png
+    - docs/imgs/order.png
+    - docs/imgs/geo.png
+    - docs/imgs/notinternet.png
+    - docs/imgs/block.png
+    - docs/imgs/tapbar/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

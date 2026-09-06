@@ -49,6 +49,7 @@ class _SmsCodeScreenState extends State<SmsCodeScreen> {
   Timer? _resendTimer;
   int _secondsRemaining = SmsCodeScreen.resendSeconds;
   bool _hasError = false;
+  bool _submitted = false;
 
   @override
   void initState() {
@@ -113,8 +114,10 @@ class _SmsCodeScreenState extends State<SmsCodeScreen> {
   }
 
   void _submit() {
-    if (!_isComplete || _hasError) return;
+    if (!_isComplete || _hasError || _submitted) return;
     if (_code == widget.expectedCode) {
+      setState(() => _submitted = true);
+      FocusManager.instance.primaryFocus?.unfocus();
       widget.onVerified();
     } else {
       setState(() => _hasError = true);
@@ -142,7 +145,7 @@ class _SmsCodeScreenState extends State<SmsCodeScreen> {
       systemNavigationBarDividerColor: AppColors.background,
     );
 
-    final canSubmit = _isComplete && !_hasError;
+    final canSubmit = _isComplete && !_hasError && !_submitted;
 
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: overlayStyle,
@@ -196,13 +199,15 @@ class _SmsCodeScreenState extends State<SmsCodeScreen> {
                         spacing: 4,
                         children: [
                           for (var i = 0; i < SmsCodeScreen.codeLength; i++)
-                            _DigitField(
-                              index: i,
-                              controller: _controllers[i],
-                              focusNode: _focusNodes[i],
-                              active: _isGroupActive,
-                              onChanged: _handleDigitChanged,
-                              onBackspace: _handleBackspace,
+                            Flexible(
+                              child: _DigitField(
+                                index: i,
+                                controller: _controllers[i],
+                                focusNode: _focusNodes[i],
+                                active: _isGroupActive,
+                                onChanged: _handleDigitChanged,
+                                onBackspace: _handleBackspace,
+                              ),
                             ),
                         ],
                       ),

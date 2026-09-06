@@ -90,83 +90,95 @@ class _PhoneAuthScreenState extends State<PhoneAuthScreen> {
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(height: 16),
-                const Text(
-                  'Добро пожаловать в «Путь»!',
-                  key: PhoneAuthScreen.titleKey,
-                  style: TextStyle(
-                    color: AppColors.accentBlack,
-                    fontSize: 24,
-                    fontWeight: FontWeight.w700,
-                    height: 1.25,
-                  ),
-                ),
-                const SizedBox(height: 8),
-                const Text(
-                  'Находите выгодные поездки и договаривайтесь на своих условиях',
-                  key: PhoneAuthScreen.descriptionKey,
-                  style: TextStyle(
-                    color: AppColors.textSecondary,
-                    fontSize: 15,
-                    fontWeight: FontWeight.w400,
-                    height: 1.33,
-                  ),
-                ),
-                const SizedBox(height: 32),
-                _PhoneField(
-                  controller: _phoneController,
-                  focusNode: _phoneFocusNode,
-                  onSubmitted: (_) => _submit(),
-                ),
-                const SizedBox(height: 8),
-                const Text(
-                  'Мы отправим вам СМС с кодом для входа в приложение',
-                  style: TextStyle(
-                    color: AppColors.textSecondary,
-                    fontSize: 12,
-                    fontWeight: FontWeight.w400,
-                    height: 1.33,
-                  ),
-                ),
-                const Spacer(),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 8),
-                  child: _TermsText(
-                    termsRecognizer: _termsRecognizer,
-                    privacyRecognizer: _privacyRecognizer,
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 16),
-                  child: SizedBox(
-                    width: double.infinity,
-                    height: 48,
-                    child: FilledButton(
-                      key: PhoneAuthScreen.getCodeButtonKey,
-                      onPressed: _isPhoneComplete ? _submit : null,
-                      style: FilledButton.styleFrom(
-                        disabledBackgroundColor: AppColors.background,
-                        disabledForegroundColor: AppColors.textSecondary,
-                        foregroundColor: AppColors.accentWhite,
-                        backgroundColor: AppColors.brandGreen,
-                        side: const BorderSide(color: AppColors.divider),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
+            child: LayoutBuilder(
+              builder: (context, constraints) => SingleChildScrollView(
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(minHeight: constraints.maxHeight),
+                  child: IntrinsicHeight(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SizedBox(height: 16),
+                        const Text(
+                          'Добро пожаловать в «Путь»!',
+                          key: PhoneAuthScreen.titleKey,
+                          style: TextStyle(
+                            color: AppColors.accentBlack,
+                            fontSize: 24,
+                            fontWeight: FontWeight.w700,
+                            height: 1.25,
+                          ),
                         ),
-                        textStyle: const TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w600,
-                          height: 1.33,
+                        const SizedBox(height: 8),
+                        const Text(
+                          'Находите выгодные поездки и договаривайтесь на своих условиях',
+                          key: PhoneAuthScreen.descriptionKey,
+                          style: TextStyle(
+                            color: AppColors.textSecondary,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w400,
+                            height: 1.33,
+                          ),
                         ),
-                      ),
-                      child: const Text('Получить код'),
+                        const SizedBox(height: 32),
+                        _PhoneField(
+                          controller: _phoneController,
+                          focusNode: _phoneFocusNode,
+                          onSubmitted: (_) => _submit(),
+                        ),
+                        const SizedBox(height: 8),
+                        const Text(
+                          'Мы отправим вам СМС с кодом для входа в приложение',
+                          style: TextStyle(
+                            color: AppColors.textSecondary,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                            height: 1.33,
+                          ),
+                        ),
+                        const Spacer(),
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 8),
+                          child: _TermsText(
+                            termsRecognizer: _termsRecognizer,
+                            privacyRecognizer: _privacyRecognizer,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 16),
+                          child: SizedBox(
+                            width: double.infinity,
+                            height: 48,
+                            child: FilledButton(
+                              key: PhoneAuthScreen.getCodeButtonKey,
+                              onPressed: _isPhoneComplete ? _submit : null,
+                              style: FilledButton.styleFrom(
+                                disabledBackgroundColor: AppColors.background,
+                                disabledForegroundColor:
+                                    AppColors.textSecondary,
+                                foregroundColor: AppColors.accentWhite,
+                                backgroundColor: AppColors.brandGreen,
+                                side: const BorderSide(
+                                  color: AppColors.divider,
+                                ),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                textStyle: const TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w600,
+                                  height: 1.33,
+                                ),
+                              ),
+                              child: const Text('Получить код'),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
-              ],
+              ),
             ),
           ),
         ),

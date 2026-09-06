@@ -1,0 +1,1 @@
+enum ProfileImageSource { camera, gallery }

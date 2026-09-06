@@ -1,0 +1,252 @@
+00:00 +0: loading /Users/aleksandremelianov/Development/projects/vput/test/core/utils/russian_date_labels_test.dart
+00:00 +0: /Users/aleksandremelianov/Development/projects/vput/test/app/bootstrap_test.dart: renders a first frame while storage is pending then starts app
+00:00 +1: /Users/aleksandremelianov/Development/projects/vput/test/app/bootstrap_test.dart: renders a first frame while storage is pending then starts app
+00:00 +2: /Users/aleksandremelianov/Development/projects/vput/test/app/bootstrap_test.dart: renders a first frame while storage is pending then starts app
+00:00 +3: /Users/aleksandremelianov/Development/projects/vput/test/app/bootstrap_test.dart: renders a first frame while storage is pending then starts app
+00:00 +4: /Users/aleksandremelianov/Development/projects/vput/test/app/bootstrap_test.dart: storage error has retry and retry recovers
+00:01 +5: /Users/aleksandremelianov/Development/projects/vput/test/app/router_test.dart: new user completes registration before role and city
+00:02 +6: /Users/aleksandremelianov/Development/projects/vput/test/app/router_test.dart: new user completes registration before role and city
+00:02 +7: /Users/aleksandremelianov/Development/projects/vput/test/features/city/presentation/city_selection_screen_test.dart: shows the missing city state and clears a query
+00:02 +8: /Users/aleksandremelianov/Development/projects/vput/test/app/router_test.dart: existing-account action skips onboarding and profile
+00:02 +9: /Users/aleksandremelianov/Development/projects/vput/test/app/router_test.dart: existing-account action skips onboarding and profile
+00:03 +10: /Users/aleksandremelianov/Development/projects/vput/test/app/router_test.dart: a deactivated account is stopped right after the code check
+00:03 +11: /Users/aleksandremelianov/Development/projects/vput/test/features/city/presentation/city_selection_page_test.dart: shows the system loader while the catalog is loading
+00:03 +12: /Users/aleksandremelianov/Development/projects/vput/test/features/city/presentation/city_selection_page_test.dart: shows the system loader while the catalog is loading
+00:03 +13: /Users/aleksandremelianov/Development/projects/vput/test/features/city/presentation/city_selection_page_test.dart: shows the system loader while the catalog is loading
+00:03 +14: /Users/aleksandremelianov/Development/projects/vput/test/app/router_test.dart: profile: editing personal data, switching role, and logging out
+00:03 +15: /Users/aleksandremelianov/Development/projects/vput/test/features/city/presentation/city_selection_page_test.dart: a failed catalog load offers a retry that reloads it
+00:04 +16: /Users/aleksandremelianov/Development/projects/vput/test/features/chat/application/chats_controller_test.dart: ChatsController the same person and trip reuse one thread
+00:04 +17: /Users/aleksandremelianov/Development/projects/vput/test/features/chat/application/chats_controller_test.dart: ChatsController another trip with the same person is its own thread
+00:04 +18: /Users/aleksandremelianov/Development/projects/vput/test/features/chat/application/chats_controller_test.dart: ChatsController a message lands in the thread and blank text is ignored
+00:04 +19: /Users/aleksandremelianov/Development/projects/vput/test/features/chat/application/chats_controller_test.dart: ChatsController «Чаты» lists only threads with messages, newest first
+00:04 +20: /Users/aleksandremelianov/Development/projects/vput/test/features/chat/presentation/passenger_chat_flow_test.dart: a confirmed passenger keeps the phone private and shows their route
+00:04 +21: /Users/aleksandremelianov/Development/projects/vput/test/features/chat/presentation/passenger_chat_flow_test.dart: a confirmed passenger keeps the phone private and shows their route
+00:04 +22: /Users/aleksandremelianov/Development/projects/vput/test/features/chat/presentation/passenger_chat_flow_test.dart: a confirmed passenger keeps the phone private and shows their route
+00:05 +23: /Users/aleksandremelianov/Development/projects/vput/test/features/chat/presentation/passenger_chat_flow_test.dart: before the decision the phone and route stay closed
+00:05 +24: /Users/aleksandremelianov/Development/projects/vput/test/features/chat/presentation/passenger_chat_flow_test.dart: «Написать» opens a chat and the message is sent
+00:05 +25: /Users/aleksandremelianov/Development/projects/vput/test/features/chat/presentation/passenger_chat_flow_test.dart: «Написать» opens a chat and the message is sent
+00:05 +26: /Users/aleksandremelianov/Development/projects/vput/test/features/chat/presentation/passenger_chat_flow_test.dart: «Написать» opens a chat and the message is sent
+00:05 +27: /Users/aleksandremelianov/Development/projects/vput/test/features/chat/presentation/passenger_chat_flow_test.dart: «Написать» opens a chat and the message is sent
+00:05 +28: /Users/aleksandremelianov/Development/projects/vput/test/features/chat/presentation/passenger_chat_flow_test.dart: «Написать» opens a chat and the message is sent
+00:05 +29: /Users/aleksandremelianov/Development/projects/vput/test/features/chat/presentation/passenger_chat_flow_test.dart: «Написать» opens a chat and the message is sent
+00:05 +30: /Users/aleksandremelianov/Development/projects/vput/test/features/chat/presentation/passenger_chat_flow_test.dart: «Написать» opens a chat and the message is sent
+00:05 +31: /Users/aleksandremelianov/Development/projects/vput/test/features/chat/presentation/passenger_chat_flow_test.dart: «Написать» opens a chat and the message is sent
+00:05 +32: /Users/aleksandremelianov/Development/projects/vput/test/features/chat/presentation/passenger_chat_flow_test.dart: the conversation shows up in «Чаты» and reopens
+00:05 +33: /Users/aleksandremelianov/Development/projects/vput/test/features/auth/presentation/phone_auth_screen_test.dart: small screen with keyboard can scroll to submit
+00:05 +34: /Users/aleksandremelianov/Development/projects/vput/test/features/auth/presentation/phone_auth_screen_test.dart: small screen with keyboard can scroll to submit
+00:06 +35: /Users/aleksandremelianov/Development/projects/vput/test/features/auth/presentation/phone_auth_screen_test.dart: formats the phone number and enables the button once complete
+00:06 +36: /Users/aleksandremelianov/Development/projects/vput/test/features/auth/presentation/sms_code_screen_test.dart: disables submit until 6 digits are entered, then verifies
+00:06 +37: /Users/aleksandremelianov/Development/projects/vput/test/features/auth/presentation/sms_code_screen_test.dart: disables submit until 6 digits are entered, then verifies
+00:06 +38: /Users/aleksandremelianov/Development/projects/vput/test/features/auth/presentation/sms_code_screen_test.dart: disables submit until 6 digits are entered, then verifies
+00:06 +39: /Users/aleksandremelianov/Development/projects/vput/test/features/auth/presentation/sms_code_screen_test.dart: disables submit until 6 digits are entered, then verifies
+00:06 +40: /Users/aleksandremelianov/Development/projects/vput/test/features/auth/presentation/sms_code_screen_test.dart: shows an error banner for a wrong code and blocks resubmission
+00:07 +41: /Users/aleksandremelianov/Development/projects/vput/test/features/auth/presentation/sms_code_screen_test.dart: switches to a resend link once the countdown finishes
+00:09 +42: /Users/aleksandremelianov/Development/projects/vput/test/features/system/presentation/account_blocked_screen_test.dart: states the block and offers no way back into the app
+00:10 +43: /Users/aleksandremelianov/Development/projects/vput/test/features/system/presentation/system_failure_view_test.dart: offline device gets the no-internet copy
+00:10 +44: /Users/aleksandremelianov/Development/projects/vput/test/features/location/presentation/location_access_dialog_test.dart: shows geolocation rationale and exposes both choices
+00:10 +45: /Users/aleksandremelianov/Development/projects/vput/test/features/location/presentation/location_access_dialog_test.dart: shows geolocation rationale and exposes both choices
+00:10 +46: /Users/aleksandremelianov/Development/projects/vput/test/features/location/presentation/location_access_dialog_test.dart: shows geolocation rationale and exposes both choices
+00:11 +47: /Users/aleksandremelianov/Development/projects/vput/test/features/location/presentation/location_access_dialog_test.dart: shows geolocation rationale and exposes both choices
+00:11 +48: /Users/aleksandremelianov/Development/projects/vput/test/features/location/presentation/location_access_dialog_test.dart: shows geolocation rationale and exposes both choices
+00:11 +49: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/application/avatar_session_test.dart: late avatar cannot enter a new user session after invalidation
+00:11 +50: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/application/avatar_session_test.dart: late draft avatar is discarded after reset
+00:11 +51: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/application/avatar_session_test.dart: late draft avatar is discarded after invalidation
+00:12 +52: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/domain/rating_calculator_test.dart: no published reviews stays null and has the exact TZ label
+00:12 +53: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/domain/rating_calculator_test.dart: only supplied published reviews determine the average
+00:12 +54: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/domain/rating_calculator_test.dart: Russian review count declensions include teen exceptions
+00:12 +55: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/domain/rating_calculator_test.dart: corrupt averages are not displayed as a fabricated rating
+00:12 +56: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/presentation/create_profile_screen_test.dart: requires a name but keeps the avatar optional
+00:13 +57: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/presentation/role_switch_screen_test.dart: reflects the current role and reports the tapped selection
+00:13 +58: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/presentation/role_switch_screen_test.dart: reflects the current role and reports the tapped selection
+00:13 +59: loading /Users/aleksandremelianov/Development/projects/vput/test/features/profile/presentation/personal_data_screen_test.dart
+00:14 +59: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/presentation/personal_data_screen_test.dart: shows the current name and phone, and saves an edited name
+00:14 +60: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/presentation/personal_data_screen_test.dart: shows the current name and phone, and saves an edited name
+00:14 +61: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/presentation/personal_data_screen_test.dart: shows the current name and phone, and saves an edited name
+00:15 +62: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/presentation/profile_screen_test.dart: shows the vehicles item only for the driver role, and it is tappable
+00:15 +63: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/presentation/profile_screen_test.dart: shows the vehicles item only for the driver role, and it is tappable
+00:15 +64: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/presentation/personal_data_screen_test.dart: blocks saving an empty name
+00:15 +65: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/presentation/profile_screen_test.dart: shows the unread notifications badge from the profile
+00:15 +66: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/presentation/personal_data_screen_test.dart: opens photo source sheet and loads a picked avatar
+00:15 +67: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/presentation/personal_data_screen_test.dart: opens photo source sheet and loads a picked avatar
+00:15 +68: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/presentation/profile_screen_test.dart: logout requires confirmation before calling onLogout
+00:15 +69: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/presentation/profile_loading_screen_test.dart: shows progress and completes after the configured duration
+00:15 +70: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/presentation/profile_loading_screen_test.dart: shows progress and completes after the configured duration
+00:15 +71: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/presentation/profile_loading_screen_test.dart: shows progress and completes after the configured duration
+00:15 +72: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/presentation/profile_loading_screen_test.dart: shows progress and completes after the configured duration
+00:15 +73: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/presentation/profile_loading_screen_test.dart: shows progress and completes after the configured duration
+00:15 +74: /Users/aleksandremelianov/Development/projects/vput/test/features/profile/presentation/profile_loading_screen_test.dart: shows progress and completes after the configured duration
+00:16 +75: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehiclesScreen an empty garage invites the driver to add the first car
+00:16 +76: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehiclesScreen lists every car of the account and opens one
+00:17 +77: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehicleDetailsScreen cancelled or failed STS selection preserves verification: _CancelledImageRepository
+00:17 +78: /Users/aleksandremelianov/Development/projects/vput/test/features/legal/presentation/legal_document_screen_test.dart: read-only mode has no accept button and the back arrow works
+00:17 +79: /Users/aleksandremelianov/Development/projects/vput/test/features/legal/presentation/legal_document_screen_test.dart: read-only mode has no accept button and the back arrow works
+00:17 +80: /Users/aleksandremelianov/Development/projects/vput/test/features/legal/presentation/legal_document_screen_test.dart: read-only mode has no accept button and the back arrow works
+00:17 +81: /Users/aleksandremelianov/Development/projects/vput/test/features/legal/presentation/legal_document_screen_test.dart: read-only mode has no accept button and the back arrow works
+00:17 +82: /Users/aleksandremelianov/Development/projects/vput/test/features/legal/presentation/legal_document_screen_test.dart: read-only mode has no accept button and the back arrow works
+00:17 +83: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehicleFormScreen brand and model are picked from the catalogue
+00:17 +84: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehicleFormScreen brand and model are picked from the catalogue
+00:17 +85: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehicleFormScreen a photo can be added and taken off again
+00:17 +86: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehicleFormScreen the chosen kind of vehicle is highlighted
+00:17 +87: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehicleFormScreen documents send the new car on review
+00:18 +88: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehicleFormScreen documents send the new car on review
+00:18 +89: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehicleFormScreen documents send the new car on review
+00:18 +90: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehicleFormScreen documents send the new car on review
+00:18 +91: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehicleFormScreen documents send the new car on review
+00:18 +92: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehicleFormScreen documents send the new car on review
+00:18 +93: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehicleFormScreen documents send the new car on review
+00:18 +94: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehicleFormScreen documents send the new car on review
+00:18 +95: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehicleFormScreen documents send the new car on review
+00:18 +96: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehicleFormScreen documents send the new car on review
+00:18 +97: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehicleFormScreen documents send the new car on review
+00:18 +98: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehicleFormScreen documents send the new car on review
+00:18 +99: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehicleFormScreen documents send the new car on review
+00:18 +100: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehicleFormScreen documents send the new car on review
+00:18 +101: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehicleFormScreen documents send the new car on review
+00:18 +102: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehicleFormScreen documents send the new car on review
+00:18 +103: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehicleFormScreen documents send the new car on review
+00:18 +104: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehicleFormScreen documents send the new car on review
+00:18 +105: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehicleFormScreen documents send the new car on review
+00:18 +106: /Users/aleksandremelianov/Development/projects/vput/test/features/vehicles/presentation/driver_vehicles_flow_test.dart: DriverVehicleFormScreen editing a car keeps its data and sends it back for a check
+00:18 +107: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/application/booking_controller_test.dart: duplicate taps and revisits do not create a second request
+00:18 +108: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/application/booking_controller_test.dart: instant awaiting payment needs a server result before showing paid
+00:18 +109: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/application/booking_controller_test.dart: unconfigured backend produces recoverable error and never succeeds
+00:18 +110: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/application/booking_controller_test.dart: completion after logout does not repopulate the next user session
+00:19 +111: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/application/driver_trips_controller_test.dart: DriverTripsController preview approval rechecks the last seat and ignores duplicate requests
+00:19 +112: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/application/driver_trips_controller_test.dart: DriverTripsController saves a draft and keeps it out of the published list
+00:19 +113: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/application/driver_trips_controller_test.dart: DriverTripsController saving with an existing id updates that trip instead of adding one
+00:19 +114: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/application/driver_trips_controller_test.dart: DriverTripsController publishing a draft keeps the same record and stamps the time
+00:19 +115: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/application/driver_trips_controller_test.dart: DriverTripsController a return trip points at the trip it was created from
+00:19 +116: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/application/driver_trips_controller_test.dart: DriverTripsController removing a trip drops it from the list
+00:19 +117: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/application/driver_trips_controller_test.dart: DriverTripsController confirmed passenger bookings occupy seats and block silent edits
+00:19 +118: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/application/driver_trips_controller_test.dart: DriverTripsController closing passenger reception leaves no free seats
+00:19 +119: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/application/driver_trips_controller_test.dart: DriverTripsController cancellation outcome depends on joined passengers and recent limit
+00:19 +120: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/application/driver_trips_controller_test.dart: driverPublicationUsage counts only published trips, by day and by rolling week
+00:19 +121: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/application/driver_trips_controller_test.dart: driverPublicationUsage counts the two directions of today apart
+00:19 +122: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/application/driver_trips_controller_test.dart: driverPublicationUsage the provider blocks a third publication on the same day
+00:19 +123: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/application/driver_trips_controller_test.dart: Booking requests a pending request waits for the driver and holds no seat
+00:19 +124: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/application/driver_trips_controller_test.dart: Booking requests confirming a request seats the passenger
+00:19 +125: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/application/driver_trips_controller_test.dart: Booking requests turning a request down drops it
+00:19 +126: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/application/driver_trips_controller_test.dart: Booking requests a draft trip takes no requests at all
+00:19 +127: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/data/pocketbase_booking_repository_test.dart: create sends selection only and accepts status exclusively from API
+00:19 +128: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/data/pocketbase_booking_repository_test.dart: inconsistent payment response never becomes success
+00:19 +129: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/data/pocketbase_booking_repository_test.dart: payment uses the custom action and requires confirmed plus paid
+00:19 +130: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/data/pocketbase_booking_repository_test.dart: no seats is a recoverable business error
+00:19 +131: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/data/pocketbase_booking_repository_test.dart: cancellation needs a matching cancelled booking and server refund
+00:20 +132: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_draft_test.dart: TripDraft fares the full route uses the price the driver set for it
+00:20 +133: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_draft_test.dart: TripDraft fares a fare between stops sums up the legs on the way
+00:20 +134: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_draft_test.dart: TripDraft fares a fare never drops below the minimum boarding price
+00:20 +135: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_draft_test.dart: TripDraft fares an unpriced leg on the way leaves the fare unknown
+00:20 +136: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_draft_test.dart: TripDraft fares a reversed range or an out-of-range point has no fare
+00:20 +137: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_draft_test.dart: TripDraft validation a fully filled draft can be published
+00:20 +138: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_draft_test.dart: TripDraft validation an empty draft reports every unfinished part
+00:20 +139: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_draft_test.dart: TripDraft validation the same address twice is not a route
+00:20 +140: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_draft_test.dart: TripDraft validation an unset arrival keeps the schedule invalid
+00:20 +141: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_draft_test.dart: TripDraft validation an arrival before the departure is rejected
+00:20 +142: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_draft_test.dart: TripDraft validation departure time off the 30 minute grid is rejected
+00:20 +143: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_draft_test.dart: TripDraft validation departure in the past is rejected
+00:20 +144: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_draft_test.dart: TripDraft validation a boarding minimum above the full route price is rejected
+00:20 +145: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_draft_test.dart: TripDraft validation a leg left unpriced is simply not sold separately
+00:20 +146: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_draft_test.dart: TripDraft validation a leg priced at zero is rejected
+00:20 +147: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_draft_test.dart: TripDraft validation an enabled extra without a price blocks publication
+00:20 +148: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_draft_test.dart: TripDraft validation an enabled parcel service without a priced size blocks publication
+00:20 +149: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_draft_test.dart: TripDraft validation a route alone is enough to save the draft
+00:20 +150: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_draft_test.dart: TripDraft return trip reverses the route and its leg prices, and clears the schedule
+00:20 +151: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_draft_test.dart: TripDraft return trip keeps prices, seats, extras, booking mode and vehicle
+00:20 +152: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_draft_test.dart: TripDraft return trip a new departure and arrival make the return trip publishable
+00:20 +153: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_draft_test.dart: TripDraft route roles marks origin, intermediate stops and destination
+00:20 +154: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_publication_limits_test.dart: TripPublicationUsage allows publishing while both windows have room
+00:20 +155: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_publication_limits_test.dart: TripPublicationUsage one publication in a direction closes that direction for today
+00:20 +156: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_publication_limits_test.dart: TripPublicationUsage the return direction is counted on its own
+00:20 +157: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_publication_limits_test.dart: TripPublicationUsage reports the daily limit first
+00:20 +158: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_publication_limits_test.dart: TripPublicationUsage reports the weekly limit when only it is exhausted
+00:21 +159: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_departure_slots_test.dart: TripDepartureSlots accepts only whole and half hours
+00:21 +160: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_departure_slots_test.dart: TripDepartureSlots a future day offers all 48 slots
+00:21 +161: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_departure_slots_test.dart: TripDepartureSlots today drops the slots that already passed
+00:21 +162: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/domain/trip_departure_slots_test.dart: TripDepartureSlots rounds up to the next slot and keeps an exact slot as is
+00:24 +163: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/passenger_order_schedule_screen_test.dart: fills date, time and passenger count for a new order
+00:24 +164: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/passenger_order_schedule_screen_test.dart: fills date, time and passenger count for a new order
+00:25 +165: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/booking/passenger_booking_response_dialog_test.dart: returns payment action from the accepted booking dialog
+00:25 +166: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/booking/passenger_booking_success_screen_test.dart: shows successful seat booking result and exposes actions
+00:25 +167: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/booking/passenger_booking_success_screen_test.dart: shows successful seat booking result and exposes actions
+00:25 +168: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/booking/passenger_booking_success_screen_test.dart: shows successful seat booking result and exposes actions
+00:26 +169: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/trip_published_screen_test.dart: confirms the publication and shows what is left of the limits
+00:26 +170: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_return_trip_flow_test.dart: the return trip mirrors the route and asks for a new departure
+00:27 +171: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_type_screen_test.dart: picks the order type and moves on
+00:27 +172: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_return_trip_flow_test.dart: cancelling the confirmation leaves the trip unpublished
+00:29 +173: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_route_screen_test.dart: collects route, schedule and seats before the next step
+00:30 +174: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_route_screen_test.dart: collects route, schedule and seats before the next step
+00:30 +175: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_route_screen_test.dart: collects route, schedule and seats before the next step
+00:30 +176: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_route_screen_test.dart: collects route, schedule and seats before the next step
+00:30 +177: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_route_screen_test.dart: the departure time offers only slots still ahead today
+00:30 +178: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_route_screen_test.dart: adds and removes a planned stop
+00:30 +179: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_route_screen_test.dart: keeps three route points in travel order
+00:31 +180: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_route_screen_test.dart: the cross clears an endpoint instead of removing it
+00:31 +181: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_route_screen_test.dart: caps the seats at the vehicle capacity
+00:32 +182: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_flow_test.dart: a driver walks the six steps through to a published order
+00:32 +183: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_flow_test.dart: a driver walks the six steps through to a published order
+00:32 +184: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_flow_test.dart: a driver walks the six steps through to a published order
+00:32 +185: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_flow_test.dart: a driver walks the six steps through to a published order
+00:33 +186: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_flow_test.dart: a driver walks the six steps through to a published order
+00:33 +187: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_flow_test.dart: a driver walks the six steps through to a published order
+00:33 +188: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_flow_test.dart: a driver walks the six steps through to a published order
+00:33 +189: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_flow_test.dart: a driver walks the six steps through to a published order
+00:33 +190: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_flow_test.dart: a driver walks the six steps through to a published order
+00:33 +191: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_flow_test.dart: a driver walks the six steps through to a published order
+00:33 +192: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_flow_test.dart: a saved draft lands in «Мои поездки» and can be reopened
+00:34 +193: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/driver_booking_request_screen_test.dart: shows the money, both routes and the two answers
+00:34 +194: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/driver_booking_request_screen_test.dart: the chip opens the stops of the trip
+00:34 +195: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/driver_booking_request_flow_test.dart: a new request is announced and can be confirmed
+00:34 +196: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/driver_booking_request_flow_test.dart: a new request is announced and can be confirmed
+00:34 +197: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/driver_booking_request_flow_test.dart: a new request is announced and can be confirmed
+00:35 +198: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_booking_mode_screen_test.dart: explains both booking types and publishes the trip
+00:35 +199: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_booking_mode_screen_test.dart: explains both booking types and publishes the trip
+00:35 +200: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/driver_booking_request_flow_test.dart: the notice is shown once per request
+00:35 +201: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/driver_booking_request_flow_test.dart: the notice is shown once per request
+00:35 +202: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_booking_mode_screen_test.dart: the daily limit opens the dialog instead of publishing
+00:35 +203: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/driver_booking_request_flow_test.dart: the trip lists what each booking is waiting for
+00:35 +204: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_booking_mode_screen_test.dart: cancelling the limit dialog leaves the trip unpublished
+00:35 +205: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/driver_booking_request_flow_test.dart: a completed trip can be repeated as a new draft
+00:35 +206: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/driver_booking_request_flow_test.dart: driver changes seats and closes passenger reception from details
+00:36 +207: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/driver_booking_request_flow_test.dart: a paid booking is announced and opens the trip
+00:36 +208: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_pricing_screen_test.dart: asks for the fare of the whole route before the next step
+00:36 +209: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/driver_trip_details_screen_test.dart: shows driver trip details without passengers and opens edit menu
+00:36 +210: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/driver_trip_details_screen_test.dart: shows driver trip details without passengers and opens edit menu
+00:37 +211: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/driver_trip_details_screen_test.dart: shows driver trip details without passengers and opens edit menu
+00:37 +212: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/driver_trip_details_screen_test.dart: shows driver trip details without passengers and opens edit menu
+00:37 +213: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/driver_trip_details_screen_test.dart: shows passengers and opens selected passenger profile
+00:37 +214: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/driver_trip_details_screen_test.dart: joined passengers limit editing to seat and reception actions
+00:37 +215: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/edit_trip_flow_test.dart: «Сохранить» stays off until something is actually changed
+00:37 +216: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/edit_trip_flow_test.dart: «Сохранить» stays off until something is actually changed
+00:37 +217: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/edit_trip_flow_test.dart: «Сохранить» stays off until something is actually changed
+00:38 +218: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_vehicle_screen_test.dart: repeats the money split and unlocks after a car is chosen
+00:38 +219: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_vehicle_screen_test.dart: repeats the money split and unlocks after a car is chosen
+00:38 +220: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_vehicle_screen_test.dart: repeats the money split and unlocks after a car is chosen
+00:38 +221: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_vehicle_screen_test.dart: repeats the money split and unlocks after a car is chosen
+00:38 +222: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_vehicle_screen_test.dart: lists only cars that passed verification
+00:38 +223: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_vehicle_screen_test.dart: an empty garage explains what to do and offers to add a car
+00:38 +224: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/driver/create_trip_extras_screen_test.dart: a service is switched on at the price from the catalogue
+00:39 +225: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/passenger_trips_page_test.dart: requests native permission only after explicit consent
+00:39 +226: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/passenger_trips_page_test.dart: requests native permission only after explicit consent
+00:39 +227: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/passenger_trips_page_test.dart: requests native permission only after explicit consent
+00:40 +228: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/passenger_booking_cancellation_result_screen_test.dart: shows refund result after a normal cancellation
+00:40 +229: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/passenger_trips_screen_test.dart: shows the car empty state and switches transport tabs
+00:40 +230: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/passenger_trips_screen_test.dart: shows the car empty state and switches transport tabs
+00:40 +231: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/passenger_trips_screen_test.dart: exposes filter and bottom navigation actions
+00:40 +232: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/passenger_trips_screen_test.dart: shows ranked trip cards and opens the selected trip
+00:40 +233: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/passenger_trips_screen_test.dart: opens the modal filter sheet and applies route filters
+00:41 +234: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/passenger_orders_screen_test.dart: shows the empty state and creates an order
+00:41 +235: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/passenger_trips_screen_test.dart: shows active filter badge when filters return no trips
+00:41 +236: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/passenger_orders_screen_test.dart: shows active passenger orders and opens details
+00:41 +237: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/passenger_orders_screen_test.dart: filters active and completed orders
+00:43 +238: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/passenger_booking_sheet_test.dart: builds a passenger booking request from selected options
+00:43 +239: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/passenger_order_details_screen_test.dart: shows passenger order details and exposes chat action
+00:44 +240: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/passenger_order_details_screen_test.dart: first cancellation asks for confirmation and requests a refund
+00:44 +241: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/passenger_order_details_screen_test.dart: second cancellation requires an extra warning and blocks booking
+00:44 +242: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/trip_details_screen_test.dart: shows no-seat details and keeps parcel action available
+00:44 +243: /Users/aleksandremelianov/Development/projects/vput/test/features/onboarding/presentation/onboarding_slide_two_screen_test.dart: keeps the Figma anchors on a 375x812 viewport
+00:44 +244: /Users/aleksandremelianov/Development/projects/vput/test/features/trips/presentation/trip_details_screen_test.dart: enables booking when the selected trip has a free seat
+00:45 +245: /Users/aleksandremelianov/Development/projects/vput/test/features/onboarding/presentation/onboarding_slide_three_screen_test.dart: keeps the Figma anchors on a 375x812 viewport
+00:45 +246: /Users/aleksandremelianov/Development/projects/vput/test/features/onboarding/presentation/welcome_screen_test.dart: matches the 375px welcome layout and handles both actions
+00:46 +247: /Users/aleksandremelianov/Development/projects/vput/test/features/onboarding/presentation/onboarding_slide_one_screen_test.dart: small display scrolls to continue without overflow
+00:46 +248: /Users/aleksandremelianov/Development/projects/vput/test/features/onboarding/presentation/onboarding_slide_one_screen_test.dart: keeps the Figma anchors on a 375x812 viewport
+00:46 +249: All tests passed!

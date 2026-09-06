@@ -43,7 +43,8 @@ class OnboardingSlideTwoScreen extends StatelessWidget {
             final artboardWidth = referenceWidth * scale;
             final artboardLeft = (constraints.maxWidth - artboardWidth) / 2;
             final bottomInset = MediaQuery.paddingOf(context).bottom;
-            final contentHeight = 334 * scale + bottomInset;
+            // The page indicator keeps its 8 dp height at every width.
+            final contentHeight = 326 * scale + 8 + bottomInset;
             final preferredCardTop = 457 * scale;
             final cardTop = math.min(
               preferredCardTop,

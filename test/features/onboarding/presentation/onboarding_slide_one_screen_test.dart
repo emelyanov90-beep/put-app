@@ -3,6 +3,27 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:vput/features/onboarding/presentation/onboarding_slide_one_screen.dart';
 
 void main() {
+  testWidgets('small display scrolls to continue without overflow', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(320, 568);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    var continued = false;
+    await tester.pumpWidget(
+      MaterialApp(
+        home: OnboardingSlideOneScreen(onContinue: () => continued = true),
+      ),
+    );
+    await tester.ensureVisible(
+      find.byKey(OnboardingSlideOneScreen.continueButtonKey),
+    );
+    await tester.tap(find.byKey(OnboardingSlideOneScreen.continueButtonKey));
+    expect(continued, isTrue);
+    expect(tester.takeException(), isNull);
+  });
+
   testWidgets('keeps the Figma anchors on a 375x812 viewport', (tester) async {
     tester.view.devicePixelRatio = 1;
     tester.view.physicalSize = const Size(375, 812);

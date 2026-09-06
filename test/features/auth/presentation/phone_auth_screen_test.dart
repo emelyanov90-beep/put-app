@@ -3,6 +3,33 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:vput/features/auth/presentation/phone_auth_screen.dart';
 
 void main() {
+  testWidgets('small screen with keyboard can scroll to submit', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(320, 568);
+    tester.view.devicePixelRatio = 1;
+    tester.view.viewInsets = const FakeViewPadding(bottom: 280);
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    addTearDown(tester.view.resetViewInsets);
+    String? requested;
+    await tester.pumpWidget(
+      MaterialApp(
+        home: PhoneAuthScreen(
+          onCodeRequested: (phone) => requested = phone,
+          onOpenTermsOfService: () {},
+          onOpenPrivacyPolicy: () {},
+        ),
+      ),
+    );
+    await tester.enterText(find.byType(TextField), '9123456789');
+    await tester.pump();
+    await tester.ensureVisible(find.byKey(PhoneAuthScreen.getCodeButtonKey));
+    await tester.tap(find.byKey(PhoneAuthScreen.getCodeButtonKey));
+    expect(requested, isNotNull);
+    expect(tester.takeException(), isNull);
+  });
+
   testWidgets('formats the phone number and enables the button once complete', (
     tester,
   ) async {

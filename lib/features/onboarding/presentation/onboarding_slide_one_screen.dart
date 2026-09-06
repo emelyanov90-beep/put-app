@@ -46,88 +46,101 @@ class OnboardingSlideOneScreen extends StatelessWidget {
                     )
                   : naturalIllustrationHeight;
 
-              return Column(
-                children: [
-                  SizedBox(height: topSpacing),
-                  const _WelcomeTitle(key: titleKey),
-                  SizedBox(height: titleToImageSpacing),
-                  SizedBox(
-                    width: illustrationHeight * 375 / 290,
-                    height: illustrationHeight,
-                    child: Image.asset(
-                      'docs/imgs/compas.png',
-                      key: illustrationKey,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  SizedBox(height: imageToDescriptionSpacing),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 16),
-                    child: SizedBox(
-                      height: 150,
-                      width: double.infinity,
-                      child: FittedBox(
-                        fit: BoxFit.scaleDown,
-                        child: SizedBox(
-                          width: 343,
-                          child: Text(
-                            'Находите нужное направление, создавайте поездки\n'
-                            'или бронируйте места,\n'
-                            'экономьте время и деньги',
-                            key: descriptionKey,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: AppColors.accentBlack,
-                              fontSize: 24,
-                              fontWeight: FontWeight.w700,
-                              height: 1.25,
+              return SingleChildScrollView(
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(minHeight: constraints.maxHeight),
+                  child: IntrinsicHeight(
+                    child: Column(
+                      children: [
+                        SizedBox(height: topSpacing),
+                        const _WelcomeTitle(key: titleKey),
+                        SizedBox(height: titleToImageSpacing),
+                        SizedBox(
+                          width: illustrationHeight * 375 / 290,
+                          height: illustrationHeight,
+                          child: Image.asset(
+                            'docs/imgs/compas.png',
+                            key: illustrationKey,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        SizedBox(height: imageToDescriptionSpacing),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 16),
+                          child: SizedBox(
+                            height: 150,
+                            width: double.infinity,
+                            child: FittedBox(
+                              fit: BoxFit.scaleDown,
+                              child: SizedBox(
+                                width: 343,
+                                child: Text(
+                                  'Находите нужное направление, создавайте поездки\n'
+                                  'или бронируйте места,\n'
+                                  'экономьте время и деньги',
+                                  key: descriptionKey,
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: AppColors.accentBlack,
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.w700,
+                                    height: 1.25,
+                                  ),
+                                ),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: descriptionToIndicatorSpacing),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 16),
-                    child: Align(
-                      alignment: Alignment.centerLeft,
-                      child: _PageIndicator(),
-                    ),
-                  ),
-                  const Spacer(),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-                    child: SizedBox(
-                      width: double.infinity,
-                      height: 44,
-                      child: FilledButton(
-                        key: continueButtonKey,
-                        onPressed: onContinue,
-                        style: FilledButton.styleFrom(
-                          padding: const EdgeInsets.symmetric(horizontal: 16),
-                          foregroundColor: AppColors.accentWhite,
-                          backgroundColor: AppColors.brandGreen,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          textStyle: const TextStyle(
-                            fontSize: 13,
-                            fontWeight: FontWeight.w600,
-                            height: 1.38,
+                        SizedBox(height: descriptionToIndicatorSpacing),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 16),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: _PageIndicator(),
                           ),
                         ),
-                        child: const Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text('Продолжить'),
-                            Icon(Icons.arrow_forward_ios_rounded, size: 16),
-                          ],
+                        const Spacer(),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+                          child: SizedBox(
+                            width: double.infinity,
+                            height: 44,
+                            child: FilledButton(
+                              key: continueButtonKey,
+                              onPressed: onContinue,
+                              style: FilledButton.styleFrom(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 16,
+                                ),
+                                foregroundColor: AppColors.accentWhite,
+                                backgroundColor: AppColors.brandGreen,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                textStyle: const TextStyle(
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w600,
+                                  height: 1.38,
+                                ),
+                              ),
+                              child: const Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text('Продолжить'),
+                                  Icon(
+                                    Icons.arrow_forward_ios_rounded,
+                                    size: 16,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
                         ),
-                      ),
+                      ],
                     ),
                   ),
-                ],
+                ),
               );
             },
           ),

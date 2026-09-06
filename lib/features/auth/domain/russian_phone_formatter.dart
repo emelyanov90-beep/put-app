@@ -39,6 +39,8 @@ class RussianPhoneFormatter extends TextInputFormatter {
   /// [text].
   static int nationalDigitsOf(String text) => _nationalDigits(text).length;
 
+  static String normalize(String text) => '+7${_nationalDigits(text)}';
+
   static String _nationalDigits(String text) {
     var digits = text.replaceAll(RegExp(r'\D'), '');
     if (digits.startsWith('7') || digits.startsWith('8')) {

@@ -1,16 +1,8 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vput/app/app.dart';
-import 'package:vput/core/api/pocketbase_provider.dart';
+import 'package:vput/app/bootstrap.dart';
 
-Future<void> main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  final pocketBase = await createPocketBase();
-
-  runApp(
-    ProviderScope(
-      overrides: [pocketBaseProvider.overrideWithValue(pocketBase)],
-      child: const VputApp(),
-    ),
-  );
+  runApp(const ProviderScope(child: ApplicationBootstrap()));
 }
